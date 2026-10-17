@@ -1,0 +1,30 @@
+# Alfa Music
+
+Reproductor de música personal para Android: buscás, tocás y suena por streaming desde YouTube Music, sin anuncios ni descargas.
+
+## Descargar
+
+**https://github.com/alfonsocarabajal-pixel/Alfa-music/releases/latest/download/AlfaMusic.apk**
+
+Este enlace siempre baja la última versión. Al abrir el archivo, Android puede pedir permitir "instalar apps desconocidas" desde el navegador: hay que permitirlo para instalar. Las versiones nuevas se instalan encima sin perder nada.
+
+## Cómo se usa
+
+- **Tocar una canción** la reproduce y arranca la **radio automática**, que agrega canciones parecidas cuando la cola se está por terminar.
+- **Botón +**: agrega la canción a la cola, antes de las sugerencias de la radio.
+- **Botón de cola** (abajo a la derecha): tocá una canción para saltar a ella, ✕ para quitarla.
+- Sigue sonando con la pantalla apagada, con controles en la notificación, la pantalla bloqueada y los auriculares.
+
+## Mantenimiento
+
+- Cada **lunes** GitHub recompila la app con la versión más nueva del extractor y publica un APK nuevo.
+- Si un día deja de reproducir: **Actions → Compilar APK → Run workflow**, y reinstalar desde el enlace de arriba.
+
+Proyecto de uso personal. Usa la API interna de YouTube (no oficial): puede dejar de funcionar cuando YouTube cambia algo, y en general se arregla recompilando.
+
+## Detalles técnicos
+
+- Kotlin + Jetpack Compose, Media3 (ExoPlayer + MediaSession) y NewPipe Extractor.
+- Sin base de datos, sin login y sin librerías extra de imágenes ni de red.
+- El audio se resuelve recién al reproducir cada canción (`ytm://ID` → URL directa), así los enlaces nunca vencen en la cola.
+- La clave de firma está cifrada en `keystore/alfa.jks.enc`; la compilación la descifra con el secreto `ALFA_KS_PASS`.
