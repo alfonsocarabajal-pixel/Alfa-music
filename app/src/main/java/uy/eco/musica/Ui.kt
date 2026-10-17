@@ -24,7 +24,6 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -35,6 +34,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Shuffle
 import androidx.compose.material.icons.filled.SkipNext
 import androidx.compose.material.icons.filled.SkipPrevious
 import androidx.compose.material3.CircularProgressIndicator
@@ -74,7 +74,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.media3.common.MediaItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -327,18 +326,30 @@ private fun QueueList(ui: PlayerUi) {
             Row(
                 Modifier
                     .fillMaxWidth()
-                    .padding(16.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
+                    .padding(start = 16.dp, end = 4.dp, top = 4.dp, bottom = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
             ) {
-                Text("Cola", style = MaterialTheme.typography.titleMedium)
-                Text(
-                    "${ui.queue.size} canciones",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
+                Column(Modifier.weight(1f)) {
+                    Text("Cola", style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        "${ui.queue.size} canciones" + if (ui.shuffle) " · Aleatorio" else "",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                IconButton(onClick = { ui.toggleShuffle() }) {
+                    Icon(
+                        Icons.Default.Shuffle,
+                        contentDescription = if (ui.shuffle) "Desactivar aleatorio" else "Activar aleatorio",
+                        tint = if (ui.shuffle) MaterialTheme.colorScheme.primary
+                        else MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
         }
-        itemsIndexed(ui.queue) { i, item: MediaItem ->
+        items(ui.queue) { entry ->
+            val i = entry.index
+            val item = entry.item
             val radio = item.mediaMetadata.extras?.getBoolean(EXTRA_RADIO) == true
             SongRow(
                 thumb = item.mediaMetadata.artworkUri?.toString(),

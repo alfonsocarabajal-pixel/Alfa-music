@@ -4,9 +4,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
+
+/** Un elemento de la cola: [index] es su posición real en el reproductor. */
+data class QueueEntry(val index: Int, val item: MediaItem)
 
 /** Estado del reproductor visible para la interfaz. Refleja lo que hace el servicio. */
 class PlayerUi {
@@ -18,9 +22,12 @@ class PlayerUi {
         private set
     var buffering by mutableStateOf(false)
         private set
-    var queue by mutableStateOf<List<MediaItem>>(emptyList())
+    /** La cola en el orden en que va a sonar (respeta el modo aleatorio). */
+    var queue by mutableStateOf<List<QueueEntry>>(emptyList())
         private set
     var index by mutableIntStateOf(-1)
+        private set
+    var shuffle by mutableStateOf(false)
         private set
 
     private val listener = object : Player.Listener {
@@ -44,7 +51,28 @@ class PlayerUi {
         isPlaying = c.isPlaying
         buffering = c.playbackState == Player.STATE_BUFFERING
         index = c.currentMediaItemIndex
-        queue = List(c.mediaItemCount) { c.getMediaItemAt(it) }
+        shuffle = c.shuffleModeEnabled
+        queue = playOrder(c).map { QueueEntry(it, c.getMediaItemAt(it)) }
+    }
+
+    private fun playOrder(c: Player): List<Int> {
+        val t = c.currentTimeline
+        if (t.isEmpty) return emptyList()
+        val order = ArrayList<Int>(t.windowCount)
+        var i = t.getFirstWindowIndex(c.shuffleModeEnabled)
+        while (i != C.INDEX_UNSET && order.size < t.windowCount) {
+            order += i
+            i = t.getNextWindowIndex(i, Player.REPEAT_MODE_OFF, c.shuffleModeEnabled)
+        }
+        // Por seguridad, si el orden vino incompleto, se agregan los que falten.
+        if (order.size < t.windowCount) {
+            (0 until t.windowCount).filterNot { it in order }.forEach { order += it }
+        }
+        return order
+    }
+
+    fun toggleShuffle() {
+        controller?.let { it.shuffleModeEnabled = !it.shuffleModeEnabled }
     }
 
     /** Toca una canción: suena ya y la radio arma el resto de la cola. */

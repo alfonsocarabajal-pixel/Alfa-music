@@ -12,7 +12,7 @@ Este enlace siempre baja la última versión. Al abrir el archivo, Android puede
 
 - **Tocar una canción** la reproduce y arranca la **radio automática**, que agrega canciones parecidas cuando la cola se está por terminar.
 - **Botón +**: agrega la canción a la cola, antes de las sugerencias de la radio.
-- **Botón de cola** (abajo a la derecha): tocá una canción para saltar a ella, ✕ para quitarla.
+- **Botón de cola** (abajo a la derecha): tocá una canción para saltar a ella, ✕ para quitarla, y el botón 🔀 activa o desactiva el **modo aleatorio**.
 - Sigue sonando con la pantalla apagada, con controles en la notificación, la pantalla bloqueada y los auriculares.
 
 ## Mantenimiento
