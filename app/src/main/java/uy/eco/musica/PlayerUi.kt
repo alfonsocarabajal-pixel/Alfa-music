@@ -13,9 +13,56 @@ import androidx.media3.session.MediaController
 data class QueueEntry(val index: Int, val item: MediaItem)
 
 /** Estado del reproductor visible para la interfaz. Refleja lo que hace el servicio. */
-class PlayerUi {
+class PlayerUi(val prefs: Prefs) {
     var controller by mutableStateOf<MediaController?>(null)
         private set
+
+    /** Playlist compartida cargada en la cola (nombre vacío = ninguna). */
+    var loadedName by mutableStateOf(prefs.loadedName)
+        private set
+    var loadedId by mutableStateOf(prefs.loadedId)
+        private set
+
+    fun markLoaded(p: Playlist?) {
+        loadedId = p?.id.orEmpty()
+        loadedName = p?.name.orEmpty()
+        prefs.loadedId = loadedId
+        prefs.loadedName = loadedName
+        prefs.loadedAuthor = p?.author.orEmpty()
+    }
+
+    /** Se llama cuando la playlist cargada se guardó, renombró o borró. */
+    fun onPlaylistChanged(p: Playlist?, deletedId: String? = null) {
+        if (p != null && p.id == loadedId) markLoaded(p)
+        if (deletedId != null && deletedId == loadedId) markLoaded(null)
+    }
+
+    /** Reproduce una playlist completa desde [start], opcionalmente en orden aleatorio. */
+    fun playPlaylist(p: Playlist, start: Int = 0, shuffled: Boolean = false) {
+        val c = controller ?: return
+        if (p.songs.isEmpty()) return
+        val first = if (shuffled) p.songs.indices.random() else start.coerceIn(0, p.songs.size - 1)
+        c.shuffleModeEnabled = false
+        c.setMediaItems(p.songs.map { it.toMediaItem() }, first, 0)
+        if (shuffled) c.shuffleModeEnabled = true
+        c.prepare()
+        c.play()
+        markLoaded(p)
+    }
+
+    /**
+     * Las canciones a guardar en una playlist: toda la cola en su orden original,
+     * menos las sugerencias de la radio que todavía no sonaron.
+     */
+    fun songsToSave(): List<Song> {
+        val c = controller ?: return emptyList()
+        val upcoming = queue.dropWhile { it.index != c.currentMediaItemIndex }.drop(1)
+            .map { it.index }.toSet()
+        return (0 until c.mediaItemCount)
+            .map { it to c.getMediaItemAt(it) }
+            .filterNot { (i, item) -> item.isRadio && i in upcoming }
+            .map { (_, item) -> item.toSong() }
+    }
     var current by mutableStateOf<MediaItem?>(null)
         private set
     var isPlaying by mutableStateOf(false)
@@ -82,6 +129,7 @@ class PlayerUi {
             prepare()
             play()
         }
+        markLoaded(null) // la cola nueva ya no es la playlist que estaba cargada
     }
 
     /** "+": la agrega después de lo que ya agregaste vos, antes de las sugerencias de la radio. */

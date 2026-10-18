@@ -21,6 +21,12 @@ android {
         targetSdk = 35
         versionCode = (project.findProperty("buildNumber") as String?)?.toIntOrNull() ?: 1
         versionName = "1.0.${versionCode}"
+
+        // Playlists compartidas (Firebase). Vacío = función desactivada.
+        fun prop(name: String) = (project.findProperty(name) as String?).orEmpty()
+            .filter { it.isLetterOrDigit() || it == '-' }
+        buildConfigField("String", "FS_PROJECT", "\"${prop("fsProject")}\"")
+        buildConfigField("String", "FS_GROUP", "\"${prop("fsGroup")}\"")
     }
 
     // Firma fija: así cada versión nueva se instala encima de la anterior.
@@ -60,6 +66,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     lint {

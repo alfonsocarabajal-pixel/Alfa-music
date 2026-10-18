@@ -2,10 +2,10 @@ name: Compilar APK
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch: {}      # botón "Run workflow" para compilar a mano
+    branches: [main, prueba]   # "prueba" solo compila, no publica
+  workflow_dispatch: {}        # botón "Run workflow" para compilar a mano
   schedule:
-    - cron: "0 9 * * 1"      # cada lunes: recompila con el extractor más nuevo
+    - cron: "0 9 * * 1"        # cada lunes: recompila con el extractor más nuevo
 
 permissions:
   contents: write
@@ -34,7 +34,7 @@ jobs:
           echo "Usando NewPipe Extractor $TAG"
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
-      - name: Descifrar clave de firma
+      - name: Descifrar clave de firma y configuración
         env:
           ALFA_KS_PASS: ${{ secrets.ALFA_KS_PASS }}
         run: |
@@ -44,6 +44,37 @@ jobs:
           fi
           openssl enc -d -aes-256-cbc -pbkdf2 -in keystore/alfa.jks.enc \
             -out "$RUNNER_TEMP/alfa.jks" -pass env:ALFA_KS_PASS
+          if [ -f config/nube.env.enc ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -in config/nube.env.enc \
+              -out "$RUNNER_TEMP/nube.env" -pass env:ALFA_KS_PASS
+            . "$RUNNER_TEMP/nube.env"
+            echo "::add-mask::$FS_GROUP"
+            echo "FS_PROJECT=$FS_PROJECT" >> "$GITHUB_ENV"
+            echo "FS_GROUP=$FS_GROUP" >> "$GITHUB_ENV"
+            rm -f "$RUNNER_TEMP/nube.env"
+          else
+            echo "Sin configuración de playlists compartidas: se compila sin esa función."
+          fi
+
+      - name: Verificar Firebase (escribir, leer y borrar una playlist de prueba)
+        if: env.FS_PROJECT != ''
+        run: |
+          P="$FS_PROJECT"; G="$FS_GROUP"
+          ROOT="projects/$P/databases/(default)/documents"
+          DOC="$ROOT/grupos/$G/playlists/zz-prueba-compilacion"
+          API="https://firestore.googleapis.com/v1"
+          fail() { echo "::error::$1"; echo "$2" | head -c 600; exit 1; }
+          BODY=$(jq -n --arg n "$DOC" '{writes:[{update:{name:$n,fields:{
+            nombre:{stringValue:"prueba"},autor:{stringValue:"ci"},
+            actualizada:{integerValue:"0"},canciones:{arrayValue:{values:[]}}}}}]}')
+          R=$(curl -s -w '\n%{http_code}' -X POST "$API/$ROOT:commit" -H 'Content-Type: application/json' -d "$BODY")
+          [ "$(echo "$R" | tail -1)" = "200" ] || fail "Firebase rechazó la escritura (¿reglas publicadas? ¿base creada?)" "$R"
+          R=$(curl -s -w '\n%{http_code}' "$API/$ROOT/grupos/$G/playlists?pageSize=5")
+          [ "$(echo "$R" | tail -1)" = "200" ] || fail "Firebase rechazó la lectura" "$R"
+          BODY=$(jq -n --arg n "$DOC" '{writes:[{delete:$n}]}')
+          R=$(curl -s -w '\n%{http_code}' -X POST "$API/$ROOT:commit" -H 'Content-Type: application/json' -d "$BODY")
+          [ "$(echo "$R" | tail -1)" = "200" ] || fail "Firebase rechazó el borrado" "$R"
+          echo "Firebase OK: escritura, lectura y borrado funcionan."
 
       - name: Compilar
         env:
@@ -53,11 +84,14 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleRelease --stacktrace \
             -PnpeVersion=${{ steps.npe.outputs.tag }} \
-            -PbuildNumber=${{ github.run_number }}
+            -PbuildNumber=${{ github.run_number }} \
+            -PfsProject="$FS_PROJECT" \
+            -PfsGroup="$FS_GROUP"
           mv app/build/outputs/apk/release/app-release.apk AlfaMusic.apk
           rm -f "$RUNNER_TEMP/alfa.jks"
 
       - name: Publicar para descargar desde el celular
+        if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ github.run_number }}

@@ -26,6 +26,8 @@ data class Song(
 
 const val SCHEME = "ytm"
 const val EXTRA_RADIO = "eco_radio"
+private const val EXTRA_DURATION = "eco_dur"
+private const val EXTRA_THUMB = "eco_thumb"
 
 /** Convierte una canción en un elemento de la cola. El audio se resuelve recién al reproducir. */
 fun Song.toMediaItem(radio: Boolean = false): MediaItem =
@@ -37,10 +39,31 @@ fun Song.toMediaItem(radio: Boolean = false): MediaItem =
                 .setTitle(title)
                 .setArtist(artist)
                 .setArtworkUri(art?.let(Uri::parse))
-                .setExtras(Bundle().apply { putBoolean(EXTRA_RADIO, radio) })
+                .setExtras(Bundle().apply {
+                    putBoolean(EXTRA_RADIO, radio)
+                    putLong(EXTRA_DURATION, durationSec)
+                    putString(EXTRA_THUMB, thumb)
+                })
                 .build()
         )
         .build()
+
+val MediaItem.isRadio: Boolean
+    get() = mediaMetadata.extras?.getBoolean(EXTRA_RADIO) == true
+
+/** Recupera los datos de la canción desde un elemento de la cola. */
+fun MediaItem.toSong(): Song {
+    val m = mediaMetadata
+    val art = m.artworkUri?.toString()
+    return Song(
+        id = mediaId,
+        title = m.title?.toString().orEmpty(),
+        artist = m.artist?.toString().orEmpty(),
+        durationSec = m.extras?.getLong(EXTRA_DURATION) ?: 0L,
+        thumb = m.extras?.getString(EXTRA_THUMB) ?: art,
+        art = art,
+    )
+}
 
 object Repo {
 

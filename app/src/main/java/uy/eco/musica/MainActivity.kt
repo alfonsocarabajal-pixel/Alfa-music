@@ -15,7 +15,7 @@ import com.google.common.util.concurrent.ListenableFuture
 
 class MainActivity : ComponentActivity() {
 
-    private val ui = PlayerUi()
+    private val ui by lazy { PlayerUi(Prefs(applicationContext)) }
     private var controllerFuture: ListenableFuture<MediaController>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

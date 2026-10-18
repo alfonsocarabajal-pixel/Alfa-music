@@ -78,6 +78,41 @@ class PlaybackService : MediaSessionService() {
             .setSessionActivity(openApp)
             .setCallback(callback)
             .build()
+
+        restoreQueue()
+    }
+
+    private val queueState by lazy { QueueState(this) }
+    private var restoring = false
+
+    /** Recupera la última cola de este teléfono, en pausa, donde había quedado. */
+    private fun restoreQueue() {
+        val saved = queueState.load() ?: return
+        restoring = true
+        player.setMediaItems(
+            saved.songs.map { (song, radio) -> song.toMediaItem(radio) },
+            saved.index,
+            saved.positionMs,
+        )
+        player.shuffleModeEnabled = saved.shuffle
+        lastCount = player.mediaItemCount
+        // No se llama a prepare(): el audio se carga recién cuando el usuario toca Play.
+        restoring = false
+        saveQueue()
+    }
+
+    private fun saveQueue() {
+        if (restoring) return
+        val songs = List(player.mediaItemCount) {
+            val item = player.getMediaItemAt(it)
+            item.toSong() to item.isRadio
+        }
+        queueState.save(
+            songs = songs,
+            index = player.currentMediaItemIndex.coerceAtLeast(0),
+            positionMs = player.currentPosition.coerceAtLeast(0),
+            shuffle = player.shuffleModeEnabled,
+        )
     }
 
     private fun resolve(spec: DataSpec): DataSpec {
@@ -111,8 +146,14 @@ class PlaybackService : MediaSessionService() {
 
     private val listener = object : Player.Listener {
         override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+            if (restoring) return
             mediaItem?.let { played += it.mediaId }
             extendRadio()
+            saveQueue()
+        }
+
+        override fun onIsPlayingChanged(isPlaying: Boolean) {
+            if (!isPlaying) saveQueue() // guarda la posición al pausar
         }
 
         override fun onPlaybackStateChanged(state: Int) {
@@ -120,24 +161,35 @@ class PlaybackService : MediaSessionService() {
         }
 
         override fun onShuffleModeEnabledChanged(shuffleModeEnabled: Boolean) {
+            if (restoring) return
             if (shuffleModeEnabled) reshuffle(keepPlayed = false)
             extendRadio()
+            saveQueue()
         }
 
         override fun onTimelineChanged(timeline: Timeline, reason: Int) {
             // Se agregaron canciones (radio o "+"): se reparten entre las que faltan sonar,
             // nunca antes de la actual, para que no se salteen.
+            if (restoring) return
             if (reason == Player.TIMELINE_CHANGE_REASON_PLAYLIST_CHANGED &&
                 player.mediaItemCount > lastCount
             ) {
                 reshuffle(keepPlayed = true)
             }
             lastCount = player.mediaItemCount
+            if (reason == Player.TIMELINE_CHANGE_REASON_PLAYLIST_CHANGED) saveQueue()
         }
 
         override fun onPlayerError(error: PlaybackException) {
             val id = player.currentMediaItem?.mediaId ?: return
             Repo.invalidate(id)
+            // Sin internet no se saltea nada: se queda en pausa hasta que el usuario reintente.
+            if (error.errorCode == PlaybackException.ERROR_CODE_IO_NETWORK_CONNECTION_FAILED ||
+                error.errorCode == PlaybackException.ERROR_CODE_IO_NETWORK_CONNECTION_TIMEOUT
+            ) {
+                retriedId = null
+                return
+            }
             if (retriedId != id) {
                 // Primer fallo: suele ser un enlace vencido. Se pide uno nuevo y se reintenta.
                 retriedId = id
@@ -220,12 +272,14 @@ class PlaybackService : MediaSessionService() {
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? = session
 
     override fun onTaskRemoved(rootIntent: Intent?) {
+        saveQueue()
         // Si se cierra la app desde recientes sin estar sonando, se detiene el servicio.
         val p = session?.player
         if (p == null || !p.playWhenReady || p.mediaItemCount == 0) stopSelf()
     }
 
     override fun onDestroy() {
+        saveQueue()
         scope.cancel()
         session?.run {
             player.release()

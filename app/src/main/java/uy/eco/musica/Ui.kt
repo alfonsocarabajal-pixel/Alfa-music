@@ -33,6 +33,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Shuffle
 import androidx.compose.material.icons.filled.SkipNext
@@ -44,7 +45,11 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -54,6 +59,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
@@ -101,14 +107,30 @@ fun EcoScreen(ui: PlayerUi) {
     var loading by remember { mutableStateOf(false) }
     var message by remember { mutableStateOf<String?>("Buscá una canción o un artista") }
     var showQueue by rememberSaveable { mutableStateOf(false) }
+    var tab by rememberSaveable { mutableIntStateOf(0) } // 0 = Buscar, 1 = Playlists
+    var openPlaylist by rememberSaveable { mutableStateOf<String?>(null) }
+    var showSave by remember { mutableStateOf(false) }
+    var autoOpened by rememberSaveable { mutableStateOf(false) }
+    val lists = remember { SharedLists() }
+    val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     val keyboard = LocalSoftwareKeyboardController.current
+    val notify: (String) -> Unit = { msg -> scope.launch { snackbar.showSnackbar(msg) } }
+
+    // Al abrir la app con una cola guardada, se muestra directamente.
+    LaunchedEffect(ui.queue.isNotEmpty()) {
+        if (!autoOpened && ui.queue.isNotEmpty()) {
+            autoOpened = true
+            showQueue = true
+        }
+    }
 
     fun search() {
         val q = query.trim()
         if (q.isEmpty()) return
         keyboard?.hide()
         showQueue = false
+        tab = 0
         loading = true
         message = null
         scope.launch {
@@ -127,10 +149,13 @@ fun EcoScreen(ui: PlayerUi) {
     }
 
     BackHandler(enabled = showQueue) { showQueue = false }
+    BackHandler(enabled = !showQueue && tab == 1 && openPlaylist != null) { openPlaylist = null }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             Surface(tonalElevation = 2.dp) {
+              Column {
                 OutlinedTextField(
                     value = query,
                     onValueChange = { query = it },
@@ -152,6 +177,23 @@ fun EcoScreen(ui: PlayerUi) {
                     keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                     keyboardActions = KeyboardActions(onSearch = { search() }),
                 )
+                TabRow(selectedTabIndex = tab) {
+                    Tab(
+                        selected = !showQueue && tab == 0,
+                        onClick = { tab = 0; showQueue = false },
+                        text = { Text("Buscar") },
+                    )
+                    Tab(
+                        selected = !showQueue && tab == 1,
+                        onClick = {
+                            if (tab == 1 && !showQueue) openPlaylist = null
+                            tab = 1
+                            showQueue = false
+                        },
+                        text = { Text("Playlists") },
+                    )
+                }
+              }
             }
         },
         bottomBar = {
@@ -166,7 +208,12 @@ fun EcoScreen(ui: PlayerUi) {
                 .fillMaxSize()
         ) {
             when {
-                showQueue -> QueueList(ui)
+                showQueue -> QueueList(ui, onSave = if (Cloud.enabled) ({ showSave = true }) else null)
+                tab == 1 -> {
+                    val id = openPlaylist
+                    if (id == null) PlaylistsList(lists, current = ui.loadedId, onOpen = { openPlaylist = it })
+                    else PlaylistDetail(id, lists, ui, onBack = { openPlaylist = null }, notify = notify)
+                }
                 loading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
                 results.isEmpty() -> Text(
                     message.orEmpty(),
@@ -196,10 +243,14 @@ fun EcoScreen(ui: PlayerUi) {
             }
         }
     }
+
+    if (showSave) {
+        SaveQueueDialog(ui, lists, onDismiss = { showSave = false }, notify = notify)
+    }
 }
 
 @Composable
-private fun SongRow(
+internal fun SongRow(
     thumb: String?,
     title: String,
     subtitle: String,
@@ -320,7 +371,7 @@ private fun MiniPlayer(ui: PlayerUi, queueOpen: Boolean, onQueue: () -> Unit) {
 }
 
 @Composable
-private fun QueueList(ui: PlayerUi) {
+private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?) {
     LazyColumn(Modifier.fillMaxSize()) {
         item {
             Row(
@@ -330,12 +381,22 @@ private fun QueueList(ui: PlayerUi) {
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Column(Modifier.weight(1f)) {
-                    Text("Cola", style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        if (ui.loadedName.isNotBlank()) ui.loadedName else "Cola",
+                        style = MaterialTheme.typography.titleMedium,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
                     Text(
                         "${ui.queue.size} canciones" + if (ui.shuffle) " · Aleatorio" else "",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
+                }
+                if (onSave != null && ui.queue.isNotEmpty()) {
+                    IconButton(onClick = onSave) {
+                        Icon(Icons.Default.Save, contentDescription = "Guardar como playlist")
+                    }
                 }
                 IconButton(onClick = { ui.toggleShuffle() }) {
                     Icon(
@@ -400,7 +461,7 @@ private object Images {
 }
 
 @Composable
-private fun Thumb(url: String?, size: Dp) {
+internal fun Thumb(url: String?, size: Dp) {
     val image by produceState(initialValue = url?.let { Images.cached(it) }, url) {
         if (url != null && value == null) {
             value = withContext(Dispatchers.IO) { runCatching { Images.load(url) }.getOrNull() }
@@ -418,5 +479,5 @@ private fun Thumb(url: String?, size: Dp) {
     }
 }
 
-private fun formatTime(seconds: Long): String =
+internal fun formatTime(seconds: Long): String =
     if (seconds <= 0) "" else "%d:%02d".format(seconds / 60, seconds % 60)
