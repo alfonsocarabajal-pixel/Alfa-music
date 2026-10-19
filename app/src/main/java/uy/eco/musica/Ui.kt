@@ -101,13 +101,13 @@ fun EcoTheme(content: @Composable () -> Unit) {
 }
 
 @Composable
-fun EcoScreen(ui: PlayerUi) {
+fun EcoScreen(ui: PlayerUi, access: Access) {
     var query by rememberSaveable { mutableStateOf("") }
     var results by remember { mutableStateOf<List<Song>>(emptyList()) }
     var loading by remember { mutableStateOf(false) }
     var message by remember { mutableStateOf<String?>("Buscá una canción o un artista") }
     var showQueue by rememberSaveable { mutableStateOf(false) }
-    var tab by rememberSaveable { mutableIntStateOf(0) } // 0 = Buscar, 1 = Playlists
+    var tab by rememberSaveable { mutableIntStateOf(0) } // 0 = Buscar, 1 = Playlists, 2 = Invitaciones
     var openPlaylist by rememberSaveable { mutableStateOf<String?>(null) }
     var showSave by remember { mutableStateOf(false) }
     var autoOpened by rememberSaveable { mutableStateOf(false) }
@@ -177,7 +177,7 @@ fun EcoScreen(ui: PlayerUi) {
                     keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                     keyboardActions = KeyboardActions(onSearch = { search() }),
                 )
-                TabRow(selectedTabIndex = tab) {
+                TabRow(selectedTabIndex = if (tab == 2 && !access.isAdmin) 0 else tab) {
                     Tab(
                         selected = !showQueue && tab == 0,
                         onClick = { tab = 0; showQueue = false },
@@ -192,6 +192,13 @@ fun EcoScreen(ui: PlayerUi) {
                         },
                         text = { Text("Playlists") },
                     )
+                    if (access.isAdmin) {
+                        Tab(
+                            selected = !showQueue && tab == 2,
+                            onClick = { tab = 2; showQueue = false },
+                            text = { Text("Invitaciones") },
+                        )
+                    }
                 }
               }
             }
@@ -209,6 +216,7 @@ fun EcoScreen(ui: PlayerUi) {
         ) {
             when {
                 showQueue -> QueueList(ui, onSave = if (Cloud.enabled) ({ showSave = true }) else null)
+                tab == 2 && access.isAdmin -> InvitesScreen(access, notify)
                 tab == 1 -> {
                     val id = openPlaylist
                     if (id == null) PlaylistsList(lists, current = ui.loadedId, onOpen = { openPlaylist = it })

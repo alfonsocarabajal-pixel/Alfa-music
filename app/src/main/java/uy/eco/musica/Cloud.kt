@@ -13,6 +13,9 @@ import java.security.SecureRandom
  * Sin SDK de Firebase: así la app sigue pesando muy poco.
  * Todas las funciones bloquean: llamarlas fuera del hilo principal.
  */
+/** Error HTTP del servidor (404 = no existe, 403 = sin permiso). */
+class HttpError(val code: Int) : IOException("Error $code del servidor")
+
 object Cloud {
 
     private val project = BuildConfig.FS_PROJECT
@@ -20,9 +23,10 @@ object Cloud {
 
     val enabled: Boolean get() = project.isNotBlank() && group.isNotBlank()
 
-    private val docsRoot get() = "projects/$project/databases/(default)/documents"
-    private val collectionPath get() = "$docsRoot/grupos/$group/playlists"
-    private const val API = "https://firestore.googleapis.com/v1/"
+    internal val docsRoot get() = "projects/$project/databases/(default)/documents"
+    internal val groupPath get() = "$docsRoot/grupos/$group"
+    private val collectionPath get() = "$groupPath/playlists"
+    internal const val API = "https://firestore.googleapis.com/v1/"
 
     /** Todas las playlists del grupo, la más reciente primero. */
     fun list(): List<Playlist> {
@@ -67,9 +71,9 @@ object Cloud {
 
     // ---- Formato de Firestore ----
 
-    private fun str(v: String) = JSONObject().put("stringValue", v)
-    private fun int(v: Long) = JSONObject().put("integerValue", v.toString())
-    private fun map(f: JSONObject) = JSONObject().put("mapValue", JSONObject().put("fields", f))
+    internal fun str(v: String) = JSONObject().put("stringValue", v)
+    internal fun int(v: Long) = JSONObject().put("integerValue", v.toString())
+    internal fun map(f: JSONObject) = JSONObject().put("mapValue", JSONObject().put("fields", f))
 
     private fun fields(p: Playlist): JSONObject {
         val songs = JSONArray()
@@ -93,10 +97,10 @@ object Cloud {
             .put("canciones", JSONObject().put("arrayValue", JSONObject().put("values", songs)))
     }
 
-    private fun JSONObject.str(key: String): String =
+    internal fun JSONObject.str(key: String): String =
         optJSONObject(key)?.optString("stringValue").orEmpty()
 
-    private fun JSONObject.long(key: String): Long =
+    internal fun JSONObject.long(key: String): Long =
         optJSONObject(key)?.let { it.optString("integerValue").toLongOrNull() ?: it.optLong("doubleValue") } ?: 0L
 
     private fun parse(doc: JSONObject): Playlist? {
@@ -130,12 +134,13 @@ object Cloud {
 
     // ---- Red ----
 
-    private fun commit(write: JSONObject) {
-        val body = JSONObject().put("writes", JSONArray().put(write)).toString()
-        http("POST", "$API$docsRoot:commit", body)
+    internal fun commit(vararg writes: JSONObject) {
+        val arr = JSONArray()
+        writes.forEach { arr.put(it) }
+        http("POST", "$API$docsRoot:commit", JSONObject().put("writes", arr).toString())
     }
 
-    private fun http(method: String, url: String, body: String? = null): String {
+    internal fun http(method: String, url: String, body: String? = null): String {
         val conn = URL(url).openConnection() as HttpURLConnection
         try {
             conn.connectTimeout = 15_000
@@ -149,14 +154,14 @@ object Cloud {
             val code = conn.responseCode
             val stream = if (code >= 400) conn.errorStream else conn.inputStream
             val text = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
-            if (code >= 400) throw IOException("Error $code del servidor de playlists")
+            if (code >= 400) throw HttpError(code)
             return text
         } finally {
             conn.disconnect()
         }
     }
 
-    private val random = SecureRandom()
+    internal val random = SecureRandom()
     private const val CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
     private fun newId(): String = String(CharArray(20) { CHARS[random.nextInt(CHARS.length)] })

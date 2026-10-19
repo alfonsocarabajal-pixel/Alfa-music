@@ -51,10 +51,29 @@ jobs:
             echo "::add-mask::$FS_GROUP"
             echo "FS_PROJECT=$FS_PROJECT" >> "$GITHUB_ENV"
             echo "FS_GROUP=$FS_GROUP" >> "$GITHUB_ENV"
+            if [ -n "$FS_ADMIN" ]; then
+              echo "::add-mask::$FS_ADMIN"
+              echo "FS_ADMIN=$FS_ADMIN" >> "$GITHUB_ENV"   # solo para la prueba; nunca entra en la app
+            fi
+            if [ -n "$FS_SEED" ]; then echo "FS_SEED=$FS_SEED" >> "$GITHUB_ENV"; fi
             rm -f "$RUNNER_TEMP/nube.env"
           else
             echo "Sin configuración de playlists compartidas: se compila sin esa función."
           fi
+
+      - name: Compilar
+        env:
+          ALFA_KEYSTORE: ${{ runner.temp }}/alfa.jks
+          ALFA_KS_PASS: ${{ secrets.ALFA_KS_PASS }}
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --stacktrace \
+            -PnpeVersion=${{ steps.npe.outputs.tag }} \
+            -PbuildNumber=${{ github.run_number }} \
+            -PfsProject="$FS_PROJECT" \
+            -PfsGroup="$FS_GROUP"
+          mv app/build/outputs/apk/release/app-release.apk AlfaMusic.apk
+          rm -f "$RUNNER_TEMP/alfa.jks"
 
       - name: Verificar Firebase (escribir, leer y borrar una playlist de prueba)
         if: env.FS_PROJECT != ''
@@ -76,19 +95,56 @@ jobs:
           [ "$(echo "$R" | tail -1)" = "200" ] || fail "Firebase rechazó el borrado" "$R"
           echo "Firebase OK: escritura, lectura y borrado funcionan."
 
-      - name: Compilar
-        env:
-          ALFA_KEYSTORE: ${{ runner.temp }}/alfa.jks
-          ALFA_KS_PASS: ${{ secrets.ALFA_KS_PASS }}
+      - name: Verificar invitaciones (reglas de acceso)
+        if: env.FS_ADMIN != ''
         run: |
-          chmod +x gradlew
-          ./gradlew assembleRelease --stacktrace \
-            -PnpeVersion=${{ steps.npe.outputs.tag }} \
-            -PbuildNumber=${{ github.run_number }} \
-            -PfsProject="$FS_PROJECT" \
-            -PfsGroup="$FS_GROUP"
-          mv app/build/outputs/apk/release/app-release.apk AlfaMusic.apk
-          rm -f "$RUNNER_TEMP/alfa.jks"
+          ROOT="projects/$FS_PROJECT/databases/(default)/documents"
+          API="https://firestore.googleapis.com/v1"
+          C=ZZPRUEBA
+          INV="$ROOT/grupos/$FS_GROUP/invitaciones/$C"
+          EMI="$ROOT/grupos/$FS_GROUP/admins/$FS_ADMIN/emitidas/$C"
+          commit() { curl -s -o /tmp/r.txt -w '%{http_code}' -X POST "$API/$ROOT:commit" -H 'Content-Type: application/json' -d "$1"; }
+          expect() { [ "$2" = "$1" ] || { echo "::error::$3 (esperado $1, vino $2). Revisá que las reglas nuevas estén publicadas en Firebase."; head -c 500 /tmp/r.txt; exit 1; }; }
+          # Limpieza de una prueba anterior que haya quedado a medias
+          commit "$(jq -n --arg e "$EMI" --arg i "$INV" '{writes:[{update:{name:$e,fields:{revocada:{integerValue:"1"}}},updateMask:{fieldPaths:["revocada"]}},{delete:$i}]}')" >/dev/null
+          commit "$(jq -n --arg e "$EMI" '{writes:[{delete:$e}]}')" >/dev/null
+
+          INVF='{nombre:{stringValue:"prueba"},creada:{integerValue:"1"},dispositivo:{stringValue:""},modelo:{stringValue:""},activada:{integerValue:"0"}}'
+          S=$(commit "$(jq -n --arg i "$INV" "{writes:[{update:{name:\$i,fields:$INVF}}]}")")
+          expect 403 "$S" "Cualquiera podría crear invitaciones sin la clave de administrador"
+          S=$(commit "$(jq -n --arg e "$EMI" --arg i "$INV" "{writes:[{update:{name:\$e,fields:{nombre:{stringValue:\"prueba\"},creada:{integerValue:\"1\"},revocada:{integerValue:\"0\"}}}},{update:{name:\$i,fields:$INVF}}]}")")
+          expect 200 "$S" "El administrador no pudo crear una invitación"
+          S=$(curl -s -o /tmp/r.txt -w '%{http_code}' "$API/$INV"); expect 200 "$S" "No se pudo leer la invitación"
+          CLAIM='{writes:[{update:{name:$i,fields:{dispositivo:{stringValue:$d},modelo:{stringValue:"ci"},activada:{integerValue:"2"}}},updateMask:{fieldPaths:["dispositivo","modelo","activada"]}}]}'
+          S=$(commit "$(jq -n --arg i "$INV" --arg d tel1 "$CLAIM")"); expect 200 "$S" "No se pudo activar la invitación"
+          S=$(commit "$(jq -n --arg i "$INV" --arg d tel2 "$CLAIM")"); expect 403 "$S" "Un código ya usado se pudo activar en otro teléfono"
+          S=$(curl -s -o /tmp/r.txt -w '%{http_code}' "$API/$ROOT/grupos/$FS_GROUP/admins/CLAVEFALSA/emitidas"); expect 403 "$S" "Se pudo listar invitaciones sin la clave"
+          S=$(commit "$(jq -n --arg i "$INV" '{writes:[{delete:$i}]}')"); expect 403 "$S" "Se pudo borrar una invitación sin la clave"
+          S=$(commit "$(jq -n --arg e "$EMI" --arg i "$INV" '{writes:[{update:{name:$e,fields:{revocada:{integerValue:"3"}}},updateMask:{fieldPaths:["revocada"]}},{delete:$i}]}')")
+          expect 200 "$S" "El administrador no pudo revocar"
+          S=$(commit "$(jq -n --arg e "$EMI" '{writes:[{delete:$e}]}')"); expect 200 "$S" "No se pudo limpiar la prueba"
+          echo "Invitaciones OK: solo el administrador crea y revoca, y cada código sirve para un teléfono."
+
+      - name: Crear invitaciones iniciales (si todavía no existen)
+        if: env.FS_SEED != '' && env.FS_ADMIN != ''
+        run: |
+          ROOT="projects/$FS_PROJECT/databases/(default)/documents"
+          API="https://firestore.googleapis.com/v1"
+          NOW=$(($(date +%s) * 1000))
+          for ITEM in $(echo "$FS_SEED" | tr ',' ' '); do
+            C="${ITEM%%:*}"; N="${ITEM#*:}"
+            BODY=$(jq -n --arg e "$ROOT/grupos/$FS_GROUP/admins/$FS_ADMIN/emitidas/$C" \
+              --arg i "$ROOT/grupos/$FS_GROUP/invitaciones/$C" --arg n "$N" --arg t "$NOW" \
+              '{writes:[
+                {update:{name:$e,fields:{nombre:{stringValue:$n},creada:{integerValue:$t},revocada:{integerValue:"0"}}},currentDocument:{exists:false}},
+                {update:{name:$i,fields:{nombre:{stringValue:$n},creada:{integerValue:$t},dispositivo:{stringValue:""},modelo:{stringValue:""},activada:{integerValue:"0"}}},currentDocument:{exists:false}}]}')
+            S=$(curl -s -o /tmp/r.txt -w '%{http_code}' -X POST "$API/$ROOT:commit" -H 'Content-Type: application/json' -d "$BODY")
+            case "$S" in
+              200) echo "Invitación creada para $N" ;;
+              400|409) echo "La invitación de $N ya existía" ;;
+              *) echo "::error::No se pudo crear la invitación de $N ($S)"; head -c 400 /tmp/r.txt; exit 1 ;;
+            esac
+          done
 
       - name: Publicar para descargar desde el celular
         if: github.ref == 'refs/heads/main'
