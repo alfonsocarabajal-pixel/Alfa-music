@@ -12,6 +12,8 @@ Este enlace siempre baja la última versión. Al abrir el archivo, Android puede
 
 Al abrir la app por primera vez pide un **código de invitación** (una palabra con dos números, como `LUNA27`). Cada código sirve para un solo teléfono. El administrador los crea, comparte y revoca desde la pestaña **Invitaciones**, que solo aparece en su teléfono.
 
+**Grupos:** cada invitación pertenece a un grupo (por ejemplo, Alfas o Familia) y cada grupo tiene sus propias playlists. Los usuarios no ven en qué grupo están; el administrador crea grupos al invitar, mueve personas entre grupos y cambia de grupo desde la pestaña Playlists.
+
 ## Cómo se usa
 
 - **Tocar una canción** la reproduce y arranca la **radio automática**, que agrega canciones parecidas cuando la cola se está por terminar.
