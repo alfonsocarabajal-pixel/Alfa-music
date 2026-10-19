@@ -88,6 +88,14 @@ object Repo {
             .distinctBy { it.id }
     }
 
+    /** Sugerencias de búsqueda de YouTube (corrigen errores de escritura). */
+    fun suggestions(query: String): List<String> =
+        yt.suggestionExtractor.suggestionList(query)
+            .map { it.trim() }
+            .filter { it.isNotBlank() }
+            .distinctBy { it.lowercase() }
+            .take(8)
+
     /** Obtiene la URL directa del audio de mejor calidad. Bloquea: llamar fuera del hilo principal. */
     fun resolve(id: String): Resolved {
         cache[id]?.let { if (System.currentTimeMillis() - it.time < TTL_MS) return it }

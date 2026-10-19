@@ -69,10 +69,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -115,6 +117,10 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     val keyboard = LocalSoftwareKeyboardController.current
+    val focusManager = LocalFocusManager.current
+    var focused by remember { mutableStateOf(false) }
+    var suggestions by remember { mutableStateOf<List<String>>(emptyList()) }
+    var lastSearched by rememberSaveable { mutableStateOf("") }
     val notify: (String) -> Unit = { msg -> scope.launch { snackbar.showSnackbar(msg) } }
 
     // Al abrir la app con una cola guardada, se muestra directamente.
@@ -125,9 +131,26 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
         }
     }
 
-    fun search() {
+    // Sugerencias mientras se escribe (con una pausa corta para no consultar en cada tecla).
+    LaunchedEffect(query, focused) {
         val q = query.trim()
+        if (!focused || q.length < 2 || q.equals(lastSearched, ignoreCase = true)) {
+            suggestions = emptyList()
+            return@LaunchedEffect
+        }
+        delay(250)
+        suggestions = withContext(Dispatchers.IO) {
+            runCatching { Repo.suggestions(q) }.getOrDefault(suggestions)
+        }
+    }
+
+    fun search(text: String = query) {
+        val q = text.trim()
         if (q.isEmpty()) return
+        query = q
+        lastSearched = q
+        suggestions = emptyList()
+        focusManager.clearFocus()
         keyboard?.hide()
         showQueue = false
         tab = 0
@@ -148,6 +171,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
         }
     }
 
+    BackHandler(enabled = focused && suggestions.isNotEmpty()) { focusManager.clearFocus() }
     BackHandler(enabled = showQueue) { showQueue = false }
     BackHandler(enabled = !showQueue && tab == 1 && openPlaylist != null) { openPlaylist = null }
 
@@ -162,14 +186,15 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                     modifier = Modifier
                         .statusBarsPadding()
                         .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 8.dp),
+                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                        .onFocusChanged { focused = it.isFocused },
                     placeholder = { Text("Canciones o artistas") },
                     singleLine = true,
                     shape = RoundedCornerShape(28.dp),
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                     trailingIcon = {
                         if (query.isNotEmpty()) {
-                            IconButton(onClick = { query = "" }) {
+                            IconButton(onClick = { query = ""; lastSearched = "" }) {
                                 Icon(Icons.Default.Close, contentDescription = "Borrar")
                             }
                         }
@@ -215,6 +240,10 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                 .fillMaxSize()
         ) {
             when {
+                focused && suggestions.isNotEmpty() -> SuggestionList(
+                    options = suggestions,
+                    onPick = { search(it) },
+                )
                 showQueue -> QueueList(ui, onSave = if (Cloud.enabled) ({ showSave = true }) else null)
                 tab == 2 && access.isAdmin -> InvitesScreen(access, notify)
                 tab == 1 -> {
@@ -254,6 +283,39 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
 
     if (showSave) {
         SaveQueueDialog(ui, lists, onDismiss = { showSave = false }, notify = notify)
+    }
+}
+
+/** Lista de sugerencias debajo del buscador. */
+@Composable
+private fun SuggestionList(options: List<String>, onPick: (String) -> Unit) {
+    Surface(Modifier.fillMaxSize(), tonalElevation = 1.dp) {
+        LazyColumn(Modifier.fillMaxSize()) {
+            items(options) { text ->
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .clickable { onPick(text) }
+                        .padding(horizontal = 16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Icon(
+                        Icons.Default.Search,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
+                        text,
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(horizontal = 16.dp, vertical = 14.dp),
+                        style = MaterialTheme.typography.bodyLarge,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+            }
+        }
     }
 }
 
