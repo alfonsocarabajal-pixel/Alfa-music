@@ -4,6 +4,17 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.SwapHoriz
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.RadioButton
+import androidx.compose.ui.text.style.TextOverflow
+import java.io.IOException
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -140,21 +151,121 @@ fun ActivationScreen(access: Access, notice: String?, onActivated: () -> Unit) {
     }
 }
 
-/** Pestaña del administrador: crear, compartir y revocar invitaciones. */
+/** Grupos del administrador, cargados desde Firebase. */
+class GroupsState(private val access: Access) {
+    var items by mutableStateOf<List<Group>>(emptyList())
+        private set
+
+    suspend fun refresh() {
+        withContext(Dispatchers.IO) { runCatching { access.listGroups() } }.onSuccess { items = it }
+    }
+
+    fun name(id: String) = items.firstOrNull { it.id == id }?.name ?: if (id == Access.MAIN_GROUP) "Principal" else "…"
+
+    suspend fun create(name: String): Group? =
+        withContext(Dispatchers.IO) { runCatching { access.createGroup(name) } }.getOrNull()
+            ?.also { g -> items = items + g }
+}
+
+/** Selector de grupo en la pestaña Playlists (solo el administrador lo ve). */
+@Composable
+fun GroupSwitcher(access: Access, onChanged: () -> Unit) {
+    val groups = remember { GroupsState(access) }
+    var open by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { groups.refresh() }
+
+    Box {
+        TextButton(onClick = { open = true }) {
+            Text(
+                "Grupo: ${groups.name(Cloud.groupId)}",
+                style = MaterialTheme.typography.titleMedium,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Icon(Icons.Default.ArrowDropDown, contentDescription = "Cambiar de grupo")
+        }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            groups.items.forEach { g ->
+                DropdownMenuItem(
+                    text = { Text(g.name) },
+                    leadingIcon = {
+                        if (g.id == Cloud.groupId) Icon(Icons.Default.Check, contentDescription = null)
+                    },
+                    onClick = {
+                        open = false
+                        if (g.id != Cloud.groupId) {
+                            access.groupId = g.id
+                            onChanged()
+                        }
+                    },
+                )
+            }
+        }
+    }
+}
+
+/** Lista para elegir un grupo, con la opción de crear uno nuevo escribiendo el nombre. */
+@Composable
+private fun GroupChooser(
+    groups: GroupsState,
+    selected: String,
+    newName: String,
+    onSelect: (String) -> Unit,
+    onNewName: (String) -> Unit,
+) {
+    Column {
+        groups.items.forEach { g ->
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clickable { onSelect(g.id) },
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                RadioButton(selected = selected == g.id, onClick = { onSelect(g.id) })
+                Text(g.name)
+            }
+        }
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .clickable { onSelect(NEW_GROUP) },
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            RadioButton(selected = selected == NEW_GROUP, onClick = { onSelect(NEW_GROUP) })
+            Text("Nuevo grupo…")
+        }
+        if (selected == NEW_GROUP) {
+            OutlinedTextField(
+                value = newName,
+                onValueChange = { onNewName(it.take(40)) },
+                label = { Text("Nombre del grupo nuevo") },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        }
+    }
+}
+
+private const val NEW_GROUP = "__nuevo__"
+
+/** Pestaña del administrador: crear, compartir, mover y revocar invitaciones. */
 @Composable
 fun InvitesScreen(access: Access, notify: (String) -> Unit) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    val groups = remember { GroupsState(access) }
     var invites by remember { mutableStateOf<List<Invite>>(emptyList()) }
     var loading by remember { mutableStateOf(false) }
     var loadError by remember { mutableStateOf<String?>(null) }
     var creating by remember { mutableStateOf(false) }
     var created by remember { mutableStateOf<Invite?>(null) }
     var revoking by remember { mutableStateOf<Invite?>(null) }
+    var moving by remember { mutableStateOf<Invite?>(null) }
 
     fun refresh() = scope.launch {
         loading = true
         loadError = null
+        groups.refresh()
         withContext(Dispatchers.IO) { runCatching { access.listInvites() } }
             .onSuccess { invites = it }
             .onFailure { loadError = "No se pudieron cargar las invitaciones. Revisá la conexión." }
@@ -202,8 +313,8 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                             Column(Modifier.weight(1f)) {
                                 Text(inv.name, style = MaterialTheme.typography.bodyLarge)
                                 Text(
-                                    inv.pretty,
-                                    style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace),
+                                    "${inv.pretty} · ${groups.name(inv.group)}",
+                                    style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                                 Text(
@@ -222,6 +333,9 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                                 }
                             }
                             if (inv.revoked == 0L) {
+                                IconButton(onClick = { moving = inv }) {
+                                    Icon(Icons.Default.SwapHoriz, contentDescription = "Cambiar de grupo")
+                                }
                                 IconButton(onClick = { revoking = inv }) {
                                     Icon(Icons.Default.Block, contentDescription = "Revocar")
                                 }
@@ -235,24 +349,34 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
 
     if (creating) {
         var name by remember { mutableStateOf("") }
+        var group by remember { mutableStateOf(Cloud.groupId) }
+        var newGroup by remember { mutableStateOf("") }
         var busy by remember { mutableStateOf(false) }
+        val valid = name.isNotBlank() && (group != NEW_GROUP || newGroup.isNotBlank())
         AlertDialog(
             onDismissRequest = { if (!busy) creating = false },
             title = { Text("Nueva invitación") },
             text = {
-                OutlinedTextField(
-                    value = name,
-                    onValueChange = { name = it.take(40) },
-                    label = { Text("¿Para quién es?") },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth(),
-                )
+                Column(Modifier.verticalScroll(rememberScrollState())) {
+                    OutlinedTextField(
+                        value = name,
+                        onValueChange = { name = it.take(40) },
+                        label = { Text("¿Para quién es?") },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Spacer(Modifier.height(12.dp))
+                    Text("Grupo", style = MaterialTheme.typography.labelLarge)
+                    GroupChooser(groups, group, newGroup, onSelect = { group = it }, onNewName = { newGroup = it })
+                }
             },
             confirmButton = {
-                TextButton(enabled = name.isNotBlank() && !busy, onClick = {
+                TextButton(enabled = valid && !busy, onClick = {
                     busy = true
                     scope.launch {
-                        val r = withContext(Dispatchers.IO) { runCatching { access.createInvite(name) } }
+                        val groupId = if (group == NEW_GROUP) groups.create(newGroup)?.id else group
+                        val r = if (groupId == null) Result.failure<Invite>(IOException())
+                        else withContext(Dispatchers.IO) { runCatching { access.createInvite(name, groupId) } }
                         busy = false
                         r.onSuccess {
                             creating = false
@@ -263,6 +387,45 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                 }) { Text(if (busy) "Creando…" else "Crear código") }
             },
             dismissButton = { TextButton(onClick = { creating = false }, enabled = !busy) { Text("Cancelar") } },
+        )
+    }
+
+    moving?.let { inv ->
+        var group by remember(inv.code) { mutableStateOf(inv.group) }
+        var newGroup by remember(inv.code) { mutableStateOf("") }
+        var busy by remember(inv.code) { mutableStateOf(false) }
+        val valid = group != inv.group && (group != NEW_GROUP || newGroup.isNotBlank())
+        AlertDialog(
+            onDismissRequest = { if (!busy) moving = null },
+            title = { Text("Grupo de ${inv.name}") },
+            text = {
+                Column(Modifier.verticalScroll(rememberScrollState())) {
+                    GroupChooser(groups, group, newGroup, onSelect = { group = it }, onNewName = { newGroup = it })
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        "Se aplica la próxima vez que abra la app.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(enabled = valid && !busy, onClick = {
+                    busy = true
+                    scope.launch {
+                        val groupId = if (group == NEW_GROUP) groups.create(newGroup)?.id else group
+                        val ok = groupId != null &&
+                            withContext(Dispatchers.IO) { runCatching { access.moveInvite(inv.code, groupId) } }.isSuccess
+                        busy = false
+                        if (ok) {
+                            moving = null
+                            invites = invites.map { if (it.code == inv.code) it.copy(group = groupId!!) else it }
+                            notify("${inv.name} ahora está en ${groups.name(groupId!!)}")
+                        } else notify("No se pudo cambiar el grupo. Revisá la conexión.")
+                    }
+                }) { Text(if (busy) "Guardando…" else "Cambiar") }
+            },
+            dismissButton = { TextButton(onClick = { moving = null }, enabled = !busy) { Text("Cancelar") } },
         )
     }
 
@@ -279,7 +442,7 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                     )
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        "Sirve para un solo teléfono. Mandáselo junto con el link de descarga.",
+                        "Grupo: ${groups.name(inv.group)}. Sirve para un solo teléfono. Mandáselo junto con el link de descarga.",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )

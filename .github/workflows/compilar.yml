@@ -55,7 +55,7 @@ jobs:
               echo "::add-mask::$FS_ADMIN"
               echo "FS_ADMIN=$FS_ADMIN" >> "$GITHUB_ENV"   # solo para la prueba; nunca entra en la app
             fi
-            if [ -n "$FS_SEED" ]; then echo "FS_SEED=$FS_SEED" >> "$GITHUB_ENV"; fi
+            if [ -n "$FS_SEED_GRUPOS" ]; then echo "FS_SEED_GRUPOS=$FS_SEED_GRUPOS" >> "$GITHUB_ENV"; fi
             rm -f "$RUNNER_TEMP/nube.env"
           else
             echo "Sin configuración de playlists compartidas: se compila sin esa función."
@@ -120,29 +120,35 @@ jobs:
           S=$(commit "$(jq -n --arg i "$INV" --arg d tel2 "$CLAIM")"); expect 403 "$S" "Un código ya usado se pudo activar en otro teléfono"
           S=$(curl -s -o /tmp/r.txt -w '%{http_code}' "$API/$ROOT/grupos/$FS_GROUP/admins/CLAVEFALSA/emitidas"); expect 403 "$S" "Se pudo listar invitaciones sin la clave"
           S=$(commit "$(jq -n --arg i "$INV" '{writes:[{delete:$i}]}')"); expect 403 "$S" "Se pudo borrar una invitación sin la clave"
+          MOVE_INV='{update:{name:$i,fields:{grupo:{stringValue:"zzotro"}}},updateMask:{fieldPaths:["grupo"]}}'
+          MOVE_EMI='{update:{name:$e,fields:{grupo:{stringValue:"zzotro"}}},updateMask:{fieldPaths:["grupo"]}}'
+          S=$(commit "$(jq -n --arg i "$INV" "{writes:[$MOVE_INV]}")"); expect 403 "$S" "Se pudo cambiar de grupo sin la clave"
+          S=$(commit "$(jq -n --arg e "$EMI" --arg i "$INV" "{writes:[$MOVE_EMI,$MOVE_INV]}")"); expect 200 "$S" "El administrador no pudo cambiar de grupo"
+          S=$(curl -s -o /tmp/r.txt -w '%{http_code}' "$API/$ROOT/grupos/$FS_GROUP/admins/$FS_ADMIN/grupos"); expect 200 "$S" "El administrador no pudo leer los grupos"
+          S=$(curl -s -o /tmp/r.txt -w '%{http_code}' "$API/$ROOT/grupos/$FS_GROUP/admins/CLAVEFALSA/grupos"); expect 403 "$S" "Se pudieron leer los grupos sin la clave"
+          PL="$ROOT/grupos/$FS_GROUP/equipos/zzotro/playlists/zz-prueba"
+          S=$(commit "$(jq -n --arg n "$PL" '{writes:[{update:{name:$n,fields:{nombre:{stringValue:"prueba"},autor:{stringValue:"ci"},actualizada:{integerValue:"0"},canciones:{arrayValue:{values:[]}}}}}]}')")
+          expect 200 "$S" "No se pudo guardar una playlist en un grupo nuevo"
+          S=$(commit "$(jq -n --arg n "$PL" '{writes:[{delete:$n}]}')"); expect 200 "$S" "No se pudo borrar la playlist de prueba del grupo"
           S=$(commit "$(jq -n --arg e "$EMI" --arg i "$INV" '{writes:[{update:{name:$e,fields:{revocada:{integerValue:"3"}}},updateMask:{fieldPaths:["revocada"]}},{delete:$i}]}')")
           expect 200 "$S" "El administrador no pudo revocar"
           S=$(commit "$(jq -n --arg e "$EMI" '{writes:[{delete:$e}]}')"); expect 200 "$S" "No se pudo limpiar la prueba"
-          echo "Invitaciones OK: solo el administrador crea y revoca, y cada código sirve para un teléfono."
+          echo "Invitaciones y grupos OK: solo el administrador crea, mueve y revoca; cada código sirve para un teléfono; cada grupo guarda sus playlists."
 
-      - name: Crear invitaciones iniciales (si todavía no existen)
-        if: env.FS_SEED != '' && env.FS_ADMIN != ''
+      - name: Crear grupos iniciales (si todavía no existen)
+        if: env.FS_SEED_GRUPOS != '' && env.FS_ADMIN != ''
         run: |
           ROOT="projects/$FS_PROJECT/databases/(default)/documents"
           API="https://firestore.googleapis.com/v1"
-          NOW=$(($(date +%s) * 1000))
-          for ITEM in $(echo "$FS_SEED" | tr ',' ' '); do
-            C="${ITEM%%:*}"; N="${ITEM#*:}"
-            BODY=$(jq -n --arg e "$ROOT/grupos/$FS_GROUP/admins/$FS_ADMIN/emitidas/$C" \
-              --arg i "$ROOT/grupos/$FS_GROUP/invitaciones/$C" --arg n "$N" --arg t "$NOW" \
-              '{writes:[
-                {update:{name:$e,fields:{nombre:{stringValue:$n},creada:{integerValue:$t},revocada:{integerValue:"0"}}},currentDocument:{exists:false}},
-                {update:{name:$i,fields:{nombre:{stringValue:$n},creada:{integerValue:$t},dispositivo:{stringValue:""},modelo:{stringValue:""},activada:{integerValue:"0"}}},currentDocument:{exists:false}}]}')
+          for ITEM in $(echo "$FS_SEED_GRUPOS" | tr ',' ' '); do
+            ID="${ITEM%%:*}"; N="${ITEM#*:}"
+            BODY=$(jq -n --arg g "$ROOT/grupos/$FS_GROUP/admins/$FS_ADMIN/grupos/$ID" --arg n "$N" \
+              '{writes:[{update:{name:$g,fields:{nombre:{stringValue:$n}}},currentDocument:{exists:false}}]}')
             S=$(curl -s -o /tmp/r.txt -w '%{http_code}' -X POST "$API/$ROOT:commit" -H 'Content-Type: application/json' -d "$BODY")
             case "$S" in
-              200) echo "Invitación creada para $N" ;;
-              400|409) echo "La invitación de $N ya existía" ;;
-              *) echo "::error::No se pudo crear la invitación de $N ($S)"; head -c 400 /tmp/r.txt; exit 1 ;;
+              200) echo "Grupo creado: $N" ;;
+              400|409) echo "El grupo $N ya existía" ;;
+              *) echo "::error::No se pudo crear el grupo $N ($S)"; head -c 400 /tmp/r.txt; exit 1 ;;
             esac
           done
 

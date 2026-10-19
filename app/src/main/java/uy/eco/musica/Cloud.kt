@@ -1,5 +1,8 @@
 package uy.eco.musica
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -25,7 +28,14 @@ object Cloud {
 
     internal val docsRoot get() = "projects/$project/databases/(default)/documents"
     internal val groupPath get() = "$docsRoot/grupos/$group"
-    private val collectionPath get() = "$groupPath/playlists"
+
+    /** Grupo activo. Lo fija [Access]; la interfaz lo observa para recargar las playlists. */
+    var groupId by mutableStateOf("principal")
+
+    // El grupo principal conserva la ubicación original, así no hubo que mover nada.
+    private val collectionPath
+        get() = if (groupId == "principal") "$groupPath/playlists"
+        else "$groupPath/equipos/$groupId/playlists"
     internal const val API = "https://firestore.googleapis.com/v1/"
 
     /** Todas las playlists del grupo, la más reciente primero. */

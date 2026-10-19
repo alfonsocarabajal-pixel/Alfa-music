@@ -248,7 +248,13 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                 tab == 2 && access.isAdmin -> InvitesScreen(access, notify)
                 tab == 1 -> {
                     val id = openPlaylist
-                    if (id == null) PlaylistsList(lists, current = ui.loadedId, onOpen = { openPlaylist = it })
+                    if (id == null) PlaylistsList(
+                        lists,
+                        current = ui.loadedId,
+                        access = access,
+                        onGroupChanged = { ui.markLoaded(null) },
+                        onOpen = { openPlaylist = it },
+                    )
                     else PlaylistDetail(id, lists, ui, onBack = { openPlaylist = null }, notify = notify)
                 }
                 loading -> CircularProgressIndicator(Modifier.align(Alignment.Center))

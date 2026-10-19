@@ -20,14 +20,18 @@ data class Invite(
     val device: String,
     val model: String,
     val activated: Long,
+    val group: String,
 ) {
     val pretty: String get() = code
 }
 
+/** Un grupo: cada uno tiene sus propias playlists. El nombre solo lo ve el administrador. */
+data class Group(val id: String, val name: String)
+
 /**
- * Control de acceso con códigos de invitación, guardados en Firestore.
+ * Control de acceso con códigos de invitación y grupos, guardados en Firestore.
  * La seguridad la ponen las reglas de Firebase: solo quien conoce la clave de
- * administrador (que no está dentro de la app) puede crear o revocar códigos.
+ * administrador (que no está dentro de la app) puede crear, mover o revocar códigos.
  */
 class Access(context: Context) {
 
@@ -50,13 +54,26 @@ class Access(context: Context) {
         get() = sp.getString("admin", "").orEmpty()
         private set(v) = sp.edit().putString("admin", v).apply()
 
+    /** Grupo cuyas playlists se ven en este teléfono. */
+    var groupId: String
+        get() = sp.getString("grupo", MAIN_GROUP).orEmpty().ifBlank { MAIN_GROUP }
+        set(v) {
+            sp.edit().putString("grupo", v).apply()
+            Cloud.groupId = v
+        }
+
     val isAdmin: Boolean get() = adminKey.isNotBlank()
 
     /** Si Firebase no está configurado, la app no pide código. */
     val activated: Boolean get() = !Cloud.enabled || code.isNotBlank() || isAdmin
 
+    init {
+        Cloud.groupId = groupId
+    }
+
     fun clear() {
         sp.edit().clear().apply()
+        Cloud.groupId = MAIN_GROUP
     }
 
     sealed interface Result {
@@ -84,6 +101,7 @@ class Access(context: Context) {
                     else -> return Result.Rejected("Ese código ya se usó en otro teléfono. Pedile uno nuevo a quien te invitó.")
                 }
                 code = c
+                groupId = inv.group
                 Result.Ok
             }
         } catch (e: HttpError) {
@@ -96,6 +114,7 @@ class Access(context: Context) {
 
     /**
      * Revisión al abrir la app: devuelve false solo si el acceso fue revocado.
+     * También aplica un cambio de grupo hecho por el administrador.
      * Sin internet, deja pasar (ya estaba activado antes).
      */
     fun stillValid(): Boolean = try {
@@ -103,7 +122,13 @@ class Access(context: Context) {
             !Cloud.enabled -> true
             isAdmin -> { listIssued(adminKey); true }
             code.isBlank() -> false
-            else -> getInvite(code)?.device == deviceId
+            else -> {
+                val inv = getInvite(code)
+                if (inv != null && inv.device == deviceId) {
+                    if (inv.group != groupId) groupId = inv.group
+                    true
+                } else false
+            }
         }
     } catch (e: HttpError) {
         !(e.code == 403 || e.code == 404)
@@ -114,8 +139,8 @@ class Access(context: Context) {
     private fun normalize(s: String) = s.uppercase().filter { it in 'A'..'Z' || it in '0'..'9' }
 
     private fun invitePath(c: String) = "${Cloud.groupPath}/invitaciones/$c"
-    private fun issuedPath(key: String, c: String = "") =
-        "${Cloud.groupPath}/admins/$key/emitidas" + if (c.isNotBlank()) "/$c" else ""
+    private fun adminPath(key: String, collection: String, id: String = "") =
+        "${Cloud.groupPath}/admins/$key/$collection" + if (id.isNotBlank()) "/$id" else ""
 
     private fun getInvite(c: String): Invite? = try {
         parseInvite(c, JSONObject(Cloud.http("GET", Cloud.API + invitePath(c))).optJSONObject("fields"))
@@ -131,10 +156,12 @@ class Access(context: Context) {
         Cloud.commit(
             JSONObject()
                 .put("update", JSONObject().put("name", invitePath(c)).put("fields", fields))
-                .put("updateMask", JSONObject().put("fieldPaths", JSONArray(listOf("dispositivo", "modelo", "activada"))))
+                .put("updateMask", mask("dispositivo", "modelo", "activada"))
                 .put("currentDocument", JSONObject().put("exists", true))
         )
     }
+
+    private fun mask(vararg fields: String) = JSONObject().put("fieldPaths", JSONArray(fields.toList()))
 
     private fun parseInvite(c: String, f: JSONObject?): Invite = Invite(
         code = c,
@@ -144,18 +171,22 @@ class Access(context: Context) {
         device = f?.str("dispositivo").orEmpty(),
         model = f?.str("modelo").orEmpty(),
         activated = f?.long("activada") ?: 0,
+        group = f?.str("grupo").orEmpty().ifBlank { MAIN_GROUP }, // las invitaciones viejas son del grupo principal
     )
 
-    // ---- Administrador ----
-
-    private fun listIssued(key: String): List<Invite> {
-        val res = JSONObject(Cloud.http("GET", Cloud.API + issuedPath(key) + "?pageSize=300"))
+    private fun listDocs(path: String): List<Pair<String, JSONObject?>> {
+        val res = JSONObject(Cloud.http("GET", Cloud.API + path + "?pageSize=300"))
         val docs = res.optJSONArray("documents") ?: return emptyList()
         return (0 until docs.length()).map { i ->
             val d = docs.getJSONObject(i)
-            parseInvite(d.optString("name").substringAfterLast('/'), d.optJSONObject("fields"))
+            d.optString("name").substringAfterLast('/') to d.optJSONObject("fields")
         }
     }
+
+    // ---- Administrador ----
+
+    private fun listIssued(key: String): List<Invite> =
+        listDocs(adminPath(key, "emitidas")).map { (id, f) -> parseInvite(id, f) }
 
     /** Todas las invitaciones, con su estado de activación. La más nueva primero. */
     fun listInvites(): List<Invite> = listIssued(adminKey).map { issued ->
@@ -163,11 +194,31 @@ class Access(context: Context) {
         else {
             val live = runCatching { getInvite(issued.code) }.getOrNull()
             if (live == null) issued
-            else issued.copy(device = live.device, model = live.model, activated = live.activated)
+            else issued.copy(device = live.device, model = live.model, activated = live.activated, group = live.group)
         }
     }.sortedByDescending { it.created }
 
-    fun createInvite(name: String): Invite {
+    /** Los grupos, con el principal primero. */
+    fun listGroups(): List<Group> {
+        val groups = listDocs(adminPath(adminKey, "grupos"))
+            .map { (id, f) -> Group(id, f?.str("nombre").orEmpty().ifBlank { "Sin nombre" }) }
+        val main = groups.firstOrNull { it.id == MAIN_GROUP } ?: Group(MAIN_GROUP, "Principal")
+        return listOf(main) + groups.filter { it.id != MAIN_GROUP }.sortedBy { it.name.lowercase() }
+    }
+
+    fun createGroup(name: String): Group {
+        val id = String(CharArray(12) { GROUP_CHARS[Cloud.random.nextInt(GROUP_CHARS.length)] })
+        val n = name.trim().take(40).ifBlank { "Sin nombre" }
+        Cloud.commit(
+            JSONObject().put(
+                "update", JSONObject().put("name", adminPath(adminKey, "grupos", id))
+                    .put("fields", JSONObject().put("nombre", str(n)))
+            ).put("currentDocument", JSONObject().put("exists", false))
+        )
+        return Group(id, n)
+    }
+
+    fun createInvite(name: String, group: String): Invite {
         repeat(5) {
             val c = WORDS[Cloud.random.nextInt(WORDS.size)] + (10 + Cloud.random.nextInt(90))
             val now = System.currentTimeMillis()
@@ -175,11 +226,12 @@ class Access(context: Context) {
             try {
                 Cloud.commit(
                     JSONObject().put(
-                        "update", JSONObject().put("name", issuedPath(adminKey, c)).put(
+                        "update", JSONObject().put("name", adminPath(adminKey, "emitidas", c)).put(
                             "fields", JSONObject()
                                 .put("nombre", str(n))
                                 .put("creada", int(now))
                                 .put("revocada", int(0))
+                                .put("grupo", str(group))
                         )
                     ).put("currentDocument", JSONObject().put("exists", false)),
                     JSONObject().put(
@@ -190,10 +242,11 @@ class Access(context: Context) {
                                 .put("dispositivo", str(""))
                                 .put("modelo", str(""))
                                 .put("activada", int(0))
+                                .put("grupo", str(group))
                         )
                     ).put("currentDocument", JSONObject().put("exists", false)),
                 )
-                return Invite(c, n, now, 0, "", "", 0)
+                return Invite(c, n, now, 0, "", "", 0, group)
             } catch (e: HttpError) {
                 if (e.code != 400 && e.code != 409) throw e // 409/400: el código ya existía, se prueba otro
             }
@@ -201,19 +254,37 @@ class Access(context: Context) {
         throw IOException("No se pudo crear el código")
     }
 
+    /** Cambia a alguien de grupo. Se aplica la próxima vez que abra la app. */
+    fun moveInvite(c: String, group: String) {
+        val g = JSONObject().put("grupo", str(group))
+        Cloud.commit(
+            JSONObject()
+                .put("update", JSONObject().put("name", adminPath(adminKey, "emitidas", c)).put("fields", g))
+                .put("updateMask", mask("grupo")),
+            JSONObject()
+                .put("update", JSONObject().put("name", invitePath(c)).put("fields", g))
+                .put("updateMask", mask("grupo"))
+                .put("currentDocument", JSONObject().put("exists", true)),
+        )
+    }
+
     fun revoke(c: String) {
         Cloud.commit(
             JSONObject()
                 .put(
-                    "update", JSONObject().put("name", issuedPath(adminKey, c))
+                    "update", JSONObject().put("name", adminPath(adminKey, "emitidas", c))
                         .put("fields", JSONObject().put("revocada", int(System.currentTimeMillis())))
                 )
-                .put("updateMask", JSONObject().put("fieldPaths", JSONArray(listOf("revocada")))),
+                .put("updateMask", mask("revocada")),
             JSONObject().put("delete", invitePath(c)),
         )
     }
 
     companion object {
+        /** El grupo original (el de las playlists que ya existían). */
+        const val MAIN_GROUP = "principal"
+        private const val GROUP_CHARS = "abcdefghijkmnpqrstuvwxyz23456789"
+
         /** Palabras cortas y fáciles de recordar para los códigos (sin tildes ni Ñ). */
         val WORDS = listOf(
             "SOL", "LUNA", "MAR", "RIO", "NUBE", "ROCK", "JAZZ", "SALSA", "TANGO", "BLUES",

@@ -59,10 +59,18 @@ class SharedLists {
     var loadedOnce by mutableStateOf(false)
         private set
 
+    private var loadedGroup = ""
+
     fun byId(id: String) = items.firstOrNull { it.id == id }
 
     suspend fun refresh() {
         if (!Cloud.enabled) return
+        if (Cloud.groupId != loadedGroup) {
+            // Cambió el grupo: no se muestran las playlists del grupo anterior mientras carga.
+            items = emptyList()
+            loadedOnce = false
+            loadedGroup = Cloud.groupId
+        }
         loading = true
         error = null
         withContext(Dispatchers.IO) { runCatching { Cloud.list() } }
@@ -90,10 +98,12 @@ class SharedLists {
 fun PlaylistsList(
     lists: SharedLists,
     current: String,
+    access: Access,
+    onGroupChanged: () -> Unit,
     onOpen: (String) -> Unit,
 ) {
     val scope = rememberCoroutineScope()
-    LaunchedEffect(Unit) { lists.refresh() }
+    LaunchedEffect(Cloud.groupId) { lists.refresh() }
 
     if (!Cloud.enabled) {
         CenterMessage("Las playlists compartidas todavía no están configuradas.")
@@ -107,7 +117,11 @@ fun PlaylistsList(
                 .padding(start = 16.dp, end = 4.dp, top = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("Playlists del grupo", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+            if (access.isAdmin) {
+                Box(Modifier.weight(1f)) { GroupSwitcher(access, onGroupChanged) }
+            } else {
+                Text("Playlists del grupo", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+            }
             IconButton(onClick = { scope.launch { lists.refresh() } }) {
                 Icon(Icons.Default.Refresh, contentDescription = "Actualizar")
             }
