@@ -114,8 +114,8 @@ fun ActivationScreen(access: Access, notice: String?, onActivated: () -> Unit) {
             Spacer(Modifier.height(24.dp))
             OutlinedTextField(
                 value = input,
-                onValueChange = { input = it.uppercase().take(24) },
-                placeholder = { Text("ALFA-XXXX-XXXX") },
+                onValueChange = { input = it.uppercase().take(30) },
+                placeholder = { Text("Ej.: LUNA27") },
                 singleLine = true,
                 enabled = !busy,
                 textStyle = MaterialTheme.typography.titleMedium.copy(fontFamily = FontFamily.Monospace),

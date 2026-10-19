@@ -21,7 +21,7 @@ data class Invite(
     val model: String,
     val activated: Long,
 ) {
-    val pretty: String get() = "ALFA-${code.take(4)}-${code.drop(4)}"
+    val pretty: String get() = code
 }
 
 /**
@@ -75,8 +75,8 @@ class Access(context: Context) {
                 adminKey = norm
                 Result.Ok
             } else {
-                val c = norm.removePrefix("ALFA")
-                if (c.length != 8) return Result.Rejected("El código tiene que ser como ALFA-XXXX-XXXX.")
+                val c = norm
+                if (c.length !in 3..16) return Result.Rejected("Revisá el código: es una palabra con dos números, como LUNA27.")
                 val inv = getInvite(c) ?: return Result.Rejected("Ese código no existe o fue revocado.")
                 when (inv.device) {
                     deviceId -> Unit
@@ -111,7 +111,7 @@ class Access(context: Context) {
         true
     }
 
-    private fun normalize(s: String) = s.uppercase().filter { it in ALPHABET || it in 'A'..'Z' || it in '0'..'9' }
+    private fun normalize(s: String) = s.uppercase().filter { it in 'A'..'Z' || it in '0'..'9' }
 
     private fun invitePath(c: String) = "${Cloud.groupPath}/invitaciones/$c"
     private fun issuedPath(key: String, c: String = "") =
@@ -169,7 +169,7 @@ class Access(context: Context) {
 
     fun createInvite(name: String): Invite {
         repeat(5) {
-            val c = String(CharArray(8) { ALPHABET[Cloud.random.nextInt(ALPHABET.length)] })
+            val c = WORDS[Cloud.random.nextInt(WORDS.size)] + (10 + Cloud.random.nextInt(90))
             val now = System.currentTimeMillis()
             val n = name.trim().take(40).ifBlank { "Sin nombre" }
             try {
@@ -214,7 +214,14 @@ class Access(context: Context) {
     }
 
     companion object {
-        /** Sin letras ni números que se confundan (0/O, 1/I/L). */
-        const val ALPHABET = "23456789ABCDEFGHJKMNPQRSTUVWXYZ"
+        /** Palabras cortas y fáciles de recordar para los códigos (sin tildes ni Ñ). */
+        val WORDS = listOf(
+            "SOL", "LUNA", "MAR", "RIO", "NUBE", "ROCK", "JAZZ", "SALSA", "TANGO", "BLUES",
+            "FUNK", "DISCO", "PIANO", "BAJO", "VOZ", "RITMO", "BAILE", "FIESTA", "PLAYA", "ISLA",
+            "VIENTO", "FUEGO", "TIGRE", "LEON", "LOBO", "OSO", "GATO", "PUMA", "PANDA", "KOALA",
+            "MANGO", "LIMON", "COCO", "KIWI", "MENTA", "CAFE", "MATE", "TORTA", "OLA", "DUNA",
+            "SELVA", "CIELO", "ROSA", "MAGIA", "ECO", "RADIO", "BOMBO", "CUMBIA", "MURGA", "CANDOMBE",
+            "TRUENO", "RAYO", "NIEVE", "LAGO", "MONTE", "PAMPA", "COMETA", "PLANETA", "ROBOT", "NINJA",
+        )
     }
 }
