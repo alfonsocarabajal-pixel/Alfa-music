@@ -8,6 +8,10 @@ Reproductor de música personal para Android: buscás, tocás y suena por stream
 
 Este enlace siempre baja la última versión. Al abrir el archivo, Android puede pedir permitir "instalar apps desconocidas" desde el navegador: hay que permitirlo para instalar. Las versiones nuevas se instalan encima sin perder nada.
 
+## Acceso
+
+Al abrir la app por primera vez pide un **código de invitación** (una palabra con dos números, como `LUNA27`). Cada código sirve para un solo teléfono. El administrador los crea, comparte y revoca desde la pestaña **Invitaciones**, que solo aparece en su teléfono.
+
 ## Cómo se usa
 
 - **Tocar una canción** la reproduce y arranca la **radio automática**, que agrega canciones parecidas cuando la cola se está por terminar.
