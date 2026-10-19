@@ -13,6 +13,9 @@ Este enlace siempre baja la última versión. Al abrir el archivo, Android puede
 - **Tocar una canción** la reproduce y arranca la **radio automática**, que agrega canciones parecidas cuando la cola se está por terminar.
 - **Botón +**: agrega la canción a la cola, antes de las sugerencias de la radio.
 - **Botón de cola** (abajo a la derecha): tocá una canción para saltar a ella, ✕ para quitarla, y el botón 🔀 activa o desactiva el **modo aleatorio**.
+- **Pestaña Playlists**: las playlists de todo el grupo. Cualquiera puede reproducirlas, renombrarlas, quitarles canciones o borrarlas.
+- **Botón 💾 en la cola**: guarda la cola como playlist con nombre. Si cargaste una playlist y le agregaste canciones, con el mismo nombre se actualiza.
+- Al abrir la app aparece la última cola de ese teléfono, en pausa donde había quedado.
 - Sigue sonando con la pantalla apagada, con controles en la notificación, la pantalla bloqueada y los auriculares.
 
 ## Mantenimiento
@@ -27,4 +30,5 @@ Proyecto de uso personal. Usa la API interna de YouTube (no oficial): puede deja
 - Kotlin + Jetpack Compose, Media3 (ExoPlayer + MediaSession) y NewPipe Extractor.
 - Sin base de datos, sin login y sin librerías extra de imágenes ni de red.
 - El audio se resuelve recién al reproducir cada canción (`ytm://ID` → URL directa), así los enlaces nunca vencen en la cola.
+- Las playlists compartidas se guardan en Firebase Firestore (API REST, sin SDK). El proyecto y el código del grupo están cifrados en `config/nube.env.enc`; antes de publicar, la compilación prueba escribir, leer y borrar en Firebase.
 - La clave de firma está cifrada en `keystore/alfa.jks.enc`; la compilación la descifra con el secreto `ALFA_KS_PASS`.
