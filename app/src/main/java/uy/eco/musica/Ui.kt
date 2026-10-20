@@ -51,6 +51,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -225,6 +226,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                         )
                     }
                 }
+                UpdateBanner()
               }
             }
         },
@@ -289,6 +291,73 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
 
     if (showSave) {
         SaveQueueDialog(ui, lists, onDismiss = { showSave = false }, notify = notify)
+    }
+}
+
+/** Aviso de versión nueva, con descarga e instalación dentro de la app. */
+@Composable
+private fun UpdateBanner() {
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var release by remember { mutableStateOf<Updater.Release?>(null) }
+    var dismissed by rememberSaveable { mutableStateOf(false) }
+    var progress by remember { mutableStateOf<Float?>(null) }
+    var note by remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(Unit) { release = withContext(Dispatchers.IO) { Updater.check() } }
+
+    val r = release ?: return
+    if (dismissed) return
+
+    fun start() {
+        if (!Updater.canInstall(context)) {
+            note = "Activá «Permitir de esta fuente» y volvé a tocar Actualizar."
+            Updater.openInstallPermission(context)
+            return
+        }
+        note = null
+        progress = 0f
+        scope.launch {
+            val ok = withContext(Dispatchers.IO) {
+                runCatching { Updater.downloadAndInstall(context, r) { p -> progress = p } }.isSuccess
+            }
+            if (!ok) {
+                progress = null
+                note = "No se pudo descargar. Revisá la conexión y probá de nuevo."
+            }
+        }
+    }
+
+    Surface(color = MaterialTheme.colorScheme.primaryContainer, modifier = Modifier.fillMaxWidth()) {
+        Column(Modifier.padding(start = 16.dp, end = 8.dp, top = 8.dp, bottom = 8.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    if (progress == null) "Hay una versión nueva de Alfa Music" else "Descargando la actualización…",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                    modifier = Modifier.weight(1f),
+                )
+                if (progress == null) {
+                    TextButton(onClick = { dismissed = true }) { Text("Más tarde") }
+                    TextButton(onClick = { start() }) { Text("Actualizar") }
+                }
+            }
+            progress?.let { p ->
+                LinearProgressIndicator(
+                    progress = { p },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 6.dp, end = 8.dp),
+                )
+            }
+            note?.let {
+                Text(
+                    it,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                )
+            }
+        }
     }
 }
 
