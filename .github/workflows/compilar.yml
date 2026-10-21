@@ -118,6 +118,8 @@ jobs:
           CLAIM='{writes:[{update:{name:$i,fields:{dispositivo:{stringValue:$d},modelo:{stringValue:"ci"},activada:{integerValue:"2"}}},updateMask:{fieldPaths:["dispositivo","modelo","activada"]}}]}'
           S=$(commit "$(jq -n --arg i "$INV" --arg d tel1 "$CLAIM")"); expect 200 "$S" "No se pudo activar la invitación"
           S=$(commit "$(jq -n --arg i "$INV" --arg d tel2 "$CLAIM")"); expect 403 "$S" "Un código ya usado se pudo activar en otro teléfono"
+          REPORT='{writes:[{update:{name:$i,fields:{version:{integerValue:"99"},visto:{integerValue:"5"}}},updateMask:{fieldPaths:["version","visto"]}}]}'
+          S=$(commit "$(jq -n --arg i "$INV" "$REPORT")"); expect 200 "$S" "La app no pudo informar su versión"
           S=$(curl -s -o /tmp/r.txt -w '%{http_code}' "$API/$ROOT/grupos/$FS_GROUP/admins/CLAVEFALSA/emitidas"); expect 403 "$S" "Se pudo listar invitaciones sin la clave"
           S=$(commit "$(jq -n --arg i "$INV" '{writes:[{delete:$i}]}')"); expect 403 "$S" "Se pudo borrar una invitación sin la clave"
           MOVE_INV='{update:{name:$i,fields:{grupo:{stringValue:"zzotro"}}},updateMask:{fieldPaths:["grupo"]}}'

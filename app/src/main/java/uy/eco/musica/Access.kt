@@ -21,6 +21,8 @@ data class Invite(
     val model: String,
     val activated: Long,
     val group: String,
+    val version: Int = 0,   // versión de la app que tiene instalada (0 = todavía no informó)
+    val seen: Long = 0,     // última vez que abrió la app
 ) {
     val pretty: String get() = code
 }
@@ -102,6 +104,7 @@ class Access(context: Context) {
                 }
                 code = c
                 groupId = inv.group
+                runCatching { reportUse() }
                 Result.Ok
             }
         } catch (e: HttpError) {
@@ -126,6 +129,7 @@ class Access(context: Context) {
                 val inv = getInvite(code)
                 if (inv != null && inv.device == deviceId) {
                     if (inv.group != groupId) groupId = inv.group
+                    runCatching { reportUse() }
                     true
                 } else false
             }
@@ -161,6 +165,19 @@ class Access(context: Context) {
         )
     }
 
+    /** Anota en la invitación qué versión tiene este teléfono y cuándo abrió la app. */
+    private fun reportUse() {
+        val fields = JSONObject()
+            .put("version", int(BuildConfig.VERSION_CODE.toLong()))
+            .put("visto", int(System.currentTimeMillis()))
+        Cloud.commit(
+            JSONObject()
+                .put("update", JSONObject().put("name", invitePath(code)).put("fields", fields))
+                .put("updateMask", mask("version", "visto"))
+                .put("currentDocument", JSONObject().put("exists", true))
+        )
+    }
+
     private fun mask(vararg fields: String) = JSONObject().put("fieldPaths", JSONArray(fields.toList()))
 
     private fun parseInvite(c: String, f: JSONObject?): Invite = Invite(
@@ -171,6 +188,8 @@ class Access(context: Context) {
         device = f?.str("dispositivo").orEmpty(),
         model = f?.str("modelo").orEmpty(),
         activated = f?.long("activada") ?: 0,
+        version = (f?.long("version") ?: 0).toInt(),
+        seen = f?.long("visto") ?: 0,
         group = f?.str("grupo").orEmpty().ifBlank { MAIN_GROUP }, // las invitaciones viejas son del grupo principal
     )
 
@@ -194,7 +213,10 @@ class Access(context: Context) {
         else {
             val live = runCatching { getInvite(issued.code) }.getOrNull()
             if (live == null) issued
-            else issued.copy(device = live.device, model = live.model, activated = live.activated, group = live.group)
+            else issued.copy(
+                device = live.device, model = live.model, activated = live.activated,
+                group = live.group, version = live.version, seen = live.seen,
+            )
         }
     }.sortedByDescending { it.created }
 

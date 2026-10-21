@@ -261,11 +261,13 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
     var created by remember { mutableStateOf<Invite?>(null) }
     var revoking by remember { mutableStateOf<Invite?>(null) }
     var moving by remember { mutableStateOf<Invite?>(null) }
+    var latest by remember { mutableStateOf<Int?>(null) }
 
     fun refresh() = scope.launch {
         loading = true
         loadError = null
         groups.refresh()
+        if (latest == null) latest = withContext(Dispatchers.IO) { Updater.latestVersion() }
         withContext(Dispatchers.IO) { runCatching { access.listInvites() } }
             .onSuccess { invites = it }
             .onFailure { loadError = "No se pudieron cargar las invitaciones. Revisá la conexión." }
@@ -326,6 +328,15 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                                         else -> MaterialTheme.colorScheme.onSurfaceVariant
                                     },
                                 )
+                                if (inv.revoked == 0L && inv.activated > 0) {
+                                    val outdated = latest != null && inv.version in 1 until latest!!
+                                    Text(
+                                        usage(inv, latest),
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = if (outdated || inv.version == 0) MaterialTheme.colorScheme.tertiary
+                                        else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
                             }
                             if (inv.revoked == 0L && inv.activated == 0L) {
                                 IconButton(onClick = { share(context, inv) }) {
@@ -482,6 +493,23 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
             dismissButton = { TextButton(onClick = { revoking = null }) { Text("Cancelar") } },
         )
     }
+}
+
+private fun usage(inv: Invite, latest: Int?): String {
+    val version = when {
+        inv.version == 0 -> "Versión desconocida (todavía no actualizó)"
+        latest != null && inv.version < latest -> "Versión ${inv.version} · desactualizada (la última es la $latest)"
+        else -> "Versión ${inv.version} · al día"
+    }
+    if (inv.seen == 0L) return version
+    val days = ((System.currentTimeMillis() - inv.seen) / 86_400_000L).toInt()
+    val seen = when {
+        days <= 0 -> "usó la app hoy"
+        days == 1 -> "usó la app ayer"
+        days < 30 -> "usó la app hace $days días"
+        else -> "usó la app el " + SimpleDateFormat("d/M/yyyy", Locale("es", "UY")).format(Date(inv.seen))
+    }
+    return "$version · $seen"
 }
 
 private fun status(inv: Invite): String {

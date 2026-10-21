@@ -50,6 +50,22 @@ object Updater {
         }
     }
 
+    /** Número de la última versión publicada (null si no se pudo consultar). Bloquea. */
+    fun latestVersion(): Int? {
+        val conn = URL(LATEST).openConnection() as HttpURLConnection
+        return try {
+            conn.connectTimeout = 10_000
+            conn.readTimeout = 10_000
+            if (conn.responseCode != 200) return null
+            JSONObject(conn.inputStream.bufferedReader().use { it.readText() })
+                .optString("tag_name").removePrefix("v").toIntOrNull()
+        } catch (e: Exception) {
+            null
+        } finally {
+            conn.disconnect()
+        }
+    }
+
     /** ¿Android ya le permite a la app instalar actualizaciones? */
     fun canInstall(context: Context): Boolean = context.packageManager.canRequestPackageInstalls()
 
