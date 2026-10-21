@@ -1,5 +1,9 @@
 package uy.eco.musica
 
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -85,6 +89,19 @@ class SharedLists {
             ?: return null
         items = (listOf(saved) + items.filter { it.id != saved.id }).sortedByDescending { it.updated }
         return saved
+    }
+
+    enum class AddResult { ADDED, ALREADY_THERE, FAILED }
+
+    /**
+     * Suma una canción al final de una playlist. Antes trae la versión actual del servidor,
+     * así no se pisan cambios que otro haya hecho mientras tanto.
+     */
+    suspend fun addSong(id: String, song: Song): AddResult {
+        val fresh = withContext(Dispatchers.IO) { runCatching { Cloud.get(id) } }.getOrNull()
+            ?: return AddResult.FAILED
+        if (fresh.songs.any { it.id == song.id }) return AddResult.ALREADY_THERE
+        return if (save(fresh.copy(songs = fresh.songs + song)) != null) AddResult.ADDED else AddResult.FAILED
     }
 
     suspend fun delete(id: String): Boolean {
@@ -283,6 +300,141 @@ fun PlaylistDetail(
             dismissButton = { TextButton(onClick = { deleting = false }) { Text("Cancelar") } },
         )
     }
+}
+
+/** Elegir a qué playlist del grupo sumar una canción (o crear una nueva con ella). */
+@Composable
+fun AddToPlaylistDialog(
+    song: Song,
+    ui: PlayerUi,
+    lists: SharedLists,
+    onDismiss: () -> Unit,
+    notify: (String) -> Unit,
+) {
+    val scope = rememberCoroutineScope()
+    var busy by remember { mutableStateOf(false) }
+    var creating by remember { mutableStateOf(false) }
+    var newName by remember { mutableStateOf("") }
+    var author by remember { mutableStateOf(ui.prefs.author) }
+    val askAuthor = remember { ui.prefs.author.isBlank() }
+
+    LaunchedEffect(Unit) { if (!lists.loadedOnce) lists.refresh() }
+
+    fun addTo(p: Playlist) {
+        busy = true
+        scope.launch {
+            val r = lists.addSong(p.id, song)
+            busy = false
+            when (r) {
+                SharedLists.AddResult.ADDED -> {
+                    lists.byId(p.id)?.let { ui.onPlaylistChanged(it) }
+                    notify("Agregada a «${p.name}»")
+                    onDismiss()
+                }
+                SharedLists.AddResult.ALREADY_THERE -> notify("Ya estaba en «${p.name}»")
+                SharedLists.AddResult.FAILED -> notify("No se pudo agregar. Revisá la conexión.")
+            }
+        }
+    }
+
+    fun createWithSong() {
+        busy = true
+        if (author.isNotBlank()) ui.prefs.author = author
+        scope.launch {
+            val saved = lists.save(Playlist("", newName.trim(), author.trim(), 0, listOf(song)))
+            busy = false
+            if (saved == null) notify("No se pudo crear la playlist. Revisá la conexión.")
+            else {
+                notify("Playlist «${saved.name}» creada")
+                onDismiss()
+            }
+        }
+    }
+
+    AlertDialog(
+        onDismissRequest = { if (!busy) onDismiss() },
+        title = { Text("Agregar a playlist") },
+        text = {
+            Column {
+                Text(
+                    "${song.title}" + if (song.artist.isNotBlank()) " · ${song.artist}" else "",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Spacer(Modifier.height(8.dp))
+                if (creating) {
+                    OutlinedTextField(
+                        value = newName,
+                        onValueChange = { newName = it.take(80) },
+                        label = { Text("Nombre de la playlist nueva") },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    if (askAuthor) {
+                        Spacer(Modifier.height(8.dp))
+                        OutlinedTextField(
+                            value = author,
+                            onValueChange = { author = it.take(40) },
+                            label = { Text("Tu nombre (para el grupo)") },
+                            singleLine = true,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
+                } else {
+                    LazyColumn(Modifier.heightIn(max = 360.dp)) {
+                        item {
+                            TextButton(onClick = { creating = true }, enabled = !busy) {
+                                Icon(Icons.Default.Add, contentDescription = null)
+                                Spacer(Modifier.width(8.dp))
+                                Text("Nueva playlist…")
+                            }
+                        }
+                        if (lists.loading && lists.items.isEmpty()) {
+                            item {
+                                Box(Modifier.fillMaxWidth().padding(16.dp), contentAlignment = Alignment.Center) {
+                                    CircularProgressIndicator()
+                                }
+                            }
+                        }
+                        items(lists.items, key = { it.id }) { p ->
+                            val already = p.songs.any { it.id == song.id }
+                            Row(
+                                Modifier
+                                    .fillMaxWidth()
+                                    .clickable(enabled = !busy && !already) { addTo(p) }
+                                    .padding(horizontal = 12.dp, vertical = 12.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Column(Modifier.weight(1f)) {
+                                    Text(p.name, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                                    Text(
+                                        if (already) "Ya la tiene" else "${p.songs.size} canciones",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                                if (already) Icon(Icons.Default.Check, contentDescription = null)
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            if (creating) {
+                TextButton(enabled = newName.isNotBlank() && !busy, onClick = { createWithSong() }) {
+                    Text(if (busy) "Creando…" else "Crear")
+                }
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = { if (creating) creating = false else onDismiss() }, enabled = !busy) {
+                Text(if (creating) "Volver" else "Cancelar")
+            }
+        },
+    )
 }
 
 /** Diálogo para guardar la cola actual como playlist del grupo. */

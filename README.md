@@ -18,6 +18,7 @@ Al abrir la app por primera vez pide un **código de invitación** (una palabra 
 
 - **Tocar una canción** la reproduce y arranca la **radio automática**, que agrega canciones parecidas cuando la cola se está por terminar.
 - **Buscador con sugerencias**: mientras escribís aparecen nombres sugeridos (corrigen errores de escritura); tocá uno para buscarlo.
+- **Botón ≡+ (agregar a playlist)**: en los resultados y en la cola; suma la canción a cualquier playlist del grupo o crea una nueva con ella.
 - **Botón +**: agrega la canción a la cola, antes de las sugerencias de la radio.
 - **Botón de cola** (abajo a la derecha): tocá una canción para saltar a ella, ✕ para quitarla, y el botón 🔀 activa o desactiva el **modo aleatorio**.
 - **Pestaña Playlists**: las playlists de todo el grupo. Cualquiera puede reproducirlas, renombrarlas, quitarles canciones o borrarlas.

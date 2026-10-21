@@ -28,6 +28,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.PlaylistAdd
 import androidx.compose.material.icons.automirrored.filled.QueueMusic
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
@@ -113,6 +114,8 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
     var tab by rememberSaveable { mutableIntStateOf(0) } // 0 = Buscar, 1 = Playlists, 2 = Invitaciones
     var openPlaylist by rememberSaveable { mutableStateOf<String?>(null) }
     var showSave by remember { mutableStateOf(false) }
+    var addTarget by remember { mutableStateOf<Song?>(null) }
+    val onAdd: ((Song) -> Unit)? = if (Cloud.enabled) ({ addTarget = it }) else null
     var autoOpened by rememberSaveable { mutableStateOf(false) }
     val lists = remember { SharedLists() }
     val snackbar = remember { SnackbarHostState() }
@@ -246,7 +249,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                     options = suggestions,
                     onPick = { search(it) },
                 )
-                showQueue -> QueueList(ui, onSave = if (Cloud.enabled) ({ showSave = true }) else null)
+                showQueue -> QueueList(ui, onSave = if (Cloud.enabled) ({ showSave = true }) else null, onAdd = onAdd)
                 tab == 2 && access.isAdmin -> InvitesScreen(access, notify)
                 tab == 1 -> {
                     val id = openPlaylist
@@ -279,6 +282,11 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                             highlighted = ui.current?.mediaId == song.id,
                             onClick = { ui.playNow(song) },
                         ) {
+                            if (onAdd != null) {
+                                IconButton(onClick = { onAdd(song) }) {
+                                    Icon(Icons.AutoMirrored.Filled.PlaylistAdd, contentDescription = "Agregar a playlist")
+                                }
+                            }
                             IconButton(onClick = { ui.enqueue(song) }) {
                                 Icon(Icons.Default.Add, contentDescription = "Agregar a la cola")
                             }
@@ -291,6 +299,9 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
 
     if (showSave) {
         SaveQueueDialog(ui, lists, onDismiss = { showSave = false }, notify = notify)
+    }
+    addTarget?.let { song ->
+        AddToPlaylistDialog(song, ui, lists, onDismiss = { addTarget = null }, notify = notify)
     }
 }
 
@@ -516,7 +527,7 @@ private fun MiniPlayer(ui: PlayerUi, queueOpen: Boolean, onQueue: () -> Unit) {
 }
 
 @Composable
-private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?) {
+private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?, onAdd: ((Song) -> Unit)?) {
     LazyColumn(Modifier.fillMaxSize()) {
         item {
             Row(
@@ -567,6 +578,11 @@ private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?) {
                 highlighted = i == ui.index,
                 onClick = { ui.playAt(i) },
             ) {
+                if (onAdd != null) {
+                    IconButton(onClick = { onAdd(item.toSong()) }) {
+                        Icon(Icons.AutoMirrored.Filled.PlaylistAdd, contentDescription = "Agregar a playlist")
+                    }
+                }
                 if (i != ui.index) {
                     IconButton(onClick = { ui.remove(i) }) {
                         Icon(Icons.Default.Close, contentDescription = "Quitar")

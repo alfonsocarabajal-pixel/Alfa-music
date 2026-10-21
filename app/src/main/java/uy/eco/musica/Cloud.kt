@@ -56,6 +56,13 @@ object Cloud {
         return out.sortedByDescending { it.updated }
     }
 
+    /** Una playlist tal como está ahora en el servidor (null si ya no existe). */
+    fun get(id: String): Playlist? = try {
+        parse(JSONObject(http("GET", "$API$collectionPath/$id")))
+    } catch (e: HttpError) {
+        if (e.code == 404) null else throw e
+    }
+
     /** Crea la playlist (si no tiene id) o reemplaza la existente. Devuelve la versión guardada. */
     fun save(p: Playlist): Playlist {
         val saved = p.copy(
