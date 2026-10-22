@@ -211,7 +211,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                 val tabs = buildList {
                     add(0 to "Buscar")
                     add(1 to "Playlists")
-                    if (access.showKaraoke) add(3 to "Karaoke")
+                    if (access.showKaraoke) add(3 to "El karaoke de Diego")
                     if (access.isAdmin) add(2 to "Invitaciones")
                 }
                 val selected = tabs.indexOfFirst { it.first == tab }.coerceAtLeast(0)
@@ -228,7 +228,8 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                         )
                     }
                 }
-                if (tabs.size > 3) ScrollableTabRow(selectedTabIndex = selected, edgePadding = 8.dp) { tabContent() }
+                // Con el nombre largo del karaoke, las pestañas se deslizan para que no se corte.
+                if (tabs.size > 3 || access.showKaraoke) ScrollableTabRow(selectedTabIndex = selected, edgePadding = 8.dp) { tabContent() }
                 else TabRow(selectedTabIndex = selected) { tabContent() }
                 UpdateBanner()
               }
