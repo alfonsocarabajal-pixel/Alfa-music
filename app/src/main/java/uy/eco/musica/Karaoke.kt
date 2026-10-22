@@ -179,9 +179,10 @@ private fun LyricsView(ui: PlayerUi, onSearch: () -> Unit) {
 
     LaunchedEffect(item.mediaId) {
         loading = true
+        // El reproductor solo se puede consultar desde el hilo principal: se lee antes de ir a internet.
+        val dur = ui.controller?.duration?.takeIf { it > 0 }?.div(1000) ?: song.durationSec
         lines = withContext(Dispatchers.IO) {
-            val dur = ui.controller?.duration?.takeIf { it > 0 }?.div(1000) ?: song.durationSec
-            Lyrics.find(song.title, song.artist, item.karaokeQuery, dur)
+            runCatching { Lyrics.find(song.title, song.artist, item.karaokeQuery, dur) }.getOrNull()
         }
         loading = false
     }

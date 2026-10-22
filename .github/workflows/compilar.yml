@@ -93,6 +93,13 @@ jobs:
             echo "Sin configuración de playlists compartidas: se compila sin esa función."
           fi
 
+      - name: Pruebas automáticas (letras del karaoke)
+        run: |
+          chmod +x gradlew
+          ./gradlew testDebugUnitTest --stacktrace \
+            -PnpeVersion=${{ needs.revisar.outputs.npe }} \
+            -PfsProject="$FS_PROJECT" -PfsGroup="$FS_GROUP"
+
       - name: Compilar
         env:
           ALFA_KEYSTORE: ${{ runner.temp }}/alfa.jks
