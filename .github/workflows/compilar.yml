@@ -3,15 +3,57 @@ name: Compilar APK
 on:
   push:
     branches: [main, prueba]   # "prueba" solo compila, no publica
-  workflow_dispatch: {}        # botón "Run workflow" para compilar a mano
+  workflow_dispatch: {}        # botón "Run workflow": compila y publica siempre
   schedule:
-    - cron: "0 9 * * 1"        # cada lunes: recompila con el extractor más nuevo
+    - cron: "15 9 * * *"       # todos los días 06:15 (Uruguay): revisa si hay extractor nuevo
 
 permissions:
   contents: write
 
 jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    outputs:
+      npe: ${{ steps.npe.outputs.tag }}
+      compilar: ${{ steps.decidir.outputs.compilar }}
+    steps:
+      - name: Versión más reciente de NewPipe Extractor
+        id: npe
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+            https://api.github.com/repos/TeamNewPipe/NewPipeExtractor/releases/latest | jq -r .tag_name)
+          if [ -z "$TAG" ] || [ "$TAG" = "null" ]; then TAG=v0.26.5; fi
+          echo "Extractor más reciente: $TAG"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: ¿Hace falta una versión nueva?
+        id: decidir
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPE: ${{ steps.npe.outputs.tag }}
+        run: |
+          # Cambios a la app o compilación a mano: siempre se compila.
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "compilar=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # Revisión diaria: solo si el extractor cambió respecto a la última versión publicada.
+          ACTUAL=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/releases/latest" \
+            | jq -r '.name // ""' | grep -o 'extractor v[0-9.]*' | sed 's/extractor //')
+          echo "Extractor en la última versión publicada: ${ACTUAL:-desconocido}"
+          if [ "$ACTUAL" = "$NPE" ]; then
+            echo "Sin cambios: no se publica nada hoy."
+            echo "compilar=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Extractor nuevo ($NPE): se compila y publica."
+            echo "compilar=true" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: revisar
+    if: needs.revisar.outputs.compilar == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,17 +64,6 @@ jobs:
           java-version: 17
 
       - uses: gradle/actions/setup-gradle@v4
-
-      - name: Versión más reciente de NewPipe Extractor
-        id: npe
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TAG=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
-            https://api.github.com/repos/TeamNewPipe/NewPipeExtractor/releases/latest | jq -r .tag_name)
-          if [ -z "$TAG" ] || [ "$TAG" = "null" ]; then TAG=v0.26.5; fi
-          echo "Usando NewPipe Extractor $TAG"
-          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
       - name: Descifrar clave de firma y configuración
         env:
@@ -68,7 +99,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew assembleRelease --stacktrace \
-            -PnpeVersion=${{ steps.npe.outputs.tag }} \
+            -PnpeVersion=${{ needs.revisar.outputs.npe }} \
             -PbuildNumber=${{ github.run_number }} \
             -PfsProject="$FS_PROJECT" \
             -PfsGroup="$FS_GROUP"
@@ -159,6 +190,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ github.run_number }}
-          name: Alfa Music ${{ github.run_number }} (extractor ${{ steps.npe.outputs.tag }})
+          name: Alfa Music ${{ github.run_number }} (extractor ${{ needs.revisar.outputs.npe }})
           files: AlfaMusic.apk
           make_latest: true

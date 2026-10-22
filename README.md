@@ -32,7 +32,7 @@ Al abrir la app por primera vez pide un **código de invitación** (una palabra 
 
 - **Actualizaciones dentro de la app:** al abrirla, si hay una versión nueva aparece un aviso «Actualizar». La app la descarga e instala encima sin perder nada. La primera vez Android pide permitir que Alfa Music instale actualizaciones.
 
-- Cada **lunes** GitHub recompila la app con la versión más nueva del extractor y publica un APK nuevo.
+- **Todos los días a las 6:15 (hora de Uruguay)** GitHub revisa si NewPipe publicó un extractor nuevo. Solo si hay uno, compila, prueba y publica una versión nueva; si no, no pasa nada.
 - Si un día deja de reproducir: **Actions → Compilar APK → Run workflow**, y reinstalar desde el enlace de arriba.
 
 Proyecto de uso personal. Usa la API interna de YouTube (no oficial): puede dejar de funcionar cuando YouTube cambia algo, y en general se arregla recompilando.
