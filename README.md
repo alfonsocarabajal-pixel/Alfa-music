@@ -12,7 +12,7 @@ Este enlace siempre baja la última versión. Al abrir el archivo, Android puede
 
 Al abrir la app por primera vez pide un **código de invitación** (una palabra con dos números, como `LUNA27`). Cada código sirve para un solo teléfono. El administrador los crea, comparte y revoca desde la pestaña **Invitaciones**, que solo aparece en su teléfono.
 
-**Karaoke ("El karaoke de Diego"):** pestaña que busca versiones karaoke/instrumentales de YouTube y muestra la letra sincronizada en grande (desde LRCLIB), con ajuste de desfase. Solo la ven el administrador y las personas a las que se la active (🎤 en Invitaciones).
+**Karaoke ("El Karaoke de Dieguito"):** pestaña que busca versiones karaoke/instrumentales de YouTube y muestra la letra sincronizada en grande (desde LRCLIB), con ajuste de desfase. Solo la ven el administrador y las personas a las que se la active (🎤 en Invitaciones).
 
 **Versiones:** en Invitaciones, el administrador ve qué versión tiene instalada cada persona y cuándo usó la app por última vez.
 

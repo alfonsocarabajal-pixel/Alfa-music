@@ -211,7 +211,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                 val tabs = buildList {
                     add(0 to "Buscar")
                     add(1 to "Playlists")
-                    if (access.showKaraoke) add(3 to "El karaoke de Diego")
+                    if (access.showKaraoke) add(3 to "El Karaoke de Dieguito")
                     if (access.isAdmin) add(2 to "Invitaciones")
                 }
                 val selected = tabs.indexOfFirst { it.first == tab }.coerceAtLeast(0)
