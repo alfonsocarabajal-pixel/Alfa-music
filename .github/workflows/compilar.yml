@@ -87,6 +87,7 @@ jobs:
               echo "FS_ADMIN=$FS_ADMIN" >> "$GITHUB_ENV"   # solo para la prueba; nunca entra en la app
             fi
             if [ -n "$FS_SEED_GRUPOS" ]; then echo "FS_SEED_GRUPOS=$FS_SEED_GRUPOS" >> "$GITHUB_ENV"; fi
+            if [ -n "$FS_SEED_KARAOKE" ]; then echo "FS_SEED_KARAOKE=$FS_SEED_KARAOKE" >> "$GITHUB_ENV"; fi
             rm -f "$RUNNER_TEMP/nube.env"
           else
             echo "Sin configuración de playlists compartidas: se compila sin esa función."
@@ -155,6 +156,10 @@ jobs:
           S=$(commit "$(jq -n --arg i "$INV" '{writes:[{delete:$i}]}')"); expect 403 "$S" "Se pudo borrar una invitación sin la clave"
           MOVE_INV='{update:{name:$i,fields:{grupo:{stringValue:"zzotro"}}},updateMask:{fieldPaths:["grupo"]}}'
           MOVE_EMI='{update:{name:$e,fields:{grupo:{stringValue:"zzotro"}}},updateMask:{fieldPaths:["grupo"]}}'
+          KAR_INV='{update:{name:$i,fields:{karaoke:{booleanValue:true}}},updateMask:{fieldPaths:["karaoke"]}}'
+          KAR_EMI='{update:{name:$e,fields:{karaoke:{booleanValue:true}}},updateMask:{fieldPaths:["karaoke"]}}'
+          S=$(commit "$(jq -n --arg i "$INV" "{writes:[$KAR_INV]}")"); expect 403 "$S" "Se pudo activar el karaoke sin la clave"
+          S=$(commit "$(jq -n --arg e "$EMI" --arg i "$INV" "{writes:[$KAR_EMI,$KAR_INV]}")"); expect 200 "$S" "El administrador no pudo activar el karaoke"
           S=$(commit "$(jq -n --arg i "$INV" "{writes:[$MOVE_INV]}")"); expect 403 "$S" "Se pudo cambiar de grupo sin la clave"
           S=$(commit "$(jq -n --arg e "$EMI" --arg i "$INV" "{writes:[$MOVE_EMI,$MOVE_INV]}")"); expect 200 "$S" "El administrador no pudo cambiar de grupo"
           S=$(curl -s -o /tmp/r.txt -w '%{http_code}' "$API/$ROOT/grupos/$FS_GROUP/admins/$FS_ADMIN/grupos"); expect 200 "$S" "El administrador no pudo leer los grupos"
@@ -183,6 +188,22 @@ jobs:
               400|409) echo "El grupo $N ya existía" ;;
               *) echo "::error::No se pudo crear el grupo $N ($S)"; head -c 400 /tmp/r.txt; exit 1 ;;
             esac
+          done
+
+      - name: Activar karaoke inicial
+        if: env.FS_SEED_KARAOKE != '' && env.FS_ADMIN != ''
+        run: |
+          ROOT="projects/$FS_PROJECT/databases/(default)/documents"
+          API="https://firestore.googleapis.com/v1"
+          for C in $(echo "$FS_SEED_KARAOKE" | tr ',' ' '); do
+            BODY=$(jq -n --arg e "$ROOT/grupos/$FS_GROUP/admins/$FS_ADMIN/emitidas/$C" \
+              --arg i "$ROOT/grupos/$FS_GROUP/invitaciones/$C" \
+              '{writes:[
+                {update:{name:$e,fields:{karaoke:{booleanValue:true}}},updateMask:{fieldPaths:["karaoke"]},currentDocument:{exists:true}},
+                {update:{name:$i,fields:{karaoke:{booleanValue:true}}},updateMask:{fieldPaths:["karaoke"]},currentDocument:{exists:true}}]}')
+            S=$(curl -s -o /tmp/r.txt -w '%{http_code}' -X POST "$API/$ROOT:commit" -H 'Content-Type: application/json' -d "$BODY")
+            if [ "$S" = "200" ]; then echo "Karaoke activado para $C"
+            else echo "::warning::No se pudo activar el karaoke para $C ($S)"; head -c 300 /tmp/r.txt; fi
           done
 
       - name: Publicar para descargar desde el celular

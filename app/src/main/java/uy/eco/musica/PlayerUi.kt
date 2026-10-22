@@ -132,6 +132,23 @@ class PlayerUi(val prefs: Prefs) {
         markLoaded(null) // la cola nueva ya no es la playlist que estaba cargada
     }
 
+    /** Karaoke: suena solo esa versión (sin radio automática). */
+    fun playKaraoke(song: Song, query: String) {
+        controller?.run {
+            setMediaItem(song.toMediaItem(karaokeQuery = query))
+            prepare()
+            play()
+        }
+        markLoaded(null)
+    }
+
+    /** Karaoke: la suma al final de la cola. */
+    fun enqueueKaraoke(song: Song, query: String) {
+        val c = controller ?: return
+        if (c.mediaItemCount == 0) playKaraoke(song, query)
+        else c.addMediaItem(song.toMediaItem(karaokeQuery = query))
+    }
+
     /** "+": la agrega después de lo que ya agregaste vos, antes de las sugerencias de la radio. */
     fun enqueue(song: Song) {
         val c = controller ?: return

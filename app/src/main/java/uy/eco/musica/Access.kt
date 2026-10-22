@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
 import android.provider.Settings
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import org.json.JSONArray
 import org.json.JSONObject
 import uy.eco.musica.Cloud.int
@@ -23,6 +26,7 @@ data class Invite(
     val group: String,
     val version: Int = 0,   // versión de la app que tiene instalada (0 = todavía no informó)
     val seen: Long = 0,     // última vez que abrió la app
+    val karaoke: Boolean = false, // ¿ve la pestaña Karaoke?
 ) {
     val pretty: String get() = code
 }
@@ -66,6 +70,18 @@ class Access(context: Context) {
 
     val isAdmin: Boolean get() = adminKey.isNotBlank()
 
+    /** Si el administrador le activó el karaoke a esta persona. Se actualiza al abrir la app. */
+    var karaoke by mutableStateOf(sp.getBoolean("karaoke", false))
+        private set
+
+    private fun saveKaraoke(v: Boolean) {
+        sp.edit().putBoolean("karaoke", v).apply()
+        karaoke = v
+    }
+
+    /** El administrador siempre ve la pestaña Karaoke. */
+    val showKaraoke: Boolean get() = isAdmin || karaoke
+
     /** Si Firebase no está configurado, la app no pide código. */
     val activated: Boolean get() = !Cloud.enabled || code.isNotBlank() || isAdmin
 
@@ -104,6 +120,7 @@ class Access(context: Context) {
                 }
                 code = c
                 groupId = inv.group
+                saveKaraoke(inv.karaoke)
                 runCatching { reportUse() }
                 Result.Ok
             }
@@ -129,6 +146,7 @@ class Access(context: Context) {
                 val inv = getInvite(code)
                 if (inv != null && inv.device == deviceId) {
                     if (inv.group != groupId) groupId = inv.group
+                    if (inv.karaoke != karaoke) saveKaraoke(inv.karaoke)
                     runCatching { reportUse() }
                     true
                 } else false
@@ -190,6 +208,7 @@ class Access(context: Context) {
         activated = f?.long("activada") ?: 0,
         version = (f?.long("version") ?: 0).toInt(),
         seen = f?.long("visto") ?: 0,
+        karaoke = f?.optJSONObject("karaoke")?.optBoolean("booleanValue") == true,
         group = f?.str("grupo").orEmpty().ifBlank { MAIN_GROUP }, // las invitaciones viejas son del grupo principal
     )
 
@@ -215,7 +234,7 @@ class Access(context: Context) {
             if (live == null) issued
             else issued.copy(
                 device = live.device, model = live.model, activated = live.activated,
-                group = live.group, version = live.version, seen = live.seen,
+                group = live.group, version = live.version, seen = live.seen, karaoke = live.karaoke,
             )
         }
     }.sortedByDescending { it.created }
@@ -274,6 +293,20 @@ class Access(context: Context) {
             }
         }
         throw IOException("No se pudo crear el código")
+    }
+
+    /** Activa o desactiva la pestaña Karaoke para una persona. Se aplica la próxima vez que abra la app. */
+    fun setKaraoke(c: String, enabled: Boolean) {
+        val k = JSONObject().put("karaoke", JSONObject().put("booleanValue", enabled))
+        Cloud.commit(
+            JSONObject()
+                .put("update", JSONObject().put("name", adminPath(adminKey, "emitidas", c)).put("fields", k))
+                .put("updateMask", mask("karaoke")),
+            JSONObject()
+                .put("update", JSONObject().put("name", invitePath(c)).put("fields", k))
+                .put("updateMask", mask("karaoke"))
+                .put("currentDocument", JSONObject().put("exists", true)),
+        )
     }
 
     /** Cambia a alguien de grupo. Se aplica la próxima vez que abra la app. */

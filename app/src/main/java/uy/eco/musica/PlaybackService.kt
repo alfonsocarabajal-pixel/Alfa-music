@@ -246,6 +246,8 @@ class PlaybackService : MediaSessionService() {
     private fun extendRadio() {
         if (player.mediaItemCount == 0) return
         if (remaining() >= 2) return
+        // En karaoke no se agregan canciones automáticas: suena solo lo que se eligió.
+        if (player.currentMediaItem?.karaokeQuery != null) return
         val seed = player.currentMediaItem?.mediaId ?: return
         if (seed == radioSeed) return
         radioSeed = seed

@@ -46,6 +46,7 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
@@ -206,29 +207,29 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                     keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                     keyboardActions = KeyboardActions(onSearch = { search() }),
                 )
-                TabRow(selectedTabIndex = if (tab == 2 && !access.isAdmin) 0 else tab) {
-                    Tab(
-                        selected = !showQueue && tab == 0,
-                        onClick = { tab = 0; showQueue = false },
-                        text = { Text("Buscar") },
-                    )
-                    Tab(
-                        selected = !showQueue && tab == 1,
-                        onClick = {
-                            if (tab == 1 && !showQueue) openPlaylist = null
-                            tab = 1
-                            showQueue = false
-                        },
-                        text = { Text("Playlists") },
-                    )
-                    if (access.isAdmin) {
+                // 0 = Buscar, 1 = Playlists, 2 = Invitaciones (solo admin), 3 = Karaoke (con permiso)
+                val tabs = buildList {
+                    add(0 to "Buscar")
+                    add(1 to "Playlists")
+                    if (access.showKaraoke) add(3 to "Karaoke")
+                    if (access.isAdmin) add(2 to "Invitaciones")
+                }
+                val selected = tabs.indexOfFirst { it.first == tab }.coerceAtLeast(0)
+                val tabContent: @Composable () -> Unit = {
+                    tabs.forEach { (id, label) ->
                         Tab(
-                            selected = !showQueue && tab == 2,
-                            onClick = { tab = 2; showQueue = false },
-                            text = { Text("Invitaciones") },
+                            selected = !showQueue && tab == id,
+                            onClick = {
+                                if (id == 1 && tab == 1 && !showQueue) openPlaylist = null
+                                tab = id
+                                showQueue = false
+                            },
+                            text = { Text(label, maxLines = 1) },
                         )
                     }
                 }
+                if (tabs.size > 3) ScrollableTabRow(selectedTabIndex = selected, edgePadding = 8.dp) { tabContent() }
+                else TabRow(selectedTabIndex = selected) { tabContent() }
                 UpdateBanner()
               }
             }
@@ -251,6 +252,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                 )
                 showQueue -> QueueList(ui, onSave = if (Cloud.enabled) ({ showSave = true }) else null, onAdd = onAdd)
                 tab == 2 && access.isAdmin -> InvitesScreen(access, notify)
+                tab == 3 && access.showKaraoke -> KaraokeScreen(ui)
                 tab == 1 -> {
                     val id = openPlaylist
                     if (id == null) PlaylistsList(

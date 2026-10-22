@@ -34,6 +34,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Block
+import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
@@ -315,7 +316,7 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                             Column(Modifier.weight(1f)) {
                                 Text(inv.name, style = MaterialTheme.typography.bodyLarge)
                                 Text(
-                                    "${inv.pretty} · ${groups.name(inv.group)}",
+                                    "${inv.pretty} · ${groups.name(inv.group)}" + if (inv.karaoke) " · 🎤 Karaoke" else "",
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
@@ -344,6 +345,28 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                                 }
                             }
                             if (inv.revoked == 0L) {
+                                IconButton(onClick = {
+                                    val enable = !inv.karaoke
+                                    scope.launch {
+                                        val ok = withContext(Dispatchers.IO) {
+                                            runCatching { access.setKaraoke(inv.code, enable) }
+                                        }.isSuccess
+                                        if (ok) {
+                                            invites = invites.map { if (it.code == inv.code) it.copy(karaoke = enable) else it }
+                                            notify(
+                                                if (enable) "Karaoke activado para ${inv.name} (lo ve la próxima vez que abra la app)"
+                                                else "Karaoke desactivado para ${inv.name}"
+                                            )
+                                        } else notify("No se pudo cambiar. Revisá la conexión.")
+                                    }
+                                }) {
+                                    Icon(
+                                        Icons.Default.Mic,
+                                        contentDescription = if (inv.karaoke) "Desactivar karaoke" else "Activar karaoke",
+                                        tint = if (inv.karaoke) MaterialTheme.colorScheme.primary
+                                        else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
+                                    )
+                                }
                                 IconButton(onClick = { moving = inv }) {
                                     Icon(Icons.Default.SwapHoriz, contentDescription = "Cambiar de grupo")
                                 }

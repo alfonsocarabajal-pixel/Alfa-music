@@ -28,9 +28,10 @@ const val SCHEME = "ytm"
 const val EXTRA_RADIO = "eco_radio"
 private const val EXTRA_DURATION = "eco_dur"
 private const val EXTRA_THUMB = "eco_thumb"
+private const val EXTRA_KARAOKE = "eco_karaoke"
 
 /** Convierte una canción en un elemento de la cola. El audio se resuelve recién al reproducir. */
-fun Song.toMediaItem(radio: Boolean = false): MediaItem =
+fun Song.toMediaItem(radio: Boolean = false, karaokeQuery: String? = null): MediaItem =
     MediaItem.Builder()
         .setMediaId(id)
         .setUri("$SCHEME://$id")
@@ -43,6 +44,7 @@ fun Song.toMediaItem(radio: Boolean = false): MediaItem =
                     putBoolean(EXTRA_RADIO, radio)
                     putLong(EXTRA_DURATION, durationSec)
                     putString(EXTRA_THUMB, thumb)
+                    karaokeQuery?.let { putString(EXTRA_KARAOKE, it) }
                 })
                 .build()
         )
@@ -50,6 +52,10 @@ fun Song.toMediaItem(radio: Boolean = false): MediaItem =
 
 val MediaItem.isRadio: Boolean
     get() = mediaMetadata.extras?.getBoolean(EXTRA_RADIO) == true
+
+/** Lo que se buscó en la pestaña Karaoke para esta canción (null si no es de karaoke). */
+val MediaItem.karaokeQuery: String?
+    get() = mediaMetadata.extras?.getString(EXTRA_KARAOKE)
 
 /** Recupera los datos de la canción desde un elemento de la cola. */
 fun MediaItem.toSong(): Song {
@@ -84,6 +90,19 @@ object Repo {
         extractor.fetchPage()
         return extractor.initialPage.items
             .filterIsInstance<StreamInfoItem>()
+            .mapNotNull { it.toSong() }
+            .distinctBy { it.id }
+    }
+
+    /** Versiones karaoke / instrumentales (videos de YouTube, no YouTube Music). */
+    fun searchKaraoke(query: String): List<Song> {
+        val extractor = yt.getSearchExtractor(
+            "$query karaoke", listOf(YoutubeSearchQueryHandlerFactory.VIDEOS), ""
+        )
+        extractor.fetchPage()
+        return extractor.initialPage.items
+            .filterIsInstance<StreamInfoItem>()
+            .filter { it.duration in 60..900 }
             .mapNotNull { it.toSong() }
             .distinctBy { it.id }
     }
