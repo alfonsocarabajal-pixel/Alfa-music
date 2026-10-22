@@ -332,12 +332,16 @@ private fun UpdateBanner() {
         note = null
         progress = 0f
         scope.launch {
-            val ok = withContext(Dispatchers.IO) {
-                runCatching { Updater.downloadAndInstall(context, r) { p -> progress = p } }.isSuccess
+            val file = withContext(Dispatchers.IO) {
+                runCatching { Updater.download(context, r) { p -> progress = p } }.getOrNull()
             }
-            if (!ok) {
-                progress = null
+            progress = null
+            if (file == null) {
                 note = "No se pudo descargar. Revisá la conexión y probá de nuevo."
+            } else {
+                val opened = runCatching { Updater.openInstaller(context, file) }.isSuccess
+                note = if (opened) "Tocá «Instalar» en la pantalla de Android. Si se cerró sin instalar, volvé a tocar Actualizar."
+                else "No se pudo abrir el instalador. Instalala desde el link de descarga."
             }
         }
     }

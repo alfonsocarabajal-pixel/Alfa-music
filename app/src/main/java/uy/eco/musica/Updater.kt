@@ -1,15 +1,12 @@
 package uy.eco.musica
 
-import android.app.PendingIntent
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageInstaller
 import android.net.Uri
-import android.os.Build
 import android.provider.Settings
-import android.widget.Toast
+import androidx.core.content.FileProvider
 import org.json.JSONObject
+import java.io.File
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
@@ -17,14 +14,13 @@ import java.net.URL
 /**
  * Actualizaciones dentro de la app: busca la última versión publicada en GitHub,
  * la descarga y la instala encima, sin perder nada.
- * La primera vez Android pide confirmar; desde Android 12, cuando la app ya se
- * actualizó a sí misma, las siguientes pueden instalarse sin preguntar.
+ * La primera vez Android pide permitir que la app instale; después, cada
+ * actualización se confirma con un toque en el instalador de Android.
  */
 object Updater {
 
     private const val LATEST =
         "https://api.github.com/repos/alfonsocarabajal-pixel/Alfa-music/releases/latest"
-    private const val ACTION_STATUS = "uy.eco.musica.INSTALL_STATUS"
 
     data class Release(val version: Int, val apkUrl: String)
 
@@ -78,76 +74,54 @@ object Updater {
     }
 
     /**
-     * Descarga el APK directo a una sesión de instalación de Android y la confirma.
-     * [onProgress] recibe de 0 a 1. Bloquea: llamar fuera del hilo principal.
+     * Descarga el APK al almacenamiento interno de la app. [onProgress] recibe de 0 a 1.
+     * Bloquea: llamar fuera del hilo principal. Devuelve el archivo descargado.
      */
-    fun downloadAndInstall(context: Context, release: Release, onProgress: (Float) -> Unit) {
-        val installer = context.packageManager.packageInstaller
-        val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL).apply {
-            setAppPackageName(context.packageName)
-            if (Build.VERSION.SDK_INT >= 31) {
-                setRequireUserAction(PackageInstaller.SessionParams.USER_ACTION_NOT_REQUIRED)
-            }
-        }
-        val sessionId = installer.createSession(params)
-        val session = installer.openSession(sessionId)
+    fun download(context: Context, release: Release, onProgress: (Float) -> Unit): File {
+        val dir = File(context.cacheDir, "updates").apply { mkdirs() }
+        dir.listFiles()?.forEach { it.delete() } // descargas viejas
+        val file = File(dir, "AlfaMusic-${release.version}.apk")
+        val conn = URL(release.apkUrl).openConnection() as HttpURLConnection
         try {
-            val conn = URL(release.apkUrl).openConnection() as HttpURLConnection
-            try {
-                conn.connectTimeout = 15_000
-                conn.readTimeout = 30_000
-                conn.instanceFollowRedirects = true
-                if (conn.responseCode != 200) throw IOException("Error ${conn.responseCode} al descargar")
-                val total = conn.contentLengthLong
-                conn.inputStream.use { input ->
-                    session.openWrite("AlfaMusic.apk", 0, if (total > 0) total else -1).use { out ->
-                        val buf = ByteArray(64 * 1024)
-                        var done = 0L
-                        while (true) {
-                            val n = input.read(buf)
-                            if (n < 0) break
-                            out.write(buf, 0, n)
-                            done += n
-                            if (total > 0) onProgress(done.toFloat() / total)
-                        }
-                        session.fsync(out)
+            conn.connectTimeout = 15_000
+            conn.readTimeout = 30_000
+            conn.instanceFollowRedirects = true
+            if (conn.responseCode != 200) throw IOException("Error ${conn.responseCode} al descargar")
+            val total = conn.contentLengthLong
+            var done = 0L
+            conn.inputStream.use { input ->
+                file.outputStream().use { out ->
+                    val buf = ByteArray(64 * 1024)
+                    while (true) {
+                        val n = input.read(buf)
+                        if (n < 0) break
+                        out.write(buf, 0, n)
+                        done += n
+                        if (total > 0) onProgress(done.toFloat() / total)
                     }
                 }
-            } finally {
-                conn.disconnect()
             }
-            val flags = PendingIntent.FLAG_UPDATE_CURRENT or
-                (if (Build.VERSION.SDK_INT >= 31) PendingIntent.FLAG_MUTABLE else 0)
-            val status = PendingIntent.getBroadcast(
-                context, sessionId,
-                Intent(context, InstallReceiver::class.java).setAction(ACTION_STATUS),
-                flags,
-            )
-            session.commit(status.intentSender)
+            if (total > 0 && done != total) throw IOException("La descarga quedó incompleta")
         } catch (e: Exception) {
-            session.abandon()
+            file.delete()
             throw e
         } finally {
-            session.close()
+            conn.disconnect()
         }
+        return file
     }
 
-    /** Recibe el resultado de la instalación; si Android pide confirmar, muestra su pantalla. */
-    class InstallReceiver : BroadcastReceiver() {
-        override fun onReceive(context: Context, intent: Intent) {
-            when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, PackageInstaller.STATUS_FAILURE)) {
-                PackageInstaller.STATUS_PENDING_USER_ACTION -> {
-                    @Suppress("DEPRECATION")
-                    val confirm = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT) ?: return
-                    context.startActivity(confirm.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-                }
-                PackageInstaller.STATUS_SUCCESS -> Unit // la app se reinicia con la versión nueva
-                else -> Toast.makeText(
-                    context,
-                    "No se pudo instalar la actualización. Probá de nuevo más tarde.",
-                    Toast.LENGTH_LONG,
-                ).show()
-            }
-        }
+    /**
+     * Abre el instalador estándar de Android con el APK descargado (el mismo que se usa al
+     * instalar desde el navegador). Funciona también en teléfonos Xiaomi, que bloquean
+     * el método de instalación silenciosa.
+     */
+    fun openInstaller(context: Context, file: File) {
+        val uri = FileProvider.getUriForFile(context, "${context.packageName}.updates", file)
+        context.startActivity(
+            Intent(Intent.ACTION_VIEW)
+                .setDataAndType(uri, "application/vnd.android.package-archive")
+                .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK)
+        )
     }
 }
