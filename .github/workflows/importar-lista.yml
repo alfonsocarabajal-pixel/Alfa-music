@@ -1,0 +1,46 @@
+name: Importar lista a playlists
+
+on:
+  push:
+    branches: [main]
+    paths: ["listas/**"]
+  workflow_dispatch:
+    inputs:
+      archivo:
+        description: "Archivo de lista (por ejemplo listas/bajada.txt)"
+        required: true
+        default: "listas/bajada.txt"
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar buscador de YouTube
+        run: pip install -q yt-dlp
+
+      - name: Descifrar configuración
+        env:
+          ALFA_KS_PASS: ${{ secrets.ALFA_KS_PASS }}
+        run: |
+          openssl enc -d -aes-256-cbc -pbkdf2 -in config/nube.env.enc -out "$RUNNER_TEMP/nube.env" -pass env:ALFA_KS_PASS
+          . "$RUNNER_TEMP/nube.env"
+          echo "::add-mask::$FS_GROUP"; echo "::add-mask::$FS_ADMIN"
+          { echo "FS_PROJECT=$FS_PROJECT"; echo "FS_GROUP=$FS_GROUP"; echo "FS_ADMIN=$FS_ADMIN"; } >> "$GITHUB_ENV"
+          rm -f "$RUNNER_TEMP/nube.env"
+
+      - name: Importar
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            FILES="${{ github.event.inputs.archivo }}"
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- listas/ | grep '\.txt$' || true)
+          fi
+          for F in $FILES; do echo "== $F"; python tools/importar_lista.py "$F"; done
