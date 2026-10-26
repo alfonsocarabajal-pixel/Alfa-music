@@ -232,6 +232,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                 if (tabs.size > 3 || access.showKaraoke) ScrollableTabRow(selectedTabIndex = selected, edgePadding = 8.dp) { tabContent() }
                 else TabRow(selectedTabIndex = selected) { tabContent() }
                 UpdateBanner()
+                GreetingBanner(access.displayName)
               }
             }
         },

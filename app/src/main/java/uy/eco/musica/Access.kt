@@ -82,6 +82,18 @@ class Access(context: Context) {
     /** El administrador siempre ve la pestaña Karaoke. */
     val showKaraoke: Boolean get() = isAdmin || karaoke
 
+    /** El nombre que le puso el administrador en la invitación (para el saludo). */
+    var displayName by mutableStateOf(
+        sp.getString("nombre", "").orEmpty().ifBlank { if (sp.getString("admin", "").isNullOrBlank()) "" else "Denis" }
+    )
+        private set
+
+    private fun saveName(n: String) {
+        if (n.isBlank()) return
+        sp.edit().putString("nombre", n.trim()).apply()
+        displayName = n.trim()
+    }
+
     /** Si Firebase no está configurado, la app no pide código. */
     val activated: Boolean get() = !Cloud.enabled || code.isNotBlank() || isAdmin
 
@@ -121,6 +133,7 @@ class Access(context: Context) {
                 code = c
                 groupId = inv.group
                 saveKaraoke(inv.karaoke)
+                saveName(inv.name)
                 runCatching { reportUse() }
                 Result.Ok
             }
@@ -147,6 +160,7 @@ class Access(context: Context) {
                 if (inv != null && inv.device == deviceId) {
                     if (inv.group != groupId) groupId = inv.group
                     if (inv.karaoke != karaoke) saveKaraoke(inv.karaoke)
+                    if (inv.name != displayName) saveName(inv.name)
                     runCatching { reportUse() }
                     true
                 } else false

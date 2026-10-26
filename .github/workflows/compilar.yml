@@ -93,7 +93,7 @@ jobs:
             echo "Sin configuración de playlists compartidas: se compila sin esa función."
           fi
 
-      - name: Pruebas automáticas (letras del karaoke)
+      - name: Pruebas automáticas (letras del karaoke y saludos)
         run: |
           chmod +x gradlew
           ./gradlew testDebugUnitTest --stacktrace \
