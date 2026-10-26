@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.PlayArrow
@@ -179,6 +180,7 @@ fun PlaylistDetail(
     id: String,
     lists: SharedLists,
     ui: PlayerUi,
+    access: Access,
     onBack: () -> Unit,
     notify: (String) -> Unit,
 ) {
@@ -190,6 +192,7 @@ fun PlaylistDetail(
     val scope = rememberCoroutineScope()
     var renaming by remember { mutableStateOf(false) }
     var deleting by remember { mutableStateOf(false) }
+    var copying by remember { mutableStateOf(false) }
 
     fun update(changed: Playlist, okMessage: String? = null) = scope.launch {
         val saved = lists.save(changed)
@@ -223,6 +226,11 @@ fun PlaylistDetail(
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
+                    }
+                    if (access.isAdmin) {
+                        IconButton(onClick = { copying = true }) {
+                            Icon(Icons.Default.ContentCopy, contentDescription = "Copiar a otro grupo")
+                        }
                     }
                     IconButton(onClick = { renaming = true }) {
                         Icon(Icons.Default.Edit, contentDescription = "Cambiar nombre")
@@ -268,6 +276,10 @@ fun PlaylistDetail(
         }
     }
 
+    if (copying) {
+        CopyToGroupDialog(p, access, onDismiss = { copying = false }, notify = notify)
+    }
+
     if (renaming) {
         NameDialog(
             title = "Cambiar nombre",
@@ -300,6 +312,59 @@ fun PlaylistDetail(
             dismissButton = { TextButton(onClick = { deleting = false }) { Text("Cancelar") } },
         )
     }
+}
+
+/** Copiar una playlist a otro grupo (solo el administrador). */
+@Composable
+private fun CopyToGroupDialog(p: Playlist, access: Access, onDismiss: () -> Unit, notify: (String) -> Unit) {
+    val scope = rememberCoroutineScope()
+    val groups = remember { GroupsState(access) }
+    var busy by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { groups.refresh() }
+    val others = groups.items.filter { it.id != Cloud.groupId }
+
+    AlertDialog(
+        onDismissRequest = { if (!busy) onDismiss() },
+        title = { Text("Copiar «${p.name}» a…") },
+        text = {
+            Column {
+                if (others.isEmpty()) {
+                    Text(
+                        "No hay otros grupos. Se crean desde Invitaciones, al invitar a alguien.",
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                others.forEach { g ->
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable(enabled = !busy) {
+                                busy = true
+                                scope.launch {
+                                    val ok = withContext(Dispatchers.IO) {
+                                        runCatching { Cloud.copyToGroup(p, g.id) }
+                                    }.isSuccess
+                                    busy = false
+                                    if (ok) {
+                                        notify("«${p.name}» copiada a ${g.name}")
+                                        onDismiss()
+                                    } else notify("No se pudo copiar. Revisá la conexión.")
+                                }
+                            }
+                            .padding(horizontal = 8.dp, vertical = 14.dp),
+                    ) { Text(g.name) }
+                }
+                if (busy) CircularProgressIndicator(Modifier.padding(8.dp))
+                Text(
+                    "Se crea una copia independiente: si después cambian una, la otra no se toca.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        },
+        confirmButton = {},
+        dismissButton = { TextButton(onClick = onDismiss, enabled = !busy) { Text("Cancelar") } },
+    )
 }
 
 /** Elegir a qué playlist del grupo sumar una canción (o crear una nueva con ella). */

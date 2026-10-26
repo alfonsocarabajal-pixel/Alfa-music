@@ -263,7 +263,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                         onGroupChanged = { ui.markLoaded(null) },
                         onOpen = { openPlaylist = it },
                     )
-                    else PlaylistDetail(id, lists, ui, onBack = { openPlaylist = null }, notify = notify)
+                    else PlaylistDetail(id, lists, ui, access, onBack = { openPlaylist = null }, notify = notify)
                 }
                 loading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
                 results.isEmpty() -> Text(

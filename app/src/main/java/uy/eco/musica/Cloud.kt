@@ -33,9 +33,10 @@ object Cloud {
     var groupId by mutableStateOf("principal")
 
     // El grupo principal conserva la ubicación original, así no hubo que mover nada.
-    private val collectionPath
-        get() = if (groupId == "principal") "$groupPath/playlists"
-        else "$groupPath/equipos/$groupId/playlists"
+    private val collectionPath get() = collectionFor(groupId)
+
+    private fun collectionFor(group: String) =
+        if (group == "principal") "$groupPath/playlists" else "$groupPath/equipos/$group/playlists"
     internal const val API = "https://firestore.googleapis.com/v1/"
 
     /** Todas las playlists del grupo, la más reciente primero. */
@@ -64,7 +65,10 @@ object Cloud {
     }
 
     /** Crea la playlist (si no tiene id) o reemplaza la existente. Devuelve la versión guardada. */
-    fun save(p: Playlist): Playlist {
+    /** Guarda una copia independiente de la playlist en otro grupo (solo lo usa el administrador). */
+    fun copyToGroup(p: Playlist, group: String): Playlist = save(p.copy(id = ""), group)
+
+    fun save(p: Playlist, group: String = groupId): Playlist {
         val saved = p.copy(
             id = p.id.ifBlank { newId() },
             name = p.name.trim().take(80).ifBlank { "Sin nombre" },
@@ -75,7 +79,7 @@ object Cloud {
         val write = JSONObject().put(
             "update",
             JSONObject()
-                .put("name", "$collectionPath/${saved.id}")
+                .put("name", "${collectionFor(group)}/${saved.id}")
                 .put("fields", fields(saved))
         )
         commit(write)
