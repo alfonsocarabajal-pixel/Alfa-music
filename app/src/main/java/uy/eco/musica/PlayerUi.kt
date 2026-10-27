@@ -56,6 +56,15 @@ class PlayerUi(val prefs: Prefs) {
      */
     fun songsToSave(): List<Song> {
         val c = controller ?: return emptyList()
+        // Si se está escuchando una playlist del grupo, las sugerencias de la radio
+        // NUNCA se guardan en ella (aunque ya hayan sonado).
+        if (loadedId.isNotBlank()) {
+            return (0 until c.mediaItemCount)
+                .map { c.getMediaItemAt(it) }
+                .filterNot { it.isRadio }
+                .map { it.toSong() }
+        }
+        // Cola armada a mano: se guardan las sugerencias que ya sonaron, no las que faltan.
         val upcoming = queue.dropWhile { it.index != c.currentMediaItemIndex }.drop(1)
             .map { it.index }.toSet()
         return (0 until c.mediaItemCount)

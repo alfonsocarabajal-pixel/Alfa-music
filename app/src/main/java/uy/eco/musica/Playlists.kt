@@ -544,7 +544,7 @@ fun SaveQueueDialog(
                 Spacer(Modifier.height(8.dp))
                 Text(
                     when {
-                        updating -> "Se reemplaza «$loadedName» con la cola actual."
+                        updating -> "Se reemplaza «$loadedName» con la cola actual (sin las sugerencias de la radio)."
                         loadedName.isNotBlank() -> "Con otro nombre se crea una playlist nueva. " +
                             "Para actualizar «$loadedName», dejá ese nombre."
                         else -> "La van a ver todos en la pestaña Playlists."

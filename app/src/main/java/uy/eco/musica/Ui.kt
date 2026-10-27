@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -572,16 +573,29 @@ private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?, onAdd: ((Song) -> Uni
                 }
             }
         }
-        items(ui.queue) { entry ->
+        // Separador antes de la primera sugerencia de la radio, para que se vea
+        // claramente qué es de la playlist y qué no.
+        val firstRadio = ui.queue.indexOfFirst { it.item.isRadio }
+        itemsIndexed(ui.queue) { pos, entry ->
+          Column {
+            if (pos == firstRadio) {
+                Text(
+                    if (ui.loadedName.isNotBlank()) "Sugerencias de la radio · no se guardan en «${ui.loadedName}»"
+                    else "Sugerencias de la radio",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 4.dp),
+                )
+            }
             val i = entry.index
             val item = entry.item
-            val radio = item.mediaMetadata.extras?.getBoolean(EXTRA_RADIO) == true
+            val radio = item.isRadio
             SongRow(
                 thumb = item.mediaMetadata.artworkUri?.toString(),
                 title = item.mediaMetadata.title?.toString().orEmpty(),
                 subtitle = listOfNotNull(
                     item.mediaMetadata.artist?.toString(),
-                    if (radio) "Radio" else null,
+                    if (radio) "Sugerencia" else null,
                 ).joinToString(" · "),
                 highlighted = i == ui.index,
                 onClick = { ui.playAt(i) },
@@ -597,6 +611,7 @@ private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?, onAdd: ((Song) -> Uni
                     }
                 }
             }
+          }
         }
     }
 }
