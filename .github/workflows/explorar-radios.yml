@@ -16,7 +16,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Buscar y probar emisoras
-        run: python tools/explorar_radios.py $(cat tools/radios-extra.txt 2>/dev/null || true)
+        run: |
+          python tools/explorar_radios.py $(cat tools/radios-extra.txt 2>/dev/null || true)
           python tools/buscar_streams.py
       - name: Guardar resultado en la rama datos-radios
         run: |
