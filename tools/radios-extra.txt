@@ -1,0 +1,9 @@
+http://puma.streemlion.com:2575/stream
+https://puma.streemlion.com:2575/stream
+https://streaming1.hostingmontevideo.com/8034/stream
+https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_URY_MV.mp3
+https://radiolatina.live/7906/stream
+https://radiolatina.live/8152/stream
+https://radios.iwstreaming.uy/8032/stream
+https://radios.iwstreaming.uy/8038/stream
+https://s3.yesstreaming.net:7022/stream

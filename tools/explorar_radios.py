@@ -12,7 +12,7 @@ def probe(url):
         req = urllib.request.Request(url, headers={**UA, "Icy-MetaData": "0"})
         with urllib.request.urlopen(req, timeout=12) as r:
             data = r.read(32768)
-            return {"ok": len(data) > 4000, "status": r.status,
+            return {"ok": len(data) > 4000, "status": r.status, "head": data[:300].decode("latin1"),
                     "type": r.headers.get("Content-Type", ""), "bytes": len(data), "final": r.geturl()}
     except Exception as e:
         return {"ok": False, "error": str(e)[:120]}
