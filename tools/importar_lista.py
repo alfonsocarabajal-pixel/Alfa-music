@@ -40,7 +40,8 @@ def read_list(path):
         line = line.strip()
         if not line:
             continue
-        if line.startswith("#"):
+        # Comentarios: "# ..." (con espacio). Un tema puede empezar con "#", p. ej. "#Canta".
+        if line == "#" or line.startswith("# "):
             m = re.match(r"#\s*nombre:\s*(.+)", line)
             if m:
                 name = m.group(1).strip()
