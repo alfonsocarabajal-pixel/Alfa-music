@@ -1,0 +1,28 @@
+# clave  página-oficial  [direcciones extra a probar]
+sport890 https://www.sport890.com.uy/ https://alba-uy-sport890-sport890.stream.mediatiquestream.com/index.m3u8
+delplata https://www.delplatafm.com/
+m24 https://www.m24.com.uy/ https://streaming1.hostingmontevideo.com/8034/stream https://streaming1.hostingmontevideo.com/8034/; https://streaming1.hostingmontevideo.com/8034/stream/;
+emisoradelsur https://emisoradelsur.uy/ https://radios.iwstreaming.uy/8038/stream https://radios.iwstreaming.uy/8040/stream https://radios.iwstreaming.uy/8032/stream https://radios.iwstreaming.uy/8031/stream https://radios.iwstreaming.uy/8033/stream https://radios.iwstreaming.uy/8035/stream https://radios.iwstreaming.uy/8037/stream https://radios.iwstreaming.uy/8039/stream
+clasica https://clasica.uy/
+futura https://www.radiofutura.com.uy/
+nacional https://www.radionacional.com.uy/web/
+centenario https://radio36.com.uy/
+amlibre https://www.amlibre.com.uy/
+radio1010 https://www.1010am.com.uy/
+urbana https://www.urbanafm.com.uy/
+concierto https://www.conciertofm.com/
+delsol https://delsol.uy/
+azul https://azulfm.com.uy/
+oceano https://oceanofm.com/
+espectador https://espectador.com/
+sarandi https://www.sarandi690.com.uy/
+radiomundo https://enperspectiva.uy/
+carve https://radiocarve.uy/
+montecarlo https://www.radiomontecarlo.com.uy/
+universal https://970universal.com/
+oriental https://oriental.com.uy/inicio/
+rural https://radiorural.uy/
+clarin https://radioclarin.uy/
+babel https://babel.uy/
+mediospublicos https://mediospublicos.uy/
+continente http://cx10continente.com/ http://cx10continente.com:8152/ http://cx10continente.com:8152/;
