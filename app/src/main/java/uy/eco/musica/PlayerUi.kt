@@ -43,6 +43,7 @@ class PlayerUi(val prefs: Prefs) {
         if (p.songs.isEmpty()) return
         val first = if (shuffled) p.songs.indices.random() else start.coerceIn(0, p.songs.size - 1)
         c.shuffleModeEnabled = false
+        c.repeatMode = Player.REPEAT_MODE_OFF
         c.setMediaItems(p.songs.map { it.toMediaItem() }, first, 0)
         if (shuffled) c.shuffleModeEnabled = true
         c.prepare()
@@ -56,6 +57,7 @@ class PlayerUi(val prefs: Prefs) {
      */
     fun songsToSave(): List<Song> {
         val c = controller ?: return emptyList()
+        if (stationsMode) return emptyList() // las emisoras de radio no se guardan en playlists
         // Si se está escuchando una playlist del grupo, las sugerencias de la radio
         // NUNCA se guardan en ella (aunque ya hayan sonado).
         if (loadedId.isNotBlank()) {
@@ -85,6 +87,9 @@ class PlayerUi(val prefs: Prefs) {
         private set
     var shuffle by mutableStateOf(false)
         private set
+    /** ¿Están sonando emisoras de radio (pestaña Radios)? */
+    var stationsMode by mutableStateOf(false)
+        private set
 
     private val listener = object : Player.Listener {
         override fun onEvents(player: Player, events: Player.Events) = refresh()
@@ -108,6 +113,7 @@ class PlayerUi(val prefs: Prefs) {
         buffering = c.playbackState == Player.STATE_BUFFERING
         index = c.currentMediaItemIndex
         shuffle = c.shuffleModeEnabled
+        stationsMode = c.currentMediaItem?.isStation == true
         queue = playOrder(c).map { QueueEntry(it, c.getMediaItemAt(it)) }
     }
 
@@ -134,6 +140,7 @@ class PlayerUi(val prefs: Prefs) {
     /** Toca una canción: suena ya y la radio arma el resto de la cola. */
     fun playNow(song: Song) {
         controller?.run {
+            repeatMode = Player.REPEAT_MODE_OFF
             setMediaItem(song.toMediaItem())
             prepare()
             play()
@@ -144,6 +151,7 @@ class PlayerUi(val prefs: Prefs) {
     /** Karaoke: suena solo esa versión (sin radio automática). */
     fun playKaraoke(song: Song, query: String) {
         controller?.run {
+            repeatMode = Player.REPEAT_MODE_OFF
             setMediaItem(song.toMediaItem(karaokeQuery = query))
             prepare()
             play()
@@ -154,14 +162,15 @@ class PlayerUi(val prefs: Prefs) {
     /** Karaoke: la suma al final de la cola. */
     fun enqueueKaraoke(song: Song, query: String) {
         val c = controller ?: return
-        if (c.mediaItemCount == 0) playKaraoke(song, query)
+        if (c.mediaItemCount == 0 || stationsMode) playKaraoke(song, query)
         else c.addMediaItem(song.toMediaItem(karaokeQuery = query))
     }
 
     /** "+": la agrega después de lo que ya agregaste vos, antes de las sugerencias de la radio. */
     fun enqueue(song: Song) {
         val c = controller ?: return
-        if (c.mediaItemCount == 0) {
+        // Si suenan emisoras de radio, la canción reemplaza la lista de emisoras.
+        if (c.mediaItemCount == 0 || stationsMode) {
             playNow(song)
             return
         }
@@ -182,8 +191,26 @@ class PlayerUi(val prefs: Prefs) {
         }
     }
 
+    /**
+     * Radios: suenan todas las emisoras de la lista, empezando por [index].
+     * ⏮ ⏭ pasan de una emisora a otra y al llegar al final vuelve a la primera.
+     */
+    fun playStations(stations: List<Station>, index: Int) {
+        val c = controller ?: return
+        if (stations.isEmpty()) return
+        c.shuffleModeEnabled = false
+        c.repeatMode = Player.REPEAT_MODE_ALL
+        c.setMediaItems(stations.map { it.toMediaItem() }, index.coerceIn(0, stations.size - 1), 0)
+        c.prepare()
+        c.play()
+        markLoaded(null)
+    }
+
     fun next() = controller?.seekToNextMediaItem()
-    fun previous() = controller?.seekToPrevious()
+    fun previous() = controller?.run {
+        // En vivo no hay "volver al principio": siempre va a la emisora anterior.
+        if (currentMediaItem?.isStation == true) seekToPreviousMediaItem() else seekToPrevious()
+    }
 
     fun playAt(i: Int) {
         controller?.run {

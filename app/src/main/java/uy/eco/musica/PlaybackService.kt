@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.annotation.OptIn
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
+import androidx.media3.common.ForwardingPlayer
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
@@ -74,7 +75,16 @@ class PlaybackService : MediaSessionService() {
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
 
-        session = MediaSession.Builder(this, player)
+        // Desde la notificación o los auriculares, "anterior" en una emisora en vivo
+        // pasa a la emisora anterior (no hay "volver al principio" en una transmisión).
+        val sessionPlayer = object : ForwardingPlayer(player) {
+            override fun seekToPrevious() {
+                if (player.currentMediaItem?.isStation == true) player.seekToPreviousMediaItem()
+                else super.seekToPrevious()
+            }
+        }
+
+        session = MediaSession.Builder(this, sessionPlayer)
             .setSessionActivity(openApp)
             .setCallback(callback)
             .build()
@@ -89,12 +99,22 @@ class PlaybackService : MediaSessionService() {
     private fun restoreQueue() {
         val saved = queueState.load() ?: return
         restoring = true
+        val items = saved.songs.mapNotNull { (song, radio) ->
+            if (song.id.startsWith("emisora:")) Stations.byMediaId(this, song.id)?.toMediaItem()
+            else song.toMediaItem(radio)
+        }
+        if (items.isEmpty()) {
+            restoring = false
+            return
+        }
+        val stations = items.all { it.isStation }
         player.setMediaItems(
-            saved.songs.map { (song, radio) -> song.toMediaItem(radio) },
-            saved.index,
-            saved.positionMs,
+            items,
+            saved.index.coerceIn(0, items.size - 1),
+            if (stations) 0 else saved.positionMs,
         )
-        player.shuffleModeEnabled = saved.shuffle
+        player.shuffleModeEnabled = saved.shuffle && !stations
+        if (stations) player.repeatMode = Player.REPEAT_MODE_ALL
         lastCount = player.mediaItemCount
         // No se llama a prepare(): el audio se carga recién cuando el usuario toca Play.
         restoring = false
@@ -139,14 +159,17 @@ class PlaybackService : MediaSessionService() {
             controller: MediaSession.ControllerInfo,
             mediaItems: MutableList<MediaItem>,
         ): ListenableFuture<MutableList<MediaItem>> = Futures.immediateFuture(
-            mediaItems.map { it.buildUpon().setUri("$SCHEME://${it.mediaId}").build() }
-                .toMutableList()
+            mediaItems.map {
+                Stations.byMediaId(this@PlaybackService, it.mediaId)?.toMediaItem()
+                    ?: it.buildUpon().setUri("$SCHEME://${it.mediaId}").build()
+            }.toMutableList()
         )
     }
 
     private val listener = object : Player.Listener {
         override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
             if (restoring) return
+            retriedId = null // cada canción o emisora nueva tiene su propio reintento
             mediaItem?.let { played += it.mediaId }
             extendRadio()
             saveQueue()
@@ -188,6 +211,16 @@ class PlaybackService : MediaSessionService() {
                 error.errorCode == PlaybackException.ERROR_CODE_IO_NETWORK_CONNECTION_TIMEOUT
             ) {
                 retriedId = null
+                return
+            }
+            if (player.currentMediaItem?.isStation == true) {
+                // Emisora en vivo: se reintenta una vez; si sigue sin responder, queda en pausa
+                // (con ⏮ ⏭ se pasa a otra emisora).
+                if (retriedId != id) {
+                    retriedId = id
+                    player.prepare()
+                    player.play()
+                }
                 return
             }
             if (retriedId != id) {
@@ -248,6 +281,8 @@ class PlaybackService : MediaSessionService() {
         if (remaining() >= 2) return
         // En karaoke no se agregan canciones automáticas: suena solo lo que se eligió.
         if (player.currentMediaItem?.karaokeQuery != null) return
+        // Con emisoras de radio en vivo tampoco.
+        if (player.currentMediaItem?.isStation == true) return
         val seed = player.currentMediaItem?.mediaId ?: return
         if (seed == radioSeed) return
         radioSeed = seed

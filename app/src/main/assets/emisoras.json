@@ -1,0 +1,234 @@
+[
+ {
+  "id": "sarandi",
+  "nombre": "Radio Sarandí",
+  "banda": "AM",
+  "frecuencia": "690",
+  "url": "https://radiolatina.live:10977/sarandi",
+  "logo": ""
+ },
+ {
+  "id": "oriental",
+  "nombre": "Radio Oriental",
+  "banda": "AM",
+  "frecuencia": "770",
+  "url": "https://radiolatina.live/7906/stream",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Orientalcx12.gif"
+ },
+ {
+  "id": "espectador",
+  "nombre": "El Espectador",
+  "banda": "AM",
+  "frecuencia": "810",
+  "url": "https://espectador-1.nty.uy/",
+  "logo": "https://espectador.com/public/img/favicon/apple-touch-icon.png"
+ },
+ {
+  "id": "carve",
+  "nombre": "Radio Carve",
+  "banda": "AM",
+  "frecuencia": "850",
+  "url": "https://streamingcasazorrilla.innovanexo.com:8000/radiocarve850.mp3",
+  "logo": "https://radiocarve.uy/wp-content/themes/carve_theme/assets/images/logo.svg"
+ },
+ {
+  "id": "montecarlo",
+  "nombre": "Radio Monte Carlo",
+  "banda": "AM",
+  "frecuencia": "930",
+  "url": "https://streamingcasazorrilla.innovanexo.com:8000/montecarlo.mp3",
+  "logo": ""
+ },
+ {
+  "id": "universal",
+  "nombre": "970 Universal",
+  "banda": "AM",
+  "frecuencia": "970",
+  "url": "https://970universal-3.nty.uy/",
+  "logo": ""
+ },
+ {
+  "id": "uruguay",
+  "nombre": "Radio Uruguay",
+  "banda": "AM",
+  "frecuencia": "1050",
+  "url": "https://radios.iwstreaming.uy/8036/stream",
+  "logo": ""
+ },
+ {
+  "id": "nacional",
+  "nombre": "Radio Nacional (La 30)",
+  "banda": "AM",
+  "frecuencia": "1130",
+  "url": "https://stream.rcast.net/73479",
+  "logo": ""
+ },
+ {
+  "id": "radiomundo",
+  "nombre": "Radiomundo",
+  "banda": "AM",
+  "frecuencia": "1170",
+  "url": "https://stream1.enperspectiva.net:8443/radio.mp4",
+  "logo": "https://enperspectiva.uy/logo_radiomundo.jpeg"
+ },
+ {
+  "id": "clarin",
+  "nombre": "Radio Clarín",
+  "banda": "AM",
+  "frecuencia": "580",
+  "url": "https://radioclarin-zikoxweb.radioca.st/stream",
+  "logo": "https://radioclarin.uy/wp-content/uploads/2024/01/cropped-ic_launcher-playstore-180x180.png"
+ },
+ {
+  "id": "rural",
+  "nombre": "Radio Rural",
+  "banda": "AM",
+  "frecuencia": "610",
+  "url": "https://radiolatina.live/8152/stream",
+  "logo": ""
+ },
+ {
+  "id": "clasica",
+  "nombre": "Clásica",
+  "banda": "AM",
+  "frecuencia": "650",
+  "url": "https://radios.iwstreaming.uy/8032/stream",
+  "logo": ""
+ },
+ {
+  "id": "cultura",
+  "nombre": "Radio Cultura",
+  "banda": "AM",
+  "frecuencia": "",
+  "url": "https://radios.iwstreaming.uy/8034/stream",
+  "logo": ""
+ },
+ {
+  "id": "fenix",
+  "nombre": "Radio Fénix",
+  "banda": "AM",
+  "frecuencia": "",
+  "url": "https://sp3.servidorrprivado.com/8070/;",
+  "logo": ""
+ },
+ {
+  "id": "america",
+  "nombre": "Radio América",
+  "banda": "AM",
+  "frecuencia": "",
+  "url": "https://america-2.nty.uy/stream",
+  "logo": ""
+ },
+ {
+  "id": "delsol",
+  "nombre": "Del Sol",
+  "banda": "FM",
+  "frecuencia": "99.5",
+  "url": "https://delsol-1.nty.uy/",
+  "logo": "https://delsol.uy/favicon.ico"
+ },
+ {
+  "id": "azul",
+  "nombre": "Azul FM",
+  "banda": "FM",
+  "frecuencia": "101.9",
+  "url": "https://azul-1.nty.uy/",
+  "logo": "https://azulfm.com.uy//public/img/streaming/musica.png"
+ },
+ {
+  "id": "oceano",
+  "nombre": "Océano FM",
+  "banda": "FM",
+  "frecuencia": "93.9",
+  "url": "https://oceano-2.nty.uy/netradio/listen.mp3",
+  "logo": "https://oceanofm.com/wp-content/uploads/2024/11/cropped-favicon-180x180.png"
+ },
+ {
+  "id": "disney",
+  "nombre": "Radio Disney",
+  "banda": "FM",
+  "frecuencia": "91.9",
+  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_URY_MV.mp3",
+  "logo": ""
+ },
+ {
+  "id": "hit",
+  "nombre": "FM Hit",
+  "banda": "FM",
+  "frecuencia": "90.3",
+  "url": "https://hit-1.nty.uy/stream",
+  "logo": "https://fmhit.uy/wp-content/uploads/2023/09/Logo_HIT_BLANCO-sin-claim.png"
+ },
+ {
+  "id": "babel",
+  "nombre": "Babel",
+  "banda": "FM",
+  "frecuencia": "97.1",
+  "url": "https://radios.iwstreaming.uy/8030/stream",
+  "logo": ""
+ },
+ {
+  "id": "futura",
+  "nombre": "Radio Futura",
+  "banda": "FM",
+  "frecuencia": "91.1",
+  "url": "https://radiolatina.live:10849/",
+  "logo": "https://www.radiofutura.com.uy/icon.png"
+ },
+ {
+  "id": "aire",
+  "nombre": "Aire FM",
+  "banda": "FM",
+  "frecuencia": "100.3",
+  "url": "https://streaming3.hostingmontevideo.com/8064/stream",
+  "logo": ""
+ },
+ {
+  "id": "metropolis",
+  "nombre": "Metrópolis FM",
+  "banda": "FM",
+  "frecuencia": "104.9",
+  "url": "https://metropolis-web-1.nty.uy/",
+  "logo": ""
+ },
+ {
+  "id": "inolvidable",
+  "nombre": "Inolvidable FM",
+  "banda": "FM",
+  "frecuencia": "93.1",
+  "url": "https://inolvidable-1.nty.uy/",
+  "logo": ""
+ },
+ {
+  "id": "columbia",
+  "nombre": "Columbia FM",
+  "banda": "FM",
+  "frecuencia": "88.5",
+  "url": "https://stm.gmpro.top:7008/;",
+  "logo": "https://fmcolumbia.com/wp-content/uploads/2020/02/columbia-1024x576.png"
+ },
+ {
+  "id": "alfa",
+  "nombre": "Alfa FM",
+  "banda": "FM",
+  "frecuencia": "96.3",
+  "url": "http://radioonline.netgate.com.uy:8000/alfafm",
+  "logo": "https://alfafm.com.uy/assets/img/inicio__izquierda__video--splashscreen.png"
+ },
+ {
+  "id": "concierto",
+  "nombre": "Concierto FM",
+  "banda": "FM",
+  "frecuencia": "",
+  "url": "https://s3.yesstreaming.net:7022/stream",
+  "logo": ""
+ },
+ {
+  "id": "clave",
+  "nombre": "La Clave",
+  "banda": "FM",
+  "frecuencia": "92.9",
+  "url": "https://stream-151.zeno.fm/ndwvn44vebruv?zs=gsCKxmQESE6hL5yVzBYFAA",
+  "logo": "https://laclave92.000webhostapp.com/reproductorluna/playershoutcastv2/favicon.png"
+ }
+]

@@ -103,6 +103,10 @@ jobs:
             -PnpeVersion=${{ needs.revisar.outputs.npe }} \
             -PfsProject="$FS_PROJECT" -PfsGroup="$FS_GROUP"
 
+      - name: Probar emisoras de radio (solo avisa, no frena)
+        continue-on-error: true
+        run: python3 tools/probar_emisoras.py
+
       - name: Compilar
         env:
           ALFA_KEYSTORE: ${{ runner.temp }}/alfa.jks

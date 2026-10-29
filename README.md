@@ -46,3 +46,10 @@ Proyecto de uso personal. Usa la API interna de YouTube (no oficial): puede deja
 - El audio se resuelve recién al reproducir cada canción (`ytm://ID` → URL directa), así los enlaces nunca vencen en la cola.
 - Las playlists compartidas se guardan en Firebase Firestore (API REST, sin SDK). El proyecto y el código del grupo están cifrados en `config/nube.env.enc`; antes de publicar, la compilación prueba escribir, leer y borrar en Firebase.
 - La clave de firma está cifrada en `keystore/alfa.jks.enc`; la compilación la descifra con el secreto `ALFA_KS_PASS`.
+
+## Radios
+- Pestaña **Radios** (para todos): las principales emisoras AM y FM de Uruguay, en vivo.
+- Filtro Todas / AM / FM; tocás una y suena. ⏮ ⏭ pasan de una emisora a otra (al final vuelve a la primera).
+- Las emisoras están en `app/src/main/assets/emisoras.json` (nombre, banda, frecuencia, dirección y logo).
+- En cada compilación se prueba que cada emisora esté transmitiendo; si alguna no responde queda un aviso (no frena la compilación).
+

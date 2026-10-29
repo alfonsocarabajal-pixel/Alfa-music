@@ -79,7 +79,10 @@ class QueueState(context: Context) {
         val arr = o.getJSONArray("canciones")
         val songs = (0 until arr.length()).mapNotNull { i ->
             val j = arr.getJSONObject(i)
-            songFromJson(j)?.let { it to j.optBoolean("r") }
+            // Las emisoras de radio también se recuperan (su id empieza con "emisora:").
+            (songFromJson(j) ?: j.optString("id").takeIf { it.startsWith("emisora:") }
+                ?.let { Song(it, j.optString("t"), j.optString("a"), 0, null, null) })
+                ?.let { it to j.optBoolean("r") }
         }
         if (songs.isEmpty()) return null
         Saved(

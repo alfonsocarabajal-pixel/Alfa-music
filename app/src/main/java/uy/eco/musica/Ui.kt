@@ -208,10 +208,11 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                     keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                     keyboardActions = KeyboardActions(onSearch = { search() }),
                 )
-                // 0 = Buscar, 1 = Playlists, 2 = Invitaciones (solo admin), 3 = Karaoke (con permiso)
+                // 0 = Buscar, 1 = Playlists, 4 = Radios, 2 = Invitaciones (solo admin), 3 = Karaoke (con permiso)
                 val tabs = buildList {
                     add(0 to "Buscar")
                     add(1 to "Playlists")
+                    add(4 to "Radios")
                     if (access.showKaraoke) add(3 to "El Karaoke de Dieguito")
                     if (access.isAdmin) add(2 to "Invitaciones")
                 }
@@ -256,6 +257,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                 showQueue -> QueueList(ui, onSave = if (Cloud.enabled) ({ showSave = true }) else null, onAdd = onAdd)
                 tab == 2 && access.isAdmin -> InvitesScreen(access, notify)
                 tab == 3 && access.showKaraoke -> KaraokeScreen(ui)
+                tab == 4 -> RadiosScreen(ui)
                 tab == 1 -> {
                     val id = openPlaylist
                     if (id == null) PlaylistsList(
@@ -558,12 +560,12 @@ private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?, onAdd: ((Song) -> Uni
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
-                if (onSave != null && ui.queue.isNotEmpty()) {
+                if (onSave != null && ui.queue.isNotEmpty() && !ui.stationsMode) {
                     IconButton(onClick = onSave) {
                         Icon(Icons.Default.Save, contentDescription = "Guardar como playlist")
                     }
                 }
-                IconButton(onClick = { ui.toggleShuffle() }) {
+                if (!ui.stationsMode) IconButton(onClick = { ui.toggleShuffle() }) {
                     Icon(
                         Icons.Default.Shuffle,
                         contentDescription = if (ui.shuffle) "Desactivar aleatorio" else "Activar aleatorio",
@@ -600,7 +602,7 @@ private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?, onAdd: ((Song) -> Uni
                 highlighted = i == ui.index,
                 onClick = { ui.playAt(i) },
             ) {
-                if (onAdd != null) {
+                if (onAdd != null && !item.isStation) {
                     IconButton(onClick = { onAdd(item.toSong()) }) {
                         Icon(Icons.AutoMirrored.Filled.PlaylistAdd, contentDescription = "Agregar a playlist")
                     }
@@ -645,7 +647,7 @@ private object Images {
 }
 
 @Composable
-internal fun Thumb(url: String?, size: Dp) {
+internal fun Thumb(url: String?, size: Dp, placeholder: Boolean = true) {
     val image by produceState(initialValue = url?.let { Images.cached(it) }, url) {
         if (url != null && value == null) {
             value = withContext(Dispatchers.IO) { runCatching { Images.load(url) }.getOrNull() }
@@ -655,7 +657,7 @@ internal fun Thumb(url: String?, size: Dp) {
         Modifier
             .size(size)
             .clip(RoundedCornerShape(6.dp))
-            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .then(if (placeholder) Modifier.background(MaterialTheme.colorScheme.surfaceVariant) else Modifier)
     ) {
         image?.let {
             Image(it, contentDescription = null, modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
