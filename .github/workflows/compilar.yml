@@ -3,6 +3,9 @@ name: Compilar APK
 on:
   push:
     branches: [main, prueba]   # "prueba" solo compila, no publica
+    paths-ignore:              # las listas de temas no cambian la app: no generan versión nueva
+      - "listas/**"
+      - "tools/**"
   workflow_dispatch: {}        # botón "Run workflow": compila y publica siempre
   schedule:
     - cron: "15 9 * * *"       # todos los días 06:15 (Uruguay): revisa si hay extractor nuevo
