@@ -11,16 +11,26 @@ class GreetingsTest {
 
     @Test
     fun primeraVez() {
-        val g = Greetings.choose("Choco", 0, at(2026, Calendar.OCTOBER, 26, 10))
-        assertTrue(g.title, g.title == "¡CHOCO ESTÁ EN LA CASA!")
+        val titles = (1..200).map { Greetings.choose("Choco", 0, at(2026, Calendar.OCTOBER, 26, 10)).title }.toSet()
+        assertTrue(titles.toString(), "¡CHOCO ESTÁ EN LA CASA!" in titles && "¡AL FIN, CHOCO!" in titles && titles.size == 6)
     }
 
     @Test
-    fun masDeUnaSemanaUsaLosDosMensajes() {
+    fun masDeUnaSemanaUsaLosSieteMensajes() {
         val now = at(2026, Calendar.OCTOBER, 26, 10)
         val last = now.timeInMillis - 10L * 86_400_000L
-        val titles = (1..60).map { Greetings.choose("Choco", last, now).title }.toSet()
-        assertTrue(titles.toString(), titles == setOf("CHOCO, ¿DÓNDE ANDABAS?", "¡APARECIÓ CHOCO! 🙌"))
+        val titles = (1..300).map { Greetings.choose("Choco", last, now).title }.toSet()
+        assertTrue(titles.toString(), titles.size == 7 && "CHOCO, ¿DÓNDE ANDABAS?" in titles &&
+            "¡QUÉ ALEGRÍA, CHOCO!" in titles && "¡RESUCITÓ CHOCO! 🙏" !in titles)
+    }
+
+    @Test
+    fun deTresASeisDias() {
+        val now = at(2026, Calendar.OCTOBER, 26, 10)
+        val last = now.timeInMillis - 4L * 86_400_000L
+        val titles = (1..300).map { Greetings.choose("Choco", last, now).title }.toSet()
+        assertTrue(titles.toString(), titles.size == 6 && "¡VOLVISTE, CHOCO!" in titles &&
+            "¡RESUCITÓ CHOCO! 🙏" in titles && "¡QUÉ ALEGRÍA, CHOCO!" !in titles)
     }
 
     @Test
@@ -28,7 +38,9 @@ class GreetingsTest {
         val now = at(2026, Calendar.OCTOBER, 27, 9) // martes
         val last = now.timeInMillis - 86_400_000L
         val g = Greetings.choose("choco", last, now)
-        assertTrue(g.title, g.title == "BUEN DÍA, CHOCO ☀️" || g.title == "ARRIBA, CHOCO")
+        assertTrue(g.title, g.title.contains("CHOCO") && g.line.isNotBlank())
+        val titles = (1..300).map { Greetings.choose("choco", last, now).title }.toSet()
+        assertTrue(titles.toString(), "ARRIBA, CHOCO" in titles && "¿YA DESAYUNASTE, CHOCO?" in titles)
     }
 
     @Test
@@ -36,6 +48,8 @@ class GreetingsTest {
         val now = at(2026, Calendar.OCTOBER, 27, 18)
         val last = now.timeInMillis - 2L * 3_600_000L
         val g = Greetings.choose("Choco", last, now)
-        assertTrue(g.title, g.title == "OTRA VEZ POR ACÁ, CHOCO 😎")
+        val esperados = setOf("OTRA VEZ POR ACÁ, CHOCO 😎", "¡CHOCO, OTRA VEZ! 😂", "¿VOLVISTE, CHOCO?",
+            "CHOCO, ESTO YA ES AMOR ❤️", "¡TE ENGANCHASTE, CHOCO!", "CHOCO, ¿TE OLVIDASTE ALGO?")
+        assertTrue(g.title, g.title in esperados)
     }
 }
