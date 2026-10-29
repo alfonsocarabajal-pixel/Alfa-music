@@ -1,0 +1,3797 @@
+[
+ {
+  "name": "Del Sol FM",
+  "url": "https://delsol-1.nty.uy/?type=http&nocache=2780&dbl=0",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://delsol.uy/",
+  "favicon": "https://delsol.uy/favicon.ico",
+  "clicks": 14,
+  "votes": 184,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004Ìò9×\t\u001aàK£{\u0000aé8J-\u0003b\u0007 kU\u001f,A\rpö»°êXY\u001d¤Ír¶kïÞ04aóó\u0011bÊ°¹!Än_\u0019ïFºËÊøJÐ£Ç;½Øë[,ÄUÒBVÈÎÏºÖîT:Z¨f°Ó\u0010\u000eÌUs\n*,a\u0011§hl\"*h¸\u001b\u00167=%þ,Hòu+1T}É!ªK7IQÀ\u0006/pqEÔ\u0010\u0011¦JU\u001cÓ]¥uÙ<EÔ<Þ¥\u0004\fL{\u0011COé\u001a U0LC«¼û qFaºsgpÐ¦\u001dR¡\b\u001c\u001f\u000b\u001fS\u0016\u0013}%qS¼XÏ¨)ÄÐ(\u0016édaÔ5RÝ!¢>\u0004jT\u001e\u0018\u001eiÉÊ\nå¯£ãçßw\fX°{?0òô_.\u0015\u001e\b\u001aKÅ#nÊ.\u0004\u0000Æzþß",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://delsol-1.nty.uy/?type=http&nocache=2780&dbl=0"
+  }
+ },
+ {
+  "name": "Fm Inolvidable 93.1",
+  "url": "https://inolvidable-2.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 13,
+  "votes": 2072,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004ç\u0000\u0002ß>Øc\t\u0013ò[çÛ\fa\"~J(i§°§AF\u0010m4ö\u0014è \u0013áé¬NYNèK\u001fº|ÅT)w÷Êb-A!W>Mï;¥Ìý4ªö¶ÕéE5\u0010æcksµ,×lPñ©SÊ\t?õÔ°\bZ}ÚdÄ\u0013\u0000I\u0011o\u0015\rcôkQ(ÐæCtíÍ]\u0013jX±ÅÒÐVç¼Ã\u0016\u0017?þü_\u0002`¬Áìx\bÉ)U26ßþÙ{ÿ.ú\u0011E8[\\)[*þÔBÓîÓ\" \u0002L°x¨k\u001f£Z\u0001c`È#ÍÑ\u000b56í¤\u0015;ÎÍ\u000b®À®c¬è\tØÊWg4ÿöËÛÿùwÐ)ÂÚáJÜáWôn¥\u0000 \\­¤\u0002@*hXòßãÊ®Á!ÆÿÚ\u0006\u0003C\u0006 Ë<PdEÄ0B«T\u0015;ù",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://inolvidable-2.nty.uy/"
+  }
+ },
+ {
+  "name": "Del Sol FM",
+  "url": "http://radio.dl.uy:9950/radio",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "http://fmdelsol.com/",
+  "favicon": "https://cdn-profiles.tunein.com/s13953/images/bannerx.jpg?t=636203379790000000",
+  "clicks": 13,
+  "votes": 5259,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004ïó 1Õ/\u001aàgGÚÀeè\\\u000b³X\f1\tk\u001cëAq}¯&¤2gôX\u001bÛ®VÃ\"Å\u0016>wá/(C¤÷VU<X­\t3Ì@»\u0012\u0019y¦âõFÊÄ¤»4\tâ? S\u001002v)g¦dfY\u0019\u0015®Æ$ñÀ1.é«dý=9\u001eGu¯7j\u0010J+Ç­\u001e8#\fÿÿk\u0017p%\b\u0016·E\u0004r%´Ù©}¨X~M\u000eµ¿CãôG\r²ã/Ùäò8õ¶ãó/XÝ\u0016]cfÔUqD~$VA»,EÈ¡:]&0e¶cpªT4xè6\"_^cÇ§ë®\u000f\u0000dz\u0019\u00110ÌÖ\u0018xóS¤¸SZ Cf¬bþï[2ù_\u001e\u0002¾$V´îÔK¹£ÃùÏt¬VfkÝ?}|Úwß÷",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://radio.dl.uy:9950/radio"
+  }
+ },
+ {
+  "name": "Azul FM 101.9",
+  "url": "https://azul-2.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "alternative,entretenimiento,indie rock,musica,rock",
+  "state": "",
+  "homepage": "https://azulfm.com.uy/",
+  "favicon": "",
+  "clicks": 10,
+  "votes": 601,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004kòo)X\u0007=à\u0000LDû\u0000ç¼\u0000\nl­^\u0007½TkÀ÷q´ïßHë/ãì?÷öòÍ·Ë¬\u001fÖ5¨AãR8dÄ,ÅÚ}\u001d«0MjpW|2ÿ¿ÓÊå\u0016éÈ:`4\u0015R¹ºb\u0019ØÜd\bÍ­\u0007G(&E%i¢Å\u001a¡¶ä§ÿÿöïû1-]«ïÎÍæídiÚÖW<qañ\u0002^¼ÔgèTª£|ïPZÊí¯Ý76§TÓ'É;¨æú¶+ÉëßüÚÞøÌ<n\u0011rÇ\u0017/ëý½ãÅØ­ËÿýÂìðÈ\u001fÿtò²áò\tQ¹éã\u001b\u0018¾ 2Ð·\u001aµý\n_ÈPnuê\u000bYUýÏsG³Ú62tOg®mq¿ß´íµ¶¾èNô3­äîÖëÝÑÕ\u001fÿÿðp7o",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://azul-2.nty.uy/"
+  }
+ },
+ {
+  "name": "Radiomundo",
+  "url": "https://stream1.enperspectiva.net:8443/radio.mp4",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "talk",
+  "state": "",
+  "homepage": "https://enperspectiva.uy/",
+  "favicon": "https://enperspectiva.uy/logo_radiomundo.jpeg",
+  "clicks": 8,
+  "votes": 926,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "vÎÊf\u001bÐgdà\u0015K\u0010e#Ân¿\bòÒÕùdê÷Ý\u0010±\fc[¿\u000f?\u0010C\u0001DdR\u0004\u001d\u0001\r©®Pþ\u0001X£Íµ+z´Q³¯\u0005=\\G pb\"÷ÂBî8,r{áq¦fçrÒ\"`\u001d Ûó\u0014uhÍ\u0005h@\u000bAH¨\u0015\u0005\u001dÅUg[oÜ)¦³Ì\u0001\u0019k\\\r'ñ\u0019Ü_c©ÉñïÚü\u0001?\u0004üÐ0wj\"^\u001bX\u0007éöóZr½@&Cbp(\u0007ZÆ\u0006v$Þ°\u000eRÝä¦Ja\u001fÅ|\u0000$ÇïÁä\u00006L¥ÑëJ\u0013`aóéJÒM(Ê@\u0017\u0000\u0006ð\u0010Ç\fê)³Å¥\u0016w`lÞ~8Îí¶\u0000\u0000\u000eÿñX4A!\u001bU\r²\u0013c ¢4\t\bfÃDR\u001cr&*\u0012Ëd%-%¼ÀCñÏD",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://stream1.enperspectiva.net:8443/radio.mp4"
+  }
+ },
+ {
+  "name": "Sarandi 690",
+  "url": "https://radiolatina.live:10977/sarandi",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "news,talk radio",
+  "state": "",
+  "homepage": "https://www.sarandi690.com.uy/",
+  "favicon": "",
+  "clicks": 8,
+  "votes": 290,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ\\-á°!\u001bT­-\u0004B1Pl3\u000fÓÌ¾2ÈÓ½óãÎw¥ê÷S2Ú\u0016\"\u0004¥H¦\n!¤ÈÇHÿ8.ÐÙûaí]ûóö\tÆá¢íáeæøWBdUá²8ageH-Õ;çÙWW|Oà¯\t£\u001bäË+¯¼/½ä\u0006ÊÑÏmõîº;mÂC\u001ad¨Ã>|ùaÁ*m¨'F«±_¨Tç\u0005KdM¤d\u0007\u0013¥ùÑîÖL\u0004ô;}+\u001a-)¢ùªt\\©'Øw$Æ2\u001eUQ\\J./X¼Ît ½p8Â\\µ\tLä«S-g¾ì,ª#1º|¦ï¦ÏÄ¬¿\f¦xÊöÇµ_I\u00036ò5'½ swÒûoyÈA/ãÔ\u0000_ð46ä8³_D§«2\bìq;\u001bjV\u001b\n\\ã>VYkÛFÒI!",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://radiolatina.live:10977/sarandi"
+  }
+ },
+ {
+  "name": "Babel",
+  "url": "https://radios.iwstreaming.uy/8030/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "instrumental,jazz,music,radio pública,uruguay",
+  "state": "",
+  "homepage": "https://babel.uy/",
+  "favicon": "",
+  "clicks": 7,
+  "votes": 669,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû@Û\u0003[eØÉïkhKdJùeíK\u000eea,=­©E+k¥´ô\u000bOB\u0005ß;âÇ«·»ëAëyz5Fß$øÈîÆ?_ÅÃ£¾¥½D/¨±è\"~O]ÂÌ¬ImDVf¥×\u001dÌY@l¯÷á÷#´ºv\"8Õ)$`'¸Å\\¡\u001f\u0007\u0002U³©\u0017q\u0004!L\u0013óa¾5¶Å½Ió}¿ÿöòúýÿù¾Wôo¿Ûåù>_ãrª*­*ª»¥[5%wÇî@+þö\"\u001cü\u001a\u0002\b\r\u0014ÁÔOy\u0015è\u000fWI½ä\fc2×\bÕ\t\u0016f\fúâ¨V3à¡ÿ\u0012;\u00007ëñ/å~kºæ5q3ú¿!óþ)ô\u001eùC¼([Êôo*\u001bEÐoè6¿_\u000eò¯=+7WõþJÙ\u0013à¹+þuÆi¸\u001dó!",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radios.iwstreaming.uy/8030/stream"
+  }
+ },
+ {
+  "name": "Radio Uruguay 1050",
+  "url": "https://radios.iwstreaming.uy/8036/stream",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "información,radio pública,uruguay",
+  "state": "",
+  "homepage": "https://radiouruguay.uy/",
+  "favicon": "",
+  "clicks": 7,
+  "votes": 674,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿóp½\u0018%ÍTaæm¨\u0002\\¬\u0000\u0000\u0000ºRjìÿ\u0000\u0000où-¶ÛvÚN)\u0015_@ìÎ5æÚ\u001a]Y ÔY¢º.K³E\u001a{é§°VÚH¢ÌÊ$lD&´ÐÏ¯+jRËû:É6zyÈ£¬È«C\u0012Í*µ¤®\"¸I\u0014jV¯ZIÊ4ÔjWQèr®¤ª®òò¶^\rLïC4H¦±4µ\u00131b7d4nmÄ±/D¡D{LBvg¶ÐhÒ¢¡\tË!ZhZM¸¹×6f¡\t.lDÒß\u001aLÍ/$$´BÍpÿóp´\u0016áÑXßa)m¨\u0002\\¬\u0000\u0000\u0000Ãfþ\u0000\u0000_ù$Ûm·\u000b*V#\u001cb4Ô×Cf~ \u0007\u001dvG,%0{ð\rÇ\u0001Ì¬rrje¤¥\u000b\u0000á@\u0001ËEoV£\u0011\u0014¤",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radios.iwstreaming.uy/8036/stream"
+  }
+ },
+ {
+  "name": "El Espectador 810",
+  "url": "https://espectador-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "news",
+  "state": "",
+  "homepage": "https://espectador.com/",
+  "favicon": "https://espectador.com/public/img/favicon/apple-touch-icon.png",
+  "clicks": 6,
+  "votes": 853,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004­ô0)Rxzb\u0004ÊPo\u0018JK\u0018wP\ráéA^\u000eê\u0001¼=(²¦lþßý?ö-®Ãc%ÈýÉÙ¸2äk2 8YÌ\u0006\u0010Ð±a+©T©±\"CöréSt¨ø#@{\r³3}K_ñc?\u0018Qbqf\u000bµbçÔ*\u0017²ÝFlÿÿÿúÕhN\t$ÄÎæ0H×Oqîc¬2B¨#@âp{EfÏ¹\b$c\nqà{²,%íq¡qbò\u0019\r_ç5KT6\u001e\u0005N\nG Ðw\nI\u0004\u0005Bt;v¯ÿÿÿýB\tÁ*LLîc\u0004t÷\u0018îæ9\u001aÃ$*8¨\u000e'\u0007´Vlû\u0012Hö0§\u001e\u0007»\"Â^×\u0019j\u0018\u0016/!ÕÜ¯³Uj>\u0013pP« ÑètözH$ø*\u0013Ý»Wÿÿ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://espectador-1.nty.uy/"
+  }
+ },
+ {
+  "name": "FM HIT 90.3 Uruguay",
+  "url": "https://hit-1.nty.uy/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "oldies,pop,rock",
+  "state": "Montevideo",
+  "homepage": "https://fmhit.uy/",
+  "favicon": "https://fmhit.uy/wp-content/uploads/2023/09/Logo_HIT_BLANCO-sin-claim.png",
+  "clicks": 6,
+  "votes": 198,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdæ\u0002\u0004>VÙ³\f\u001cp?f+V\u0018C°\u000e\r3m'qõ\u000bn|Ã\r:ÃmW6T&\u0005\u001aHPNçT6(ãÇY¶z^4Ýê\u0006]\u0018\\Ô7±^¼í® \u0012\u0011/ÆËÉü£ß*¶Îø\u0000) \u0000\u0000.OÁor¨°]XCák\u000eõ\u0015C\u0004l\u0005\u001cÅÖÃá4Þ/ÿ\tQ0ÔS\u0015\u00021/¼ø\u001cùÓà°ÛnGV?ïú´X\u0010\u0000\u0006\u000f@\u001aB\u0016 îØEPç7\tøBmNZ\u000f&Ø\"\u0005¤á\fÙ°8pJ+ðz¥ÓuÁ#7n\u0011Sä×;\u0006U¡¿\u0011\u0018Q'®Cì°ºi#\r \u0001\u0015½\u001fNb9z\u0015o¨7g\tlô¨|ûï÷ü=ÊÝþÝö¿\u001b\u001b£ÒûäíüÃ¶t\"Á\u0001,5£|",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://hit-1.nty.uy/stream"
+  }
+ },
+ {
+  "name": "Zorrilla de San Martin",
+  "url": "https://server-usa2.radioseninternet.net/9312/stream",
+  "codec": "AAC+",
+  "bitrate": 32,
+  "tags": "classical",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 6,
+  "votes": 196,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\@\u0015aÔ\u0001>4\u0010v·R\u001c$\u0000\u0000\nÍ-*3KhYõ÷=÷½286\u000bc×ÿÖk,Ñ\u0012>dÓÊÐ¼` \r6oë¢F=o]\u0018G\u001f¬Îz8ÿ4\u001fËtt8P°3ãreß6Tå!ù0ø¹QÌê­áã~+pºNöH8GÂ³t?»(`]ê=\u0001p¶Á#Æ\u0018I9D \u0014T\u0000È´\u000bÓ1«z\u0000¥\u0011N\u0003­ÿù\\@\u0016¡Ø\u0001<4tb\u0015\u0013¥(ªß\u0015¨\u0000]\u001dX\u0011\u001eäI\u001füz9GÝ.ûî¢8c^\n¿WEo\butÈ®ìj\u0015õÆ§1>Ö+yf£\u001e¨UWºº$î\u0007}j7JVc\u0015\"=­ÚíwìÔaõ-ówMãSÝ,ÙÝ\u0004ÅDù#Gnô",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://server-usa2.radioseninternet.net/9312/stream"
+  }
+ },
+ {
+  "name": "Cosquin Rock Radio Uruguay",
+  "url": "https://icecast15.innovanexo.com:9000/radiocero.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "chat,fun,gossip,rock",
+  "state": "",
+  "homepage": "https://cosquinrockuy.net/",
+  "favicon": "https://cosquinrockuy.net/wp-content/uploads/2025/11/logo-color-17.png",
+  "clicks": 5,
+  "votes": 27,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "GFz\u0005\u001c¶\b\u001e³\npLào\u000bJÃ\u0002Àå½ó\u0007CnQ\u0005¦\u0005ù\u0014F6Xf)\\cLÉ®XqC\u001dù*aâl-é|&ùdFSs6äc5îkp\u0010[>HÚú!É\n°À0g`^¯ü\t¥\u0000\u0002\\DÍ#ÍðpX$HqyUa¢JEþ½\u0013ç´0\\À\f:Ì&ZNÚ¨U\bãCÐÊÅå}fMwÚBÿ\u001eÍë>\u0015\u0018&Â#¶\u001dÿûdè\u000eôvZÒ\u0013\u001f\"Fdª@aé>\u000e÷NM<éÁ\u0011\u000f)A¡8S\u001ahÜÂ=H,åè¯¡\u0006\u0019¿Z>¤Y\u0010Y:\u001aV\u0000\"}8ÍTa?BE§Ö VÇ\u0001\u0011²SØaJP­®\u00038Ö÷¸R¥·C,R´&\u00112¸\u0006c\u0004C¸|ª¹\u0001QÁ\u0018\u001cõ@Æ]",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://icecast15.innovanexo.com:9000/radiocero.mp3"
+  }
+ },
+ {
+  "name": "OCÉANO FM",
+  "url": "https://oceano-2.nty.uy/netradio/listen.mp3:8000/;?download=false",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://oceanofm.com/",
+  "favicon": "https://oceanofm.com/wp-content/uploads/2024/11/cropped-favicon-180x180.png",
+  "clicks": 5,
+  "votes": 6,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004Î\"DZyá\u001dØSÈ¬hÃX\n\rW±AG¡«5ðàpÄ$ø\u0010lï»G\u0000Ý\\d\"@\u0004:\u000b\u0004\u0004±20\u001az5á\f¾(!­/KP\u0004åÄ7òNòâé\u0011\u0004\u000b02^Ç2\u0005D9ÚºÉ¾yObõS¿)]óNp·#â\b®Gô¾çÜî\u001c1\t ~\u0004\u001b;çxx\u001bÿ@\u000b&Úe\u0000\u0019\u0000j~a\u001e»ÅG\u0003Gc4x\u001aa¥M\u0017¼\u0011¶¶\u000bûÍO±ZR÷mµð}?ò>«þrÔ¶\"ÝÍ5UÝG-õsu¾­YUÑÉÈÖ£Q·\b\u0007Åó\u000bGèÍ¾0É}1ÓAÏv¶G\u001b)\u0005Yô¥ OFå\u001eÚ½Íûú\n.\u0019#áTmóÅ5\u001b5½ë{K©\n9£RG«ÊE-Yß×uo«",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://oceano-2.nty.uy/netradio/listen.mp3:8000/;?download=false"
+  }
+ },
+ {
+  "name": "Metropolis 104.9",
+  "url": "https://metropolis-web-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 5,
+  "votes": 97,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd£\u0000\u0002*Ùû\f\u0010øN\"\u001b\u000f0eb\n`©kì0G!Q\u000e«8ôPajU\u0016mõ}(\u001aWÂ\u0005F®ÚºX§j`í2wð13$b*xnvÍb%ÚúxôI\u000f)Å&åE{õ_C;}y?ùþÿëÒßcrÿÿÿÿÿþÌ3(\t@gj°\\¡Q5#R3¤\nQ¥xû)\tD\u0016µó\u000e)ü¨\u0005M\u0003\t=Æ#8±}#¾_NûèÎå*ÞÕ\u001cÉ]þÚÿÿõÿ®ßÑ­)º\u0019ÕkW[~ÿÿü¬\u0011Ã\b5-zR-Ö\u0005bI(@0\u001e`P`(\u0004Y¶µÇ7í¾ôrId¶-cS\u0011tR'¯\u00175àîô 8<ÃÃ à;Äë\u00124¢%\u001f\u0015ÃD®nµ=-ÿìÕÝòP\u0003c¥¡rA\u0006\u0005ë\u0000d\t0\u0013(@$\u0002å®\\",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://metropolis-web-1.nty.uy/"
+  }
+ },
+ {
+  "name": "CX 20 Radio Monte Carlo",
+  "url": "https://streamingcasazorrilla.innovanexo.com:8000/montecarlo.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "aqui esta su disco,la super radio,music,news",
+  "state": "",
+  "homepage": "https://www.radiomontecarlo.com.uy/",
+  "favicon": "",
+  "clicks": 5,
+  "votes": 155,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ê¸ÊÉ\u0014JBN(\rqqZZ{\u0019Nq¡\r6gILÎ\u0003hº$ÌUR´¶¡r\u000b»ãæ+¯\f\u000fbCay\u0002Nß!nn\u0013Ùôªõ\u0003çõdË0vá\"_Q5ÌªíH±\u0007;ôbï]Æ/a_7ÿûdd\u0000\u0007\fvÔmà\u0000 ¢z`Ì\b\u0000\u000f!1a\u0000\u0000Ö(C°0\u0000{\u0007U­kõ,úÜÿÿÿÿÿÿÿÿÿ`bI¿ü@Á¦G\u000bnãª\u00069{µîËùÌwø)Ùtv¾Eå\u0019àÄµ^Ï÷\u0000\u0014\u0000\u0000$½À\u0015­ÔêIä\u00132üªã;[X\u000eDç£ÍÓ\u0007áø+\u0011¹\u0000Ô\u0013\u0017\u0011æ¾\"9\u0017z«nb*þ\"\\²Ì\u001cr×\u0011\u00058b\u0018\u001d¸ÁC\u0014oØziÃæ\u001eZ½a¦¸\u001c«lvå»",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://icecast14.innovanexo.com:9000/montecarlo.mp3"
+  }
+ },
+ {
+  "name": "Radio Carve",
+  "url": "https://streamingcasazorrilla.innovanexo.com:8000/radiocarve850.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://radiocarve.uy/",
+  "favicon": "https://radiocarve.uy/wp-content/themes/carve_theme/assets/images/logo.svg",
+  "clicks": 4,
+  "votes": 76,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ì\u001c~\nk/§Gv¼´B©\u001bDª)h®J\u000fnÈC¾ßë¯ìµéøã¯£ÖÊpkÂ-ô\u00043¤­¬>É!\u0003a\u0011DB¶\u0004Ê\u0015\u001b&KH[ÿÿÿOÿÿÒßò¸[Z=¬ÜÏ*\u0000\u0017\u001ce¬0Íó\u001eÈ*¤õBðröP\u000e£/\u0010\u0003`èwiéÖê\b\u0003©x]ß0ÒÑDÆ'\bHÝUÒ(\u001eÝÙó¢,1Ñ\u001a\u0001\nl18å\f\"Gf<\u0000§¯ÿü|7w\u0017vèÕkNãÚ\u0006ÕIDÿûd/ô?kQH. 4bI=T\u0011­@mä©ÈÃ¥ÀôèV»:ÄÑ\u0001oÚ\u001f`h]\u0019wDC\u0018Û3¥ymÌÎÌëÑ\u0015÷WåOÿÿÿçþØÈ±}:Ý\u0011¾\u001fïÉ_\u0015ùC\u0014ýTV~ï8ËªÌ=­y_ú",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://icecast14.innovanexo.com:9000/radiocarve850.mp3"
+  }
+ },
+ {
+  "name": "Radio Pipí Cucú",
+  "url": "https://comodin.uy/radio/8000/320.mp3",
+  "codec": "MP3",
+  "bitrate": 0,
+  "tags": "argentina,brasil,música,popular,uruguay",
+  "state": "Montevideo",
+  "homepage": "https://fediverse.blog/~/RadioPip%C3%ADCuc%C3%BA",
+  "favicon": "",
+  "clicks": 4,
+  "votes": 1178,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûàDøÈÃÛcríî(ÂsInZ­)Má¬,ÀâÅÌ&hR¯Ò§\u0013\u000f´Î{\u000e¼æcù@crJ¦£QF1<`\u000f&$j´æÒ@`Ëær\u001c\u0018\u0012?Ö(eËÜ¡¡§0\b0\bp\u0007 +\u0019ìeA­a§BpL'm\u0000HÎo#=?!ù03\u001aÏ\u0004àü\n¯\u0005ÍÝa^ZJlp°êx\u0002\u000f\b\në×Õ\u000b¥3\u0006ð¡\\¨:!m\f\u001f~2K^\u0003³³»²ztUu£m\u001cDÀ\u001a!dº\u0007t¨à`ÑÃ2ñ}$g\n\t\u000711\u0012ùhü¨ÍTë(Y,$\u0013ÌÙâ{\n¦<Íå%_aü¶\u001fÀWÑUÖ\u001bÚ5ÖH²8u\f·Cò²Cf\u0010\u0010\u001c\u0013\u001ee!a~¦1E\u0018z\u0002aRÁ\u0000cR@yF",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://comodin.uy/radio/8000/320.mp3"
+  }
+ },
+ {
+  "name": "90.3 FM DEL ESTE",
+  "url": "http://usa15.ciudaddigital.com.uy:8010/DelEsteFM",
+  "codec": "MP3",
+  "bitrate": 24,
+  "tags": "entretenimiento,information,music",
+  "state": "",
+  "homepage": "https://noventatres.com/",
+  "favicon": "https://noventatres.com/index_htm_files/2.png ",
+  "clicks": 4,
+  "votes": 19,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "Qb]'õ­\u000b çU\u0015\u0005ÙF°îkC2Co¬!¥§-5ES e%Ù¿ßëúÿÿË-ëÿó0Äç\u0010ZzÀ\u0000X¹¼®û~­V,\u0018è9NÈ\r¥UiVÆVV°!F\u0018\u0004\u0014\u0012ªnCU¨®ã­c4ëT¯Í\u0015ieoiw0\u0010îúþnÿß=Pïþß¯újÿó2Äæ\u000fvÀ\u0000PJ¹×£þ»{+\nD§\u000b96¶¨:Êêú»dÒã©/\u000fJ¨NÜ­IcXD$\u0012¼·­¨Ëb·ÉW MébìïÎ{z£2¡OåFe¿òÿó0Äé\u000fÀ\u0000hP¹)þ¯Ó¯GècTgk\nÿ~îËE©Ï$Õ\u001bP0+-LG­ým\tKèß¸s,¶Fq\u0006\u0011össïÏÓ&\b_ÂBéü´Ðÿó0Äë\u0010:r´\u0000x¹9",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://usa15.ciudaddigital.com.uy:8010/DelEsteFM"
+  }
+ },
+ {
+  "name": "Mega FM",
+  "url": "https://radio.cimaspeed.com/8070/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Vergara",
+  "homepage": "https://megafm.com.uy/mega/",
+  "favicon": "https://cdn-profiles.tunein.com/s210344/images/logod.png?t=164432",
+  "clicks": 4,
+  "votes": 24,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdÞ\u0000ãÆ.ÉK\u000f1Â'ì83\u0000\u0010¯M]'¬±\u000fÈ²°ÛL\u0000R¾¾Ä\u0018ôKâ\tH[õMõì\u000fÃ\u001e\n\u0002q³#¼d&\rz='&\u001aÚØÌBûÐC/q£ 6çnÕ9£IyæÙre2+\u0003²\u001et\u0000\u0000\u001f»2ÿìíRÞîöM_þ¸ä\u0005ÏáFd2ø7T4Q\bD\u0006\u0014\u0018CPRÂÂ]\u0013WyuvX\nu6ÂToáx5Q ¨!$\u0011\u0016z\u001eG;D\u0003vêsdCfZe4NU5\tM¬\u0000$9àÐ»8ä\u0006\u0014zf¦~{ô&9Û¼[\b\u0017\u00172}.^ô%\u0000Rbú\u0000YGPÕiJæÑ=ÙÑ'M@H¾®\u0003_IÃ ¡EÆ\n!\u0014ã\u0003@îB)Î&u;ÿÕS3bM\u0015$« \u000b6\b$Å",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radio.cimaspeed.com/8070/stream"
+  }
+ },
+ {
+  "name": "La Otra - FM 104.5",
+  "url": "https://cento02.mipanelradio.com/proxy/fmlaotra?mp=/stream",
+  "codec": "AAC+",
+  "bitrate": 48,
+  "tags": "cultura,folclore,información,música,pop,rock,sociedad",
+  "state": "Paysandú",
+  "homepage": "https://laotrafmpaysandu.blogspot.com/",
+  "favicon": "https://laotrafmpaysandu.blogspot.com/favicon.ico",
+  "clicks": 4,
+  "votes": 87,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\@\"Áè\u0001J6-¨Ø3\u0004ÐB0¬\u0002ì\u0002¶ÂUÔ\u001df P\u0000\u0011G8ÔfçD\u000f\u0010JÔýÊæh´\u0003*%®ÙUl\u0012\u001dHÐþD_÷ëF*¥iÑ²!È®Ó,«õ.WÏ+°k\u000fçÃÿË¯²³ÊÅ7ó\u0010h6èæ¥W¡/äý\u001b¬Ë~ë!\\\u000fQ5[åÑ¬2\u0012¥$[fÄM\rÑÇ?\u000660\u0016@\u0000gE8ª%°ý¿:ßåS\u0005ã\u0012 \u0005r^Ü\u001aþ9>ääÙ\u0010\u0001A\u0016c\fÄTY\u00135{1íñ¯írÏ)ºmÆ\u001bãÁÕÏko7è\u00007è\u0010\u0012Óÿ_ï9G3ýø6d`\u00000A\u0000\u001d`\u0000o\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000öÿù\\@\"Áè\u0001T6%\u0014=\u0006\u0010$@LÏ4",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://cento02.mipanelradio.com/proxy/fmlaotra?mp=/stream"
+  }
+ },
+ {
+  "name": "Latina - FM 95.3",
+  "url": "http://medios.ciudaddigital.com.uy:8168/LatinaFM",
+  "codec": "MP3",
+  "bitrate": 192,
+  "tags": "cultura,información,música,pop,rock",
+  "state": "Paysandú",
+  "homepage": "https://www.latinafm.com.uy/",
+  "favicon": "https://www.latinafm.com.uy/site/wp-content/uploads/2020/06/logolatina.png",
+  "clicks": 4,
+  "votes": 88,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": " øH%#\u0000W\u0004{&oo0\u0012ä4\u0010¼xêhíúËcnMÛiI\u0001`\u001a\u0001T¼\u0003<úí)¹Ì¶'\u000e\u0012*|SddÂB\u0014¯>ÉDæ\f\u0004Âl%\t½ÂV\nÚJ\u001cYõ=/î¯S\u0012°\b»ÕLAME3.99.5UUUUU\u0000\bÚhÕX-ñÝ\bÁ¼ÏLO\u0010Æh×MÌH À¡\u0013ns\rF0ZHÏ#+YÎ2Ò¨Âd1ÕÃiq¢\u001c\u0003Ê\u0018\u001cD\u0013\nS.À\u0003b\u0011ó\nÊã\u0000Ks\u000fS\u001fÊóQ\t£[Ã\u001aCS)\u0002c\u001fO\u000e\"ÙÚ+B\f\u0019LIJ\u0018úË\t\r'&,æ2\n`\"@ÎÁ¼ÉSÌ£(Óf`ÝÖ<Ôf¨ÆÎ4þC°Ö)|Ë²\\Óf¼ÆtÔÃÁ¬È@X0±I§6Gb¦õ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://medios.ciudaddigital.com.uy:8168/LatinaFM"
+  }
+ },
+ {
+  "name": "Oldies FM",
+  "url": "https://hit-1.nty.uy/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "80s,90s,classic hits,oldies",
+  "state": "",
+  "homepage": "https://fmhit.uy/",
+  "favicon": "",
+  "clicks": 4,
+  "votes": 85,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdæ\u0002\u0004>VÙ³\f\u001cp?f+V\u0018C°\u000e\r3m'qõ\u000bn|Ã\r:ÃmW6T&\u0005\u001aHPNçT6(ãÇY¶z^4Ýê\u0006]\u0018\\Ô7±^¼í® \u0012\u0011/ÆËÉü£ß*¶Îø\u0000) \u0000\u0000.OÁor¨°]XCák\u000eõ\u0015C\u0004l\u0005\u001cÅÖÃá4Þ/ÿ\tQ0ÔS\u0015\u00021/¼ø\u001cùÓà°ÛnGV?ïú´X\u0010\u0000\u0006\u000f@\u001aB\u0016 îØEPç7\tøBmNZ\u000f&Ø\"\u0005¤á\fÙ°8pJ+ðz¥ÓuÁ#7n\u0011Sä×;\u0006U¡¿\u0011\u0018Q'®Cì°ºi#\r \u0001\u0015½\u001fNb9z\u0015o¨7g\tlô¨|ûï÷ü=ÊÝþÝö¿\u001b\u001b£ÒûäíüÃ¶t\"Á\u0001,5£|",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://hit-1.nty.uy/stream"
+  }
+ },
+ {
+  "name": "Radio Disney Uruguay",
+  "url": "https://27383.live.streamtheworld.com/DISNEY_URY_MV.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "music,pop music",
+  "state": "",
+  "homepage": "https://uy.radiodisney.com/",
+  "favicon": "",
+  "clicks": 4,
+  "votes": 23,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd\u0000\u0003\u0003eCZ¡æ\u001bÐ,À\u001aL\u0000#\u0000\u0010éce\f$ËH×\u0000è 0\u00000Bk `>Á\n¦ÓT¾\u001d%Ùå5Q¤¼®q9éd\u0007\u0004àñ\u0014Ç\u0016.ÓCÀ[zx´ý^j¢«¢WµßÞ¢Uâ¢\u0002\"v\u0005ejÊ\u0000VGÿ\u001aÜ}\u001aù}=&GÀê>$[ÌÇ¤Ldù×ÔM¸ÞÓ*\u000f´ßx&\u0019c1m@IF\u000b(Ó\u0018ô\nÖå·¿Þ\u000ecÔ×]G±­îÿBÿßs¿îó\u0006äÿZRr­D`¨*P2\u0012µÀëÁt½n{Ô«R´\r\u0012$@®\u0005g§\n\u0013\u0017v.¨$ì9HT²#_R#%>ÇÁ²Ô$µH*±äoíçérRê±Í¥x\u00065$zLÖÿ§MËw)\u0016Ý^Eûµ¾QY¬çwÌ[6ëìë",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://27383.live.streamtheworld.com/DISNEY_URY_MV.mp3"
+  }
+ },
+ {
+  "name": "FM Sueños 106.7",
+  "url": "https://radios.iwstreaming.uy/8012/stream",
+  "codec": "OGG",
+  "bitrate": 192,
+  "tags": "classic hits,other,pop",
+  "state": "Rio Negro",
+  "homepage": "https://fm1067.com.uy/",
+  "favicon": "https://fm1067.com.uy/assets/images/favicon.png?v=405a4609",
+  "clicks": 4,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "OggS\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000g#\u0007\u0005\u0000\u0000\u0000\u0000t\u000fv\u0001\u001e\u0001vorbis\u0000\u0000\u0000\u0000\u0002D¬\u0000\u0000\u0000î\u0002\u0000\u0000î\u0002\u0000\u0000î\u0002\u0000¸\u0001OggS\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000g#\u0007\u0005\u0001\u0000\u0000\u0000µ¤c\u0010Xÿÿÿÿÿÿÿÿÿÿÿÿÿÿq\u0003vorbis\u001d\u0000\u0000\u0000Xiph.Org libVorbis I 20030909\u0003\u0000\u0000\u0000\u0006\u0000\u0000\u0000TITLE=\u0007\u0000\u0000\u0000ARTIST=\u0012\u0000\u0000\u0000ENCODEDBY=altacast\u0001\u0005vorbis+BCV\u0001\u0000\b\u0000\u0000\u00001L(ÄÐU\u0000\u0000\u0010\u0000\u0000 6\u0010k§µÖZk¤vZkªµÖZk&µ¶Zk­µÖZk­µÖZk­µÖZc 4d\u0015\u0000\u0000\u0004\u0000@(J\u0012´dRLJ)e Grä9HÊ'¥(G\nbâ9è=õdkM",
+   "type": "application/ogg",
+   "bytes": 32768,
+   "final": "https://radios.iwstreaming.uy/8012/stream"
+  }
+ },
+ {
+  "name": "OCEANO",
+  "url": "https://oceano-2.nty.uy/netradio/listen.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://oceanofm.com/",
+  "favicon": "https://oceanofm.com/wp-content/uploads/2024/11/cropped-favicon-180x180.png",
+  "clicks": 4,
+  "votes": 67,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004Î\"DZyá\u001dØSÈ¬hÃX\n\rW±AG¡«5ðàpÄ$ø\u0010lï»G\u0000Ý\\d\"@\u0004:\u000b\u0004\u0004±20\u001az5á\f¾(!­/KP\u0004åÄ7òNòâé\u0011\u0004\u000b02^Ç2\u0005D9ÚºÉ¾yObõS¿)]óNp·#â\b®Gô¾çÜî\u001c1\t ~\u0004\u001b;çxx\u001bÿ@\u000b&Úe\u0000\u0019\u0000j~a\u001e»ÅG\u0003Gc4x\u001aa¥M\u0017¼\u0011¶¶\u000bûÍO±ZR÷mµð}?ò>«þrÔ¶\"ÝÍ5UÝG-õsu¾­YUÑÉÈÖ£Q·\b\u0007Åó\u000bGèÍ¾0É}1ÓAÏv¶G\u001b)\u0005Yô¥ OFå\u001eÚ½Íûú\n.\u0019#áTmóÅ5\u001b5½ë{K©\n9£RG«ÊE-Yß×uo«",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://oceano-2.nty.uy/netradio/listen.mp3"
+  }
+ },
+ {
+  "name": "Radio Continental 1600 AM Pando",
+  "url": "https://server-usa2.radioseninternet.net/9316/stream",
+  "codec": "AAC+",
+  "bitrate": 64,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.radiocontinental.com.uy/",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 54,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\)Áô!\u001bTÅºÆA(R\u0010\u0000AV¦QkUÄE­±,\u0018µ\u0015F¾g?\u0005è×Ýé\u001fÏP·O~Í¸Úg\u0005\u0006°·\\Û|úW\u000f\u0004±n¶~ÃXßga3Ó¦¯%K\u0004-yræÉV©\u0015±Ê\u0006pYê\bu¼\u0011sÝSkÏ8MBxO&28Ã¡¥-OãgeÆIFQß·\u0010²Oÿí\u0003ïZ${¡L§\u000e%­ÔÏÔ5ãÎó3VÔ]Xã\u00076b|\"ºßö\u001dÏ¦ïÞNä^èÓ4ãB-x_\u0013^\u0013Gh\u0018PÌ5Ð\u0014\u0005q0R´o3\b*Kª|¤ÊØ%Å!ÚÆ!\u0010¤ù+©ç`¶Êvýc!ã³\\\u0019)ïá¡î\u0001ñ\u0007ÇÜ <ÁL\u0017Î1r±\u0007{Je\u001diH?",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://server-usa2.radioseninternet.net/9316/stream"
+  }
+ },
+ {
+  "name": "Columbia FM 88.5",
+  "url": "https://stm.gmpro.top:7008/;",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "cumbia,entretenimiento,latino,música variada,tropical",
+  "state": "",
+  "homepage": "https://fmcolumbia.com/",
+  "favicon": "https://fmcolumbia.com/wp-content/uploads/2020/02/columbia-1024x576.png",
+  "clicks": 3,
+  "votes": 28,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdÛ\u0000õ¯VÔi\u0016Æ\u0000\u0000\r \u0000\u0000\u0001\u000fÍ[{G°op\u0000\u00004\u0000\u0000\u0004V¥tý\u0010½½Û\u0002\"Õz\nåJRß[ZÔ X\u001a\u0003B£UrZo-\u0014ÞM&¥ö)êIÊ§\u0018¡&#\u0011Í  ¨k95uP¡\u0014D\u0019.\u0015oUæUry(Æ1V9uã\u0012\u0014ÈU%TR\f¡3\u001fQSÄ3r×~¶SÛèW@®K5D*[GpÌ_PaZK5éjµç\u0019F­KÖ+'Â+J\fÅ7$¡6âgC0k7biª\\«³\u001c>T«pt= î\u0017ÿý\u0012ÝTh*8\u00161Ç-ý¾ù¶z[ÿÿÿýñ\u0014\u000b7\u000eL7ÿýõ=CPå«¸ëût\u001aèkÛ\u0014S%ÿ\u0013ö«\u0010S&ÿ?d\\©£\u000e8hRLAME3.100ªª",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://stm.gmpro.top:7008/;"
+  }
+ },
+ {
+  "name": "970 Universal",
+  "url": "https://970universal-3.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "futbol,noticias",
+  "state": "",
+  "homepage": "https://970universal.com/",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 314,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004_\u0002y%Wû\t\u001b`O$ªÿa#l\tÃcç­A1l|ó\u0015¨Ëcº4\u001cµíØHZÌ©o÷W-n£)fú\u0010Î4S-P`¸Ó;%F=r\u0013L\u001fQ\u0000¤óK uß\u0014@ÆÐh¼Ìk\u001f\tcõV[o80ï§îWùlwF²ò=»\t\u000bY-þêå­Ôq\u0010%,ßB\u0019ÆJeª\f\u0017\u001agd¨Ç®Biê\u0000\u0003FA \u001dÖ&Hk\f\u0007ÁD7\u001e\u0007SÌ\\à\u0013Ì;\u0007=°S_¤\u0014Ëéyççä·ä:G\u0014\u0016r\u000b\u0019\rCV\f0½ç2?¾Ç5\u0014ÿÐ\u0000\u0007\u0010@;/¬LÖ\u0019\u001c\u000f32(n=\"\u000e§¹-À'v\u000f\u0006{\u001b`¦¿\rH)ÒóÏÏÉoÈt(-!\u0016å\u0014\u00162\u001a¬\u0018a{\u0005",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://970universal-3.nty.uy/"
+  }
+ },
+ {
+  "name": "Del Plata FM 95.5",
+  "url": "https://alba-uy-delplata-delplata.stream.mediatiquestream.com/index.m3u8",
+  "codec": "UNKNOWN",
+  "bitrate": 0,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://www.delplatafm.com/",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 124,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno -2] Name or service not known>"
+  }
+ },
+ {
+  "name": "Celestial Fm 90.7",
+  "url": "https://cloudstream2036.conectarhosting.com/8032/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "gospel,religious",
+  "state": "",
+  "homepage": "https://www.celestialfm.com/sitio/",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 33,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûDK\u0000\u0002t*VË\t\u001b\u0010UD?1(e\nD¡[G±AV\u0012m¼ô,ÿÿÿSaÇ,j\u0014bVT¹TIR\u0014ÏÁ\u0019 ÈÉFøO¸}±E\u0000P\u001aÑX\u0018²Ï\u00148$\rì®ò\u0011~Ñá¬Ë÷2[<Ks®Èß@\u0005Î\u0012Vx°u\u0003\u001c¢$'}ßÕý¿üéYvì>·Ôjpæ$\u0004­Ûv³0\u0015u*T\u000bz}\u00198\r¹ü°ß¶P}©dÌfi¬FA\u0014#¾E\u0018ã)\u0003ÛµÉs\u0000SÑG<\u0018Yª¿©MWÑÛ¦UÏbÕ¡0mJFÃB@õ§\u001dxÙ®¶X5<IßhTÍÌvºÑTQ\\\u001e?\u0015Xëõhb¾Ê)ë\\Ï7G¾ßeF³ô\u001dj\u001fBIÚO¼q3.ù/Ñì\u001dÖ9é©7l\u0000\u0006çM¡",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://cloudstream2036.conectarhosting.com/8032/stream"
+  }
+ },
+ {
+  "name": "RADIO FELICIDAD - URUGUAY",
+  "url": "https://medios.ciudaddigital.com.uy:18042/Felicidad",
+  "codec": "MP3",
+  "bitrate": 24,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.radiofelicidad.com.uy/",
+  "favicon": "https://www.radiofelicidad.com.uy/am_felicidad.jpg",
+  "clicks": 3,
+  "votes": 29,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÁBjÿó0Äñ\u0011Y¦¤\u0000ÓP\u0004\u0000\u0002\u0007æüuè«Â%×\u000fY\u0010N\u000bHþoàLJ8µ÷Bõ=ô\u0005Í{àÜU>ªLq\u0005ÆnôÆ´­Ô\u0002\u0001#Ü#\r%×\u001fÿó2Äì\u000f\u00012¤\u0000Ë\np\u0006\u0003,Üä®oØÇì%ÿ­õ\u0004ÒE\u001d$m\fH\nµ:Å<ãÿÓX\u0018¹DÐ×ý½<ÊæÀ[@m%¬¶r¸Ö:\u001aÛd!6,Åÿó0Äò\u0013AZ°\u0000ÃXP\u0005¢$\u001eZj{ÿß!\u0007f}%Æ¡¿õæ\u0015°H\r\u0017Ç\u0011\u0010 \u000e]\u000fE hf.\u000eFâSjOÏDDBXR\\Kÿó0Äæ\u000fyBÌ\u0000{ÐqÕnfm^Úä¥íß¹¹Su\u001a(\u000eI«ZÌ5Ïÿü4\u0015Ë\u0004\r:Â\bº/R ÑN~",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://medios.ciudaddigital.com.uy:18042/Felicidad"
+  }
+ },
+ {
+  "name": "Aire FM 100.3",
+  "url": "https://streaming3.hostingmontevideo.com/8064/stream",
+  "codec": "MP3",
+  "bitrate": 192,
+  "tags": "cumbia,music,plena,reggaeton",
+  "state": "",
+  "homepage": "https://www.airefm.com.uy/",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 7,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû²Dî\u0004½dÜQì4BLkJ<ÉÈQqes¬,u\u0002!,­½\u000e9D§£f\b\u0007Æ\u000f¦\u00035ý, j)`ÚfhãßÈJ©õøbècë5µ¿æu\u001f¯AV¶\t'oe6Øôÿê<=\u000e@GÒ\u001e7âÀªÆ@L\u0004bÌ\bV:ðkªâdlïXéÙþöPB¼¯1¯§_\u0016-\u0000H  \u0000\u0000\u0000\u0000\u0017Á\u0017tÆ à\u0010È\u001fsYR®RÎTâ`´ª7<Ù`xaÓ§Égß ±ê9&å­Ôc½RYF\u0019ÞÑ\bID´\u000eÉ»Uqd\u0006)x6§H\"ì#¨¢¤ë¢\u0006uðò/\u0004Q;4áy\u0014à;\u001aÅ½ôº\u0016kú0Qj¯áTRÖ\u0019HîMµÐmË·mW_;û.Æôã\u000bdÆ%&*ßÒ\u0017a\u0000\u0004\\ä¯\u001e©\\£\u0010",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://streaming3.hostingmontevideo.com/8064/stream"
+  }
+ },
+ {
+  "name": "Metropolis 104.9",
+  "url": "https://metropolis-web-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 205,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd\"\u0003+\u0016]ñï0bC#ì\u000f\f#¤\fPÝsÇ¤j\u0005\u0006¯<Ã\tqÞnÐJ¿Éëû·¥Ì\u0018¿¢\tfö÷³±Iö6\u000fÛíË_@\u0004\u000f0ó\u000bk­´gM\u0003áTFò9®\u001c\u0003íWÈÓ/æ­Ã!Õ!ê\u001c\u0017±¯«C\u0018´N,8JÁ\u0015)F¦Åqk÷å÷m\n® B7ºc\u0000ÄX\u0006\u0001¾>É\u001aDSKâ\u0014[Áw\bôé\u0003ÓV19\u001f\u0001{7\u0003\u001dZÆ0FÐÎ°Í\fäïdµ©\u0014þY2\u0001jÞ¬Ðõ\u0013¨£P4 \u0015\u001a.­ÂacÈ¥ä\u00073¹tâ'Ò\nÏqj©\u0005Hì·ä`2¤câÁ`\u0018Ù¹\u0014Ü\u001b\u0015G$QgË\u0018(4í\u001aõ¨$õ\u000f$&\u000eÉ\r=ÿõ9JÝÿÿùab-*U±2",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://metropolis-web-1.nty.uy/"
+  }
+ },
+ {
+  "name": "Radio Cultura AM 1280",
+  "url": "https://radios.iwstreaming.uy/8034/stream",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "news talk",
+  "state": "Montevideo",
+  "homepage": "https://mediospublicos.uy/category/radio/radio-cultura/",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 79,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿóp=\u0011uy\\Ïië\\¨\u0002\\¬\u0000\u0000\u0000ÿÓ\u0004t~\u0013ªæS0\u0001GJ#õtëþ¿¾ºVËQr\né°ßÿÿÿÿøçâvLfË°Îö÷1WíÚåM\u001atøy#\rÀJZP:RçµÈ¢\u0010§ð\u0000\u0000¥Klo¸\u000e\\­[\bþ\t\u0001\u0019\bobj\u0019 j\u001e\u0003òÇ­ÂÛ±\u0005\u0006=ÐkE\u0006?S´µ¬Êq×þ}Ç,1¥ÞëUÕjkRêðËIXWh¹ÁiðÌF\u001d÷×;®ë\u0006K§¸±\u001fªÚc?\u0016¾õZË]bÖÿópi\u0015MyRk\u000f\\¨\u0002\\¬\u0000\u0000\u0000\tÊ.¡½ÝÕ\u000f^¶­q»oý{[ýÛ_5öÞqþkGÖ´ÿ\fHtö}õþsZ×_ï_ÿ@Ûj§8f«r\u001aË\nöQ6®?À\u0000\u0000dÜ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radios.iwstreaming.uy/8034/stream"
+  }
+ },
+ {
+  "name": "Boliche Radio",
+  "url": "https://streaming1.locucionar.com/proxy/bolicheradio?mp=/stream",
+  "codec": "AAC+",
+  "bitrate": 64,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://bolicheradio.com/",
+  "favicon": "",
+  "clicks": 3,
+  "votes": 100,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñX*AT!\u001bU=ª!B \tH\u0000Ø\u0000\u000b\u0000³JZ»î-F¢½À=nõÎEA¿µÊ®ð÷äDã9N\"¿g¢\u0015}r\r{Å2³ÿ³ÊxZS·9Jq7X°¯[¡\u0001¨VçafÅÙòª$¢]\u0004$¬J®Ä,¡\u0013&ÄäÅJE7\u00022kÙ{\u0005â`>bÖ ãQIó´\u0010GØã¨!æ¹þ9Z+-\u000e0¿ï÷U/ÆyÀ(à \u0018\"Àd\u0001\u001b\u0016\u0019Vð°)\u0003P\u0002-\"78R»ùüÄH-%PÔ\u00003^1?¿óÙuí¸Íj¸ð\bÈV0\n¬ùô\u0000gníJg\u0004¿CD\u0004iÁ\u0004[\u0000\u0015Ð×\u0014ã/ÛD)©®)JÑK\u000et¥`)\u0002Ïò¡èïÑ&mtªÏ¿nWë%Õe\u0004Ê?ÄoaH",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://streaming1.locucionar.com/proxy/bolicheradio?mp=/stream"
+  }
+ },
+ {
+  "name": "FM Buenos Aires 104.1",
+  "url": "http://radio.solumedia.com.ar:8352/stream",
+  "codec": "AAC",
+  "bitrate": 96,
+  "tags": "baladas en español,hits,musica romantica,música en español e inglés,música variada",
+  "state": "",
+  "homepage": "https://fmbuenosaires.net/",
+  "favicon": "https://fmbuenosaires.net/FMBA%20CXC281B2.png",
+  "clicks": 3,
+  "votes": 16,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿùP\"?ü'\fU\u0006\u0002Ã\u0010° \u0016\u0014\u0005\u0002!@¸H(\u0016\t\u0005B` D(\u00122\bH\u0002\u0010¬àÙä\u0005p\u000b\u0007\u0007\u001f\u0003}@ï\u000eIºû%ÕÿA+=WãÍ\u001cgtHû²²ö¿B7×Ê$G^Ð\u000eÌ`§ãÿÿ§üÓÙ{3KÏ¸1ç«FÖ¥Ùñ*\u0003YÇöÇ`VTüö.¶h\u0016Ny\u0014\u0019\u001bÄJ\u0003UÒÌú\u0010\u001e§Û¡Vu\u0018j55^@\u001eôiÒ&´¦¥|\u0011;¾\u000b7äâ$\u0013û%E \bNP2\u0016\u0004\u0014\t\u0005\u0002\"\u0000 $\u0013\u0011\u0004\u0004¡\u0010L \u0012\u0010\u0004Â!\u0000B@pÑ,D¦\u0003\rÔ»KÇÞÙÐ^ãîÂIáèYå©`5ÿ­âC\u0011OÜð\u0004ÄR\u0004 \"0\u0000\u000bÿùP\"\u001fü'\fU\u0006¡ °L,\u0014\u000b\u0004B¡\u0018D(",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://radio.solumedia.com.ar:8352/stream"
+  }
+ },
+ {
+  "name": "Radiomundo",
+  "url": "https://stream1.enperspectiva.net:8443/radio.mp4",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "talk",
+  "state": "",
+  "homepage": "https://enperspectiva.uy/",
+  "favicon": "https://enperspectiva.uy/logo_radiomundo.jpeg",
+  "clicks": 3,
+  "votes": 2,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "½F\u0010\u0000hm\u001f@\t\u0014Õb´öÕô:±Ñ\u001ffsëë×wË¶æ*í\u0016\u0000@VZÿ,ü\u0007s©¹ÒN )Y\u0007M7\u0005\u0005X¸\f]\u0004\n\u0010Ì\u0010\bûþVZLp\u0000%À\u0004l>Ã\u001c\\<U@È¡<s\u0000K®ÿ\tµJ.\u0000\u0003¬d¥\tó;jqu\u0010Q÷oØ\tàB\n(?ýæ}Ý\u001c\u0003ý\u000fÿy3C\u001fø@pÿñX.!!\u001bTí¡L)£0j\u0014\b\u0004Ê¢\u0010\u0019Ð\u0000°½´+?%©i!\u0000\u0001Ã\u0000«DÄ\u000eCê·Sb²Õªt\f]%ï9WÓÂ3ý\u000bä½Â´Èò\u0012oxWÊ nÌ±8\u0003Ly°âU6_z°+Íq·iòÈÇ\u0002+Óâ·S[¹vm \bVlWUafJð©ù®W¸&Þ\u001ei»J\u0000\u001a7",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://stream1.enperspectiva.net:8443/radio.mp4"
+  }
+ },
+ {
+  "name": "La Clave Uruguay 92.9 FM",
+  "url": "https://stream-151.zeno.fm/ndwvn44vebruv?zs=gsCKxmQESE6hL5yVzBYFAA",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://la-clave-92-9-fm.webnode.es/",
+  "favicon": "https://laclave92.000webhostapp.com/reproductorluna/playershoutcastv2/favicon.png",
+  "clicks": 2,
+  "votes": 19,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd\u0006àhÙ;){às-\u000b\\<Å\u000bØguì0g!X\u001b¬°ó\t E¾[h±æo¹õtewoRÍa.\u0018×ï\"nr¡fbNªF\u001f\u0010\"nª{Y\u000fV\u0001²;¬©&v$R«e÷\u001aH0EÒP%ü\u000e+À¹TåIàÓOswu[?\"lÈ~\fÅ¬ú\u0000å\rå¥ÄÔÐFþA\u000bD\u0015BÎÆV×mÏ4û\u0014\r\u000ed°r$\u0005\u0007\u0001\u001a\\¹\u0013¨\u0018\u0001J²\u0001\u0005%F\u0003Ü¶\u000bpU\u0005r6TÛÈmÊ¤\t\u001d\n:\u0005í°ònëæõ3B-\fV\u0019¯ôc=\\­ÿySËÕÓÌñµZ\u001b©Þ\u0003^oþ)Ù\u0014Dq0XÃãÐ\u0003Dwzl¥\u0005c\u0019&:tÈ!Iòr\\ÒHbí\u0013²úp¢\u0001\u0019$9Õ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://stream-175.surfernetwork.com/ndwvn44vebruv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJuZHd2bjQ0dmVicnV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6ImQyQTlwU2dEUmN5NUFJSHJUSWh1ZUEiLCJpYXQiOjE3OTMyOTg1MzcsImV4cCI6MTc5MzI5ODU5N30.Fgw9E2uU0o4qD0NLfrMFCwpESkZK4w9V_asJ98J9Wg0"
+  }
+ },
+ {
+  "name": "Carve Deportiva",
+  "url": "https://streamingcasazorrilla.innovanexo.com:8000/carvedeportiva.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "sports",
+  "state": "Montevideo",
+  "homepage": "https://carvedeportiva.uy/",
+  "favicon": "https://carvedeportiva.uy/wp-content/themes/radio1010_theme/assets/images/logo-carve-deportiva.svg",
+  "clicks": 2,
+  "votes": 55,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "v)¥\u0004\u000b¸9@®cÇZëïýcâßÿñFwñÿÿûd¦\u0007\"`Õ\u001eo \u0000¬*÷Æ<\u0000Y\u0001VYº\u0000\u0001¯¬\u0007\u0018ð\u0000×ìQ~3w¦#ÿ$\rGùÖ·_ÿÿÿé¿¯ÿÿÀ½`íÃQ7óKg\u001a¦u¼ï6ÿxÄ\u0013G_@x\u0000\u0003\u0002\u0005g0$°æªêfaF\fk%=(h¡àQÓ\u0007\"2vÑç\u0000(-\u0011ZÉ\u0006ð\u0007í\u0003\f\f\u001bT\u0011;\u00035,\u000eX l(~ÀPxtXLBù8\u0004\u0016Â\u0012`w\u0002@Gh]AD\u000b\u001c\u0000À\"H'á/\u0015Ç(2ñ>\\*\u0010\u0011\r\\W&F4TJæC<&¥$\u0012\u0011øüE\u0013¬!\u0010mD~LH&ìar9\u0002x¢:dè±\u001cj¥§§R\b\u001eZU\"æÇ\tô«ÿ'þËäÑ·þFËo¿",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://icecast14.innovanexo.com:9000/carvedeportiva.mp3"
+  }
+ },
+ {
+  "name": "El Libertador 1210 AM",
+  "url": "https://streamingraddios.online/proxy/llamadad?mp=/stream",
+  "codec": "MP3",
+  "bitrate": 40,
+  "tags": "folclore,folk,music,noticias,social,variety",
+  "state": "",
+  "homepage": "https://ellibertador.com.uy/",
+  "favicon": "https://i0.wp.com/ellibertador.com.uy/wp-content/uploads/2020/11/cropped-cropped-Logo-El-Libertador-1-1.png?fit=935%2C337&ssl=1",
+  "clicks": 2,
+  "votes": 28,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿòPÈ \u0000\u001bzFj40Æ´J\u0016ùZª©kL\nND³ðÅÓúâAY«jZ&o8Ë&wP¤r/}^½ÐáH¸Ñõ=ïH·êÂ;ï?ï\"ùr\u0016ÛÚE}¾BpT$l5\u0011\u0004Þ\u0019,M Äpév¤tÒY8÷(i\u0015).\u0012\t\"4´µ^¥AjT\u0000\u0000\u0000\u0000\u0000ÿòPÈ\u0007\u0014\u0000\u001c\u000b\nnT1¸%\u001cIU_×Yea\u0012Í3Q+\naov-\u001cèkî7ÿ<Çó-ÐÏïn¢Jï\u0019ÏÙþtÊHg\bü¤Ï=¦Gü;Íß\\üÉóâÞ2,$Ò]j¶{\u00175/2¼½\u0002á½3kGyÐañhêßjÄµ\u0013\u0010¨¢^Ít\u0000\u0000\u0000ÿòPÈSÎ\u0000\u001c\u0012rT@ÆØ%©-i_ÿþ;\t©\u001b0((¥J\u001cç!ä\u000bJ\u0012R",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://streamingraddios.online/proxy/llamadad?mp=/stream"
+  }
+ },
+ {
+  "name": "Radio Disney Uruguay 103.7 (AAC Stream)",
+  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_URY_MVAAC.aac",
+  "codec": "AAC+",
+  "bitrate": 128,
+  "tags": "2000's,classic hits,music 70s 80s 90s,musica moderna,others,pop,rock",
+  "state": "Montevideo",
+  "homepage": "https://uy.radiodisney.com/",
+  "favicon": "https://uy.radiodisney.com/favicon.ico",
+  "clicks": 2,
+  "votes": 3,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ^U_ü!\u001bÔÕüô\u001bCÇO~*RUMx­[t»¬]ïWÉR2\u0000ÏÜfgÍ94»N?\u0013\u0019j¯¿I5rié\u001bb\u00074d*tRgsäeÆ/¹¹MÏÏ»²#£H©~çjcTÝNåÚf\tÚ]\u0018Òæ6xÑM÷×kmçÁVpÛ4ìc\u0005Qñ¥V9´5#Ù?³¦]¯¯\u001bS¸ÔN¬¢8æûµÔËU{ilS³\u0014\u001azÌVrfAL-.&áwvè°ùDhøY~·PÂó\u0013ªnæo¡Ñ§ÅZm\u000eÙ)æÁ»\u0004\fÉ:,fÞ5g\u001cÁ\u0014£¬­\u001b=!çÝ¥%`óFdð½Rú=\u0018ÓªWûD;Ã0-+*­;_9÷^ï~c6¬ FÈ{k1RSè3$ÀbY\u0005i\u0014\rÒwceð\u0014èG",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://24233.live.streamtheworld.com:443/DISNEY_URY_MVAAC.aac"
+  }
+ },
+ {
+  "name": "Hiperactiva FM",
+  "url": "https://srv2.radiostreamuy.com:8016/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "folk,hits,news,pop",
+  "state": "",
+  "homepage": "https://hiperactivafm.com.uy/",
+  "favicon": "https://www.cxradio.com.br/img/Radio/Logo/66ad6ade51a3094504c0ce983c295be8.webp",
+  "clicks": 2,
+  "votes": 0,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdÊ\u0000óÙXYë\fBö\u0000\u0000\r \u0000\u0000\u0001\u0012åig¬=+P\u0000\u00004\u0000\u0000\u0004Åê­Nõf*rr®\u0005(ý<Ù0â©»} 6«k\u001eòÙí¸ C²ã¤\u001dªú¸?3½ò×ß\u000eu»>±¦£ë#q£)hóFÏ^\u0005E?ª\u0018¶Y¢\u0004\bä\tM\u0013\u0012Û«âÿªKQ»ÿoÿÿõõ\u0015¬¥\"ÑdÛJ\u0004&iÁpB%\u0016°tÉ´ßWõj*£\u0005ÇW\u0002Dï=×ûzÜvG(ÅE3À4%ëdVû°&Çy\u0001\u0018æ´\u001c69Vþ.\u000e©?ªNBaU\u001bI§6SW¸oM¯©½¶ÅÜ¦x\u0012õðó\u000f\u0005É\fvúOU\u001dË\u0017Þ£\u001c¯\u0010ÿÿâ\u0002±!£\u0018L\\ \u0016\u000eêLAME3.100ªª",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://srv2.radiostreamuy.com:8016/stream"
+  }
+ },
+ {
+  "name": "Multimedios Rincón FM 107.7 - Fray Bentos",
+  "url": "https://rincon2-zikoxweb.radioca.st/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "general",
+  "state": "Río Negro",
+  "homepage": "https://multimediosrincon.com.uy/",
+  "favicon": "https://multimediosrincon.com.uy/wp-content/uploads/2023/03/cropped-cropped-Rs-32x32.png",
+  "clicks": 2,
+  "votes": 14,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdô\u0000\u0003¥YWk\b\u001c|M¢japÑW9¬¤W\u0001`h4ó\u000e\u0002'ºu}¥S´èóp÷a[b~\u001e¢\u000fXúî\u0004äô\u0007a\u0016B\"CBûþîîûîçÿÄOOxo\u0013÷zDDB\u0016,ÌÂ A\u0013Ï3B3Ã0ûT\b*|2Ô÷Ö[±¦\u001bGfÞ\u0016å³²éÀí)®¥\u000e÷NGqeIÞ¥ wð¦0ÈÀ8\f\u0001\u0000{Ü0(V¼DÐ\u000eSNÄï.ü¢\u0011\"¤!\u0012Qi(b@\b°T\u0004\b\u001c^f^Vs¨\u001e¥èÂÝNHðÈÎHÞ Ø\u000eVs\u001f_*\u001eñª·rÞ§óÏ8\u0004\u0000\u0016ÎèPúTü_¨&3éêÖí¸\u0019,\u0013v\b\rñã§*°{:\u0000\u0019Ì£õ\u000b",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://rincon2-zikoxweb.radioca.st/stream"
+  }
+ },
+ {
+  "name": "Alfa FM 96.3",
+  "url": "http://radioonline.netgate.com.uy:8000/alfafm",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "cumbia,music,música en español e inglés",
+  "state": "",
+  "homepage": "https://alfafm.com.uy/",
+  "favicon": "https://alfafm.com.uy/assets/img/inicio__izquierda__video--splashscreen.png",
+  "clicks": 2,
+  "votes": 79,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ\\@+ÿü\u0001H6-\u0014{\bab@¨,:\u0013\u0015\u0002\u0001fVk]ë:â÷ËsjEÓ5HA* 8!_\u00152z]ó«:½\u0018é°\u001f2ø°\u0019÷:[äªõUðXp©I\u001eRyê\u0007ú~%¾Q³E*$g}Ú¿å\u0016 ³Îy²:óÓ-K.|\u0004;v_\u0002\tbÊH£|X\f\u0011V\u0012ìÁ­]ÆÚ:\u000f¶]âßYÜ\u0013 \u00116\f¾ç¡,\u0000\u0005YÇ;È¦\tòÙ·Ö×\u0010[;4ä\u0016>@\u001d³dô\u001b\u0000G±\u0002Ýgäÿñì8\u0007Åâ¹\u000e(8áÍ9»u;\u0006\u001aÊ(¦D@+«ÊÀîs[éUQÑ\u000f\u0011\tBÂÎÍ\u0018](*á´kûí<îQ#)T@\u001b*ÁýsDBØ'×æÎKUYaXe³³Æ",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "http://radioonline.netgate.com.uy:8000/alfafm"
+  }
+ },
+ {
+  "name": "Concierto FM 95.1",
+  "url": "https://conectperu.com/8012/stream",
+  "codec": "MP3",
+  "bitrate": 256,
+  "tags": "dance,reggaeton,rock",
+  "state": "Punta del Este, Maldonado",
+  "homepage": "https://www.conciertofm.com/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 586,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "status": 200,
+   "head": "<br><br><br><center><h2>Stream is Offline</h2><br>There is no sound on the radio. Start AutoDJ or stream music to the radio. The direct SSL play url can work only if there is stream/sound on the radio.</center>\r\n",
+   "type": "text/html",
+   "bytes": 212,
+   "final": "https://conectperu.com/8012/stream"
+  }
+ },
+ {
+  "name": "Clásica 650 AM",
+  "url": "https://radios.iwstreaming.uy/8032/stream",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "música clásica,radio pública",
+  "state": "",
+  "homepage": "https://clasica.uy/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 263,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 503: Service Temporarily Unavailable"
+  }
+ },
+ {
+  "name": "Mundo fm",
+  "url": "http://emisiones.com.uy:8088/mundo",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "http://mundofm.net/",
+  "favicon": "http://mundofm.net/favicon.ico",
+  "clicks": 2,
+  "votes": 49,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "]Üif\u0012|^«[Ý\u0018e¥q¢aùt®¯ta\u0016w\u0000¹#i<&aky\u001a®ueÆ8\u0013<¤lV²\u000enH\u001cÒXû\u001c÷GTMfÃK\u0018Æ\u0001PF3ÿÛüÎtCº²£ìn³\u0002îVÒÓf\u0012»ÿþ¬¥\"³Ò\u001dAP%\n\fXÄ(C;Â`6åÖémIÇB;dg1\u001b¢\u0010³3âs²¸\u0003OJ\u0014\u001aôñß?³m¿ðê¤ÌËfÿÿé\u0015ü0î\t²èÙ%\bûDVP\n}ÿÿþÊTÞÔÃ\u0014£EÀ\u0000 Xï\u0017\u0006;mÛ[¶ÖÞ\u0019R\t\u0004Ã\u0011c\u001f1Þ¾\n.KÈf+yìzsf¦EFÊç|ØI8÷ìáRÿÿr*\u0004Ø£¹Ý|áÆÄªF£®i©°Á\u0002½39ÿÿÿÿåÓY",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://emisiones.com.uy:8088/mundo"
+  }
+ },
+ {
+  "name": "Mas FM 101.3",
+  "url": "https://one.cloudstreaming.eu:7002/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://masfm.com.uy/",
+  "favicon": "https://i0.wp.com/masfm.com.uy/wp-content/uploads/2016/06/portadadereproductor.jpg?resize=256%2C256&ssl=1",
+  "clicks": 2,
+  "votes": 0,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl."
+  }
+ },
+ {
+  "name": "24 de Agosto",
+  "url": "https://24deagosto-zikoxweb.radioca.st/stream",
+  "codec": "MP3",
+  "bitrate": 192,
+  "tags": "classic rock oldies,golden oldies,goldies,oldies",
+  "state": "Montevideo",
+  "homepage": "https://24deagosto.com/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 127,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû²dø\u0004]Y{\f3jL;/=\u0002«VS¬½-ì¬¬<ô\u000bQÅ½ÆÚ`Ô°^Ç0°\u0017Ú·8GGW4\u0014ÄÉù\u0003\u0007+%\u000fY¥}¬I}óÕiTM\u001dô^¦­èYöé¶|BÞU¾¥³3ôj¼¡N\u001ad,Æ¦ÆôALAM\u0000\u0003\u0018\u00005\u0000\u0000\u0000jP\u0019n&\u00122#,Ð3Ñ`\u000bÅ¨\u0007\u001b.Êa\u0000«mÉÆ*\u0015\u0006¾\u0010\\WI/ZdÇ\\\u0013ñ=¢Î©¼!K\u0018\"Ú_Ò\u001bvìâøHZ\u0012\u0004@@\b\u001d\u0001ñ\u0004)<Õ'Åv#!ª}¥­!ì\"B#úD|K8JòæÊèÕ¢´ZY`ñF\u001dé¥\u00000Ðþ{\u0000-)B{\u0001h nz\u001dºõ* !/;yKO\u0010\u0011\u001daÈ\u0019¶Â\u0018ð)ÊEòOI",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://24deagosto-zikoxweb.radioca.st/stream"
+  }
+ },
+ {
+  "name": "Cadena del Mar 106.5 FM",
+  "url": "http://streamingraddios.online:9455/;",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "deportes,entretenimiento,local radio,música variada,noticias,noticias y comentarios,noticias y deportes,radio hablada",
+  "state": "",
+  "homepage": "https://cadenadelmar.uy/",
+  "favicon": "https://cadenadelmar.uy/assets/grafica/logo.png",
+  "clicks": 2,
+  "votes": 25,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "Del Plata FM 95.5",
+  "url": "https://alba-uy-delplata-delplata.stream.mediatiquestream.com/index.m3u8",
+  "codec": "UNKNOWN",
+  "bitrate": 0,
+  "tags": "adult contemporary,classic hits,retro",
+  "state": "",
+  "homepage": "https://www.delplatafm.com/",
+  "favicon": "https://www.delplatafm.com/wp-content/uploads/2021/10/logo-delta.png",
+  "clicks": 2,
+  "votes": 63,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno -2] Name or service not known>"
+  }
+ },
+ {
+  "name": "Radio Nuevo Tiempo Uruguay",
+  "url": "https://stream.live.novotempo.com/radio/smil:rntMontevideoUY.smil/playlist.m3u8",
+  "codec": "UNKNOWN",
+  "bitrate": 64,
+  "tags": "religious",
+  "state": "",
+  "homepage": "https://www.nuevotiempo.org/uruguay/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 57,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno -2] Name or service not known>"
+  }
+ },
+ {
+  "name": "INOLVIDABLE FM",
+  "url": "https://inolvidable-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.inolvidablefm.com.uy/#",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 15,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004á\u0002é(T³,\u001að\\å\ne^\tèSXì0cMêiépNgB\nçUU{Û®Úù3Îè\u001aÁ«(LÐ\t(H¹ H³/Sj\u00011îqq¢8u«\u0014\u001e\u001b\u0013Ó[·9+­\u0001Mºz\u0000ÌÀE\u0010!Å<2-«wþ9aIY(~\u0014<bA5Hñ`(ð©\\§\feM\u0002\u0018zJV2ôc\t '\u0003\u0016.&:\u0003@ß.D\f\u0017U&¬\u001cá«\u001f¬ÅÈ®V*a¦\u0015LÈ!¬$V×´úÜÐ¡yÕÎNK³z\u000e¨'Y`ªê\u000b¨²=x¦X¤\u0017÷'å¼0LÇ¸\f6»úéªÓDÔ4!oHy$\u001eÙ¥Ís¼ãmsÄ§óÆÎ\u001bÇ\u0018Ó¤1Ã\u00107{î¶)MDs¬ÖÄZÒKêUX·£Ò",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://inolvidable-1.nty.uy/"
+  }
+ },
+ {
+  "name": "CX 580 Radio Rural",
+  "url": "https://radiolatina.live/9206/stream",
+  "codec": "MP3",
+  "bitrate": 48,
+  "tags": "rural",
+  "state": "",
+  "homepage": "https://radiorural.uy/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 132,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû2d\u0006q2]ië9À\u000fàêÈ\u0018\"0\u0005pa{å/\u00000*Àp\t RfÒ!ù\u0003Ë,ÞTvDJiOz²ß*ú2\u0004\"ê?ÿ£ÿßÛ3TÇ1Æ\b@\u0000\u0000Ë!\u000bF#\u00017ÿìÔ\u0000 \u0002\u0006PQ<Í\u00006Þ7$¨´û\u0015\u001a¹\u0016çÑ«4Ã1§.Õ\u0006ø×@¡¤þÏÝï[Ã1.\u00162\u0014\u000b_Nø:\u0000\u0001u \u0006O4åÿû0d\u0006\u0000qt\u001a\\Ñbà\u000fÀúÄ\f'0\u0005ÌÉ¤ï06\u0003«Ð1H#~JX¬\u0013Å\u0018-·ÕÔû%zØþZ\u0019\u001amcô\u001c\u0010y{|êÜ©0 \u0000\u0000Eeg3\u001aDðÝ_÷fQaã¬ª\u0000ZQ|\u001eâF\u0006ÜÍâ¹(ØA\u001a=\n{qô¨*[ÿÑg·Õôÿ£æåZ:t4!\u0001°Î02¨ø",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radiolatina.live/9206/stream"
+  }
+ },
+ {
+  "name": "CX12 Radio Oriental 770 AM",
+  "url": "http://radiolatina.live:7906/1",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "cx12 radio oriental 770 am",
+  "state": "Montevideo",
+  "homepage": "https://oriental.com.uy/inicio/",
+  "favicon": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Orientalcx12.gif",
+  "clicks": 2,
+  "votes": 1050,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûpÀà\u0011\u000fi¬=oâ@%íüö\u000fÌY\\íÏ`R=¯+üîþ?é<Cv;ÐMPRp\\4A\t[ª¤t|WS=cO¤\u000bbx·§\u000e¤IRy'åÜÅ\u0003×4ô*Y\u0005(Ç,\u001bf¬É\u0016h\n%tÌÌ(ðÞÞ¤J«!1Vf+O·}¹7\u001fÚ\u001eûnaIOYölï0cÐ«\u0002½?ýõÇN/_··R@DFä·CG©r8\n\u0018+ý\u0013Åßù¼oç\u0019ÿ;ÿÓ\u0010ýq¿¿\u0002kcqßî\u0016§Þ/-ë{E­iL*úÁÒNâ\u0007AÀ[Ì²ÐÖ\u0005@¾¤\u0003\t¢<½ÏXÒ.®4û.©8¹DÂ\u001e_\te\u0002D\u00114tº±e¤g\u0016©k{w/7\b\u0010eë¡¬l!¾úèdA$¼6æ¢Ö*d",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://radiolatina.live:7906/1"
+  }
+ },
+ {
+  "name": "El Libertador",
+  "url": "https://streamingraddios.online/proxy/llamadad?mp=/stream",
+  "codec": "MP3",
+  "bitrate": 45,
+  "tags": "",
+  "state": "Cerro Largo",
+  "homepage": "https://ellibertador.com.uy/",
+  "favicon": "https://i0.wp.com/ellibertador.com.uy/wp-content/uploads/2020/11/cropped-cropped-Logo-El-Libertador-1-1.png?fit=935%2C337&ssl=1",
+  "clicks": 2,
+  "votes": 29,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿòPÈ\\\u0000\u0017@^T\u0018ÄHJY£)+5)\u0006\u0014B@£°\u0000 ¡A\u0016\b!¹ÄQ^AÎ\u000e\u000e\u001d>k\u0010¤@u¸ebËPG\u0016u4=cüÖH²<\u0002^EK7DT!ÉZz!:á­u\u0007Fl\u0005I®µ°½ýõÐôïjG±Ì\u0017\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000ÿò@Èt\u0017\u0000\u0016\u0018fZT\u0019H%»µH«2­\u0018\u0018¾\u0002\u0007OMè\u0012rdäT\u001a\u000e\u001ea°ár'H^4å%ÝXÆ\u0014FwS{\u001fbß]FêKÍ-i~¤ÙbMp5½µsÌÏ*¸²÷\u0007]\\q\u0019&ÂBUX\u0000ÿò@Èj\u0000\u0015ðfZR\u0019HnY\\Dªß\f,X1P\bpÄªi\b\u0019\u0001ÅhP¢\u0000iBJÇm/X«âfg\u0014ê6*-ÔEÎÐ¢þ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://streamingraddios.online/proxy/llamadad?mp=/stream"
+  }
+ },
+ {
+  "name": "La Bottega Radio Online",
+  "url": "https://streaming6.locucionar.com:24048/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.labottegaonline.com/radio/index.html",
+  "favicon": "https://static-media.streema.com/media/cache/b7/b8/b7b8d13cd752de8782070ccec44ab932.png",
+  "clicks": 2,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004â\u0000\u00027\u0016X©é0PKêë9=\"LKiKk§°CÉu)í0ôqÿØñKý§)e\"cãLj G\u0016ZÊPo\u0014\u0006\u0001\u0001 ÃM\u0000Uxxw\u001deîóÚ\u00002ÅªRÅA UERÀd\u0000\u0000\u0000À\u0005\u000bYË¦u¶ÀP\u0019À\rØ'\ns®\u0001o\u0005e«sPK\u0010!ãm:Ì¨ÅëvÜÛZYtfèw+ ö\u0004\u0017ëO~±x\u0011\u001aÐ°ÊgÎ¹Ëiuõ<ò\u000bµ«\u001a¤¦b\u0004\u0010\u0011dI\u0011¨y\u000e\u0013m,°LÂ¡er¼­=ÜÇ\u0003\u0003[\bJÛ3H\u00128B~9á+Ü¨ÔÕÑ¼ßñs-Íi%\u0002\u0015\u0007ÁT\u0003¯ü\u0012\n?X»\u0000LWgÙïvmáRíjÃbÕ\rZÉa\u0000Ji(æ\u0019eÄËF\tA\u0005¡.\\ØVBCeÙÉ[ ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://streaming6.locucionar.com:24048/stream"
+  }
+ },
+ {
+  "name": "Radio Arapey",
+  "url": "http://emisiones.com.uy:8085/arapey",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "",
+  "state": "Salto",
+  "homepage": "https://10minutos.com.uy/arapeyon-line/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 9,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "\u0004@õÃæ©¤Úh£7A\u0013-Õ\u0002\u0000,\t\u0000W,Ù`çZm\tÞ6ª¸2¤Þ)\f:Ø0\rg¢IO\u0017\bÆ$@ãmøÝ+unü¨Ú[\u000f<Þ92/\u0000\u0002\u00168î\\fpl_[n\u001dÞÏ\u0004Z\u001dü§\u0006'\np­ÊfÕ+~¢©®å0\u0011É<\u001d\u0018°¤ÛU\rÜ{9OûÎ§«¡9uÔ|Ôª\u0013_eÒà¡&\u0003qÌîæ¹\u000e\u0002ÔÐi&LÏºY)¬\u0011\tÀÀKLjQSUªÜK,ì;\f°ó,ÓVÒca±b­\"¤{EX¥B¼o.0t[\"  Á\b|\u0000ðAÍ¼#@Â*ª\u0017M2è4èUØÞ{7ç\u0001 (\u0003\u0007ÿñ\\)AD!\u001bT±¦a XH\u0011\u0011\u001d\u0016J²¢(õJ]\rIF ÿ\u0007ú£`G",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "http://emisiones.com.uy:8085/arapey"
+  }
+ },
+ {
+  "name": "Radio Clarin",
+  "url": "https://radioclarin-zikoxweb.radioca.st/stream",
+  "codec": "AAC+",
+  "bitrate": 96,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://radioclarin.uy/",
+  "favicon": "https://radioclarin.uy/wp-content/uploads/2024/01/cropped-ic_launcher-playstore-180x180.png",
+  "clicks": 2,
+  "votes": 77,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\TÁx!\u001bTåÚd¡Ùh¶\u0010\u0000D]¨u½&\u0005\"¢Ao\u000bÁK°n$°sø¢\u000eðßÊ¨#DV9oèDõ\"P\u001bf\u001e!\u001dlª6~!: ×Ô«`îè\rª\u001eÃ§æ»Æ\u0005`×éµ}mYj\u001bQf¬*ú\u0013Ð«\nO!5\u0016}\fè¿¼]bÁÓS¢øþÁËXùÕæ6èÒ×ÔUu}\u000f\t84{î-8×{»ñ¿+ÎÌÉq¼ÂnwVÇû?Óå\u0011¯¯ðî\u000fôîàð-oí9ê©ÌëN\u0014ONÆÁ)\u0006û7îü$ç\n>\u0011Á|N?ÐÌ6U8.«Éßiéä/Å\u0005[ãµÒÓ\u0004\u0002l`\u0015åÀc|Ã×á<jÞÕ\rd¯Òyò¾z¥\u000eÕ\u0015v/\u0019Àµ6iâîÛUúÔe6T@u½C+|Qø\u0019",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://radioclarin-zikoxweb.radioca.st/stream"
+  }
+ },
+ {
+  "name": "Kairos FM Uruguay",
+  "url": "https://panel.streamenviron.com:8264/radiokairos",
+  "codec": "MP3",
+  "bitrate": 256,
+  "tags": "religious",
+  "state": "",
+  "homepage": "https://www.radiokairos.net/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 105,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûÒ@=\u0006cXÓ\u000f5úËû-aé¿\u0018\rcL½5ã\n²,)¦¼.¢\"£'ìÀ¸V¹´´©\u0011SäË÷«ñÜÞQá@¬oÄÄ 1doueF\u001e*_M$z9¹¹#À2,áh©÷Ð3m\u0013\u001e¡f`=âK¿ÿÿÿÿÿÿÿÿÿÿÿÿÿöÐI&£q¶ T\u001a¤\f2ìwU°Cé,!Ì\u0016mJG\u001akÜiÿÍÊÐ¾ãïT¸ø^§æ^ÀÃ\tT¯:Ô\u000b%K¢¦g©|¸.êÀ²Â7 .]0±?P®\rña°­\u001eñ¶²´Ôx=9Âº7jø#ñÒú}PfI¨\u0012iä\u0018p&\u001e\u001dÎËÕ*­¥.~!\bS\u0011Ûâ¯GsK¼öcqä\u0018s¹,\u0012\\®Ù!*)\r\u001b·°%þðÄ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://panel.streamenviron.com:8264/radiokairos"
+  }
+ },
+ {
+  "name": "Radio Patria",
+  "url": "https://medios.ciudaddigital.com.uy:18052/PatriaAM",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Treinta Y Tres",
+  "homepage": "https://www.radiopatria.com.uy/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 20,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "6ü\u0005´Å\bBp\\\u0011\u0000\u001cÖm \b\u000b\u0015÷3\u0004³\u0016²ÚÑfÑýö\u0014\n&îµÈ+4:qHúû[\u001fÍ.È¹¢°H\u001b\u001b\u001a\u001f\u000b/öZ¥é·ÿÀV¹\u001b \u001c@\b1Ê\u001d%ý1È-µë\fã(s\u0013{&k\u0000\u0005¢M9­èÝIV¼pbp\u0011\u0001\u0006h`mjÛ&/<ü$²\u0017«\u0003ÑzÆ¯á¡BjßÿÅ¹\"[àcÿø8ÿÿÿÂ¹¬©ûÿÿOýj\u0000!M5[¤:Y/ËÑ\u0010:\u0012¤é_\u0005y¥3Þ'Lf­Gí\u0015!Cd¥}4ùE\u001cü¹\u000eçÞ\u001bÿ¶+ÿ®úÚôu·ÿ «\u0007¥×ÑM§\u0018ÿÿÿýÿïÔv\u0006`ç²´&ÊSmæñ2²\u001e@*áVë|ê³c:«$· ÿûdÿ\u0004",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://medios.ciudaddigital.com.uy:18052/PatriaAM"
+  }
+ },
+ {
+  "name": "Multimedios Rincón FM 107.7 - Fray Bentos",
+  "url": "https://rincon2-zikoxweb.radioca.st/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "general",
+  "state": "Río Negro",
+  "homepage": "https://multimediosrincon.com.uy/",
+  "favicon": "https://scontent.fmvd2-1.fna.fbcdn.net/v/t39.30808-6/337384218_1595585237572448_8701487168143709854_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=oMl_JwxkgOQQ7kNvgFRKET9&_nc_ht=scontent.fmvd2-1.fna&oh=00_AYDVOWlfjxf-9fLoPFn84FIjQMOVEfvA0xykA6ut8bX05w&oe=66FE82EF",
+  "clicks": 2,
+  "votes": 17,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdô\u0000\u0003¥YWk\b\u001c|M¢japÑW9¬¤W\u0001`h4ó\u000e\u0002'ºu}¥S´èóp÷a[b~\u001e¢\u000fXúî\u0004äô\u0007a\u0016B\"CBûþîîûîçÿÄOOxo\u0013÷zDDB\u0016,ÌÂ A\u0013Ï3B3Ã0ûT\b*|2Ô÷Ö[±¦\u001bGfÞ\u0016å³²éÀí)®¥\u000e÷NGqeIÞ¥ wð¦0ÈÀ8\f\u0001\u0000{Ü0(V¼DÐ\u000eSNÄï.ü¢\u0011\"¤!\u0012Qi(b@\b°T\u0004\b\u001c^f^Vs¨\u001e¥èÂÝNHðÈÎHÞ Ø\u000eVs\u001f_*\u001eñª·rÞ§óÏ8\u0004\u0000\u0016ÎèPúTü_¨&3éêÖí¸\u0019,\u0013v\b\rñã§*°{:\u0000\u0019Ì£õ\u000b",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://rincon2-zikoxweb.radioca.st/stream"
+  }
+ },
+ {
+  "name": "Radio Vichadero",
+  "url": "http://204.197.245.100:9146/;",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "",
+  "state": "Rivera",
+  "homepage": "https://www.radiovichadero.com/",
+  "favicon": "https://cdn.onlineradiobox.com/img/l/6/29206.v4.png",
+  "clicks": 2,
+  "votes": 1,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "FM Azul",
+  "url": "https://azul-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://azulfm.com.uy/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 88,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004ê\u000fòìNV\u0003\u0011Zòc\tÚ°fJ^\u000b¡=V\rM«Áq§jÁ©©x\u0017»ên+3\u0011­m°\b\u000fS\u001bG\t\u0007F\u001eª&ð{TË\u0017\u0013å3Õ¬µËoÈk\u001a\nD²\u0005\u0000j:%¬ë:Tl£Z>l£Ô\u000e\"@Õ9'¤«5IãÎDY ÅÝB\u001a\u0003zG:¿nÜ¯OóË>'þ¥`äWöð\u0005`\r\u0003¦\u001a ®\nG5³\u0013NcËO\u001eã>lpw\bÑG\u0007Ðp·N9è³áÿç>\u000fúùÊQ½ïGù¿Ý\\+~+Hû7\u0012TÑrÙ!\u0002c\u0015&³ûRÁ{*p7ûØþÚ?õ+\bþÞ\u0000oEÓPh+¥\u0012\nÍ14æ<ê=ÇIôXWÄø1h(\u001dxÓ=ýLø\u0017¿\u0001çø<(ÓköÉ?Åo",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://azul-1.nty.uy/"
+  }
+ },
+ {
+  "name": "America FM",
+  "url": "http://emisiones.com.uy:8118/america",
+  "codec": "AAC",
+  "bitrate": 128,
+  "tags": "salto uruguay",
+  "state": "Salto",
+  "homepage": "http://americafm.com.uy/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 290,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "6jmUlv|\u000f\r\u0016öÒômÕ}9t\u0001÷\ràZ\u0002\u0010UT\u000e\u0015\fÊ p¨f4ìv\u001bäÀ\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000=ÿù\\r4!OmD_Üßæÿ7ù\f³Vz¥5W·\u0019nxÚ2Z\u001c«áà_,å\t\u0013\u001eC\u000bL»>Er\bfïV\u0003\u001e';²ga\u0006BI\u0001!\u001e¾@ F5BqMbÕ&U9~åw(",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "http://emisiones.com.uy:8118/america"
+  }
+ },
+ {
+  "name": "FM Digital 100.1",
+  "url": "https://sh1.radioonlinehd.com:8001/stream",
+  "codec": "AAC",
+  "bitrate": 128,
+  "tags": "entretenimiento,hits,latino,music,reggaeton,urbano",
+  "state": "",
+  "homepage": "https://fmdigital.net/",
+  "favicon": "https://fmdigital.net/Digital.png",
+  "clicks": 2,
+  "votes": 18,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\\\á!\u001bU\u0015öbQ,H\u0015R£\u0004®\u0015¹\r/]QZ\u000b\u001b%Ó~á¤B\u001eÍð\u001a dfç\b°:'ü¸Lp@N\u0018\u0017X¡¦{&\bÆÇ·ë8_\u001b °³Bv«ü~Uz\u0006E&E=v\"\u001ae²(§`Q¿8æ$.äl\u0010KbAv^Â \u0019AbêýºqÕ\u0006r\nþ·\u001f2fä\u000fä.G·ÌI\"·úN\u000f²ùJ,\u0012@$a\u000fâ4m¦\"eQ!ô¬IkÝÂMn¬£Øærw\u000f£Aû²11¾Ò\u0014Ú\bÕï«ìýëàkLR\u001bzjäÓ\u0013¯0ã\u001dxÒY#l\u0019\fºþ<xý^}Ó\rÂ¹¤ø^ñÏ6FÙc>y]ÞyðäBOësMñÌ\u001eqç÷ykA÷ìõKÀ1MIaÁä\bÇLÇàfrçf",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://sh1.radioonlinehd.com:8001/stream"
+  }
+ },
+ {
+  "name": "Metropolis Punta 95.9",
+  "url": "https://metropolis-web-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 18,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd5\u0000\u0003:VÛyì\u0011à@B«­$\u0003 Leõ\u0000\u00014\u000e­~P\u0000\tÒNFÓ¢\t0%\t\u001eMpÎ\u001b¿U¹\u000f'å¯$a?ÔGæ\u0006@ Ñé\u0016¼8YU½þ\u001eË;C¾HÇW\u0019þð\u000320\u0000\u0000\u0000\u0018TÒÀva×â\\á»ÏÄ\u0006«\u0013b\u0013ªhú@\u0010\t\u00140\u0014hJ\r^÷Ö÷V}l¢[Í 4\u0019}ÿýÙ°XFiì\u001eÎ¤\u0017{\u0010\u001aihé\u0014ÿÿú²/Á!íö¦ÎÜ\bÎH`MÚsBc¶\u0016\u0012ø à:2ÛÒ\u0018o~§\u0004#\u000bÛ).¨=\u0004Iúú¡ÅÊEõB^F\u000e²tT\u0017\u0014ÛÝ\u0018u®\nÛý\u000fÿ¥;*ûT I\u001b²©\u001c±¶mÉ%vÒ*)ä©½!-÷Ú\"¶A/\u0015ìÃgÚÏ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://metropolis-web-1.nty.uy/"
+  }
+ },
+ {
+  "name": "La Voz De Melo",
+  "url": "https://stream.zeno.fm/fzc86k96yy8uv",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Cerro Largo",
+  "homepage": "https://www.lavozdemelo.com.uy/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 50,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdä\u0000\u0004X`YÓ\t<t!\u0000\u001a\u0004#\u0001\u000fñys§ µ +t!\b\u0006\u0018v¡oÆ\u0007\u00038Q¢ A5\u0018M¢SÁKFÜ¶9;fÛñÎ{us»èû2¿ó¬E~ÕIÜËö\t¦>\u001bï\u0014\u0000\u0000¥Çû\u0006ð«P¤à_\u0005ð\u001f ô\fàaÅñS2µ\u0002O\bRÆ{Æ\u000b\rË\u001eY\rJÕ[\u001bõZ\u001b#îH¼GE\u0001ÊZc¨L®\r\u001a¡\n\u0015Dq\u000b7$'¬Ô\u0019JäÜÙ¬K\u0016´lS\\»æGÕ<\u0004Ò1sá¦PÎä\u001e\u000e«¬OkÞ\u0002¬$\u0012RÌ÷:A~Zû\u001bU\u001eü\\Ü\b$õPÿ\u0017\u0018üé<1Ù\bV !¹âòàp2(WFTíe¼6Å¤\n½,zvlßû\u0015î_û¯½?»ÙÿþßÿÿÝ¡LAME3.1",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://stream-289.surfernetwork.com/fzc86k96yy8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJmemM4Nms5Nnl5OHV2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IkFNcGpvTG1iUVJ1dC1YUGNOM25sc0EiLCJpYXQiOjE3OTMyOTg1MzcsImV4cCI6MTc5MzI5ODU5N30.Aqon5RPaRP4DRGVF5RQV_zy-lzgguYFyObRaN-qMp2A"
+  }
+ },
+ {
+  "name": "Difusora Treinta y Tres 1390 AM",
+  "url": "https://server-usa2.radioseninternet.net/8132/stream",
+  "codec": "AAC+",
+  "bitrate": 64,
+  "tags": "baladas en español,entretenimiento,information,musica romantica,música variada,noticias,radio hablada",
+  "state": "",
+  "homepage": "https://difusoratreintaytres.com.uy/",
+  "favicon": "https://difusoratreintaytres.com.uy/assets/images/logo.png",
+  "clicks": 2,
+  "votes": 14,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\8AÌ!\u001bU\u001bA\r\u0002DHX4+\u001c\u0015µ*\n\u0019W{Ðâã$©@\u0018kØ¾oßi\u0006\u0000Í,Ï©^Z\u000e\u0011\bP\u0001æ]ÀP²É¹G£ Ù!\u000eQÄÑµ\f¶µ\"fxín\u001avc¼í\fb»Á\u0002^Eð~}Ç¼¯\u001b(l/úa8Ð½ü\u0011\u001c£\u000e\u0007ü÷Éï´EFyjõû-$½ùø®oÇKÛ©_°qÇXð£]XÆÅ¼_|\u0005\u000e×Zº«Y:¥Ö\u00135ï8\u0016\u0011\u0018eÈ<p«O:\u0002ì\fÝ\u0011ßÜö`×/yààßz3hÞë¤-ÀBíóõ½÷#5á\tçº=õ¿ÿ\u0007³ñw<ôé6&øþ§&½2<\u0019G»þvï°÷ÑÚdp\u0007Q\u000b\u0012êÛË×Óe/\u001eïûþ4Ø©®Ã}.\u0007q¬°ð6J",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://server-usa2.radioseninternet.net/8132/stream"
+  }
+ },
+ {
+  "name": "Azul FM 101.9",
+  "url": "https://azul-2.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://azulfm.com.uy/",
+  "favicon": "https://azulfm.com.uy/public/img/favicons/apple-touch-icon.png?v=5",
+  "clicks": 2,
+  "votes": 142,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004ó2CÓ)ZàoIZ`e^\rGD\r=«Á¨¤¨§µx5\u0017ºÕR{\u001cf@h3I\u0003hÇMJ;\u001du\u0018\u000eñ½ëCR$\u0005-C¹túýú×Öê\u001f¦rÌtB¬w}07FæW=VÈ_Ç³¿Xæ»Çm`½^QÞw\u0006/ß¤Ú\u0004&\u0000t-VX\u001a\f]#*²Eëº9÷ÔÝvRO)YDAæÉãË\u001dÆ«T»Hà¢öKr\")±ÑjÓo]o¾Ê\u0015ýY?î¢½ÄtÑ\u0013NfÀEÍ¹!\u001f{ÅÑßÃÅ¯Â=·Ø¹Ìã­^\u0007Ö3[©6t\u0007p\u000b¨AðlÃÜÔhc\u000eW×ëjJ4]elµ\u0013¨³Æ¢Ä¢ì³TUYôRDy/sM1÷PÆO6·ÿê0j(µú²p",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://azul-2.nty.uy/"
+  }
+ },
+ {
+  "name": "Metropolis Punta 95.9",
+  "url": "https://metropolis-web-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 33,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd5\u0000\u0003:VÛyì\u0011à@B«­$\u0003 Leõ\u0000\u00014\u000e­~P\u0000\tÒNFÓ¢\t0%\t\u001eMpÎ\u001b¿U¹\u000f'å¯$a?ÔGæ\u0006@ Ñé\u0016¼8YU½þ\u001eË;C¾HÇW\u0019þð\u000320\u0000\u0000\u0000\u0018TÒÀva×â\\á»ÏÄ\u0006«\u0013b\u0013ªhú@\u0010\t\u00140\u0014hJ\r^÷Ö÷V}l¢[Í 4\u0019}ÿýÙ°XFiì\u001eÎ¤\u0017{\u0010\u001aihé\u0014ÿÿú²/Á!íö¦ÎÜ\bÎH`MÚsBc¶\u0016\u0012ø à:2ÛÒ\u0018o~§\u0004#\u000bÛ).¨=\u0004Iúú¡ÅÊEõB^F\u000e²tT\u0017\u0014ÛÝ\u0018u®\nÛý\u000fÿ¥;*ûT I\u001b²©\u001c±¶mÉ%vÒ*)ä©½!-÷Ú\"¶A/\u0015ìÃgÚÏ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://metropolis-web-1.nty.uy/"
+  }
+ },
+ {
+  "name": "La Diaria Radio",
+  "url": "https://radiolatina.live/8156/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "cultural,news,talk radio",
+  "state": "",
+  "homepage": "https://radio.ladiaria.com.uy/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 13,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004å\u0002)ZÙæ\u0013@V\u0007»8=\"N\rMqegS\tÔ®, ôy4ô$\u0019ÍRÏZPßèR80©¼àg*C­¶À\u0006ex¤\u0006¨\u001d\u0017\u0001iô?\u0010ÖÆ?\u001bÀU\u001cÇóÄÅòï÷\fW]0B\u0016F:.kç§RnYçJ~Ôõ AháWó¨\u000b\u0019\\_C\u0013ÏÅ\u0012Xª*âÖ!\b\fKÈ5«B@Q$@\u0003\u000bxf'Òª3\u001dÙàn´ÅÚ\u0002JÌëPrêË)Ò'KEé4×1XG¡\u0007~´,7¦\u001bÌ\u001bëÎ¯ª°Èñ­bÎ\u0002õ\"CÝ)²5r|í]oY\"¯päÄH&¶9¬²ÄBnFÔ|P\u0003ÇÄb9(\u001bËD÷\u0017\u0012XÇZõ«Àe\u0003j\u000bVá>²¸9Z&­\\¼wL4#×oô\u0010",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radiolatina.live/8156/stream"
+  }
+ },
+ {
+  "name": "Radio Pipí Cucú (128 kbps)",
+  "url": "https://comodin.uy/radio/8000/128.mp3",
+  "codec": "MP3",
+  "bitrate": 0,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://fediverse.blog/~/RadioPip%C3%ADCuc%C3%BA",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 127,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdÎ\u0000;9Vk\u000fAü@§J\u001d=\u0005w\u0013)?L°yIg è´ô\rù\u0000\u0012!­Dô+a<H\u0019u¸ü.b/Býg\u0002Ó<µ¡y3\u001ajçä9³\f6\tªÚídö\u0017\u0019+¯mß2§5Ïû\u0011¢rë}Ý¤Ò·ïí{\u0019iÀ\u0018#Tõ.eÛ´ÕE7ì\"\u00193ÇýT'6Úß^À\u0001BX\u0014\u0002\u000b\u0016\u0010!Pdµ(Þic+\réR \u001f\u0004ÖE»zÖÝª &_÷Z¤£EN>&Z£òþËêYJ<\u0013Ó]õÙÿ@\u0001DD\u0012JV^ó>ZuB\u0019Å¤Ùå,ÒÎIÛz\u001a_\u001fº`m¦uX2fË9æßÔþhRUº´ôAÿüÛÕ\u0001\u0014áG1áìb¹\u001d¬\rÖÕ­åfCW\u0010¡«ÜÖ{[Ý|¾kÑ6\u0001\u0015",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://comodin.uy/radio/8000/128.mp3"
+  }
+ },
+ {
+  "name": "Radio Nuevo Tiempo Uruguay",
+  "url": "https://streamradio.novotempo.com/CDN-RADIO-ES/smil:rntMontevideoUY.smil/playlist.m3u8",
+  "codec": "UNKNOWN",
+  "bitrate": 64,
+  "tags": "religious",
+  "state": "",
+  "homepage": "https://www.nuevotiempo.org/uruguay/",
+  "favicon": "",
+  "clicks": 2,
+  "votes": 8,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "status": 200,
+   "head": "#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-STREAM-INF:BANDWIDTH=64000\nchunklist_b64000_slspa.m3u8\n",
+   "type": "application/vnd.apple.mpegurl",
+   "bytes": 87,
+   "final": "https://streamradio.novotempo.com/CDN-RADIO-ES/smil:rntMontevideoUY.smil/playlist.m3u8"
+  }
+ },
+ {
+  "name": "FM Naturaleza 88.1",
+  "url": "http://stm.gmpro.top:7006/",
+  "codec": "AAC+",
+  "bitrate": 48,
+  "tags": "",
+  "state": "Canelones",
+  "homepage": "https://fmnaturaleza.com/",
+  "favicon": "https://static-media.streema.com/media/cache/14/d4/14d4f52131dda600648c334d10fb335e.jpg",
+  "clicks": 2,
+  "votes": 255,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ\\@#\u00014\u0001:6-°·,\râA(F!ÉB\\)\u0004Réx¬º\u0011è \rØÏ\tªqx»ÎÏ¤Tä ÕÃ×A'\u0001§ãa\f@Æà\u0019¯Á,@õ9ÙpÆã}\u001655CÜw\u0018-bT56UõÔÂ/9Ï=Ò³ó+¤ç\u0014^r\u0003¡éÝÛ1[y?·[u·Èh\u0006p\u0016Æp±T@W9?\u0010kfyøøô\u001c§\u0000,¯Üì¼ï<å \u0015\u0019xÕ)\u0011Q0xx~((W0=w\u0018¨!\u0003ýrîK\u0015\u001fÏæÛP\u0014Ó}8½\u0002¾ ÿÏÌqZð°\u0017ó\u0004`s\u0015\u0018Fõ\u0015d\u0019Ò·On¸xô6µ´óèG_ê|û\u0000nÐfÈ\u000bD\u0017Û´\"I\u0000\u0011àÿñ\\@#A0\u0001>6\u001cT$\"æ¢@T",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://stm.gmpro.top:7006/"
+  }
+ },
+ {
+  "name": "Multimedios Rincón AM 1510 - Fray Bentos",
+  "url": "https://rinconam-zikoxweb.radioca.st/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "general",
+  "state": "Río Negro",
+  "homepage": "https://multimediosrincon.com.uy/",
+  "favicon": "https://scontent.fmvd2-1.fna.fbcdn.net/v/t39.30808-6/337384218_1595585237572448_8701487168143709854_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=oMl_JwxkgOQQ7kNvgFRKET9&_nc_ht=scontent.fmvd2-1.fna&oh=00_AYDVOWlfjxf-9fLoPFn84FIjQMOVEfvA0xykA6ut8bX05w&oe=66FE82EF",
+  "clicks": 2,
+  "votes": 16,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdé\u0000\u0003ô[Ýë\f\u001bt++\r4\"\u0001\u0015£Yì1.@ª1\f\u0006¿Z±ÚÚ'ýýy_áì\u0012OÓ5aþ:3ýÎ^zý\u0013R%þ¿M±ò&PúÑù£!ðòó\u0019Zð¨Óq\u0005i)´\u0006p»O=.TVtîíèÝ¥ÔÿÕþOÿ_ÿÿÅ)\t\u0000\u0000$\u0019\u0000p¸ bQ ªÌÊx¨Zg\u0016D¨­ÒêY´ à2Ë*fÁ#°Ê<\u0019\\¹Há·8\u0015%¶RâÌ¹Nâ\b®e¹\u0002µæÒ\u0001pKk\u0011Êé$Ò¥Ñ;,¤­vxµµÉWªó\u0002j\u0013¥{SÞ¯8=ÂYû¡\u001c\u0012hàP.\u0010A«\u0000òP\u0014*18pI$\u0017¨pøàjsïÀrdÙÇ¾\u0014Ò¾°}§Î\u0015mïá\\  /P ùD´",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://rinconam-zikoxweb.radioca.st/stream"
+  }
+ },
+ {
+  "name": "Azul Punta del Este 93.5",
+  "url": "https://icecasthd.net/proxy/azulp/live",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 53,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ïàA6\u0000\u0006\u0011s\u0016Ý& êîHBY\u001fæÞùë±\u001eZÖe5\u000b\r±ú©\fu¸´è\u0012MmùAÃ\u0011=]ÏÐ g5LL\u0000\u000f³þr\u0000\u0001¼g_þ³¤;,õ%õ²×³Ê{Ö2Î1ªqÂà±@\u0000\u0000\fIÉU\u0000V\u0004n\u0001´¸ÅÕ×QVsTg]J[!\u001bïLàN\n)ÐÙ«½WÀÒm8¦#ôy\bßÖYÕàÈ¨ \u0000sàUÈø½®>\u0006\u0018¶\u0002Àýâ3îè_\u001b\u0010\u0012øÑiMDô_2\u0013Ó\"!p2\u0005\u0012B\r\u001eÌ¬KÌ¨ßàQÐ\"È j¢ë0°]H©yÕT\u0000\u0004)A`X\u0004\u0011 À\"$\u0010\u0002a\u0002\u0005_\u001f³¤\u0000]|zEÃ»Ô-ÿ\u0000\u0001ïg\u001aä\u0001\"BF\u0016\u0016\"\u0002«?P¬(8ÃK½ÊÉ¦L",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://icecasthd.net/proxy/azulp/live"
+  }
+ },
+ {
+  "name": "Fm Inolvidable 93.1",
+  "url": "https://inolvidable-2.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 163,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004é\u0002Ì#Wý``\bYDzÿ¬\f\u0001\u001bQ{Y¹\u0000\u0013b/lw3\u0002 \u0014Øs9¿ZYb¬ÞzáðpÓ>.³\u0018t¹¼w\u0010Ü<ºß¶¹;qu¸\t¬6¤J­V1f;ößÉg!økÁÍ\u001bçzSw\u001e÷ùOnA^WÜ\u001fG\u0012\u0005£µëÜ¿c7-÷wîá:¤Ã¸ï´1»ÚþÔåÝ,¸s½Ã=óñÂßá?)òçZ|³}àv?GÏÝÏ¦Þ0\f²\u0004ÆäH\tN´=\b!w$çt2-0+åAòºg0i\u0004\"\u001c%,\u0006\n\u0012[[½\u0010ö«\u0017\u0007!ewõÛ´°õ>­f\"t¯ê£¦\u001dHû´óÔõ5\\,Ï×\u001dy4\u001c¨t!É7¬zs\u0010Quÿ×ê\u001c×ÿÿ@&7\"D\u0000Ju¡èA\u000b¹';¡",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://inolvidable-2.nty.uy/"
+  }
+ },
+ {
+  "name": "Sport 890",
+  "url": "https://alba-uy-sport890-sport890.stream.mediatiquestream.com/index.m3u8",
+  "codec": "UNKNOWN",
+  "bitrate": 0,
+  "tags": "deportes,noticias",
+  "state": "",
+  "homepage": "https://sport890.com.uy/",
+  "favicon": "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240623_101428021.jpg?alt=media&token=4553b784-4a5a-41b8-ae80-1e11e7359772",
+  "clicks": 1,
+  "votes": 239,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno -2] Name or service not known>"
+  }
+ },
+ {
+  "name": "Radio Fm 99.1",
+  "url": "https://rr5100.globalhost1.com/8454/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "adult contemporary,deportes,local radio,music,música en inglés,noticias,oldies,radio hablada",
+  "state": "",
+  "homepage": "https://www.radiofm991.com/",
+  "favicon": "https://www.radiofm991.com/wp-content/uploads/2022/07/117723095_3171402616247190_7121555974750199924_n-150x150.jpg",
+  "clicks": 1,
+  "votes": 14,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûDï0QÔk&\u00148^Ä:mg\u0003\u001c\fpÁ_¬0lñ¥êµ¦\rr\u0000\u0000\u0000RK+@\u00030\u0012·.q®Ò^6ÈE°k¨üÉi;w´ç5Ð\u001cþ=ZË\u0019k\u0018Ö>­\u0013wç»®F\n,¸ö°$|6\u0012\u000f¥g\u000fÃ\u0002UÖNAcoúÿéÜ1ßÓu5$\u000b³FIdJÌ*\"\u0000cd´¥P\u0001\u000e,\u0004Iö\u001eË¡N\u0004\u001b\u0013fÆyj½<¹¥\u001bZjG9ÉMþD¬Ê¥¸³ª!SÙ\f®ó¤GJúÖÞÉ½»§¯¢ßwF^õdeììÍècUëªÑ?É»Æ»´H\u0006\u0000fk~\"±âO\u0002E*\u0019ãQgñãcÒ\u0000\u000fºc\bE#²ÌÃ_B¡ÉIf\u0003\u0001r\u0005\u0004d­ËWK'ZiÓ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://rr5100.globalhost1.com/8454/stream"
+  }
+ },
+ {
+  "name": "Radio Chiveo",
+  "url": "https://comodin.uy/listen/chiveo/320.mp3",
+  "codec": "MP3",
+  "bitrate": 320,
+  "tags": "infancia,musica infantil,música para niños,niñas,niñes,niños",
+  "state": "Montevideo",
+  "homepage": "https://comodin.uy/public/chiveo",
+  "favicon": "https://comodin.uy/static/uploads/chiveo/album_art.1680347629.png",
+  "clicks": 1,
+  "votes": 43,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûâDÈ\f(\u0000UI\u0013¼Ðá\u0005ªé2w\u001c\u001få]&owC\u001b+e!îhpr\u001d³ëàäúª;ÖË©ÎL)²§T5´/\"o+Lbgj\u0013SµYë]AÉrxAÎ\u000e\u001aL®\u001e\u0005\u0004\u001e\u0014Âü\u0013=ñM%ìÇ2¹`±@`Tpd\f4W·\u0006¶ÞÀmÆ\u0019Ü\u0005ØÎ{Í/\tv±ÚÝ*\t\u001a\"ªØó\u0007í´­\u00000\u0000¡ad\u0012.#&a\u00166Þ\u000fó\u001eAó @`Æ\u0003\u0004@ÀhÌÔ\u001c|0p»\faøD±ÂãØ\u0010,Sc\bAÓÃ\u0007\u0004&Û!nÙá*<¡Ê\u0019B-ôÆ,\u0002\u000b\tZOÙ$üÃF%\u0002Ã=\"##ÂØ\u0000R\u0019×QSX!\u00121lçå&y 3K\n\u0012Jä°Àp\u001dqU[Øì9ÏúU?0¯\u0017çïºe",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://comodin.uy/listen/chiveo/320.mp3"
+  }
+ },
+ {
+  "name": "FM de La Cumbre 102.9",
+  "url": "http://158.106.131.228:9020/;",
+  "codec": "MP3",
+  "bitrate": 32,
+  "tags": "cumbia,entretenimiento,popular,various",
+  "state": "",
+  "homepage": "http://www.delacumbrefm.com/",
+  "favicon": "http://www.delacumbrefm.com/images/WhatsApp_Image_2023-06-06_at_11.20.40.jpeg",
+  "clicks": 1,
+  "votes": 9,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "Federal FM 99.1",
+  "url": "http://usa15.ciudaddigital.com.uy:8040/FederalFM",
+  "codec": "MP3",
+  "bitrate": 320,
+  "tags": "deportes,information,noticias,noticias y comentarios,radio hablada,variety",
+  "state": "",
+  "homepage": "https://federalfm.com.uy/",
+  "favicon": "https://federalfm.com.uy/img/fachada.gif",
+  "clicks": 1,
+  "votes": 46,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "3ÃPÃ}HRÖUkÈPõÂË[!nªì4öh°a^HÑ×Q±0+§º¬S:ªÛQáUHñ¹UH;Ö}ñ÷c1·óßâÕÏùÖw÷õÿûâ\u0004ð\u000fø\"O\u0003z{s\u00040©ðoOn_¦\u0017<\u000emíËùÂçÁÍ½¸þ>sÿÿ×ÿ¿ÿøÿYÿýkç9§Þ«y¥Ð]J\u0013ÐVlUj»Wß\u001fÖF\rbF¦£\u0007\f0D\u0006\u0000\u0019\f0bÈ¬FEQuúó\u0001'\u0010^B\u0018ª§Ò2Ê\u000e\u0014\\ÑÑ\rå!9\r\u0004Î\u001d8 \u0016\u0006V}Úª]f§ÛµºD JYÇØPpq &:P\"\u0012¬a5å²,µ<óæqxÙ¸ÕÎ³FÙ5\u000fFÁW'*ÛÌ/F\t²ù¼\u0017\u0004ýaªÓÃ½rú´®",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://usa15.ciudaddigital.com.uy:8040/FederalFM"
+  }
+ },
+ {
+  "name": "FM Ciudadela 88.7",
+  "url": "https://streaming1.locucionar.com/proxy/fmciudadela887?mp=/stream",
+  "codec": "AAC+",
+  "bitrate": 32,
+  "tags": "musica,radio comunitaria",
+  "state": "Centro, Cordón, Ciudad Vieja",
+  "homepage": "https://www.fmciudadela.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 16,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ\\@\u0017!L\u0001@4­\u0013T\u0013\fN\u0000\u0005 *Ä\u0015`t\u0000\n\u0016óñý¹P\u0013áNéêllíFvè¾2­)|¿\u0011j^7Æ\u000esÌ.\u0018\"¢\n¬<g\n 6\u0015\\l¶ÌÊÌ\u0019MÝ$r8\fëVê%\u0014ËITµ]öí¦$@¹«åÔ°A¾y@Öà,¯Z\u0005áOéÎ[áÈ_7hH\u00161\u0013\u0000\u0006$ý1Ñàô¨=\u001fÏp\u0000Þ\u0019 ýNº*d»¥ßP\u000f\\?ÉôhòÌ½ªî \u0001Àÿñ\\@\u0017ÁH\u0001J4¤ÌÃT\u0015\u0002&\u0000XÍ2à\u0001pc¡ eû7ùC>°Z,ºC´\u001af­\fv%©0 m~iÁGÆ¶ddèqÑ\u0006^N\u001cûQÿE$ébjìX\u001c$%ÆÔ@\u00069' ð½y!»ÇqÑz?\u000fY",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://streaming1.locucionar.com/proxy/fmciudadela887?mp=/stream"
+  }
+ },
+ {
+  "name": "Radio San Carlos",
+  "url": "http://198.49.65.43:10396/;",
+  "codec": "AAC+",
+  "bitrate": 36,
+  "tags": "variado",
+  "state": "San Carlos, Maldonado",
+  "homepage": "http://radiosancarlos.uy/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 97,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\\u0016A,!)Ôí¤.\u0000+@5®Z\f5Ö\u0004Ù$áÄH\u001cq´è-\u000f¬éG\u0007á)]?¾¹\u000esF¶6c¤²V\u0012\u001e\u0004¢ï(ß 7^§Î «*a\"\u0015¨8Ä\u0017À%t^p\u0019K¤é\u0005@\n\b(¨\u0014-\u0000´\u001a\r\u0002ÌÐ!#P\u0010\u0016P½îÍÊ&è$o#\u0007GAQZ\"R\u0001x!\u0016KH\u0000\u0000°:?kdÅ\"ÍàúiÜ\u0003{\u0013´¾»«îþÄÐ\u0006\u0001  `\u0000\u001fÿù\\\u001e\u0001\u0014!Kl÷µÖ²äì&Âá\fD.3LEÒ(µÃK\u001ac­¯¾K`ûü6j\u000b\u0000zq(DQ@5³¥ %\u0012º¾Gk©ØÏ\u0004\u0003\"ù\u0014s\u0016%\u001e\tô$uod\u001b®°°\u000fAYu¢Ì0¾B\u0006[T1\u0014¶Ê¿#'¤w¹ÞaNj",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://198.49.65.43:10396/;"
+  }
+ },
+ {
+  "name": "colonia am 550",
+  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/COLONIA_ADP.aac",
+  "codec": "AAC+",
+  "bitrate": 128,
+  "tags": "talk & speech",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 427,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ^W?ü!\u001bÔU|Ù(67\u000b|óë9¿7Û_\u000e¼qÇ}n÷­øI×[­^­½oË\u000eßß\u0013\u0001vüÊ»µÓ¯kh=µ¥SµÍóX1«yó<\u000baÐìp\n+¢L\u00018²r\u0018É°VÐ¦ç¦f\u001c¼H\u0001¢\u000fÔkÛ-BÉÃãkF(Ë-F\b§qS×/\u001eàÌ7<I¥RµÞe¢\u0007g\u0012´ð¹K\u0011ü­\nLq3&d¶Úõo×{ö¦\u0017#P$ðêö\t\u001bÁX\u0014ÿ_³\u0010>rRï\u0013MÅ¢ú\t«9Û8ÅÒG0ýÑËï-\u0007¤w·îW\u001c\n¾ç»ÎÐ6­×\u0013SÚ¶ýÜ\u001dÿ¬Ûÿ)ÑÒ5¶ØÌ­¿¨U\u00138<\u0016V\u0006\"ær¹æègàÁ \u0003ôëÃÛy1Osû«0n<ùÕ\rÏN½",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://27323.live.streamtheworld.com:443/COLONIA_ADP.aac"
+  }
+ },
+ {
+  "name": "Radio Centenario CX36 1250 AM",
+  "url": "http://rfm.radio.netgate.com.uy:8000/centenario",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "http://www.radio36.com.uy/",
+  "favicon": "https://radio36.com.uy/wp-content/uploads/2024/08/cropped-android-chrome-192x192-1-1-180x180.png",
+  "clicks": 1,
+  "votes": 741,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 404: File Not Found"
+  }
+ },
+ {
+  "name": "Radio Chiveo",
+  "url": "https://comodin.uy/listen/chiveo/128.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://comodin.uy/public/chiveo",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 20,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûDÒ\u0000\u0002¬?Ôk\t\u0011ð[çúme<\n`W¬$iá]¨©¦\fèQÎ,4 \u0016X\u0011uzgfa¾8\u0000 \u0005ì\u001cgi 8`\u001aÇ\u0010¹\n\u001a\fb±ë\b¹óÓ\u000fG£)Õ¾äUuMí<¦È±ÊW!ßÎôÓº\u001b-Ç+¿õûú*+Ö_ì^ÒÅAÄeº\u0017ý\u0018Ç\u001ex\r\u0002 a\u0007\"alFha9¡\u0006¦\u0002\u000b\u0001Äà\u0010\u0015vO\u0012umÓhÁø\u0016\u0007\u000b\u0004%34ã\u001aNÇ²;ëýîº\u00118ºzW\u001b6Ñ|Çë\u0006ñýq­\u0017O\u000f¥dV)×­ÄUûüi:Äß£Ö`\u0019Ò¾\"\u0000E\u0011\u0016yæ\u0012%\nlA1)\u0000ÔXGAÔ\u001fGåÕi\u0013\fKÒ\u001f\r\u0006Q4XØ¤¾\u001bÛÍZã×3iËo¯G\u0016",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://comodin.uy/listen/chiveo/128.mp3"
+  }
+ },
+ {
+  "name": "Horizonte - FM 106.3",
+  "url": "http://1063fm.ddns.net:8025/online",
+  "codec": "AAC",
+  "bitrate": 80,
+  "tags": "cultura,folclore,información,música,pop,rock,sociedad",
+  "state": "Paysandú",
+  "homepage": "https://horizonte1063.com.uy/",
+  "favicon": "https://horizonte1063.com.uy/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-08-at-10.19.54-AM.jpeg",
+  "clicks": 1,
+  "votes": 49,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "¤ø\u0017ÐÂ\u0016ÃW\u0018á/`8[(E·á|_ñ¿Dë-X\u0000V\u0010 «/J´ª*Æz¾g\u001cE\u0002\u000eÊç\u00126jäÀÀëJÖq´yñ^ú?\u0010Õ?Ã#mpÇI\u001a¶¥·JTâS³°\u0000\u0010¡ã£0\u0003QC\u0003\t:Û\u0019«4\nL»4\r!¥»p\u001dÑ\u0000oôÍÓãú×îänú¿P¤Îà\u0014t@Îx6TPÆ\u0002?È°J|ûp\u001f@\"\u0001&°\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000eÿù\\:\u0002\u0014!\u001bO\u00044\u0003Ei,pe\t\u000eD\u0014­Îå\u0017j¨B^h à´\u0003QÒd?¸ÓrÉ\b\"2ç\u001cçUX÷p\u0001ã»^jö)¤ÄöIç­ßGì|Üú<Æ|¯w\u0001s­ÿ?ýÛø@6S\u0012|ùýIÇÇ ®ÛG4",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "http://1063fm.ddns.net:8025/online"
+  }
+ },
+ {
+  "name": "Armonía FM 92.5",
+  "url": "http://usa15.ciudaddigital.com.uy:8132/ArmoniaFM",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "deportes,hits,music,música en español e inglés,noticias,pop,radio hablada,top 40,variety",
+  "state": "",
+  "homepage": "https://emisorastacuarembo.com/radio/",
+  "favicon": "https://emisoras.com.uy/uploads/img/armonia-fm.png",
+  "clicks": 1,
+  "votes": 12,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "À<\fúERåéX³]ì}°¬Ç<Ì&¤&zc3ãø±µþaÄ\u0001ËHë\u001b\u0002Å¬\fu1\u0016#D³GÕûT\u001dkÁ)1rØãË8ðñ,yR£­÷ü $Sv\n(ìswª,|.&\u001a\u0015Bõ%N1måasN^h~PÕ\u001a¸71g5\u0018¢ÿnö`Û5¨ðË£¨#:¶_Yäñkã<ÿûpÄèÒ]P\f=-ÊC/k\u0000÷¹³n\u0017wÊ¶ºew¸»n£Ú×_æLÁ·ø´¶k,\u001dhe>I\u001da='5\u001dwé©\u0004\u0011^zÆJ[üZË¥5vÄKiºñÈ*E^6)netÍ\u0012\u0014&\u001cV,Ëk.VnòtÚéË|¦â4JÄ¤X£S»6¡<ê;j\u0004\u0005í$\u001c\u00058\u0006¦",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://usa15.ciudaddigital.com.uy:8132/ArmoniaFM"
+  }
+ },
+ {
+  "name": "Perfil FM",
+  "url": "https://radiosar.com:8086/stream",
+  "codec": "AAC+",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Treinta Y Tres",
+  "homepage": "https://perfilfm.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 25,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\\\á!\u001bTíÊq¢\u0000\u0010ÊÎ(f¨EEIW (Ä\\\u0012l\u0002\u0005.ÁèRk\u00199(ì=¸>d@$`\u0006\u0002ïÒÒá\u001d·ñ\u001dFëÎ\u0012íïµª£½¹Ø\u001d´­èD® ð`ìØøòÖ\u0014ö\u001c1\u001dµd²ØøÞy¬\u0017ãÕeªaKËt+\u0005\\äù\"PF[Xý\u0017sv>êëQi±\u0012¸ºÆ÷úÌ²/ç\nWé<o0ñkÔ\\k¥:«÷\t\u0002{¦\u0011ÖæòO\u0002±¢\u0011\u0019®Ñ5VÄÿóWåË4ùÞ'üè\u0011qgPmy|\u001cÇ8*$eCy\u0019\u0013ª\"FÀ³ßú8³ìòm]þYLXàqÕ®MI/X\\ø\b\u0014zAæ9@Y0Zcéý\u001d]\u000biò¦HÑ·ÀfÍ[´d\u001b1Ó¹",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://radiosar.com:8086/stream"
+  }
+ },
+ {
+  "name": "Radio Señales",
+  "url": "https://s1.radiosenialesfm.com:8030/radio.mp3",
+  "codec": "AAC",
+  "bitrate": 192,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://radiosenialesfm.com/index.html",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 7,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñPEÁ!\u001b\u0014Õ¶a¥@l \nvXµ\u0010Ñ\\W#XÊç'X9ÕdÏ\u001cýv\u0002\u0001\u0007cpÍç^Ó\u000eî-ß|ã©¾Ã¬±Þ~ÒY\u0013Ì\u001c½Avt4Vº0ª\u0007SÆÐÖ2Ùó8-VniÚ\u0006oâÞ v-Ü9=\u0004Ö\u0002>wþKB¨ÿSÍn³üfß¢rë\tTåÝWÎ='\u0015#Y÷·\u001a!¡*Æ,\fÈ\u0007¡%ûDüw8î¾Û­¢ê\u000f«DÖOl0ð\u0011n{Íù@`]Â ²(2¦ËÎµ'¸ñWëc·s\u0010Åig·}Ê6O\u0004*X\u001dÊZ[f^\u0015 vçn¤ßû~ÕÑª\u0005,\u0011åæ\u000eVJ\u0003!:)®ø`¥~òÌlz/U».^nTHqMÖÉ¡rué\u0005\u001d©©i÷¬¶N\u0002W:ÝÉ",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://s1.radiosenialesfm.com:8030/radio.mp3"
+  }
+ },
+ {
+  "name": "Atlantida FM 89.9",
+  "url": "http://server-uk1.radioseninternet.net:8034/;",
+  "codec": "AAC+",
+  "bitrate": 72,
+  "tags": "80s,90s,classic hits,hits 80s",
+  "state": "",
+  "homepage": "https://atlantidafm.com.uy/",
+  "favicon": "https://atlantidafm.com.uy/assets/images/bg.jpg",
+  "clicks": 1,
+  "votes": 94,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿùP\u0015¡¬!\u0019UU\u0019\u0016\u0011UMð\u0002,\u0000\u0017afçý\u0007½æOÜõÐ#kJ\u0012þ0½#\u0007:b²Ã\u001e¼,2æ'`©~õÎ¦[\u0014Ïº÷3Âf\u0012k'\u001b¯:,µ<ù6%\u001búÉ å\u0011Ø¿°Ó$ylp[T¢¼«y-ugtCzÊÜ÷ ¡W\u0004\nK\b\u0003\u0000¢\u0000\u000e0±Ð\u0006gû ¶\u001cê¸Ç,Ï,{½ø\u0005gë\u0000\u0019õÏm@\u0000\u0000/(-pxkFù\u0000d\u001cÿùP\u0016\u0001°!\u0019U-#E+\u0016£\u0017PX \u001d\u000f ©Ûdæ\u0016÷à²TlÄ8U7]H\t(à&qÚéÖx%×Ö^\rÃô?\u0005\r\u001d®ÊÂÉýëªgÛ~õiNd1|<hÒ8Nð-®6&g:Ë+\u00035F\u000bñîA!\"»É0è®ÂZSÓ",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://server-uk1.radioseninternet.net:8034/;"
+  }
+ },
+ {
+  "name": "Radio Activa Florida 101.1",
+  "url": "https://streaming1.hostingmontevideo.com:7014/;",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "information,radio comunitaria,social,various",
+  "state": "",
+  "homepage": "https://radioactivaflorida.com/",
+  "favicon": "https://radioactivaflorida.com/wp-content/uploads/2022/12/Logo-1-Retocado-2048x2048.jpg",
+  "clicks": 1,
+  "votes": 18,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004ê\u00037:Ýiã,Lf\t\ra,\u000b,Éoç°GaoìèñZëõÒY3«îú§\u000e½Ö¾\u0010\u0010\u0004\u0000RÈ¢\fï\u0014:ñi/wG/7?raû¥nhQºZ@PÙd£í,6=¿f+z¦Û¥\tÁè¾ïÝEi­\u0019M\u0003ÉkN°L\\T8\u001c>ã=úåÙÀ_p\u001eu¨'Q$¡\f`«:\u00101\n\u0006\u0005\b\u0017R\u0012Àâ¡æ-\bHôÜìÊiR±\u0013T'nâGºØl5%x¦)A[¥§¸cñLìÁ­\u0016]#Qp ¬r°\u001e\u0010\u001fz\u0000ª¨Gk}(èHýÁ¬\u000f\u0005N\u0004D¢åLa_ÙHB&nIÛ\u00134iÎ;ÕH÷\b£KÖBËg$\u0019j\u0001!ÃÙ\u00006¯å[Ï\u0003nªâ¿D\u001b\u0017ýÎ©fNQ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://streaming1.hostingmontevideo.com:7014/;"
+  }
+ },
+ {
+  "name": "Radio Cultura 1290 AM",
+  "url": "https://radios.iwstreaming.uy/8034/stream",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "",
+  "state": "",
+  "homepage": "https://mediospublicos.uy/category/radio/radio-cultura/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 68,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿóp¤\u0016]AZßiïZà\u0002\\°\u0000\u0000\u00005k{×O²Z\b'<­ßûÛûü\u0000\u0000@EþÛvø\u0006Inl`U¦Á!RpÅ%J[s*«Á\u0011½o\u0019\n(ésÌ(ÐH¯¨ÈÂ fÐûÍ\u0019ÉºOPMGd2\u0019jMRHñ:KY¦ºÑ­ÄÖR\"ºtòÅâÓd\u0017\u0014\r[¥n-7\u0004|.ºÕNf\u001eÚÕæcÆþ+Úëë>·¾æÅä\u0010c«c2ÄgXa.J3ÁJÀolcë:úúÖ·¯]ãqw]?lËÈ°:ÿóp¨\u00181eXÏo\u000f\\\u0000à\u0002\\°\u0000\u0000\u0000Tã\u0016W0`f¹}\u00065&ðm«Ò|Z\rNHÚà\u0000\u0001\bj[Ûp=·\u0016\f´R¶èd?É¸dÃ@ª÷;B ¥\u0010\u00188*\u00162\tu\u0005\u0014",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radios.iwstreaming.uy/8034/stream"
+  }
+ },
+ {
+  "name": "Radio Difusora 33",
+  "url": "https://server-usa2.radioseninternet.net/8132/stream",
+  "codec": "AAC+",
+  "bitrate": 64,
+  "tags": "",
+  "state": "Treinta Y Tres",
+  "homepage": "https://radios.com.uy/difusora-treinta-y-tres/",
+  "favicon": "https://www.cxradio.com.br/img/Radio/Logo/046315c745c9d39f5815ac5bc4ef45e3.webp",
+  "clicks": 1,
+  "votes": 14,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\-B@!\u001bTýÍB@Ø`hU\n\u00043[KlÔ©eIJu\u0002\u0001¶|p(T\u001a<-G6-\u0016Záxy1À%\u0002\u001cXù££bø\nÄ31Wiñ\"3µW+äpû¹3¸X³²3CÂ2Ü\nadè`5y¥¨+ý¾eg\u0014@Q²ÏLÑG¶_ëÊ×¬ÿ¶YD\u0015Ñ£2Æ½DºFíÂ®=\u0015Ó\u0011W»NÝ[\u0006 \u0000qÃwcnh'ÏG\u000026\u001fÀyóÑ«\fkZeèÞG¢\\Ñ!Oè\u00121n\u001a(Æ©ÇJðß`\u0002-\nkb@ÄJ\"a\u0018\u0004Å\fK½Úm\u001foèÚl?ì^ÉÒaÄãöýÿ[là\u0006\u0015\u0003\"\u00028ÓéôwëHlöªÛW~Þº29\u0002\u0016cÇ\u0017¨ëÃZ[>|:v7ÙË Ùãa;é",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://server-usa2.radioseninternet.net/8132/stream"
+  }
+ },
+ {
+  "name": "DelSol",
+  "url": "https://delsol-1.nty.uy/?type=http&nocache=2780&dbl=0",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://delsol.uy/",
+  "favicon": "https://delsol.uy//public/lb/img/favicons/apple-touch-icon.png?v=2020",
+  "clicks": 1,
+  "votes": 5,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004T\u000fò¢\u0016YìIÀOeK@a\"L\u000b,¯d\f<ÉNlÁ\u00190'Fâ\u0018\u000e\u0006Q+´ß\n4D\nfÎ)dã\fo(Û[R¹rÈó@^\r\u000bBZK;Û·ôÏMtNéÝÛö>f$Wmr´+x²U2\u000b&\u0007ÎÓÅgU\u0017^EMb*ÿêPáiWG!ùn1î8ÿÆl#sËüÓëhR#\\Ðõ{|¹ú\u000f4eÕ³lûÿþlLâ5KÃk±j|´éZ\u001aÇÁdkK\u0007VY\u0003ýL\u001eêZßîUS\n$(ò¤/JlÄ¾¸¬Y4#.\\¸E3\u0015¡Âc\u0013\u0010¹\u0001BJ\u0016\u001c\u001f©dÛÛ\u001a¹Q\u0003]l\f\r\u000f\u0001\u0017-4\u0007\u0019r\u0018Õ\u0016a\"M\r\u000f\b¤ïïÉsÛ?ÿþ³H\u0015ÇËº£\u0004bä",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://delsol-1.nty.uy/?type=http&nocache=2780&dbl=0"
+  }
+ },
+ {
+  "name": "Azul FM 101.9",
+  "url": "https://azul-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://azulfm.com.uy/",
+  "favicon": "https://azulfm.com.uy//public/img/streaming/musica.png",
+  "clicks": 1,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004îó,-X\u0001ïB`e\u001aðaìJL4Á`\u0007±\tl\u0013+Á¥(\u0001Eã¶SZ»8½É>Å>\u0000ö\u0015òæÚd\u0000ú¾éÁi@?YM« ¾t½)²ÜùÆ\u000bS±î<áÞ\u0003VlÊ,Xê/VçßQ[©­çvÉãè=1\u001c|Ë\u0002Å)q\u0001W1bÖQÔõU#ëY\u0000S©RòìZ]æRª8È2°á\"Þ'Ïy¤e W(P÷ÌqØréóªH)\u0011¢ð¥\u0003\u0000½¶§zgÊ×/dßÙ+<ÖÞF\u001fQaÍ©îH+\\IÙEeNVº¬÷O}gð,\b\u0012¼E\u001aH![\ttCÉ\u0012\u0003itä\u0002ñ\u001d¦\u001a©\b:F¤2\u0003kc\u001b\u001dõ\u001d¸¾¹7ÀÔ°F8;\u0005jìÅÜ[­ÝÃ\u0016÷î",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://azul-1.nty.uy/"
+  }
+ },
+ {
+  "name": "Radio Mas FM",
+  "url": "https://s1.radiosenialesfm.com:8020/radio.mp3",
+  "codec": "MP3",
+  "bitrate": 192,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://www.radiomasfm.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 8,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû°dÞ\u0006\u0006¿cS\u000bO?2T$ºü<Én\u001bÑL­=»IE\u001fë­\txQÎ²Bâ¤\u0015zU\"a\u001a°á\u0004<¶£Wö§E]M\u0012v\u0005\u0013r³J{®u\u0015ª%Va³D¹gÞ®´¶ù¢\u001bzz\u0016½ýðó-pÔHd½H7ºßæCÚhÅP\u0000\u0010\u0003\u0013d±F\u001a71b¥ÅÍ¬\u0002b=¾\u001eI\u000eÄ\fi9·Ôé¯H\r\u0015ùSPnÑ.­1JFÑTßêê$\u001b>F,dÿÿêÿ3\nkª\u001cgÅ^iD¿XMP\u0000\u0000\u0000\u0000\u00000\u0019F374æ\u00024\"4@©¼h\u0002ÄÂ;\u0017*<ÓS/PaÁô\u0003\u001e3>Õ!`\u0000\u0018\"úb&\u0016µ8ÊÝ]WÓy\u001dÞÙ*7«Öf#\u000b\u001aLfbêÀ\u0005ïfLE±öI\u001bI¦r¡+Å<ü]®Æ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://s1.radiosenialesfm.com:8020/radio.mp3"
+  }
+ },
+ {
+  "name": "Carve Deportiva",
+  "url": "https://streamingcasazorrilla.innovanexo.com:8000/radiocarve850.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://radiocarve.uy/",
+  "favicon": "https://radiocarve.uy/wp-content/themes/carve_theme/assets/images/favicon.png",
+  "clicks": 1,
+  "votes": 18,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "¤xÃå \nÀõ-F\u001dft0Ô°@ìß¨\u0006t¤G\u00036Z3CLu®,­7i\rï^møØ:k\"Kªc¼Ü2²nm+IsâGË-\bý¸é¢r)U~Û[½26SçÄÞ\u00173íHD)L\u0018½ÊSpÀ\u0006M(¡¬d`T\u0005¡l\u0018z\bK²£I(÷*gû[,½\u0015?ý©·ì_\u0016uEº\f¼Ët&å¯~Ðë\u0019}çKtI\fÒ\\`PN¼0°PíÉé\f^)ZBüOÆ¥Tq{wd3pü\u0000×Ù[ùFú/29Ùý\u001b\\aDV£Bw ¥ñy¥pM\u0007ôÕ¹YÌDtf\u000f\u0013Ì¥\u0010Ê\b6ÅKÔt}£ªÊù!\u0005u\u0018Seü¹\\©Èº©\u001b96­æ7%Û\u0011OÌîjKéÖ6Ô",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://icecast21.innovanexo.com:9000/radiocarve850.mp3"
+  }
+ },
+ {
+  "name": "FM La Costa 88.3",
+  "url": "https://streaming3.hostingmontevideo.com:8074/stream",
+  "codec": "MP3",
+  "bitrate": 192,
+  "tags": "latino,music,pop music",
+  "state": "",
+  "homepage": "https://www.lacostafm88.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 3,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû²dü\u0000\t+fÕÓzÀrD+\u0017\u0004b\n\u0018õi¬°×È¥\u0000nt\u0010\u0004ÎmEÖ\u001a\\QH¿r'^õÐ;=\u001cc²;P¡5xUÞKXÿ§¥àµhwE\u0007£ìÆ¯²\u0006T¹Øæ©ÝC!\u0016+Zj4SÍâ$¬±\u0014\u0017\\jßKwÿenzq\u0015m_Â¿û\u0019X¯ÿ£Ýûöÿ¥\u0014S\u0004!Vã@q\u0010\u00183L\f:C#\u0010ÃL:EÌX\u0001F\u000f\u0010ÌÓ\f\u0018à22LèdÁx¶l\u001aº\u0005ÞTÂ#Ã©&èZ¨\b\u0002U:W&È¤ Çìl!L\u0006ª\u001eÆ¯4\u0005¼I\u0002¼%\"\u0000T\u000eÂ¨­\rÑ\u0015L?b\u0006!êh2XhÀF.\u000fÎqúF[M\u0013ø¦2Ú©\fx«Q1U,¨ª?$ÑLÈLc«Z­+\re\u0011\u001c¨¢¢ï\u001e!ÚZ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://streaming3.hostingmontevideo.com:8074/stream"
+  }
+ },
+ {
+  "name": "La Isla Radio Online Del Uruguay",
+  "url": "http://lirodu.zapto.org:8000/laislaradio",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "arte,candombe,cultura,folclore,folklore,música,poesía,sociedad,tango,uruguay",
+  "state": "San Carlos, Maldonado",
+  "homepage": "http://radiolaisla.blogspot.com/",
+  "favicon": "https://4.bp.blogspot.com/-kEcSU07Giuc/W_ghHfD0ufI/AAAAAAAAABs/7MizkiJ9v6QDzLkbUdpM9fUEfzabxBJVQCK4BGAYYCw/w800/La%2BIsla%2BRadio%2BOnline%2BDel%2BUruguay.png",
+  "clicks": 1,
+  "votes": 326,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error timed out>"
+  }
+ },
+ {
+  "name": "Carve Deportiva",
+  "url": "https://streamingcasazorrilla.innovanexo.com:8000/carvedeportiva.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://carvedeportiva.uy/",
+  "favicon": "https://carvedeportiva.uy/wp-content/themes/radio1010_theme/assets/images/logo-carve-deportiva.svg",
+  "clicks": 1,
+  "votes": 19,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "´æï#9å{çþ¨_tBÿûd~\\Z\u001b\t\u001b°0b;ü\u0000Fg=ybl$qÞ\bnè\u0000ôH_\u000fi¿èñ\u000b\u0006ýù#4þk\r\u0010j\u001c8´qþÀÆ¸ïU@\u0012:;\u0012sþIWé!,Æbó\u0000\t))GÔ\u001c9BBã¸¡3ªÀ±Nû¶x¢B\r\u0018\u0000\bSÐ>`P\u001f\u0001$ªukXÈ L\u0000@Â Udª_\n>­%%\u0005HK\u0007Y\u001d\rHéL_\fÁð<eií=B\u0012^ÌyCl('ó/oþ\u0001\u001b)\u001f´R¢LRéó¤Æ_ùnnú`ð@Ý9Ó¹ÊäTÙ74±;i^MÍ4G\u001cPbPÅÁ\u0000\u000bØ!G¼\u0000\u0000\u0000\u000b¨ÖÇ/LÁ\u0004\u0005\u0002\u001aÒÿQÔûë\tÜW[\t\u0001ºþ\\nÓ?0,",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://icecast21.innovanexo.com:9000/carvedeportiva.mp3"
+  }
+ },
+ {
+  "name": "Radio Uno FM",
+  "url": "http://radio.hostlagarto.com:9822/",
+  "codec": "AAC+",
+  "bitrate": 64,
+  "tags": "",
+  "state": "Canelones",
+  "homepage": "http://radiounofm.com.uy/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 308,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿùX@*¡¨\u0001*5­Î{\fª\u0004£(`N\u0010\u0015J\u0010¢ñk¤¡\u0016\u0000)Î¡©'@ÀèZ`¬$U?0÷Íí<I3KmsMìÙ\u0011þØ)F\u00034µ©\u0016vÆöx\u0007ÝÍP¯M÷\"\u0005÷>(\u0000\u0016¥ÀÞL[\u001eÇÖ1Ã\u0016\u0015Òêe]aû¯\u001bJº(\u0006<û5§Yë~5¡ÅlágÝ]òZ8«=ÝË\fz½\f\n»fß\u0010Õ~¶iC1\u001dI\u0006sJe³î=b¿g&üù`¨µO»¢öêÏiÍëÉ\u0011×Ï-\u0015û~]+v\u0017v)n3c\u0000ËÍ($¸ê0èÙÇ(g\u0010\u0004IÆ\u0015¡µ-u\u0019èÚ#éÄ\u0015û8ÒefÃ\u0000P\u0018ãqÎ´_xÇ\u000b\u001f\u001e¢\u0015\fê\tÆûvûÈ$IÜ³ÔE+öñÝu\f\u000bÙ",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://radio.hostlagarto.com:9822/"
+  }
+ },
+ {
+  "name": "Diamante FM 98.7",
+  "url": "https://radiolatina.live/8058/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.diamantefm.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 14,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004Q\u0000\u0002ÚUÙc\u0006\u0013`Tê«Ï<b\u000b¥We0£d\u001f-ôó\u0015íþ«éj¤«ÚË\u0015\u0002&õÒÒ\u0002P \u001cÂÄ)mØ`èø\u0007\u0007ñXþ@\nyÂñ\u0005\u000f\u001eã¥XéH\tAw P(¦0Ó3\u000b\\@×g5ÜÚ;í<êç9¨ú:UO?2:=\u001bù­ú¦õS{¥ºÔUÕGc8ãW°D¼ÒD\u0004Rv¬IEÐrA«\tCÔùÊ\u0010¡RG\töð\u0014Sdv\u001e á[££æ\u0014¼M\u0010êúí÷²ÕY\u0016Öw;HúÙk»÷}>aé\u0010»R7}5~Òg¡k¹\b¯ÿüê\u0004-@@3Lm,)Ö]¶ ×rEA3\u001e\u0002U\bÌ\u001aÕ¡4¦Û[{^KÎ¢/J¯+9±<åe\u001ddf\u001cêïÕßÖ\f¹+£¤",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radiolatina.live/8058/stream"
+  }
+ },
+ {
+  "name": "Radiocero 104.3 FM",
+  "url": "http://streamingcasazorrilla.innovanexo.com:9000/radiocero.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "music,talk radio",
+  "state": "",
+  "homepage": "https://www.radiocero.uy/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 19,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "Aæ»ÆÝ5ï}{¹|ßÿ¶Øþ/2ó\u001dÈ\u0005@$Úc8ÿ\u0014Þ8¶\u000b¹ÿÿ´G\"ÿ·ü;\\¼¾(á\u0010?Ú¡¨ö\u0018¥]ûQø@\u0004À\u0000\u0002îhIJVuy\"eÅ7%fm\u0010\b}ïG\u000eÖdjÇSÙOá\u0017@T\r\u0010Ê\tã]$¸X\u0000Þí\u0000\u0000ªq \"x?lU\"\nHùÂh7À\u001e\"ùµ,§d\nüÞ)«èMÔñ}ëR!_÷¿@d\u001chÂF¤m|×ûò\u001f#çÆgvßû^63r°@8>P´F^êÚYÀ³¡#Û-,å\u00027¹ÿÜ­ìó?ò¥äh¾­\u0018À, íA_ßd\u0002Hd\u0000\u0000JE£u.ê\u0006¡b,r4I7â\u0004\u0014\u0006TwÅ$(¥Ýát¢\u0012\u0017\u0016\u0000&Ã8",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://streamingcasazorrilla.innovanexo.com:9000/radiocero.mp3"
+  }
+ },
+ {
+  "name": "Galaxia FM 105.9",
+  "url": "https://stream-30.zeno.fm/bf4gt1pem0quv",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "music,religious",
+  "state": "",
+  "homepage": "https://zeno.fm/radio/galaxiafm1059/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 2,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûpd\f\u0003I9Ýáæ\u001cP$à\u0018¼\u0004\u0000\u0000\f Áy§\u0011\b\"\u0004\u0000\u0000\u0000RH«¾©,Ôã¦;µ¥Ö\u001aªþ2)<%\u0004Èd\u0016¢Ñò¢XÎNú`Â)Ú*3¤_áÃÿ\u0019Øú¤nf\u0014\b\f\u00047\u0017\f\u001esn\\\u001fb[ÙâÅ\u0004Oõ&T\u0012VEæ<Q\u0018¢\u0013Ñëí¡¿G÷¿öûìªûû®¶_«ïë8Ô\u0004\u0000L3%7Fùo/¤!\t\u0015Lì\u0001¤jÎ\u000bÑänK­FÅ\u0018t®üûDçÊwòÚKNÙ×Õ ù×i¤Â²$J °¢ªæFBSJEß¥É×¢\u000eO»$ß÷_fð\fY»¹ýßóûæ~~\u0016[æ \u0019ÐÄGQû\u000eQEõý¿èµ(\n\u001dLëÔÑõ§¥c®û(uGÓý´*$\u0000\u00000þFÔ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://stream-287.surfernetwork.com/bf4gt1pem0quv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJiZjRndDFwZW0wcXV2IiwiaG9zdCI6InN0cmVhbS0yODcuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6ImNnUGVvVU5hUXlXTzl4UE9pR3VwMHciLCJpYXQiOjE3OTMyOTg1MzksImV4cCI6MTc5MzI5ODU5OX0.is_4PdMt9VnGTllng2YqB4eGkNCW1he7b1qE1nIYXOA"
+  }
+ },
+ {
+  "name": "mundo fm uruguay",
+  "url": "http://emisiones.com.uy:8088/mundo",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "musica",
+  "state": "",
+  "homepage": "http://mundofm.net/2016/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 190,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "á\u0007«ä|ñ\u0007¨¶ôý­\u000f¨I\"y\u001bSd|Ý¶.;#éÿ¶sP;â\u0006©äV¹¢ft\u0015k\u0007\u001c4MÅ©\u0000]E*\u0000):Bh>¦»c{ç÷\u001bBTRïåùsòÝø÷Â(ØÛ{\u001fê?\b=_#â\u0018Þ\u0010xÐm\u001bþÏVÅ\u0007Ô$=Sd|ß±qÙ\u001fOý³PQâîð§ZBî­\u001agA]\u0003Ï\u00102ÜZÄ\u0014ÔP\u0000ÿû\u0000\u0000\u0000\u0002åXàù',þ[\u000b\u001bÍ$å¥__§¬íA~,l´ó§2\u0000RvUIÊ)·³zn®óéí²°9=8ïÕÞ!\u001eÊêC\u0013\u0017qÀ)B¨gúòzó³\bæè~WBßôêÈ'\u001aÁrÊ£ï»M~¡qü»~£c\"\u0002¤Fz\u0000ªâ\u000fâõ.nà\u0010Û´pö_",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://emisiones.com.uy:8088/mundo"
+  }
+ },
+ {
+  "name": "Casupá FM 94.1",
+  "url": "https://stm1.ifantasy.com.br:7256/;",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "entretenimiento,local radio,música variada,noticias",
+  "state": "",
+  "homepage": "https://radiocasupa941.webnode.com.uy/",
+  "favicon": "https://cdn.webrad.io/images/logos/radios-com-uy/casupa-fm.png ",
+  "clicks": 1,
+  "votes": 5,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid f"
+  }
+ },
+ {
+  "name": "FM cordialidad 94.9",
+  "url": "https://cordialidad-zikoxweb2.radioca.st/stream",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "entretenimiento,music,música variada,noticias,radio hablada",
+  "state": "",
+  "homepage": "https://fmcordialidad.com/",
+  "favicon": "https://fmcordialidad.com/assets/img/basic/logo2.png",
+  "clicks": 1,
+  "votes": 10,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûpdÀ\u00026Þk\u000f9D*£Ë\u0018<Å*\u000f\u0001_q§\u0007Á1£n(àÿöyDCÊ SRQTr%Ñpñ\rl¥¢ P0\u0014\u001e1cF\r`6<Lv\u001cpJG\u0004p\u0011Ù¢3\bæL^\u00145$æí¿\u0016QUÅk\u0002\u001d¹N¸uqÔ?¡ ÂY!ð±Q\u0016ÑS\t\u0013P¬¦x\u0018ëu¼|þàÓ\u001d{e×\u0012Ò4±îÙ\u0015§úù\u0015pÍ}DüïwÛq\u0011jÕ²\"\u0001 J¥Rp{f\tDã¡þËCÆL>r\nÝ\u0013M\u0007à»8\u0005RÁ¾öGßWµ'\u0001[PÿG]TÕÆÑ?~ªS©ì»ÿï_É\u000bÞÉüµ¥¢ç\b-\u0000°²\u001b·&8ù>1f¦:\"\n§`±2a&3æý\b×Ñ\u0007ú·ïÐvWÅ¿Rj\u001aÜÙl",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://cordialidad-zikoxweb2.radioca.st/stream"
+  }
+ },
+ {
+  "name": "Amatista FM 90.7",
+  "url": "http://usa15.ciudaddigital.com.uy:8044/AmatistaFM",
+  "codec": "MP3",
+  "bitrate": 56,
+  "tags": "gospel,religion",
+  "state": "",
+  "homepage": "https://amatistafm.com/",
+  "favicon": "https://amatistafm.com/Imagenes/desde%20artigas%20capital%20piedras.JPG",
+  "clicks": 1,
+  "votes": 9,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÈM\b§rQÔëÈMèIÈPûÿûBÄé\u0003Ê8V\f½)A@ªÁ\u0019(±ÜEvÈ\u001c(\u0010§\u0013\u0017\u0010Zsøo(R'\u0010*\u000e\u0014B8ìP8åçùrëþe¹Ùò51\u0005þãe¯e>ß¾x¬2ö\u001déþøùüíý&P×\u0006\u0011ÅÞ\u0001 \\aGêlLÓbyò¼ìwÿÞÎû»¼¶ñæ18|¤B\u0011êFÙ\u0007\u001b\u000e©[\u001aÛS\u0015ôÕ¹Æ¨'z±ºÝWÏÙÌ0­áµ\u001eör{s¡\t·-¬Ð\u001384ô&ÿûBÄé\u0003ÊV\f½)I0*Á%(\u0014¡ºHGÏ2-Éxe\rZÉüÙä\u000f znzâ\u001c\u0007rSÅ×dr«4ÅÔ\u0013V×ÍßvEe\u0013gþ4?&òÑÈÄàz¹Rfoû\u0019Xm&EUT",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://usa15.ciudaddigital.com.uy:8044/AmatistaFM"
+  }
+ },
+ {
+  "name": "Radio El Espectador",
+  "url": "https://espectador-1.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://espectador.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 42,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004çó8ZP\u0018\u0013pgKJ\u0010c\u0002n\nÌeB\u0007³\u0007\u0001:èôààÿþ\u0014\u001d'©\r!UlT¯(\u001a\u0019¢öãPíÊ)LB(Ü¥Î½gIäã^@!!bH\u0018©Ê÷´\u0006èû*¸%# ­5a£þÿÿÿÿþÿ¿m×k9ÓK<ßújÿOïïµWÿÿ×Oÿÿ'd\f;\bÎï´íCmb,h\u0016j÷4:3\u001b4²Û\u0014Íã¯|±Ènb2Íþ*\u0005\u0010×ò\u000e­\u0006æºàµÀk8|ÂÖ1±Å\u0014P¶×_\\^¤Øa\u0007ßÃ\u0019ûÓ£ºÆÔÏéêð¨¶yË¤Fw}§j\u001bls\u0011c@³W¹¡ÑÜa¥Ø¦l·\u001d{åCs\u0011¾oôùP(¿uh75×\u0005®\u0003YÃæ\u0016±tQB×]}rNEz",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://espectador-1.nty.uy/"
+  }
+ },
+ {
+  "name": "La voz de Paysandú - AM 1320",
+  "url": "http://salida.stream.com.uy:8508/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "cultura,folclore,información,música,pop,rock",
+  "state": "Paysandú",
+  "homepage": "https://www.radiocw39.com/",
+  "favicon": "https://www.radiocw39.com/cw39.jpg",
+  "clicks": 1,
+  "votes": 67,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004ë\u0000#Î`T\u001b\f*ðeË\nù=#M­#_§°§AE¤ªé\bè\u0018{¶hG´Ýô\f@Á7º³)x\u0005*±Ík3Ï{õ_\fÙ\u0004ÓB>Óm$ÝôB\u001bêª±5dk\u001cZ<¨\u000e¦A\u000f-§bÕ¬ÈgÖÖ)\u001b½¡Wåkõ}÷u/ÿ·tÎ\f·\u0001NØ¡\u001eÔïô\t)¼¦È\u0004ô²¥©+\u0011~TÉóa.\u0018õÒÎCqmNYj°´\u000fa\u001dGO0Éw\b%0mT·\u0010±Uõ\u00121XÓoï?¤\"HáÓj£Y]Ó¦ÛöHc\"|óÎ²ôÑV\u0014<£_Ì\te\u0005Ö*Ùþ°\u0000%\b\u0000\u0001$¤êªbQÈì\tb¥k>eÃ¤\b±\u0000ä\u00104^\f\u0017\u0017<úU«ªÇ¸û«´Ë\u001d\nÐÃ\u0011\u0010¼",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://salida.stream.com.uy:8508/stream"
+  }
+ },
+ {
+  "name": "Radio Cristal AM 1470 - Las Piedras",
+  "url": "https://medios.ciudaddigital.com.uy:18126/CristalAM",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "",
+  "state": "",
+  "homepage": "https://radiocristaldeluruguay.com.uy/",
+  "favicon": "https://static.wixstatic.com/media/70feb5_58ac170957af42108431964e6845d606%7emv2.png/v1/fill/w_180%2ch_180%2clg_1%2cusm_0.66_1.00_0.01/70feb5_58ac170957af42108431964e6845d606%7emv2.png",
+  "clicks": 1,
+  "votes": 26,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 404: File Not Found"
+  }
+ },
+ {
+  "name": "FM La Ley",
+  "url": "https://streaming2.locucionar.com/proxy/laleyfm?mp=/stream",
+  "codec": "AAC+",
+  "bitrate": 32,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://fmlaley.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 49,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\@\u0017!Ð\u0001L44V2ÄÌ\u0010ÃÆ<ì\rk\u0004 àt¼\u000f°,`\u0011|Ú_Ò\u000fV¾ÆÐLÎ>©\\¹\\<½ºG§\u0013ÒtEßÇ6\"» ÷eÝpksKT\u001d\u001d6s2Æ±V©1&ak\u0002\u0006Æî\u0018ÚÙ¬tqTð«»aO\u0015é­Öß\u0002Ùï;¸\u000b*ÎÀ¥}£OZ¨×&\u000beÝÍâ\nÐ_\u001bÅÖUÞíÃu®æÀ\u00007h3Uq\bå¼+[ \u001d\u00057\u0012T»wÚ/m°ÿù\\@\u0016¡Ô\u0001P44VR¼ÔHµ;áDsjºU¬\n ©?_tÒW±'ì3ßnQgpÛ_ö\f\u0000J!'$G»'¦*&ò\u00103Â¶á­Qp:ðAK¿é^Èî1²H½Z\u000f<ô@¦÷½Ä«\u000f\u000b×4jK_\u001b§Q:É-Ô\u0007\u001c",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://streaming2.locucionar.com/proxy/laleyfm?mp=/stream"
+  }
+ },
+ {
+  "name": "Montevideo Jazz Radio",
+  "url": "http://node-34.zeno.fm/2ykx0xbm6gruv?rj-ttl=5&amp=&rj-tok=AAABgdsb5DoAz8MV8KJpNVyteA",
+  "codec": "MP3",
+  "bitrate": 0,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://montevideojazzradio.com/",
+  "favicon": "https://montevideojazzradio.com/wp-content/uploads/2022/07/cropped-72396285_952890841735510_2637510734681997312_n-270x270.png",
+  "clicks": 1,
+  "votes": 113,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 401: Unauthorized"
+  }
+ },
+ {
+  "name": "FM HIT 90.3 Uruguay",
+  "url": "https://hit-1.nty.uy/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://fmhit.uy/",
+  "favicon": "https://fmhit.uy/wp-content/uploads/2020/07/cropped-FmHIT90.3-192x192.jpg",
+  "clicks": 1,
+  "votes": 51,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdî\u0002\u0004èEØ+,66A!Ï\u0019i\u0002\u000fLåk'±\u000f@æ\u0005î´4\r+2\u0004hæ$tDBòæ\u0005GµaB´J\u0017öÛnZ»BiÚ¼Ù·°Å5QM×\u0014+ìûç\u000f\t¯6¤!w+ªþ½3»L^d,Ö§B2WJúýßý)_µh\u0000ÐBcÊÌÓSªØÃ \\ûzÚ×ùÃÿM\u0017\u0019Í·ÿé·G¹åVö'³r¯\u0005Ä\"\u0000\u0000d\u0000iÂµ\u00000 Ü\u0019ÆÓb\bðg2Gò6ÚX¹×M¸54p9Z5$N_âÊG\u0015M6î§k°VM$ÌæÞ®jHÀ\tá\n$m,²l\u0005¬$\u0018\u0011Ð\t\u0004bÞS\u001cIú»xG\u0016c1\u0012èGCd\u0003\u0006\bH^ä¾ÊlHXðiB)ÚO*x\u0005$è\u0000* \u0000\u0000\\\u001e",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://hit-1.nty.uy/stream"
+  }
+ },
+ {
+  "name": "Oceano FM",
+  "url": "https://oceano-2.nty.uy/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://oceanofm.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 159,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004ä\u0000\u0002»*Yùé\u001a°Rd+\\=(fÌßa§¤m\u0011\u0011j±\u0019p\"á \u0010Òì8.ÍX¼\u001dÿv·ÝXPfcL\u0000\u0001ä6¼Ä±e²\"¨ZgWU³k\u0019\u001aÀtº\u0006õÑ\u0006o~ºX¹Øh+GµÙòÍñHO¯õËs\\0Â-\u001cåR©\u0014\u000eP£x9I§=\u0007\u000f\\÷\u001eß½u¯RÖ¥©KjÝ\u000e ;m©\u0004sZiejÐ\u0000\u0006\n²\u000e\u0012\u000e\u0000ÁI\u000eâðT\u0000R=Gáë\t@»Lá« B)Díc`GJö\u0002\u0012dR9u\u0015?jloÈ7P~w7ñÝüY1«G²\u0017µõG>b\u001eûÿî××kq\u00035\u0007iÛ\u001c\u0012 \u0013\u0019V8ÉÍÄÑÒµ\u0016×\u0003$\u000f>ß9Ô\u0003Õ×Ò¥à0\u0019àÓÍ:tDT÷",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://oceano-2.nty.uy/"
+  }
+ },
+ {
+  "name": "Radio Acuarela",
+  "url": "https://onlineradiobox.com/json/uy/acuarela/play?platform=web",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Cerro Largo",
+  "homepage": "https://onlineradiobox.com/uy/acuarela/",
+  "favicon": "https://cdn.onlineradiobox.com/img/l/6/75696.v4.png",
+  "clicks": 1,
+  "votes": 22,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdg\u0000\u0006ëeW>k\u0000\u0002\u001dQÅ\u0000\u0018õq¹\bï©Ç\u00120\u0000¢ïá¨Ô\rw¾¾¬}Á\u0000\u0001+Ã·ºÞù§Tû\tÚ\u0004µZiÎ6Ð@`\u0010;mI\u0013I²Ä½ý\u0002¢¢õE¤åPC{P@Õ Ën¯Õ°!Ê`\u001d3 \u001849 N\u001b\fÍ4\u001fë/çÁ\n%B\u0005dFgO;'[~3±\u0015h¥s2¶\u0002a}ÅPõ<\u0018P/¦\f¿õÔ\u001aÃwó?s~òxs®\u0016p\u0019\u0015\n¥Výv§ÆÇ\u001fTï%ËÈóOHµÓs[Wº\u001f\u001fll÷~ÿ9ñ Á\u001elfôa½¥RÙWÇ¥ñHð\u0015\u000eo oÇ~£Ýï[Ç¬_GÑë\u0002\"\u00050^P\b%#\u0002=Ó\b\u001c¸3\u000eeÕÃ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://emisora.zonasinergia.com/8042/stream"
+  }
+ },
+ {
+  "name": "Neutral FM",
+  "url": "https://sp.dattavolt.com:7024/stream",
+  "codec": "AAC+",
+  "bitrate": 320,
+  "tags": "latin,news,pop",
+  "state": "",
+  "homepage": "https://www.radioneutralfm.com/",
+  "favicon": "https://www.radioneutralfm.com/wp-content/uploads/2022/03/logo-radio-neutral-fm.jpg",
+  "clicks": 1,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñLh`ä!\u001a\u0015üT\u0015wyS*´ËºII2*\u0000\u001f\u0002@Ð²¤Ì%-v\u0005ÃßþÃ\t¨Í\u0019Á²ò'ÍW¬µl½\fÿÜ³ZcDºmÔµF;ðê·\"¨~XíöÒ\u000eA\bsW³z:ºL<Ã\n¶\\b:Ü@7C)¥åÔº©Å\fßU\u0018¼f \u0007\u001bEVv[i£G¶ú5Õ:Áß¡t\u0017?up|;ªy\u001b\bð~dúÝ/\u0000ø\u000bÝ®\n£yj$«Vå1}ûï\tátßý3cÄéæ\\Å³¨`õÇÃy6xÅ¬ªkç1ô\nquëóß»½7º¯¬ù­óÙ5o¯â±?ÈÊ\u0000èL³ø­×C+ënFÃ9÷§öÿnÞ{Ã!ØèÊs\u0013{$ÒKo7\u0014s\u0015¹\u0018!¸Wõô[ºð¾3\u0010PëoO",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://sp.dattavolt.com:7024/stream"
+  }
+ },
+ {
+  "name": "Azul Punta del Este 93.5",
+  "url": "https://icecasthd.net/proxy/azulp/live",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "",
+  "state": "",
+  "homepage": "",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 33,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "KA\u000ec\u0015\u0000\u001bÁ`\u0000Ä\u00010\u001c÷«h\u0011ÈÂ1~\u0006b¢\u001d\u0014ÕÑ#àçá­ä\u00019¦à\tq©Ó´§014\u0019P@\n1ýhÀ\u0018H\f/­¸:¥+Yóe¨[|ã\u000b3\u0012ÛeXbñ§Üí\u001dÊò«,\fuhÖ,Gæ¾èÚu9Ï­¯²;\u0017ºd)¦-@\u0012\u0010¡ûkh¿)ïµã¸\nq\tZªH¬&¨\u0002EéH³.1Ð@8Ñfð-\u0001\u0019êª°A¿¤QZe±\u0000\u000fÿù\\-áÈ!\u001bUt\r®!Ç6¤µXb\u0010@\u0002\u0010\u0002¦ú×3í¶&YÌÖé¹ì¸.¤.\u0007¦ù|Ü\u0010ì+p´®\u0005\u001d_\u001a\u0017\u0011¦3o»2f1bf%3}\u0018êì¸T\\%øj«Tba\u0014\\¹5µ\u001aí\u0006VAöÓ_ÂîK§æþàÇ^",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://icecasthd.net/proxy/azulp/live"
+  }
+ },
+ {
+  "name": "Exito FM 99.7",
+  "url": "https://salida.stream.com.uy:8506/stream",
+  "codec": "AAC+",
+  "bitrate": 192,
+  "tags": "adult contemporary,entretenimiento,hits,music,música en español e inglés,top 40",
+  "state": "",
+  "homepage": "https://exitofm.com.uy/",
+  "favicon": "https://exitofm.com.uy/wp-content/uploads/2023/06/EXITO-LOGO3-338x132.png",
+  "clicks": 1,
+  "votes": 16,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ\\[H!\u001bU\u0015¶f¢X0:#\u00044¸LÊ]8º¿\u0007W7T\tÄz\u0018jöX\u0011±Éê»8EÚ\u0004\u0006²(J\u0014\u0012H\u001bø×\u0012\t\u0016à¾\u001aý\u0018Ð\u0016O(öa\u0010È¢]\u000b\u0019<i\u0017roø\fÇ<\u0010\"Çg\u000f!_ÐN4buê!³v»[©qÜýKýw¼~ÓöÝ«Á¼äK@#ï¬â\u001d\u000fUæÎ%È¯qM²;M¶Õ7KÆ9ÇFÇz#¦õmn½\u0013*ì»¦xô^fÇz^ûYÖhÖ7¥Ï¸yú®E¬)§a°Ì#Í7©/®\\_rHÉðÓ¸IFØ\u0002ñ&I¥DÝ¥­ç\u000fÇq\u0015§Ò\u0007+=Ó\u001bWû\":î¯là<YQÊ'ñN\u0019½êîñÏ4(\u000f÷è­ì.C·é\u0011&ß§­öÎ\n",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://salida.stream.com.uy:8506/stream"
+  }
+ },
+ {
+  "name": "Radio Prado Sur",
+  "url": "https://usa2.fastcast4u.com/proxy/wqzjjais?mp=/;",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "ballads,classic rock,jazz,oldies,pop,pop rock",
+  "state": "Montevideo",
+  "homepage": "https://radiopradosur.com/",
+  "favicon": "https://radiopradosur.com/wp-content/uploads/2022/06/cropped-faviconrps-270x270.png",
+  "clicks": 1,
+  "votes": 23,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûrd\u0002é>WÑé\u001b@0AJÍ\u0005æ\b\n(QWL0g\u0000øª´ðh/ÿù/úPàêÚÒ\u0006\u0004¢Á\u000f£P\u0001\ni$ÑNÀ&Óê¥Ë.dô7&\u0015Â\u0016\u000b\u001bø;XbÁÂ6Ø\u001b<\u001fÂù\u0001(\u0012\u0002òÏH_*µCl\u001dªç\f49I\u0010Äo\"U;¬UéòÇ\u000bm\"d,¢k)&i\u0002gÂ²\u0015]dÔ%bêyúº@T\u0017tpÂ¥º´²+÷`Qè{þÞªM¤¿×TºdF>4¬wÞþåÆ©\u001eRi§\u001aN4\nªàü/¢º¸'IC|ð<ZÒè\n¾Î¡MÅ4Âf\tq}Ì¤\fE»hï0@p|\u0006¶r\b§ìrìXQì-JWöþiè¹ËÐ´q¤Ä«\tZ\bsÐ$ýc",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://usa2.fastcast4u.com/proxy/wqzjjais?mp=/;"
+  }
+ },
+ {
+  "name": "Radiomundo 1170 AM - En Perspectiva",
+  "url": "https://edge.mixlr.com/channel/nuuij",
+  "codec": "MP3",
+  "bitrate": 0,
+  "tags": "news",
+  "state": "",
+  "homepage": "https://enperspectiva.uy/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 63,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 404: Not Available"
+  }
+ },
+ {
+  "name": "Diamante FM 98.7",
+  "url": "https://radiolatina.live/8058/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "adult contemporary,classic hits,entretenimiento,musica romantica,música en español e inglés,noticias",
+  "state": "",
+  "homepage": "https://www.diamantefm.com/",
+  "favicon": "http://www.diamantefm.com/wp-content/uploads/2016/10/logo_header-1.jpg",
+  "clicks": 1,
+  "votes": 29,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004\u0000\u0002`([éé\u0011PLGl<bl\tDYk°g\u0001*\u000e­pôé>aHSxÎ\b8Xân¡Ä\u0019\u0018²daFO½wùxOU\u0016#8\b­YÒù\u0011\u0012ý4IS-¡(]\u0007þ#XEì²õ\u0004ÜµÉE\u0014XJç\u0016x°ÍU\u0002å\"Âí\u0012LQg:(Ò6Ð\u000bÐÕz%*<Â4è\"MS?ó¨aUsiÃä\u0012¤~¢Ç]õñ¸Ð\bwº\u001bXa\u0007;¹{­Cq)\u0019Ð\u0003V¸\t\u0005D\nÒ\u0005±æ©P#P\u0015©à³ç!\u0007$*7N±älC%`\u0012À\u0012\\D\u001c§±4\u0015Ù=²Ä9­Ô8S\u0004|Ð\u0017Ï£GP\u0010IÚ\u0004R(S\u0000\u0000\u0006Pz@\u001f\u0011¨\u0011\u0015\u0007ägN\u0016\b**±úÅì-\u0013þ/Î\u0016\u0014]",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radiolatina.live/8058/stream"
+  }
+ },
+ {
+  "name": "Emisora Principal",
+  "url": "https://s7.myradiostream.com/10764/listen.mp3?ver=755704",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://emisoraprincipal.com/",
+  "favicon": "https://emisoraprincipal.com/wp-content/uploads/2020/02/emisoraprincipal_logo.png",
+  "clicks": 1,
+  "votes": 13,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûD\u0000\u0003Ã_Ó¿a\u0000\u0002¬úì$\u0000NmOL$mAÎ°ji\u0014ø~i|{Lä¤Í#DÜg\u0001@\u0010~f±¥\u000fH\u0012/JYsÞÓ\u0018£þôð\u0002\u0005Í&%J1Ó¿Ù\n3Ó+\r¿í=f6\u0014òe:4¹\u0019A$\u00026Û_ÿüÊbÕ­e3?Ï¿÷>¶agÙ´eÈ `3\u001fïOûÍÉr/|$Q³þ¥c\u0012eZÖ\"\u0013\u0000\u0000\u0001\u000e\nÑ\u00105ÆKt\"ô¥Ê\u001fÀp54\u000eÅ5$¨;{OmµòÉwNW¢nüÊ%ª\"&¥4t\"gc3Ø;*£iÑÒÉþQ®×+\"+Uy¾ªè¦¸F¥JUVB®ÂÈèãåþÚlUoµÕÉaUõC\u0004K\u0004½\u0002@\u0004n§ó]O\u0005\u0010 ðÕîÛ:ðC",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://s7.myradiostream.com:10764/listen.mp3?ver=755704?nocache=1793298539"
+  }
+ },
+ {
+  "name": "Radio La Zurda",
+  "url": "https://radios.solumedia.com:6270/stream",
+  "codec": "AAC+",
+  "bitrate": 48,
+  "tags": "folk,latinamerican music,local music",
+  "state": "Montevideo",
+  "homepage": "https://radiolazurda.com/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 90,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñX\u001f¡¼!\u001a\u0015©ddS\u0018\"\u0010\u0000A-\u0017±Æá\u0001\u0007òV>_8¸\u0018e@¦LSÈ\u0004 =\u0016â@¾ÂÉ÷[\u001e\u0006up8ù\n¤\r]÷ö\u0003ÓÀ\u000eî\u0014\u000fÓG0`gï\u0002\u0000\u0013y\u0000-ð\u0015üqÀ\u0007?\u0019°\ní7¸\u0002'Ï\u0017Y\u000f+\u0000\u0007`\u0000/Õ wz\u0010<Ø\u0000º*,\u0002ü`\nD\u0014 \u001a\"ê¡3(\tPÝ»*Ú¬\u0014 \u0002øèQJîÅµt}Ç®IU.òm\u001b§¹(HeÄ\\\u001eÜ«óÄô4\u0000f·\\3òÏªVT=²Æ %ðç»Àqû0<*\u0001\rP2Ä\u000f®\u0003Ó5@\níæÀ_¿P$\u0003¾\u0000Õ¤:\u0001m ê\u000b\u000b(\u0001ÀÿñX\u001f\u0001À!\u001a-\fð3)\fÄ#\t8\bÌ+Û±õî¥@\u00044ÌêER:Ãîá¹pþ¤",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://radios.solumedia.com:6270/stream"
+  }
+ },
+ {
+  "name": "Emisora del Sur",
+  "url": "https://radios.iwstreaming.uy/8034/stream",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "información,música uruguaya,radio pública,uruguay",
+  "state": "",
+  "homepage": "https://emisoradelsur.uy/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 228,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 503: Service Temporarily Unavailable"
+  }
+ },
+ {
+  "name": "102.3 FM CORONILLA",
+  "url": "https://streaming01.shockmedia.com.ar/9184/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "entretenimiento,information,música variada,pop,radio hablada,reggaeton,rock,variety",
+  "state": "",
+  "homepage": "https://fmcoronilla.uy/",
+  "favicon": "https://fmcoronilla.uy/img/logo.png?v=1.1",
+  "clicks": 1,
+  "votes": 127,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû\u0004è\u0002þLØQæ\u0014f`([\r<ÃfL%Y0kÑ$ëèô£Û]dë¿óäx-ºÊ¾{Ïæ¥h\u0000\u0000\u001c\u00184U|Ä2IæÎY:{ )ÝÑL¦ `\u0019Ô\u0016¿-ôæp>\u0013´Ã_Os ß.t«&éy\u0015%[\u0010V|õ%+'ù/Ë>^oôøÓÿãù\u001d+Üõ¡ÜQ6ÛH\u0006H\u0000þ§\u0011H¬\u0003&¡öð\u001dbH\u001d\u0003ÄQÕUfS*Å­ª~\u0015ÿ´E\t<h¤yW©S\u0011Ñª£\u0010:!_\u001eWn^\u0019³5bÅ*´g#Óé}~i\u0006I%onlÀÀ^¿M9Ô)ÅÕ²`\u0018b\u0004\u0001$\u0011\u0000\u0001yF\u000bBb?9>ö¦b8 ©wÇÙæ\u0018Oõ1ÊûAué\u0003\u001eÁÑ¤%õ&\u0015l~",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://streaming01.shockmedia.com.ar/9184/stream"
+  }
+ },
+ {
+  "name": "Radio Carmelo",
+  "url": "https://server.laradio.online/proxy/martin_barragan05?mp=/stream",
+  "codec": "AAC+",
+  "bitrate": 48,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.radiocarmelo.com/",
+  "favicon": "https://www.radiocarmelo.com/images/faviconcarmelo.jpg",
+  "clicks": 1,
+  "votes": 122,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿùP@\u000fa\u0001L2¬p©)±\u0002&Z!¹q»ÞÀ\u0000}=&ä¢].\u000eT\fÒ \n\u0018Ê\tZ±©QPÁª®;B\u0013a\u000b Tå{ïüx­Kn\nYþ_uøö¬\u001cÆ¼p\u001cvÎ\u0018~®ÇJô8m¤Ä\n\r9põADö³)Á¼yf\u0000\u0006, \u0000ñ\u0000%\"ïÿùP@\u0010¡\u0001@2¬pË\n\u000e4\u0000Ä@e¡V ñ¡'H_÷\u001fãËãæ[\n«8\u0014ï\u0006¥Ñ\u0015=¸±KuËë¹n±%¸§¢\u00010ÊÀk9vÖxKÍ\u001eö>´Pa#­\u001cnwó´ãhYÁ\u001cÐ·LZ=^w\u0014ÖìºødO\b6ìÇÁèÛ|ÇÎ¨h\u0000J¡ÍÿùP@\u0010\u0001B3,pÕ@ \u0006cb´Ëâµ(þ^Di6We)x<\u000b_%\u001fÖ",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://server.laradio.online/proxy/martin_barragan05?mp=/stream"
+  }
+ },
+ {
+  "name": "Radio Río Branco",
+  "url": "https://medios.ciudaddigital.com.uy:18164/RioBranco",
+  "codec": "MP3",
+  "bitrate": 32,
+  "tags": "",
+  "state": "Cerro Largo",
+  "homepage": "https://www.radioriobranco.com.uy/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 22,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "-)³\u0013ÜñhVö\u0017\u001a.e*ÏîH\u0001ÈÄ%ÚæaoU¥(+\u0017ÚñsÅæþu\u001c]ZóÉ\u0013Xmþ^kNnt¸ùýÿóBÄç\u0016²2ä\u0000aFÿéç\u001a\u0019ó¥ÃÜ\u0016v¡Lóbi[3ÛAkþ\u0019LX:æ\u0005<Vò·ß\u0003Uä\f¤J\\\u0012\u0004\u0007Ä$|!~\u0012\t³Ñà|¢\tÛæ3õen»ê=ÑùÊÜß¢£È¤ÆuS}»ÿó@Äè\u0016rä\u0000z\u0006¹¥JÎ²îò~ï(«\u0015i\u0004ýö9®¶@'(+\u001dæå(¬Ýí÷%\t74\nX'm¾ñ¼»²Xî \u0014\u0018\u0018§Z\u0018\u0007>è\"\u0016sq\u0002¾üÎ£ª5\u0005F\u00066yl{ÛÛ(E¯9ÂÿóBÄè\u0016\n®Ø\u0000J\u0006¹&.W¤§¯-+ç\nèÅ²¦S<",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://medios.ciudaddigital.com.uy:18164/RioBranco"
+  }
+ },
+ {
+  "name": "CX 30 Radio Nacional (La Treinta)",
+  "url": "https://stream.rcast.net/73479",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "conservative talk,talk radio",
+  "state": "",
+  "homepage": "https://www.radionacional.com.uy/web/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 5,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "fÿ*K@*£e\u001d$»y J¦&ÙV3]^OûY>Ìá{BÃà\u0019Âo±$Rõ$ÉyÃðµÿûdý\u0000\u0005`Ôë,Nª&`;\u001d$A\u0001qiY¬°Æà­´\u0006MØ¤\f*\u0018Ò\u0012Rÿ\f\u0004)ïE·Z\u001f+i|Ò\u0000 ¢¸w\u0002Ó` ®ô\r¶ÿË^\u0016\n\u0014\u0014\u0015ÿ×ÍÑS\u000bþ\u0001\u001233LÏÿí¶áSÀ\u0003eF\u001er5Þ»©ü\u0017ÿ«¹®éïç£¡;,ßs«öÿÿë\u0005;­º·ci)\u0004\t ²\u000fâèe}ÍTuáµàºÐÝ\ré~±!AÒºæ¡:È°ï¹»U\u0004Çr8µ®ðÍ2j\bÃA\u0005èâGþ¹M\u001cÅþMÈ5ËtR\u001at!\\Um?'ó£*y\u0015Ùteý_B(¸Á~°\u0000±]",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://stream4.rcast.net/73479"
+  }
+ },
+ {
+  "name": "Impacto FM - Fray Bentos",
+  "url": "https://a3.asurahosting.com:7740/radio.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Río Negro",
+  "homepage": "https://impacto989.com.uy/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 25,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+  }
+ },
+ {
+  "name": "ESPACIO SPORT 91.5 FM",
+  "url": "https://medios.ciudaddigital.com.uy:18098/EspacioFM",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "deportes,entretenimiento,information,music,noticias",
+  "state": "",
+  "homepage": "https://www.915espaciofm.com/",
+  "favicon": "https://www.915espaciofm.com/assets/logo-DwXxCiga.webp",
+  "clicks": 1,
+  "votes": 14,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "í\u0007jWCËlÿ@GÿûdW\u0003×CW[\f2²2Á*ß\u0005'\b\u000e#[\u0018rÀÈêè\u0017\u001a\f\u0019\u0004\u0002!¸e`UkS:ÏÊ$»ªºYUV\u0013»(Àÿº{\u0013ß@ÍâS§D¨÷ôÁ¨ìôþ¥BFÙÚ\nfx\":\u0007)!Ê ÈLrÖAò¬@,[#¨N\u000b\u0004\u0017/ó3®¦s\rpUÐ[ ðPÁó\u0001\u0015\u0010±ó·\u001f\u0014H\u0000\u0001\u0000[µÒ·v6ä\u0012\u0014ºÌ\u0014\\2§j\u0004 ¿S]ÿ]mB¼}<+D³Û§Õÿ·ÉÕ\u0004aA(\u0000\u00000ãGË\u001f5©ØÈ\u0011uÒ7³LÂ]\u000eÛ¨ÙëYºðÚ¤·Ym ~ZÚ­·\u0013Þq«ú±\u0004ìÎ eg±g\u0017VdtB\r29eV²ÖD°«­jËõeí÷1uf",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://medios.ciudaddigital.com.uy:18098/EspacioFM"
+  }
+ },
+ {
+  "name": "Radio 098",
+  "url": "https://stream.zeno.fm/aam2ts855p8uv",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "2000s,60s,70s,80s,90s,jazz,pop,punk,rock",
+  "state": "",
+  "homepage": "https://radio098.wixsite.com/radio098",
+  "favicon": "https://static.wixstatic.com/media/3ef6b0_9fba2216d6de4ed4859f75c578f02074~mv2.png/v1/crop/x_0,y_35,w_1280,h_454/fill/w_642,h_228,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%201280x680%20ROJO.png",
+  "clicks": 1,
+  "votes": 8,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd½\u0000\u0006ØeÓFmà\u0000|Ì<\u0000\u001aía¹\u0002nªð¿\u001f \u0002R.K®;\"\u0015ÄÌm×yýb¯e` ,°\u0010\u0013PU¨,\u0001\u0012ò:Cü*JSüZÁ¤<\u0003ôBT(jÚ¼T=EúI\u00179ÈàS.¦'\b0¢\f2R\u0018,Åz\u0018®D¼1¢(Í#¡K\u0012VWÏâ_Élq\u00034`ã\rNÃW0®Ú Ay\u0005PÃ\u0014¸J\u0012jXX\u000e\u0014\u001fVÍSá\"ùí!ÇyêØÎ\u001f·^mb\rïXôõð\"x³î¿RC«ûÀdo¥cM°ïz® +-6bR¸ÖÛ\u0019#«^31ÁË\u0006j¬Lðï\u0010îªÌïnnI\\oðKàK£ÍLR#À¦>ÙOaë\u0001¤ò\u0006Ä\u0002\t\u0011Ðb¡Þ)2ùQ¦DÅ\u001cq",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://stream-178.surfernetwork.com/aam2ts855p8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJhYW0ydHM4NTVwOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IkREY1lHS3JrUzR1ektpejVSZElad1EiLCJpYXQiOjE3OTMyOTg1MzksImV4cCI6MTc5MzI5ODU5OX0.zIM8bOjHVDkJkcyxEhoiFVzCgyR8-ZAFXSZUxzjx-uc"
+  }
+ },
+ {
+  "name": "Radio Babilonia",
+  "url": "http://89.167.37.248:8000/listen/babilonia2/radio.mp3",
+  "codec": "AAC+",
+  "bitrate": 128,
+  "tags": "80s 90s classic hits retro oldies dance soft rock pop disco nostalgia",
+  "state": "Colonia del Sacramento",
+  "homepage": "https://audioserver.pro/babilonia/",
+  "favicon": "",
+  "clicks": 1,
+  "votes": 1,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error timed out>"
+  }
+ },
+ {
+  "name": "ARAPEY (AM 1450)",
+  "url": "http://emisiones.com.uy:8085/arapey",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "noticias opinion,sports,talking,variety",
+  "state": "",
+  "homepage": "https://10minutos.com.uy/arapeyon-line/",
+  "favicon": "https://cdn-radiotime-logos.tunein.com/s86075g.png",
+  "clicks": 1,
+  "votes": 26,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "©2¶á*»*à¤_C©Q%Xô\u0006$\u0000Îµî8W\neÕvÉôóà7ÝÊfÝÔ\u0001*ú\u001b­\n°Ð0G¸÷ýÓÜ0tfØ,\u001e=s(\fm\u0000Û{ofÍ­@\u0017\u0015\u0018ÝûKð\u0002%v|$B}®ì_µJ½\u0019lz³~y\u00118£\u00147F\u0018ppÞ±;Op5\u001c3\u0017\b.«KEµOØ¦34× ræwù9J\u001d\u0000ñ-¯$0\u001c@é\u0007ìæË\u0005ìÜËth§×\u0011\u0002\fFr:N\u0013^\u001e5+z\u0003R\u0011kU»Ée\\Ü\u0019\rà©«dX6Â\u001aÏ\r%.µ\u0019¡r8K2+Y²Sÿj\u0000Ì\u0016\u0001ù\u000fÈ~Cò(È7h\u0018ÌÀ\u0000»u¾×¿Gìuø÷ïévë}¯~þØëñïßÐ  (pÿñ\\.A°!{T",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "http://emisiones.com.uy:8085/arapey"
+  }
+ },
+ {
+  "name": "América FM 103.3",
+  "url": "http://emisiones.com.uy:8118/america",
+  "codec": "AAC",
+  "bitrate": 128,
+  "tags": "entretenimiento,latino,música en español,pop en español",
+  "state": "",
+  "homepage": "http://americafm.com.uy/",
+  "favicon": "http://americafm.com.uy/assets/america.png",
+  "clicks": 0,
+  "votes": 45,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "§\rA\u001fðh~\u001d\u001dÓ±NÑÓß¦éVA°$jijóÍ.ã#*­í3ýÁm\u0004óóÝkw¡Ä×nX©\u001clmUmF;\u0014¯æ-­¼m\tä\r\u0012ÆÈî»íbÉ^¶ªÊõ/¯¯p\u0019ã¾\u0002¡@\u001fpÞ\u000b cÿQL- àÞÙÐKx7°\u0000\u0001¾p\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "http://emisiones.com.uy:8118/america"
+  }
+ },
+ {
+  "name": "Radio Pedal",
+  "url": "https://streaming1.hostingmontevideo.com:7003/stream.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://radiopedal.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 96,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "Conaicop",
+  "url": "http://stream.zeno.fm/w5k0y0qbft5tv",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Montevidei",
+  "homepage": "http://radioconaicop.blogspot.com/",
+  "favicon": "http://radioconaicop.blogspot.com",
+  "clicks": 0,
+  "votes": 50,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdæ\u0004J=R\u0003xLRJÄÍaz\u000eèûJ-<oÁC\u001fjébÂFsX9Ài¥ÓÁ\u0014\u0006¸ãfQ¤a!\u001b-ß$ôqN\u0017\u0002=Í­\u0018o¡êõ|éóí\bVWQØfN³°\u0007\u0000V<u\u001a)oKÇ-§9Ög9sdldÍ5\u000e;\u0006\u0013\rZ\n­Xt3(\u001c\u0017Á d<¢½o+¨ïØÙ5ÿÿ \t \u0013\u0000\u00042'\u0003\u0006Ø¦Ù*Fb0{_} F¹(\b\u0004í T§\u0014\u000f@,\u001bnåí\u0014ÍÊ¸¢äÈ\u0013uËôú¬ö\u0010$\u000b?¼ÿÿÿ©¿ÿý\u0000\u0004H\u0002!\u0014Î_X\u0013d\rø!A\u0012W\u0006@Y\nÒ\b\u0019A!\u000ex \\à\u00173q\r\u0018C)Bm\u0005E\fP×¤d\u0003\u0002P\u000f`\f ¼\u0000\u0004\u0016\u0005\u001f\f\u0004[Ñ\u0010 `R@^",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://stream-176.surfernetwork.com/w5k0y0qbft5tv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ3NWsweTBxYmZ0NXR2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6InRqUWwyLVM0UlM2enBNTFAyai1ibEEiLCJpYXQiOjE3OTMyOTg1MzksImV4cCI6MTc5MzI5ODU5OX0.HliGPnPBQSfDXoLQCsjFiUEBs3c-ogbVFfSW0UKJ4ZA"
+  }
+ },
+ {
+  "name": "De La Cumbre",
+  "url": "http://158.106.131.228:9020/",
+  "codec": "MP3",
+  "bitrate": 32,
+  "tags": "",
+  "state": "Vichadero",
+  "homepage": "http://www.delacumbrefm.com/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 15,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "CX 46 Radio America",
+  "url": "https://america-2.nty.uy/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "religious",
+  "state": "",
+  "homepage": "https://www.cx46.com.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 97,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd\u0015\u0004W×ë\t\u001dB*Ã\n=%\u0014\u0011ÙW,0Í\u0002k\u001c\u0018\u0000Ï^½\fõ])B}S\u0005Fá,æ¾ýÄprtEëo}Ü}ÝÂvhãêt±v°\u0016×¦'ïÄ:\fìÉ\u0013ÇWx», gä,3i¿hVX\u000fCÿðþ½aUâ| Â×ü\u0002\u0000\u0000\u0015\bÉ¾Ä¸J\b\rÛ(GsÆèG]nßO²ßêÿìÑöûíö÷úÿÅûÀ\n\u0002\u0001\u0000s\u0016\u000f6\u0012ÁC!UdÂ\u001dPôç?t^_°2/©»W\u0005½×V/¸ª¯\u001cqÇ³\u001aÛyÒ!èv½þ.¥±NCVq«`ü¼¡\u0017ó¬,A½jUoFÎÃ9DÊ5ìô\n®F2\u0004VcDÖ I<ôÛ?/qÎÖ¯Ï\u0019_s\u0019xz\u000bB¿ÿïcJþO¬h'º÷",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://america-2.nty.uy/stream"
+  }
+ },
+ {
+  "name": "Causes FM 89.1",
+  "url": "https://streaming.radiosenlinea.com.ar/8870/stream",
+  "codec": "AAC+",
+  "bitrate": 32,
+  "tags": "baladas en español,deportes,entretenimiento,music,musica romantica,pop en español,variety",
+  "state": "",
+  "homepage": "https://caucesfm.uy/",
+  "favicon": "https://ss-static-001.esmsv.com/r/content/host1/6820fb3e32772eece15e2c7c6ce7fd7a/favicon/uMkSfsqrbY-32.png",
+  "clicks": 0,
+  "votes": 10,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ\\@\u0017\u0001L\u0001L4 ê[\f¦ÂåA\u001aÀ ¨ N\u0000eX\r«Ù\u0003î¿Ñ¢\u0012*Æä?DSä¯ý¥ç¢jâxpt\u0017\u0019\u0005jþ# .y\u001fz]\ty<Ì@3×l¸MìwÝbêåq\u0018eÅäU³ZÙ£Ö\u000b%ÏÄ»«ÙÁiô+S\u0001¤çÓ\u0007øG \u000bNA¼¼ñ\u0005°u;\u001aXv/¬ËÊÅ\f\f¹^Í]ä@\u0003xn©%ùP5)¿}çû\u0019Õ&Úñe3\u0010é¶Ï;¯+\u0007ÿñ\\@\u00198\u0001J4¬J\u0018\"\u0018À\u0001H·TA\u0005¬§\u0006@\u0000tJ±É\u001a.×ýÏÛû\u0003\\åæÅ-tøÑ\"r¬r}¼Å\r)guöS \"ùr¿¥ÝR§Á¡\u0016L¯ti\u0003÷ój£Þd¬\f\u0007{¼[VrSÕ¶Á÷i-",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://streaming.radiosenlinea.com.ar/8870/stream"
+  }
+ },
+ {
+  "name": "Caraguatá la voz",
+  "url": "https://icecasthd.net/proxy/fmcaraguatalavoz/stream",
+  "codec": "AAC",
+  "bitrate": 32,
+  "tags": "",
+  "state": "",
+  "homepage": "https://fmcaraguatalavoz.com/",
+  "favicon": "https://fmcaraguatalavoz.com/wp-content/uploads/2025/09/251777485_110411394779145_2338006538381218982_n.jpg",
+  "clicks": 0,
+  "votes": 0,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "v\u0007\b\fºr:P×ýPöç¹.¼ñ3ä\u00169Ìªä¼­´x«\u0014\u0001\u00129oVHQ²\u000eÆ¢@ç\f¿m½¤BÙ\u001c¬ûÜ·RÓ¿Mw>«¾ìëÊÈ*Té\u0016ñÌi«HAò°U§x\u001e»ª£E©Zâ­\u0000\u0000\u0000\u0007ÿù\\\u0017ÁÈ!\u0019Õefb Ä+;»*¯\"À,\u0005X\\\u0007×¯þ©£\u001b­\\î*¢o~\frFûºøÀºÿ.È¬ôí®\u0015Î»+[¶)\u0014½\u0012qÿÝr§yîW­-\u0002ð¼\u0015øðÞ6~sª_Z÷Û·r3´ûåÇ*Y\fQÚ\tD@\u0003\u0010z\u0014\tX\u0007\u0007\u001c½ÊBà\bw)!ÎCÌ²Xò¢cëÍ£wz/øb÷nãt¯|@\nä\u0018|¤\u000f±j}à:F~ªBBÁ\u0012¬\u0000\u0000\u0000\u0000\u0000\u001e",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://icecasthd.net/proxy/fmcaraguatalavoz/stream"
+  }
+ },
+ {
+  "name": "Radio Futura - 91.1 FM",
+  "url": "https://alba-uy-radiofutura-futura.stream.mediatiquestream.com/index.m3u8",
+  "codec": "UNKNOWN",
+  "bitrate": 0,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://www.rf.com.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 83,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno -2] Name or service not known>"
+  }
+ },
+ {
+  "name": "La Cotorra FM",
+  "url": "http://204.197.245.100:8238/;",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "cerro,radio comunitaria",
+  "state": "",
+  "homepage": "https://www.lacotorrafm.com/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 7,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "Radio El Aguantadero",
+  "url": "https://streaming.gostreaming.com.ar/8096/;",
+  "codec": "AAC",
+  "bitrate": 128,
+  "tags": "funk,hip-hop,metal,reggae,rock,ska",
+  "state": "Montevideo",
+  "homepage": "https://radioelaguantadero.com.uy/",
+  "favicon": "https://radioelaguantadero.com.uy/images/icon.png",
+  "clicks": 0,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "&\u0000\u0001O¸\u0003\u0007ÿñP.`!\u001aE²\u000fAc Èb£ZË¬ãË[H_\u0011x\u0018½¯ÕYz«fÂ÷»ûXa«zÐ¦N\u0006y\u0004­öVÀ<u\\ZQ»\u0019eë\u0019©j³[ÆVðdÒ³-\u0010îPn±ö\u0007Vx¾kÿu\u001fî©«¤¿O4¸­\u0015×Ëp\u0011Ù\u0013¶EAKºÛ²ê\u0002\nO6\u0010=5©íêu\u0015sÅF®\u001aÎQÐ\rêÒÃG,>DÏ|É^FØû¯åúÞu\u0014\u0016ßLÜ×T¨\u0005Ãk÷¡\u0002ì\u0002ñL\u00058\u0006\n°±Åî%«zÚ&^¹D¶ªI©\u0005òQ·f\u001bè6î?àYûc®zN\u001eL¯bµ®ÝðDV1¹\u001cq³\u0014 ãü\u0015±\u0006\u001aD\"éè ÝbKÇ$âÃ¼ÿ#~w&ÈÑ¶÷",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://streaming.gostreaming.com.ar/8096/;"
+  }
+ },
+ {
+  "name": "CX 40 Radio Fenix",
+  "url": "https://sp3.servidorrprivado.com/8070/;",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "",
+  "state": "",
+  "homepage": "https://radiofenix.com.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 30,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿóp7\u000eaw\u001bâ´\u0000\u0000¨\u0002\\­À\u0000\u0000Í'e\u0016tt:}>ËEHë{¾·Ì\u000f3\u0018\u001aÑ@Ê¤i\u0015\u0017I/9LÕjDÈØÈÍ\u001c l*uRYG«gþVVÿÀ\u0001Ál\u001fH£û-Ûí}ÎJ§§}ãô\u0000\u0000\u0000\u0000\u0000h¡kËv´\u0017x\u001a¹¿©j;o©w«kÅOT\bËr@IÞ{CÞWZ\u0002\u000b¼e 6_ÅlØýéå\u0005>´\u0013=\u0004\fÿWáýF¶\u0011ÏLäß*¤ò\u0014Ô0<AA{\u0015\t¶pklÕ®òXÚ6XFpÔ×ÿópd\u000fqWzß\u001di\u0000¨\u0002\\¬\u0000\u0000\u0000,¢BÌäC43 ù\u0016¢ë\u0004ßrÐñ_ø\u0000UÀCôna\u0000\u0000¦·pnI,´\bÌÀ¤\u0013ó½+åq¥nL½W§^?×Ó-Ù¢",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://sp3.servidorrprivado.com/8070/;"
+  }
+ },
+ {
+  "name": "M24 - 97.9 fm MVD y 102.5 fm Maldonado",
+  "url": "https://streaming1.hostingmontevideo.com/8034/stream",
+  "codec": "AAC+",
+  "bitrate": 96,
+  "tags": "entretenimiento,information,music,noticias,radio hablada,various",
+  "state": "Montevideo",
+  "homepage": "https://www.m24.com.uy/",
+  "favicon": "https://cdn.onlineradiobox.com/img/l/2/86622.v3.png",
+  "clicks": 0,
+  "votes": 23,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "status": 200,
+   "head": "<br><br><br><center><h2>Stream is Offline</h2><br>There is no sound on the radio. Start AutoDJ or stream music to the radio. The direct SSL play url can work only if there is stream/sound on the radio.</center>\r\n",
+   "type": "text/html",
+   "bytes": 212,
+   "final": "https://streaming1.hostingmontevideo.com/8034/stream"
+  }
+ },
+ {
+  "name": "Radio 41",
+  "url": "https://stream20.usastreams.com:7008/;",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.radio41.com.uy/",
+  "favicon": "https://www.radio41.com.uy/templates/radio41_2017/img/logo-radio41-80px.png",
+  "clicks": 0,
+  "votes": 15,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûp\u0004ìò\u001c\u0016ÖìYÀE\u0003\u001aÐ=8\bOZ\u0007½ç\u0001 \t«@÷¼à\u0002ã\nªÂä\u00100ùr\u000e}áwìpÍªNÍ\u0000wÃâ£0Q®^S¹UhõwÏÚ±\n\u001d`õL-IãÇELÍ¨\u0005\u001b\fPà<TÊVLTø\u0017\u0018UTö\u0017 haòä\u001cøð»ö8fÕ'fé8$.p\u000e\u0012ÿ\u000bã»7$û/G\u0014Ãá\u0007óçwÿ³Rõv¢ê§Î*îv9\u001bÏw£\u0018vkÊ¡Áá[\u000fÄ6<\u0002~Lµ\fë­úi&Æ°j\u0011!09t,0üh_\u001dÜa¹'Ùz8¦\u001f\b?ÝÞW·ËÙ/Wj)^ª|â®èI7c¼÷z1f¼ª\u001c\u001e\u0015°ù|C`ð\tù2Ô3®·é¤\u001aÁ \u0000\u0006\u0012Æ\bÇ/i#\u0006X\tA\u0015ØpÉT°ÿµ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://stream20.usastreams.com:7008/;"
+  }
+ },
+ {
+  "name": "El Puente FM 103.3",
+  "url": "https://as100.globalhost1.com/8082/stream",
+  "codec": "MP3",
+  "bitrate": 192,
+  "tags": "radio comunitaria",
+  "state": "",
+  "homepage": "https://elpuenteportal.org.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 9,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû²Dâ\u0004mgÓ{\t\u001cb,ª*eèNR]G¬¥\u0011A4i58ÐÈh1µ|å£«,uå|$Âm\t,N¢~4½\u0010\"\u0005Õ\u0013ÁDB\u0002T¿ÿ§\u001cÎ­¥åu¢7#0A-Ï\nØþ¼JØ6Ð%ÿÿÿð\u0010\u00182`0 4Ç\u0012$\u0011ÿÿxd^»b¦Vtüg8Fa\u0010í\nÏ\b]÷sR\u0010kAÁ\u0000QA\u000b\u0000\u00017@5.íü\u0011ëL\u0015\u0018C3¤@\u001d9Ü\u0012t\u0003\u0014\u0005á/\u0003t¤®ÖÜ\u0017©÷C;-\u0015Ñ.Ý´Ï\\î\u0002Ìª;Yh\u000bäÃÂ}æfe§qrugè­;3±0¥ø·[¦k\u001d7ò:f,:=Rþ\u001bTm?Ñ¸º ö0±¥aÿ?óÜæG$m$4´Ä\u0019\u0012G3\u001d\u0018Çsâ\u0003\fq7|R!\u0000",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://as100.globalhost1.com/8082/stream"
+  }
+ },
+ {
+  "name": "Centenario",
+  "url": "https://streamusa.netgate.com.uy:8010/centenario",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://radio36.com.uy/",
+  "favicon": "https://radio36.com.uy/wp-content/uploads/2025/11/CABEZAL-WEB-36-e1762485361875.png",
+  "clicks": 0,
+  "votes": 2,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+  }
+ },
+ {
+  "name": "Exito - FM 99.7",
+  "url": "http://salida.stream.com.uy:8506/stream",
+  "codec": "AAC+",
+  "bitrate": 192,
+  "tags": "comunicación,cultura,información,música,pop,rock",
+  "state": "Paysandú",
+  "homepage": "https://exitofm.com.uy/",
+  "favicon": "https://exitofm.com.uy/wp-content/uploads/2023/06/cropped-favvicon-32x32.jpg",
+  "clicks": 0,
+  "votes": 53,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿñ\\[H!\u001bU\u0015¶f¢X0:#\u00044¸LÊ]8º¿\u0007W7T\tÄz\u0018jöX\u0011±Éê»8EÚ\u0004\u0006²(J\u0014\u0012H\u001bø×\u0012\t\u0016à¾\u001aý\u0018Ð\u0016O(öa\u0010È¢]\u000b\u0019<i\u0017roø\fÇ<\u0010\"Çg\u000f!_ÐN4buê!³v»[©qÜýKýw¼~ÓöÝ«Á¼äK@#ï¬â\u001d\u000fUæÎ%È¯qM²;M¶Õ7KÆ9ÇFÇz#¦õmn½\u0013*ì»¦xô^fÇz^ûYÖhÖ7¥Ï¸yú®E¬)§a°Ì#Í7©/®\\_rHÉðÓ¸IFØ\u0002ñ&I¥DÝ¥­ç\u000fÇq\u0015§Ò\u0007+=Ó\u001bWû\":î¯là<YQÊ'ñN\u0019½êîñÏ4(\u000f÷è­ì.C·é\u0011&ß§­öÎ\n",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://salida.stream.com.uy:8506/stream"
+  }
+ },
+ {
+  "name": "Radio Pipí Cucú",
+  "url": "https://comodin.uy/hls/pipi_cucu/live.m3u8",
+  "codec": "AAC",
+  "bitrate": 105,
+  "tags": "musica popular,música uruguaya",
+  "state": "Montevideo",
+  "homepage": "https://comodin.uy/",
+  "favicon": "https://comodin.uy/static/uploads/pipi_cucu/album_art.1703858689.jpg",
+  "clicks": 0,
+  "votes": 29,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 404: Not Found"
+  }
+ },
+ {
+  "name": "Radiomundo",
+  "url": "https://stream1.enperspectiva.net:8443/radio.mp4",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "talk",
+  "state": "",
+  "homepage": "https://enperspectiva.uy/",
+  "favicon": "https://enperspectiva.uy/logo_radiomundo.jpeg",
+  "clicks": 0,
+  "votes": 73,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "\f\u0012P-;mO%Ã.¹§\"bgL®c¨Ü`k¨\u0010\\,u5\u000bÿx7,±ÂòªçR:Ú\u000eIÎ/\u001a÷ãu@j\\C¥(ÒKÖFé(\u0015]xÐä8ËG\b\u0013\u000f;¬¶2m\u00103/XZrÇüfû\u0019n¿¨?±v ~WaÎAç\u0011)þº¾[wàr«\u0013a®\u00029xù\u001a1gãå\"í¸áSÉoí/¶Ç?ûÉÚÌ°ÏÐC]B\u0000ªz2\u0002«ñj&\u0000\u000b Ab0\u0010<\u000boöBã'<h%\tÛºÀ\u0002Ýã/ÕóW&lfX+Ö´\\ô\u000b\\-\u0012\u0000\u0011àD:¡\u001c\u0013`\u0003xnUE\bPµ§óªV#\u0010»FµçR\u0012b\u0000à@\u0001\u0007ÿñX*¡¸!\u001bT»V\u0006Æ@±\"\u0014\u0010pFB))b*\b`\u0016ëøOBÿ\u0015",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://stream1.enperspectiva.net:8443/radio.mp4"
+  }
+ },
+ {
+  "name": "Radio Futura - 91.1 FM",
+  "url": "https://radiolatina.live:10849/",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://www.radiofutura.com.uy/",
+  "favicon": "https://www.radiofutura.com.uy/icon.png",
+  "clicks": 0,
+  "votes": 4,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûr\u0004£\u0001Í\u0014Xié\u0019°;¢ü0)\u0007¸Ug\u0005\u0010ñ­4Á¡ÐÖÖÛ(U}¹¿_¹Ë¯økvßë¿iW\nÎ^ß  \\¶X\u0012\n\u00008\u0018/8'¦;L\u0018á{©\u001d%ùò\u000b¨\u001dO¬°Ziß)`+RhAT¥óvéÑEm¹ßþ¢\u0001-P\u0000\u0002Þ)\u0003B\u0004,\u0004ùÄ\\þ\\óªE¶\u0002ÉE1mR\u0015\u0002¬M;¤¸¬Fy+±-cÜ±¬%~áM\u001fíñ\u0013*\u0015µ[@\u0000A@²\u0005µSr\u0016H±ffNÍiðN¡\u0006Uö¡ÙV,ñe\u001c»5\u0013#ªÛê®ËqJg¦:©ëôK°(P YGC\u0011Îµã\u0002Dr©\u001e²ÿ*¹îÒÓôß`ò©ÅJ\nï¶]¬Õmý\u0016i¸§ÿßT",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radiolatina.live:10849/"
+  }
+ },
+ {
+  "name": "Radio Rivera CX144 AM 1440",
+  "url": "http://usa15.ciudaddigital.com.uy:8060/RiveraAM",
+  "codec": "AAC+",
+  "bitrate": 112,
+  "tags": "news talk",
+  "state": "",
+  "homepage": "http://www.radiorivera.com.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 222,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "#QX\u0013½Ú0t£h´ð:°qG\u001eû\r·+ÛNaïh-ía£?hÏg\u0019LÁ²\u0013A|h°Êv!¸_QW\u0001V\fs+\b¸è[Onå\u0015\u0016×£+-$à¥RÌJ\u0002(]F\u0005<d@aÃ§\u00196Íí¸\u0005*âô¶i58©tìêiÉÞ\"@4z:i «)Îs@\u001fRÙ\u0013K\u0007ÿñP- !\u001aU\u0005Þa °`t\u0018\u0015\u0006\u0005Aa\u0000\u0006ÀÐ­*á.¨:­WÛèµM»»V!3\u000b)ñs»Æ¥¹··Ä2VÐev?¼vv']½Ðÿ¨M\u0017#(´××¡8-é~dÐ\u0013Ìks'ã :j-·ÈDH+\u001cRW\u0001öü\u000fÖß\u0018ÙÍ×ªá'\u0003Ý«ø´\u0006\u0004_B,\u001b©~¸h\u0010Çß~\u0000Uô'ÚÃÒ",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://usa15.ciudaddigital.com.uy:8060/RiveraAM"
+  }
+ },
+ {
+  "name": "Radio Chiveo",
+  "url": "https://comodin.uy/listen/chiveo/128.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "infancia,musica infantil,música para infancias,música para niños,niñas,niñes",
+  "state": "Montevideo",
+  "homepage": "https://comodin.uy/public/chiveo",
+  "favicon": "https://comodin.uy/static/uploads/chiveo/album_art.1680347629.png",
+  "clicks": 0,
+  "votes": 29,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûD©\u0004\u0002PTË\f\u0011hS¦Jý=/\ntLL0GáNêu¤;\\­7tU²C¹Q \r(\u0000l\u001a`\u0005`Ø¬Âu\u0013GG¿>+\u0013À¨¯\u001bÇ$\"Ê©XGvÿoÝ;ÿÿ?ó@àt\u0003\u0006g\u0001ó\u001b¬ Æ38·Ö{©I\u0000p2\u0001é%i;i\u0017_aÁ&pÂl@b1§\u0000 \u0007j¸È_T3äê².ê¹DCQÛýg\u001eó\u0000áTs=ºÞÙ÷Æÿ×é'mëbÍ\u001cgüdSéð\u0001ÙÕ\u0014÷!t6¥I±L1 \u0001\u00105å \u0016ù$\u0011\r\u001c¡«mTh$àfõ]É\u001a:±aØ»ãP\u001bÛ*À»hQé^ùv\u0007³+ìò­ðÙÚÞÏôQHÅQ¡äðÁ<\u0001Ör6¾wJfÎ\u0006Lìñe%!öâ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://comodin.uy/listen/chiveo/128.mp3"
+  }
+ },
+ {
+  "name": "La Nueva del Sur",
+  "url": "http://stream.zeno.fm/s6hdmgb9na0uv",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://zeno.fm/lanuevadelsur",
+  "favicon": "https://zeno.fm/favicon.ico",
+  "clicks": 0,
+  "votes": 60,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdäSO\u0013y:ð1Ç*§ \"^'<-`«ÐÔ\f(Ü&\u0010\u0019L\u0002Ë©×t\u000fÿ÷Ê=\u0019õ\u00148\u001f*ýP@\u0004\u0001×@`Ñ'OngRDààsjvÓ\u00058¶X.Pà à}ÍBàÁ@\u0000O$\u0007\u0006+\u001aKJ/½«O[·ì­µUâè\u000b\u001c=1×ÿ\u0016\r\u0017wµE_í«ôþíAsãG+9à\u0006£1\u0004\u0011\f£JÂiE\u0002\u0005\u001e\t\tàTê0\\3Äq¡ÂÁ9\nmyÊel!³'Û»Pm¹¥hÞJ\u0012&ª\u00182\b^£0|\u001cÅ`Ø5Q%ò¹»×ÿÊ*Pl4+ñ±\u0011³ÿ(5Ê\u0015\u001bË\r%mþP Ôl^\\¼to+,\\\u0015*4ãOR¥\u0000Õ\fxqJ1é\u000bPº",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://stream-176.surfernetwork.com/s6hdmgb9na0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNmhkbWdiOW5hMHV2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IkQ1ak5RQVRYUmZ1MjE5RGYwczl5VHciLCJpYXQiOjE3OTMyOTg1NDAsImV4cCI6MTc5MzI5ODYwMH0.4oZ5KulU9Exris2Vje5OU_4vnWPvHHSRm6oe3tX-XqY"
+  }
+ },
+ {
+  "name": "Radiomundo",
+  "url": "https://stream1.enperspectiva.net:8443/radio.mp4",
+  "codec": "AAC",
+  "bitrate": 64,
+  "tags": "talk",
+  "state": "",
+  "homepage": "https://enperspectiva.uy/",
+  "favicon": "https://enperspectiva.uy/logo_radiomundo.jpeg",
+  "clicks": 0,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "\u0000\u0000\u0014v<Ê@\u0006ñû\u0001<øÔp¥Öª©ýß>þv»\bã\u0005¶³ø}×>\\tüÈ!\u0004\u000eÿñX*A!+T­(ÇA0PD$(\u0002\u0002¢Æ-(J°\u0010|\b²HD\nîïW¬º{·m«õXÅ]¼æM&h`ù©\u000eLO+Â)Ö50'x¦2R\u0012J¥¨ÆoàÀPÀ!%¶å ÑÌ\rµw\u0006GvjPÚ²\u0001¾@ñ¤\u001eÐ\u0013Y5[]þ\ts±â­2\u0010µÊ^ðfA\"*{:ç\u001dyXÒ&AH\u0015÷.§·ö\u0014\u0014{\u001cîÕÜ_!Ñ<Ôl\nà³S¼§o\nËK\b`ä¶ã+\u000f\u001bw+Óüw\u000fá§ô\u0004a\u001a\u00102ÝØ¼\f'9+«Q1ÆÂ35½\u001a`¦¼\u0011)\u001b(.\u001d*\u0018Ã¦5\u0013Ô\u0001!\u0001",
+   "type": "audio/aac",
+   "bytes": 32768,
+   "final": "https://stream1.enperspectiva.net:8443/radio.mp4"
+  }
+ },
+ {
+  "name": "Felicidad - AM 1240",
+  "url": "http://medios.ciudaddigital.com.uy:8042/Felicidad",
+  "codec": "MP3",
+  "bitrate": 24,
+  "tags": "cultura,deportes,información,música",
+  "state": "Paysandú",
+  "homepage": "https://www.radiofelicidad.com.uy/",
+  "favicon": "https://www.radiofelicidad.com.uy/am_felicidad.jpg",
+  "clicks": 0,
+  "votes": 82,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "\u0011aÌ\u0014èB\u0000\u0000¿õ÷÷èÙÄÔàkUÔ\u001dZ²\"\u0007$ï?J¨t¾Dd<\u000f\"ÐøÌ÷lÆ;çÿËæ]_õë6¼çöÕÿó2Äå\u000eAö\u0000yÎAc(Ñ9·[pê7¬ÊkÃ>ýÌ.~µî\u0003 #õ\u0011ÉUÊ~nlhÑlQ\f­lZ\u000eÂ\bâ\u0003r\u000fÎCÿùÚÿú­%©\"\u0006Ó&&ÿó0Äî\u0011\"\u0002\u0000ÁÚ\u0003iì¶Á¥Ê\u001d>uU/}ýOu=Q]MÅ¶ôLL*Î-r2ViÂdôîêó\u0002­\u001b¶­¶bÿÿÿÿ»ú«Z5¤hñ\u0004ÿó2Äê\u000fIò¤\u0000xÄ\u0005Ã\u00169F³*£Sr\"ódÜát¨u\u0015Å¨J\b-éH3^ouF05CÙÑöÿ­]^µ¯d®¤Úl",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://medios.ciudaddigital.com.uy:8042/Felicidad"
+  }
+ },
+ {
+  "name": "LA VEREDA WEB RADIO",
+  "url": "https://srv2.radiostreamuy.com/8012/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://laveredawebradio.com/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 9,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdó\u0002Ð\u001cayì\u001a ]B\u001c\u001f\u0005ì\u0004\f}Ç°GIt\u000f/¼ñ\u001bI09C¸p>\u001a\u0016Ø\u001cD¥ê\f`I\u0002Ç8»|À¥\u001eüXB·Ý<Ô\u0014\\PÐN\n¬¹p¸»Ë,ä\u0003L#2>ð¨\tì\u0012\"(A5ûüÊ$K¬'v¨\u0001\u0000 A:p\u0017bR¡n\u001b$)G\t\u0000XRïÐèú|9â3Ã\u001e\rúY¼j4Ð.è\u001cHs¸·>3¹¥Çbð¾XÌ\u0006Ëï¿­Æ´¬\u0013)48À\f¥)K\u000eÌ¥¨b+ãnj!¹[ó\nÉ=·\u001b\u001417j\u0017OÂI¥JÔL\b\u0011!\u0004¨\u001f\u0001´Ã\u0013¡dÔ\u000b\u0012c²©ïìè![:XKô.&j \"SwæJôzjÕ\n4\"òbëDjåB\u001b\u0004ìY¹YíÇôfw_6$",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://srv2.radiostreamuy.com/8012/stream"
+  }
+ },
+ {
+  "name": "Fm Like Uruguay",
+  "url": "https://alba-uy-fmlike-likefm.stream.mediatiquestream.com/index.m3u8",
+  "codec": "UNKNOWN",
+  "bitrate": 0,
+  "tags": "music",
+  "state": "",
+  "homepage": "https://www.fmlike.com.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 52,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno -2] Name or service not known>"
+  }
+ },
+ {
+  "name": "CX 30 Radio Nacional",
+  "url": "https://a1.asurahosting.com:8650/radio.mp3",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "",
+  "homepage": "https://www.radionacional.com.uy/web/",
+  "favicon": "https://www.radionacional.com.uy/web/wp-content/uploads/2022/07/cropped-favicons-180x180.png",
+  "clicks": 0,
+  "votes": 105,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "CX 10 Radio Continente 730 AM",
+  "url": "http://cx10continente.com:8152/",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "religious",
+  "state": "",
+  "homepage": "http://cx10continente.com/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 26,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "error": "ICY 200 OK\r\n"
+  }
+ },
+ {
+  "name": "M24 · La radio que nos mueve (97.9  / 102.5 )",
+  "url": "https://streaming1.hostingmontevideo.com/8034/stream",
+  "codec": "AAC+",
+  "bitrate": 96,
+  "tags": "news,sport,talk & speech",
+  "state": "",
+  "homepage": "https://www.m24.com.uy/",
+  "favicon": "https://administrador.m24.com.uy/wp-content/uploads/2022/06/Banner_MiBrou.gif",
+  "clicks": 0,
+  "votes": 154,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "status": 200,
+   "head": "<br><br><br><center><h2>Stream is Offline</h2><br>There is no sound on the radio. Start AutoDJ or stream music to the radio. The direct SSL play url can work only if there is stream/sound on the radio.</center>\r\n",
+   "type": "text/html",
+   "bytes": 212,
+   "final": "https://streaming1.hostingmontevideo.com/8034/stream"
+  }
+ },
+ {
+  "name": "De La Cumbre FM 102.9",
+  "url": "https://nazca.globalhost1.com:7127/stream",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "",
+  "state": "Rivera",
+  "homepage": "https://www.delacumbrefm.com/",
+  "favicon": "https://www.delacumbrefm.com/images/Logo.jpeg",
+  "clicks": 0,
+  "votes": 2,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error timed out>"
+  }
+ },
+ {
+  "name": "FM Cerro de Nico Perez",
+  "url": "https://radiosar.com:9358/stream",
+  "codec": "AAC+",
+  "bitrate": 64,
+  "tags": "folk,news,pop,sports",
+  "state": "",
+  "homepage": "https://fmnicoperez965.com/",
+  "favicon": "https://esenvivo.com/play/nicoperez/logo23.png",
+  "clicks": 0,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿùX'\"\b!\u001bU=¥aÁ\u0004hh\n\u0005!J\u0015\"¸¾\u0002ªRË\f´T\u001c¦\u0016#n\u000eíiÜÃn\u0005©1è\u0012ÜÊ8ïðfGöE\u0015xÇa\u0001\u0005eo®½JÖ§\u0006¾³d3­°µ«}Ý³\u0017®mØ\\7ë¦\u0017\u0004©\u001d\n`±âÊ¦Ñ5þVý÷â$\u000b\u0019^Æÿ! 5\u0019*Vª¨­òxí¾²\u001cÞéNmÖÎy¹7r,ÿWy¦\u0015¨*\u0001Y HÙ\\\u000f¤µh¸a­zóTÝn\u0000à $bÅ$ã@Û2¶aºª*À%Jo¢\\\\À\u001dÜ\u001e:\u0018Á¿rÄ\t\u001a\u0010!¤§9Ü\u0013L×XR}nÓ$ØÅìÂ\u0014¹V!jáe%÷«]Ëtø\u000bÉJ_=K[ÅiX&\u0001@\u001fpÞ\u001d c3QEÃK«ô-Rýa.",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "https://radiosar.com:9358/stream"
+  }
+ },
+ {
+  "name": "Emisora Sideral",
+  "url": "https://stream-175.surfernetwork.com/124c6sbzttzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIxMjRjNnNienR0enV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ1dy1ISnZnR1NLT2Y1cFlDU1FlZVFRIiwiaWF0IjoxNzkyMzMxNTQyLCJleHAiOjE3OTIzMzE2MDJ9.tY0-GWNCbomlXckSbuXwjHfYmRrgMwCkX12Q6k2_jMY&an-uid=1479831503240270185&triton-uid=cookie%3A6e0e0ee1-37fa-4f4c-85c4-ef71feeaebc2&aw_0_req_lsid=b28d5555f2224def56ce5d9c46fccc19",
+  "codec": "",
+  "bitrate": 0,
+  "tags": "",
+  "state": "Montevideo",
+  "homepage": "https://www.facebook.com/profile.php?id=100077381875241#",
+  "favicon": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/307030138_181614667761261_5779082923208583542_n.png?stp=dst-png&cstp=mx550x550&ctp=s550x550&_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=7Tt7W9JZtgoQ7kNvwFkNthF&_nc_oc=Adpfhq6wiKRYe4QXcf30_cCE8lHX5B2dEbz-J2X8O1L3j-OTFrFbG1tOFhwOgJSlthE&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=0JQb_DIIMd47-1G5aVrcjg&_nc_ss=7b2a8&oh=00_AQNHJ6i5Kq42iC7iRAXWO2smyxCDe77OpFcsX_zyOMI-iQ&oe=6ADA9B33",
+  "clicks": 0,
+  "votes": 0,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 503: Service Unavailable"
+  }
+ },
+ {
+  "name": "Contacto FM",
+  "url": "https://salida.stream.com.uy:8512/stream",
+  "codec": "MP3",
+  "bitrate": 192,
+  "tags": "",
+  "state": "Paysandú",
+  "homepage": "https://contactofm.com.uy/",
+  "favicon": "https://contactofm.com.uy/assets/images/10483130-803201883072743-5790030209514230704-n-300x300.png",
+  "clicks": 0,
+  "votes": 0,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿû²\u0004Ý\u0000\u0004¹hÙéãMb-\u001b=<i¬P\rkçÛJ\u0001±m|ñi\u0000O\u0005}\f\u001a\u0005ørx±^_I@ã¤Q\r-³Æ\u001a­£ã[»÷±´ùoSVõ¥Þ¦µú× ìÒ`$\u001c\u000fËt5ôê¹u\u000bjY\u0011ÿùeÍ|ÑÈyóòé\u001d¤p\u0015$«J\\\u001eUÞ<­Yoã©\f(ó.ÜÛG¼¾³itËæÎÚ0\u0014\u0001\"\u0014¤\u0000\u0010U \u001b\u0004ä\u001bjà­\u0010`¼FÎ$Ð`p±2ðhéám~B¸éËÒ=8@dnÃØ7#A\u0018\u0018¼¼¥(¤eþýV´å»÷/\u001dâ¹ÏU;úigÃZKÎÒMFÊÙ­;îOAsi9!¶ªY bghxqèÆSôE\u001bÞïK*\\Ó³`ÞH\u0016\u0014ÏI+",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://salida.stream.com.uy:8512/stream"
+  }
+ },
+ {
+  "name": "CW54 Emisora Del Este",
+  "url": "http://usa15.ciudaddigital.com.uy:8076/EmisoraDelEste",
+  "codec": "MP3",
+  "bitrate": 320,
+  "tags": "folk,latin,news,sports",
+  "state": "",
+  "homepage": "https://www.cw54emisoradeleste.com.uy/",
+  "favicon": "https://www.cw54emisoradeleste.com.uy/wp-content/uploads/2026/01/cw54_logo.webp",
+  "clicks": 0,
+  "votes": 1,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "Ût ªL§\\K\u001amRÄÔk\u00175@io¾ö9¶éÙLúÿiÿùïÿÿ¯¾ûë¯ûêÿihòàKaj¬\u0006Çh2Z;1tN1o12*§1\u001020$\u0001\u001c\f\f\u001f\u0004Ì\u0013\bIs\u0010\u0000c\u0002A²\u0010 l\u0000i\u0001\u0010\u001a\u0005\u0018\b\fð³õê2:²¥Ó\u000f Ò­q_Á£èX2°ÖR@\u0018E=é& 4ðtuÍs_u×~0´\u001d*©Í¨#,ê\u0019à\u001bÖ\u001dÈh >±¼>\u0011\u000bÑE\"\u0010Üm\u0004ÈrR\u0005EãáläÞ\u0012Á$i64#I\u0014{Xâò¢h\u000f\u0007Ã3ÇNÁ¢ Ö\r¥ÐÉ¥LTóÑDÔ¸Ú\"±sSÆ-´òÉ¹Ó½ÍO5s¬D¨ùW\u001dñ,I(}²ã¾/øÿûâ\u0004ì÷¸P¸[püpÊ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://usa15.ciudaddigital.com.uy:8076/EmisoraDelEste"
+  }
+ },
+ {
+  "name": "FM Sueños 106.7",
+  "url": "https://radios.iwstreaming.uy/8012/stream",
+  "codec": "OGG",
+  "bitrate": 192,
+  "tags": "",
+  "state": "Rio Negro",
+  "homepage": "https://fm1067.com.uy/",
+  "favicon": "https://fm1067.com.uy/assets/images/favicon.png?v=405a4609",
+  "clicks": 0,
+  "votes": 0,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "OggS\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000g#\u0007\u0005\u0000\u0000\u0000\u0000t\u000fv\u0001\u001e\u0001vorbis\u0000\u0000\u0000\u0000\u0002D¬\u0000\u0000\u0000î\u0002\u0000\u0000î\u0002\u0000\u0000î\u0002\u0000¸\u0001OggS\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000g#\u0007\u0005\u0001\u0000\u0000\u0000µ¤c\u0010Xÿÿÿÿÿÿÿÿÿÿÿÿÿÿq\u0003vorbis\u001d\u0000\u0000\u0000Xiph.Org libVorbis I 20030909\u0003\u0000\u0000\u0000\u0006\u0000\u0000\u0000TITLE=\u0007\u0000\u0000\u0000ARTIST=\u0012\u0000\u0000\u0000ENCODEDBY=altacast\u0001\u0005vorbis+BCV\u0001\u0000\b\u0000\u0000\u00001L(ÄÐU\u0000\u0000\u0010\u0000\u0000 6\u0010k§µÖZk¤vZkªµÖZk&µ¶Zk­µÖZk­µÖZk­µÖZc 4d\u0015\u0000\u0000\u0004\u0000@(J\u0012´dRLJ)e Grä9HÊ'¥(G\nbâ9è=õdkM",
+   "type": "application/ogg",
+   "bytes": 32768,
+   "final": "https://radios.iwstreaming.uy/8012/stream"
+  }
+ },
+ {
+  "name": "El Shaddai MIHA Online",
+  "url": "https://stm2.livecastradio.com:20160/stream/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "religious",
+  "state": "",
+  "homepage": "https://elshaddaimiha.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 13,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+ },
+ {
+  "name": "Cadena del Mar",
+  "url": "https://streamingraddios.online/proxy/cadena?mp=/stream&1669851387477",
+  "codec": "MP3",
+  "bitrate": 96,
+  "tags": "",
+  "state": "",
+  "homepage": "https://cadenadelmar.uy/",
+  "favicon": "https://cadenadelmar.uy/assets/grafica/logo.png",
+  "clicks": 0,
+  "votes": 18,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 404: Not found"
+  }
+ },
+ {
+  "name": "RADIO MARIA URUGUAY",
+  "url": "http://dreamsiteradiocp.com:8088/stream",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "catholic,religion,talk",
+  "state": "",
+  "homepage": "https://www.radiomaria.org.uy/",
+  "favicon": "https://www.radiomaria.org.uy/favicon.ico",
+  "clicks": 0,
+  "votes": 289,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûRÄÕ\u0000\nI\u001dmçQ!L\u001bnu&à\u0018S> ä²Ù%zÕí;È/qYËø®óúv ØQ\u0010\u001cå\u0004¤z±tr\u001e\u001f`o\bÄª0¬<#m\u000bÜtAa\u0019o\r?;)ê\u000fB)Ým\u001cD£¢¯RoKë50ö\u001f³ÙoûãÎ/õª\u0002:Ü%H\u0006Hÿ\tá\u0003¢Ù±\n\u001e\u000f\u0011M*ÙàÁ*\nõe§ÝuØWðú©ärØÝ!:\u001fa1Èô&W²\"WV$=\u0016µÕ¿¼µKoz,p¿ë8\u0013`í°àC³wÿûRÄà\u0000\tàÃeæ\fQa~\u0018éñ ÔÓì¥{Ä»\u0017èÑAvú<\tòµDÖâé\u001a\u0015\u0016DGS\u00102£\u000e\u001cÖ·Sa\u0019KÜG\u0001æäª\u0015Þv\u001ePB±&\r/~\u0014JwW",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://dreamsiteradiocp.com:8088/stream"
+  }
+ },
+ {
+  "name": "Radio Babilonia",
+  "url": "http://89.167.37.248:8000/listen/babilonia2/radio.mp3",
+  "codec": "AAC+",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Colonia del Sacramento",
+  "homepage": "https://audioserver.pro/babilonia/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 1,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error timed out>"
+  }
+ },
+ {
+  "name": "FM Días de Gloria 101.9",
+  "url": "http://server.laradio.online:9114/;",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "70s,80s,90s,classic hits,hits,music,oldies",
+  "state": "",
+  "homepage": "https://www.diasdegloria.com/",
+  "favicon": "https://www.diasdegloria.com/images/logotipo.png",
+  "clicks": 0,
+  "votes": 9,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûD\u000e\u0000\u0002±-Õéì\u0018ðVFË\f=#j\nu\rY§°EÁ~!ltõPuW©êù!m\bæ\u0004,ð\u0015îv\u001d\u0014#!gsþ|&\fÿó²U\u0006g§V8Ø¢Äb¨4\u0001IË¶â£DÃÒÔê\f\u0000\u0012\u0004\u00000>yE\u0011é;\u0013Gk)\fl<ãYuÜ¹¶Ù\u0007ÎÇ¯°ê\u001fú±¿\u0011ÛÈÕV|\u0019\u0019\u0016Y[#é0\u0019Ûø%Ï²â+ê½¿Ï]&x\u0004xèÂNOüÍÍ½MÖÊD \u0001$'\tqÂ$Â|áà%1\u0004\n¨aS7}#µdíë'¿É§ôÞ 2\u0007¶K¬²\u0017ffêÊzZO$··F³÷Õ6ß­\u000b)\u0010¿\u001bF*þrb¿D¾ª/°\f\b\u0004¨\u0011Á\u001a*ØÞ2\u0010ÄZ¨Ý¹ÔÛ\u001dAI\\çl",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "http://server.laradio.online:9114/;"
+  }
+ },
+ {
+  "name": "Sport 890",
+  "url": "https://alba-uy-sport890-sport890.stream.mediatiquestream.com/index.m3u8",
+  "codec": "AAC",
+  "bitrate": 108,
+  "tags": "futbol",
+  "state": "",
+  "homepage": "https://www.sport890.com.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 161,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [Errno -2] Name or service not known>"
+  }
+ },
+ {
+  "name": "FM del Carmen 105.3",
+  "url": "http://radios-online.info:2930/;",
+  "codec": "MP3",
+  "bitrate": 64,
+  "tags": "information,music,noticias,radio comunitaria,social",
+  "state": "",
+  "homepage": "http://www.fmdelcarmen.com/",
+  "favicon": "http://www.fmdelcarmen.com/img/isotipo.png",
+  "clicks": 0,
+  "votes": 5,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": false,
+   "error": "ICY 200 OK\r\n"
+  }
+ },
+ {
+  "name": "La Elegida FM",
+  "url": "https://stm1.srvif.com:7042/",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Cerro Largo",
+  "homepage": "https://laelegidafm.com/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 4,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 401: Unauthorized"
+  }
+ },
+ {
+  "name": "Laser FM",
+  "url": "https://server.laradio.online/proxy/eduardo_correa?mp=/stream",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "entretenimiento,información,musica",
+  "state": "",
+  "homepage": "http://www.laserfm.com.uy/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 127,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûdç$ÀU×S,IðQDªå=#^\u0017\u0015oi§¼ÕÉ\"¬7\bKtRøÔCa]¿Ï =FW=O \u001b;U`*\u0012)@\u0000\u0006bJðã\r4Qj°{\u001c6\u0007Í*æt8ÂH\u001cqõÒ°ÂZI\u0018Á{h(úÇTÄç\u0018\u0005qwÖ´';Ù\u001eGnÌ1AÃÞ:>ÏüI§\u0015i\u0015°Þÿ¯íÓå\u001cª4H2Í\u000eO\u000fñ¬ZEÍ\u0017U\u0006\fèL\rÀ\b/O¹U20Á~æý%FpÁA!p\b£w]x: ^J\u0011)³\u001ce¹@îoB8á!\u000fH§oC\u0000ÏÑì¯ïý¿ÿ·Û£C\u0000£È \u0001\u0006yw\u000fâ^^Tæ\u0003\t\u000fAAWSñ¡Ó$½WÚdìN\u0018ÜL¤û\u0017÷ª\u001eÍó<Ðã0R=",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://server.laradio.online/proxy/eduardo_correa?mp=/stream"
+  }
+ },
+ {
+  "name": "La Elegida FM",
+  "url": "https://stm1.srvif.com:7042/;",
+  "codec": "MP3",
+  "bitrate": 128,
+  "tags": "",
+  "state": "Río Branco, Cerro Largo Uruguay",
+  "homepage": "https://laelegidafm.com/",
+  "favicon": "",
+  "clicks": 0,
+  "votes": 21,
+  "lastcheckok": 0,
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 401: Unauthorized"
+  }
+ },
+ {
+  "name": "Delta FM 88.3",
+  "url": "http://server-uk1.radioseninternet.net:8104/;",
+  "codec": "AAC+",
+  "bitrate": 64,
+  "tags": "folclore,information,local radio,music,radio hablada,social,variety",
+  "state": "",
+  "homepage": "https://deltafm.com.uy/sitio/",
+  "favicon": "https://deltafm.com.uy/sitio/wp-content/uploads/2020/04/logo-deltafm-1.png",
+  "clicks": 0,
+  "votes": 23,
+  "lastcheckok": 1,
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿù\\,¢<!\u001bU\u0005¦\u0017cbÁØè0\u0000¢·­\u0002,ÍUDQ\u0000ò$àkê¢\u000bÉ4°µF{Ú3c\u0010Vk#?}×ò|ÙÅ\u0000I(â3E ÖPóp\f!*\u0003¥*ùWW)\u0011å4|îKT\u0000=ªk­pÙb½\u0004êzÊyL\u0015pÈÅºêPU\u0010ñ©\u0011\fÿ:Å\u0002V\u0016QD \u0010[âÁ\u0019 Ä¦Æj\"*­K<¤\fcqðÒæFr`}¦\"qXh¨Q\r^CX \u001eÕ#-ßS­\r«ØõÊæ\u0019ãc&:\u0010Ðt\u0000\u0002\u0001ezín¿\t\u0004.¦\u0004+Î\u0005'\u0016¢\u0018À«\u0016Cp0aº¨y\f\u0006S\u0002Xq\u0010[Fh&Txf\u0004\f r23\b£\u000b­Ì(¥úX7(æ'³¬¸µg­9£è°",
+   "type": "audio/aacp",
+   "bytes": 32768,
+   "final": "http://server-uk1.radioseninternet.net:8104/;"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "http://puma.streemlion.com:2575/stream",
+  "probe": {
+   "ok": false,
+   "error": "[Errno 104] Connection reset by peer"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://puma.streemlion.com:2575/stream",
+  "probe": {
+   "ok": false,
+   "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://streaming1.hostingmontevideo.com/8034/stream",
+  "probe": {
+   "ok": false,
+   "status": 200,
+   "head": "<br><br><br><center><h2>Stream is Offline</h2><br>There is no sound on the radio. Start AutoDJ or stream music to the radio. The direct SSL play url can work only if there is stream/sound on the radio.</center>\r\n",
+   "type": "text/html",
+   "bytes": 212,
+   "final": "https://streaming1.hostingmontevideo.com/8034/stream"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_URY_MV.mp3",
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûd\u0000\u0000\u0003ÇW×û,C :H©x=%\b\u000eÍScì\u001cuÈ¤'p`\u0010\u0000\u0004\u0000\u0012\u0014D\b;!àòÖ\u001b\u0003YX{ÐÝ\u000bÑZ\u001b\f]eú\u001aÐ8XB\u0016m_\tèÁÒé\u0001\rZ/gp:¿ûJ¢u»Æ\u0002\u000f\u0011Íîfý¥ÀâÍÞÚï^¢â~zøÿ·þ/ó\u0017?Q\u0006Û¯\u001e\u0014¤FÒH];gµßö8\u0011É%¦º\u0000\u0018\u0000\u0004@\u001e\u000fu#G\u000b£Ýmdo_ëïëéþè_èÚú£{ôoõ\u000b?ùÜ¼ÏÒ\"\u0018[;¹³ö)õì=ô«v¥\u0002A\u0012%Â\ff[¬[SÌE8Ú\u001bÜ°Kz<å¸Jáü©)Ï«®âpõ]¿iI'Ð½²çq×Õ\u000eI#¥A@\u0001\u000fvfG\u0014fË«Vz'ý¹Ãÿ¢",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://26563.live.streamtheworld.com:443/DISNEY_URY_MV.mp3"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://radiolatina.live/7906/stream",
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûrÀè\u0000\u00129]L1)ê8°ìôö\u0019ýn®ü\u0003Ra×ª!FêÕª;=Íý|ß:ö×©É³Á#dÍ#\f6®æi¦\u001dK¤Á³æ\u000b\u0013\"Ù%:Wþó|öY\u0016\u0007ZG\u001c²é¤7\u0003èi\rD¹H\f\fê:\u001bA `âLD8.9Q\"k¨`# ¼¿ÍU\u0001è<¬ÑS\u0019mí&Ó)Eñð,¥À¡.\u0007º¹m÷kz¦C©\\jZê\u0003Ýj5ªßcì\"(­-¹5DâöÖoùÌtþÞó_µ»\u001c»jbHX¼'ÍODµB\n³º,YxàJlá31Îß¥fìÍihpÈ{´Wîï·òÆ/tws\u0010ÓÓ:\u0015)Þ¶1Ó>êÕ\u0011¸r\"\u001c\u0019æ;>{ýÌfû¸ÝeÄ3\u0011\u0005&ärÐÉ\u001dËjÒì",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radiolatina.live/7906/stream"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://radiolatina.live/8152/stream",
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûRd\b\u0000ò\u001e.`ÈÁ\u001b¾\u0014\"z$\u0002t\b0í¤JðQj@\tÐ6Q£Í@/D*'ÿ­\u0000R-ÁÆ?ÿË7u¢¦/2v\\ðWE°ãkä`\u001a\u001b¢Î,ÝsÙWø\u00168,À\nEs%»\u0015ÂÏúÐV¨mTX\u0000\u0002\u0004à\u00004Ò¡ö[øéØBÜ \u0015ÛÚôMË0nõ|Zz t\u000eYí×÷s2ïØ÷W£+Ùêý¬ä\u0019\u001c\fHqtÞ¼ù\u00061\u0000¸E¡Èé¶8VR/\u001a¯4¡~Q\r©\u0000Ènci0Q\u0014öe6âÆÿûRd\u0007ò 8áhÁ-\u000e\u0015bz$\"@\u0007Ðí¤J0\\iÀÃ\t\u0010ìs|4ËÓLg÷P\u001d©«°Ó7R\n\r\u000bF{­oý\nf9\u001eM}>´ï=TLè.W¬ÉÿûË¬\u000e\u0000\u0019\u000b",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radiolatina.live/8152/stream"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://radios.iwstreaming.uy/8032/stream",
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿóP­\u000bÈáTÏ=¢K\u0012éJ¥|{ÖI$»\u0011Ú½£\u001b¢\u0000Ëà\tä´e¶{Ç\u0013\u001f\nw-ÃòÆÝ\u0017\u000eõ*Ô7ùÙ\u0015\u000629è÷«¯6V#D±= õ_,\u001aòÿ\u0017H³5¯ÿ{©ÿ­ÙÇ´l»êLJef\n\u0004\u0010ç5Ò»\u0007zÌnKe»ã¥5YÎCz½\u001cÅÔêºg'\nTxc\u0007ëÕÒ¹m½\fÒåõtlDû³âï>3+\u000eÞ\u001eùêÝ*ÏØ;\u001a\u0007\u0004}k©ê\u0019_Ñõ¿ÚiûP9jk(\r\u0000fÿþI$¶á©\u0003\u0019ÿóP¾\f\bXß=é9\u0014¹bª\f{Öt¤\"3ÛéÊ³;U\u001e\bV\u001b+I#k,\u0007¦:\fq7¬\u0010\bÔyCë¹^\u0014ñ\u001cµî wH\u001dQñÍÞ<LòçW±Î¶§`kPÙ/[cÞ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://radios.iwstreaming.uy/8032/stream"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://radios.iwstreaming.uy/8038/stream",
+  "probe": {
+   "ok": false,
+   "error": "HTTP Error 401: Unauthorized"
+  }
+ },
+ {
+  "name": "EXTRA",
+  "url": "https://s3.yesstreaming.net:7022/stream",
+  "probe": {
+   "ok": true,
+   "status": 200,
+   "head": "ÿûÔ\u0004\u0013\u0005`WS/Mp³¬\nýc,>\u0017QU0}\u0002à0*±¦\u000f ¹k\u001brmC31\nñõ\u0012\u0012\u0002`\u0000 b(Þ7±O#=Ik\u000e¶\u0004x\u0007íÍø\u0011Ï\u0006#uR2À{ÿÿÿã\u0017Å©\u0007M­MàFlÔ·%`ûë\u001að1M\u0006ñâ<U\u0013\b\n&G¹àÉÿÁ\u0006\f'+­:±@]\u0010\u0017'=ïÓ{tôy´DB\u000f8¡³\u0019+\r!Y©8´µ\u001320\u0010\u0000\u0006AÒ^\u0000&b5/0!enÒ\bÙ\"Rbl\\50\u0012\u0001á\u001aøÒÒjà!D#±.É²Õ]Æ T\u001c-2`FÖ\u0017ÌÀñÑJ3×¨Vëh>Á&ã\u001f\u001f\u000e\u0012ÈxYXÝïÓ333ônæpy \u0018\u0013ÜFTqÞ\nÃ;H:\u0006\u001dDÍãs\u000fF\u000bJ",
+   "type": "audio/mpeg",
+   "bytes": 32768,
+   "final": "https://s3.yesstreaming.net:7022/stream"
+  }
+ }
+]

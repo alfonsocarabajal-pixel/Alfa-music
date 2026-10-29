@@ -1,0 +1,679 @@
+[
+ {
+  "radio": "sport890",
+  "page": "https://www.sport890.com.uy/",
+  "candidatas": {
+   "https://alba-uy-sport890-sport890.stream.mediatiquestream.com/index.m3u8": {
+    "ok": false,
+    "error": "<urlopen error [Errno -2] Name or service not known>"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1789386694267_Tancredi.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1789390801350_Larriera.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1789560595867_DIEGO%20AGUIRRE.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1789738545080_PABLO%20ALVAREZ.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1789738901842_JOSE%20LUIS%20RODRIGUEZ.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195742644_Schiappacase.mp3": {
+    "ok": false,
+    "type": "application/json; charset=UTF-8",
+    "bytes": 607,
+    "final": "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195742644_Schiappacase.mp3",
+    "head": ""
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195850751_ERNESTO%20DEHL.mp3": {
+    "ok": false,
+    "type": "application/json; charset=UTF-8",
+    "bytes": 610,
+    "final": "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195850751_ERNESTO%20DEHL.mp3",
+    "head": ""
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195924127_Mitchell%20Duarte.mp3": {
+    "ok": false,
+    "type": "application/json; charset=UTF-8",
+    "bytes": 615,
+    "final": "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195924127_Mitchell%20Duarte.mp3",
+    "head": ""
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195927905_alejandro%20gonzalez.mp3": {
+    "ok": false,
+    "type": "application/json; charset=UTF-8",
+    "bytes": 622,
+    "final": "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195927905_alejandro%20gonzalez.mp3",
+    "head": ""
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195936817_SERGIO%20PEREZ%20LAURO.mp3": {
+    "ok": false,
+    "type": "application/json; charset=UTF-8",
+    "bytes": 624,
+    "final": "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790195936817_SERGIO%20PEREZ%20LAURO.mp3",
+    "head": ""
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790683189476_ALEJANDRO%20SOBRERA.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790683828809_FERNANDO%20BRUSCO.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790688899076_carlos%20manta.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790775704193_NACHO%20RUGLIO.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1790776719009_ALVARO%20RIVERO%2B.mp3": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1791375338729_MATIAS%20PEREZ.mp3": {
+    "ok": false,
+    "type": "application/json; charset=UTF-8",
+    "bytes": 610,
+    "final": "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1791375338729_MATIAS%20PEREZ.mp3",
+    "head": ""
+   },
+   "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1791564608983_FLAVIO.mp3": {
+    "ok": false,
+    "type": "application/json; charset=UTF-8",
+    "bytes": 596,
+    "final": "https://firebasestorage.googleapis.com/v0/b/web-b9b29.firebasestorage.app/o/audios_noticias%2F1791564608983_FLAVIO.mp3",
+    "head": ""
+   },
+   "https://puma.streemlion.com:2415/stream": {
+    "ok": false,
+    "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+   },
+   "https://puma.streemlion.com:2495/stream": {
+    "ok": false,
+    "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+   }
+  }
+ },
+ {
+  "radio": "delplata",
+  "page": "https://www.delplatafm.com/",
+  "candidatas": {
+   "https://alba-uy-delplata.cdn.mediatiquepress.com/wp-content/uploads/2024/08/logo-Del-Plata.jpg\\": {
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+   },
+   "https://puma.streemlion.com:2575/stream": {
+    "ok": false,
+    "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+   }
+  }
+ },
+ {
+  "radio": "m24",
+  "page": "https://www.m24.com.uy/",
+  "candidatas": {
+   "https://streaming1.hostingmontevideo.com/8034/;": {
+    "ok": false,
+    "type": "text/html",
+    "bytes": 212,
+    "final": "https://streaming1.hostingmontevideo.com/8034/;",
+    "head": "<br><br><br><center><h2>Stream is Offline</h2><br>There is no sound on the radio. Start AutoDJ or stream music to the ra"
+   },
+   "https://streaming1.hostingmontevideo.com/8034/stream": {
+    "ok": false,
+    "type": "text/html",
+    "bytes": 212,
+    "final": "https://streaming1.hostingmontevideo.com/8034/stream",
+    "head": "<br><br><br><center><h2>Stream is Offline</h2><br>There is no sound on the radio. Start AutoDJ or stream music to the ra"
+   },
+   "https://streaming1.hostingmontevideo.com/8034/stream/;": {
+    "ok": false,
+    "type": "text/html",
+    "bytes": 212,
+    "final": "https://streaming1.hostingmontevideo.com/8034/stream/;",
+    "head": "<br><br><br><center><h2>Stream is Offline</h2><br>There is no sound on the radio. Start AutoDJ or stream music to the ra"
+   }
+  }
+ },
+ {
+  "radio": "emisoradelsur",
+  "page": "https://emisoradelsur.uy/",
+  "candidatas": {
+   "https://radios.iwstreaming.uy/8031/stream": {
+    "ok": false,
+    "error": "HTTP Error 502: Bad Gateway"
+   },
+   "https://radios.iwstreaming.uy/8032/stream": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://radios.iwstreaming.uy/8032/stream",
+    "head": ""
+   },
+   "https://radios.iwstreaming.uy/8033/stream": {
+    "ok": false,
+    "error": "HTTP Error 502: Bad Gateway"
+   },
+   "https://radios.iwstreaming.uy/8035/stream": {
+    "ok": false,
+    "error": "HTTP Error 502: Bad Gateway"
+   },
+   "https://radios.iwstreaming.uy/8037/stream": {
+    "ok": false,
+    "error": "HTTP Error 503: Service Temporarily Unavailable"
+   },
+   "https://radios.iwstreaming.uy/8038/stream": {
+    "ok": false,
+    "error": "HTTP Error 503: Service Temporarily Unavailable"
+   },
+   "https://radios.iwstreaming.uy/8039/stream": {
+    "ok": false,
+    "error": "HTTP Error 503: Service Temporarily Unavailable"
+   },
+   "https://radios.iwstreaming.uy/8040/stream": {
+    "ok": false,
+    "error": "HTTP Error 503: Service Temporarily Unavailable"
+   }
+  }
+ },
+ {
+  "radio": "clasica",
+  "page": "https://clasica.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "futura",
+  "page": "https://www.radiofutura.com.uy/",
+  "candidatas": {
+   "https://alba-uy-radiofutura.cdn.mediatiquepress.com/wp-content/uploads/2021/10/banner-rf.jpeg": {
+    "ok": true,
+    "type": "image/jpeg",
+    "bytes": 32768,
+    "final": "https://alba-uy-radiofutura.cdn.mediatiquepress.com/wp-content/uploads/2021/10/banner-rf.jpeg",
+    "head": ""
+   },
+   "https://alba-uy-radiofutura.cdn.mediatiquepress.com/wp-content/uploads/2021/10/banner-rf.jpeg&#x27;)": {
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+   },
+   "https://alba-uy-radiofutura.cdn.mediatiquepress.com/wp-content/uploads/2021/10/banner-rf.jpeg\\": {
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+   },
+   "https://puma.streemlion.com:2445/stream": {
+    "ok": false,
+    "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+   }
+  }
+ },
+ {
+  "radio": "nacional",
+  "page": "https://www.radionacional.com.uy/web/",
+  "candidatas": {}
+ },
+ {
+  "radio": "centenario",
+  "page": "https://radio36.com.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "amlibre",
+  "page": "https://www.amlibre.com.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "radio1010",
+  "page": "https://www.1010am.com.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "urbana",
+  "page": "https://www.urbanafm.com.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "concierto",
+  "page": "https://www.conciertofm.com/",
+  "candidatas": {
+   "https://s3.yesstreaming.net:7022/stream": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://s3.yesstreaming.net:7022/stream",
+    "head": ""
+   }
+  }
+ },
+ {
+  "radio": "delsol",
+  "page": "https://delsol.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "azul",
+  "page": "https://azulfm.com.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "oceano",
+  "page": "https://oceanofm.com/",
+  "candidatas": {}
+ },
+ {
+  "radio": "espectador",
+  "page": "https://espectador.com/",
+  "candidatas": {}
+ },
+ {
+  "radio": "sarandi",
+  "page": "https://www.sarandi690.com.uy/",
+  "candidatas": {
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792431875913_0_1710_GUAMATUR.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792431875913_0_1710_GUAMATUR.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792437146539_0_crudo_Carlos_Enciso_.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792437146539_0_crudo_Carlos_Enciso_.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792500449244_0_fernando_pereira_crudooooooo.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792500449244_0_fernando_pereira_crudooooooo.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792512141111_0_Gador_entrevista.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792512141111_0_Gador_entrevista.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792523566958_0_CRUDO_PABLO_ABDALA.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792523566958_0_CRUDO_PABLO_ABDALA.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792523784283_0_MAR_A_EMILIA_P_REZ_SANTARCIERI_14-10-2026.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792523784283_0_MAR_A_EMILIA_P_REZ_SANTARCIERI_14-10-2026.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792587435654_0_biologa_alexandra_crudooooooo.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792587435654_0_biologa_alexandra_crudooooooo.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792611032053_0_crudo_Mart_n_Haulde_.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792611032053_0_crudo_Mart_n_Haulde_.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792612086465_0_crudo_Daniel_Caggiani_.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792612086465_0_crudo_Daniel_Caggiani_.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792673859420_0_celsooo_cuadro_crudooooo.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792673859420_0_celsooo_cuadro_crudooooo.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792690785372_0_Ra_ces_-_Bloque_01___23-10-26.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792690785372_0_Ra_ces_-_Bloque_01___23-10-26.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792690802844_1_Ra_ces_-_Bloque_02___23-10-26.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792690802844_1_Ra_ces_-_Bloque_02___23-10-26.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792690820357_2_Ra_ces_-_Bloque_03___23-10-26.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792690820357_2_Ra_ces_-_Bloque_03___23-10-26.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792694269717_0_crudo_Nancy_Castillo_-_M_dicos_Sin_Fronteras_.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792694269717_0_crudo_Nancy_Castillo_-_M_dicos_Sin_Fronteras_.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792697233906_0_CRUDO_MART_N_PASTURINO_INEED.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792697233906_0_CRUDO_MART_N_PASTURINO_INEED.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792698028379_0_NOTA_A_FERNANDO_ABI_SAAB_ANDA.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792698028379_0_NOTA_A_FERNANDO_ABI_SAAB_ANDA.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792700290315_0_JORGE_MART_NEZ_21-10-2026.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792700290315_0_JORGE_MART_NEZ_21-10-2026.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792700292775_0_MAR_A_EMILIA_P_REZ_SANTARCIERI_21-10-2026.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792700292775_0_MAR_A_EMILIA_P_REZ_SANTARCIERI_21-10-2026.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792711150188_0_NOTA_GILARDONI_Y_PEREYRA_AMAR_EL_MAR.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792711150188_0_NOTA_GILARDONI_Y_PEREYRA_AMAR_EL_MAR.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792776735888_0_CRUDO_KARINA_SOSA_-_SINDICATO_SEGURIDAD_SOCIAL.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792776735888_0_CRUDO_KARINA_SOSA_-_SINDICATO_SEGURIDAD_SOCIAL.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792777416011_0_CRUDO_AGUSTINA_P_REZ.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1792777416011_0_CRUDO_AGUSTINA_P_REZ.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012174847_0_Walter_Alexandre.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012174847_0_Walter_Alexandre.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012584370_0_Montevideo_Proyectada.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012584370_0_Montevideo_Proyectada.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012646154_0_Homenaje_a_Villasboas_y_Sosa_Esteban_Toht.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012646154_0_Homenaje_a_Villasboas_y_Sosa_Esteban_Toht.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012668322_0_Leo_Masliah_2026.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012668322_0_Leo_Masliah_2026.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012934141_0_La_columna_negra_Juan_Carr_.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793012934141_0_La_columna_negra_Juan_Carr_.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793013720425_0_lubetkin_crudo.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793013720425_0_lubetkin_crudo.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793014724468_0_crudo_daniel_torena.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793014724468_0_crudo_daniel_torena.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793019375635_0_Columna_Gabriel_Pereyra_.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793019375635_0_Columna_Gabriel_Pereyra_.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793106520079_0_andres_ojeda_crudooo.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793106520079_0_andres_ojeda_crudooo.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793110603731_0_2410_GUAMATUR.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793110603731_0_2410_GUAMATUR.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793112728791_0_Maite_Rodr_guez_Oikos_2026.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793112728791_0_Maite_Rodr_guez_Oikos_2026.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793128119673_0_crudo_M_nica_Xavier_.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793128119673_0_crudo_M_nica_Xavier_.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138856476_0_SPIESS_1.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138856476_0_SPIESS_1.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138857947_1_BRIVA_1.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138857947_1_BRIVA_1.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138859368_2_BRIVA_2.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138859368_2_BRIVA_2.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138860289_3_SPIESS_2.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138860289_3_SPIESS_2.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138861247_4_SPIESS_3.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138861247_4_SPIESS_3.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138862206_5_BECQUART_1.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138862206_5_BECQUART_1.mp3",
+    "head": ""
+   },
+   "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138863902_6_G_MEZ.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://pub-c47d546187e64aea9e0f33cd9f9edece.r2.dev/audios_noticias/1793138863902_6_G_MEZ.mp3",
+    "head": ""
+   }
+  }
+ },
+ {
+  "radio": "radiomundo",
+  "page": "https://enperspectiva.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "carve",
+  "page": "https://radiocarve.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "montecarlo",
+  "page": "https://www.radiomontecarlo.com.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "universal",
+  "page": "https://970universal.com/",
+  "candidatas": {}
+ },
+ {
+  "radio": "oriental",
+  "page": "https://oriental.com.uy/inicio/",
+  "candidatas": {
+   "https://p.scdn.co/mp3-preview/a4843ca699d7011bc7cb86ff2f5e5c466f67295d.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://p.scdn.co/mp3-preview/a4843ca699d7011bc7cb86ff2f5e5c466f67295d.mp3",
+    "head": ""
+   },
+   "https://radiolatina.live/7906/stream": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://radiolatina.live/7906/stream",
+    "head": ""
+   }
+  }
+ },
+ {
+  "radio": "rural",
+  "page": "https://radiorural.uy/",
+  "candidatas": {
+   "http://fr1.streamhosting.ch/lounge128.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "http://fr1.streamhosting.ch/lounge128.mp3",
+    "head": ""
+   },
+   "https://podz-content.spotifycdn.com/audio/clips/3maUXJa8mMdDOrnIpnkNaf/clip_649398_709398.mp3": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://podz-content.spotifycdn.com/audio/clips/3maUXJa8mMdDOrnIpnkNaf/clip_649398_709398.mp3",
+    "head": ""
+   },
+   "https://podz-content.spotifycdn.com/audio/clips/474xRHSYtvOHgRN5Xz3yod/clip_482532_542532.mp3": {
+    "ok": true,
+    "type": "application/octet-stream",
+    "bytes": 32768,
+    "final": "https://podz-content.spotifycdn.com/audio/clips/474xRHSYtvOHgRN5Xz3yod/clip_482532_542532.mp3",
+    "head": ""
+   },
+   "https://radiolatina.live/8152/stream": {
+    "ok": true,
+    "type": "audio/mpeg",
+    "bytes": 32768,
+    "final": "https://radiolatina.live/8152/stream",
+    "head": ""
+   },
+   "https://radiorural.uy/live": {
+    "ok": false,
+    "type": "text/html; charset=UTF-8",
+    "bytes": 32768,
+    "final": "https://radiorural.uy/live-from-san-francisco/",
+    "head": "<!DOCTYPE html>\n<html lang=\"es-UY\" class=\"no-js scheme_default\">\n<head>\n\t\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport"
+   }
+  }
+ },
+ {
+  "radio": "clarin",
+  "page": "https://radioclarin.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "babel",
+  "page": "https://babel.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "mediospublicos",
+  "page": "https://mediospublicos.uy/",
+  "candidatas": {}
+ },
+ {
+  "radio": "continente",
+  "page": "http://cx10continente.com/",
+  "candidatas": {
+   "http://cx10continente.com:8152/": {
+    "ok": false,
+    "error": "ICY 200 OK\r\n"
+   },
+   "http://cx10continente.com:8152/;": {
+    "ok": false,
+    "error": "ICY 200 OK\r\n"
+   },
+   "http://cx10continente.com:8152/;?type=http&nocache=1": {
+    "ok": false,
+    "error": "ICY 200 OK\r\n"
+   }
+  }
+ }
+]
