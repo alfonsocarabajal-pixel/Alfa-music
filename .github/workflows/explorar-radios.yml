@@ -1,0 +1,27 @@
+name: Explorar radios
+
+on:
+  push:
+    branches: [explorar-radios]
+
+permissions:
+  contents: write
+
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Buscar y probar emisoras
+        run: python tools/explorar_radios.py $(cat tools/radios-extra.txt 2>/dev/null || true)
+      - name: Guardar resultado en la rama datos-radios
+        run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          cp radios-candidatas.json /tmp/r.json
+          git checkout --orphan datos-radios; git rm -rfq .
+          cp /tmp/r.json radios-candidatas.json
+          git add radios-candidatas.json; git commit -qm "Resultado de exploración"
+          git push -f origin datos-radios
