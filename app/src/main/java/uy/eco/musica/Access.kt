@@ -240,10 +240,14 @@ class Access(context: Context) {
     private fun listIssued(key: String): List<Invite> =
         listDocs(adminPath(key, "emitidas")).map { (id, f) -> parseInvite(id, f) }
 
-    /** Todas las invitaciones, con su estado de activación. La más nueva primero. */
-    fun listInvites(): List<Invite> = listIssued(adminKey).map { issued ->
-        if (issued.revoked > 0) issued
-        else {
+    /**
+     * Las invitaciones vigentes, con su estado de activación. Las bloqueadas no se muestran
+     * (se distinguen por el código, no por el nombre: puede haber una nueva con el mismo nombre).
+     * Orden: quien usó la app más recientemente arriba; las que todavía no se usaron, al final.
+     */
+    fun listInvites(): List<Invite> = listIssued(adminKey)
+        .filter { it.revoked == 0L }
+        .map { issued ->
             val live = runCatching { getInvite(issued.code) }.getOrNull()
             if (live == null) issued
             else issued.copy(
@@ -251,7 +255,10 @@ class Access(context: Context) {
                 group = live.group, version = live.version, seen = live.seen, karaoke = live.karaoke,
             )
         }
-    }.sortedByDescending { it.created }
+        .sortedWith(
+            compareByDescending<Invite> { if (it.seen > 0) it.seen else it.activated }
+                .thenByDescending { it.created }
+        )
 
     /** Los grupos, con el principal primero. */
     fun listGroups(): List<Group> {

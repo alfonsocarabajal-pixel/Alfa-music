@@ -507,7 +507,7 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                     scope.launch {
                         val ok = withContext(Dispatchers.IO) { runCatching { access.revoke(inv.code) } }.isSuccess
                         if (ok) {
-                            notify("Acceso revocado")
+                            notify("Acceso revocado: ya no aparece en la lista")
                             refresh()
                         } else notify("No se pudo revocar. Revisá la conexión.")
                     }
