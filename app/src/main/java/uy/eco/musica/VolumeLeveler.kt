@@ -60,7 +60,7 @@ class VolumeLeveler {
         config.setMbcBandAllChannelsTo(
             0,
             DynamicsProcessing.MbcBand(
-                true, true,
+                true,     // banda activada
                 20_000f,  // toda la banda de frecuencias
                 20f,      // ataque (ms)
                 400f,     // relajación (ms)
