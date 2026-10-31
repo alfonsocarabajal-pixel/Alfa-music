@@ -99,9 +99,15 @@ jobs:
       - name: Pruebas automáticas (letras del karaoke y saludos)
         run: |
           chmod +x gradlew
+          set -o pipefail
           ./gradlew testDebugUnitTest --stacktrace \
             -PnpeVersion=${{ needs.revisar.outputs.npe }} \
-            -PfsProject="$FS_PROJECT" -PfsGroup="$FS_GROUP"
+            -PfsProject="$FS_PROJECT" -PfsGroup="$FS_GROUP" 2>&1 | tee "$RUNNER_TEMP/pruebas.txt" || {
+            # Errores de compilación y pruebas fallidas, visibles como avisos (sin datos secretos).
+            grep -E '^e: |FAILED|AssertionError|Exception' "$RUNNER_TEMP/pruebas.txt" | grep -v '^\s*at ' \
+              | head -25 | sed 's#.*/app/src/#app/src/#' | sed 's/^/::error::/'
+            exit 1
+          }
 
       - name: Probar emisoras de radio (solo avisa, no frena)
         continue-on-error: true
