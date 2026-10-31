@@ -16,8 +16,12 @@ import java.security.SecureRandom
  * Sin SDK de Firebase: así la app sigue pesando muy poco.
  * Todas las funciones bloquean: llamarlas fuera del hilo principal.
  */
-/** Error HTTP del servidor (404 = no existe, 403 = sin permiso). */
-class HttpError(val code: Int) : IOException("Error $code del servidor")
+/**
+ * Error HTTP del servidor (404 = no existe, 403 = sin permiso).
+ * [detail] es lo que explicó el servidor (por ejemplo "PERMISSION_DENIED: Missing or insufficient permissions").
+ */
+class HttpError(val code: Int, val detail: String = "") :
+    IOException("Error $code del servidor" + if (detail.isNotBlank()) " ($detail)" else "")
 
 object Cloud {
 
@@ -175,12 +179,19 @@ object Cloud {
             val code = conn.responseCode
             val stream = if (code >= 400) conn.errorStream else conn.inputStream
             val text = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
-            if (code >= 400) throw HttpError(code)
+            if (code >= 400) throw HttpError(code, serverMessage(text))
             return text
         } finally {
             conn.disconnect()
         }
     }
+
+    /** El motivo que da Firebase en una respuesta de error: "ESTADO: mensaje". */
+    private fun serverMessage(body: String): String = runCatching {
+        val e = JSONObject(body).getJSONObject("error")
+        listOf(e.optString("status"), e.optString("message")).filter { it.isNotBlank() }
+            .joinToString(": ").take(300)
+    }.getOrDefault(body.take(150).trim())
 
     internal val random = SecureRandom()
     private const val CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"

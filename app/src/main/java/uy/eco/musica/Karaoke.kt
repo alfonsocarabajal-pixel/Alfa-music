@@ -95,6 +95,7 @@ private fun KaraokeSearch(ui: PlayerUi, onBackToLyrics: (() -> Unit)?) {
                 results = it
                 if (it.isEmpty()) message = "No encontré versiones karaoke de esa canción."
             }.onFailure {
+                ErrorLog.report("Buscar karaoke", "«$q» · ${ErrorLog.describe(it)}")
                 results = emptyList()
                 message = "No se pudo buscar. Revisá la conexión o probá de nuevo."
             }

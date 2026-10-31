@@ -44,6 +44,10 @@ class PlaybackService : MediaSessionService() {
     private var radioSeed: String? = null
     private var retriedId: String? = null
     private var lastCount = 0
+    private val leveler = VolumeLeveler()
+    private val prefsListener = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key == VolumeLeveler.KEY) leveler.setEnabled(VolumeLeveler.isOn(this))
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -69,6 +73,11 @@ class PlaybackService : MediaSessionService() {
             .setWakeMode(C.WAKE_MODE_NETWORK)
             .build()
         player.addListener(listener)
+
+        // Volumen parejo entre canciones (se activa o desactiva desde la cola).
+        leveler.setEnabled(VolumeLeveler.isOn(this))
+        leveler.attach(player.audioSessionId)
+        getSharedPreferences("alfa", MODE_PRIVATE).registerOnSharedPreferenceChangeListener(prefsListener)
 
         val openApp = PendingIntent.getActivity(
             this, 0, Intent(this, MainActivity::class.java),
@@ -175,6 +184,10 @@ class PlaybackService : MediaSessionService() {
             saveQueue()
         }
 
+        override fun onAudioSessionIdChanged(audioSessionId: Int) {
+            leveler.attach(audioSessionId)
+        }
+
         override fun onIsPlayingChanged(isPlaying: Boolean) {
             if (!isPlaying) saveQueue() // guarda la posición al pausar
         }
@@ -205,6 +218,11 @@ class PlaybackService : MediaSessionService() {
 
         override fun onPlayerError(error: PlaybackException) {
             val id = player.currentMediaItem?.mediaId ?: return
+            val title = player.currentMediaItem?.mediaMetadata?.title?.toString().orEmpty()
+            ErrorLog.report(
+                if (player.currentMediaItem?.isStation == true) "Reproducir radio" else "Reproducir",
+                "«$title» ($id) · ${error.errorCodeName} · ${ErrorLog.describe(error.cause ?: error)}",
+            )
             Repo.invalidate(id)
             // Sin internet no se saltea nada: se queda en pausa hasta que el usuario reintente.
             if (error.errorCode == PlaybackException.ERROR_CODE_IO_NETWORK_CONNECTION_FAILED ||
@@ -317,6 +335,8 @@ class PlaybackService : MediaSessionService() {
 
     override fun onDestroy() {
         saveQueue()
+        getSharedPreferences("alfa", MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(prefsListener)
+        leveler.release()
         scope.cancel()
         session?.run {
             player.release()

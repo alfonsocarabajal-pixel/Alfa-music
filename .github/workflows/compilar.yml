@@ -121,6 +121,27 @@ jobs:
           mv app/build/outputs/apk/release/app-release.apk AlfaMusic.apk
           rm -f "$RUNNER_TEMP/alfa.jks"
 
+      - name: Verificar registro de errores (solo avisa si falta la regla en Firebase)
+        if: env.FS_PROJECT != ''
+        continue-on-error: true
+        run: |
+          ROOT="projects/$FS_PROJECT/databases/(default)/documents"
+          COL="$ROOT/grupos/$FS_GROUP/errores"
+          API="https://firestore.googleapis.com/v1"
+          warn() { echo "::warning::Registro de errores: $1. ¿Pegaste la regla de «errores» en Firebase?"; exit 1; }
+          BODY='{"fields":{"quien":{"stringValue":"ci"},"modelo":{"stringValue":"ci"},"version":{"integerValue":"0"},"fecha":{"integerValue":"0"},"tipo":{"stringValue":"Prueba"},"detalle":{"stringValue":"prueba de compilación"}}}'
+          R=$(curl -s -w '\n%{http_code}' -X POST "$API/$COL" -H 'Content-Type: application/json' -d "$BODY")
+          [ "$(echo "$R" | tail -1)" = "200" ] || warn "no se pudo escribir"
+          NAME=$(echo "$R" | sed '$d' | jq -r .name)
+          BAD='{"fields":{"tipo":{"stringValue":"x"},"detalle":{"stringValue":"x"},"otro":{"stringValue":"x"}}}'
+          C=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$API/$COL" -H 'Content-Type: application/json' -d "$BAD")
+          [ "$C" = "403" ] || warn "aceptó un error con campos no permitidos ($C)"
+          C=$(curl -s -o /dev/null -w '%{http_code}' "$API/$COL?pageSize=5")
+          [ "$C" = "200" ] || warn "no se pudo leer ($C)"
+          C=$(curl -s -o /dev/null -w '%{http_code}' -X DELETE "$API/$NAME")
+          [ "$C" = "200" ] || warn "no se pudo borrar ($C)"
+          echo "::notice::Registro de errores: OK"
+
       - name: Verificar Firebase (escribir, leer y borrar una playlist de prueba)
         if: env.FS_PROJECT != ''
         run: |

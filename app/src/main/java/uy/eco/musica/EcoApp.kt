@@ -8,6 +8,7 @@ import org.schabi.newpipe.extractor.localization.Localization
 class EcoApp : Application() {
     override fun onCreate() {
         super.onCreate()
+        ErrorLog.init(this)
         NewPipe.init(Http, Localization("es", "UY"), ContentCountry("UY"))
     }
 }

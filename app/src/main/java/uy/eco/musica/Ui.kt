@@ -65,6 +65,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import android.widget.Toast
+import androidx.compose.material.icons.filled.Equalizer
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -171,6 +173,7 @@ fun EcoScreen(ui: PlayerUi, access: Access) {
                     if (it.isEmpty()) message = "Sin resultados"
                 }
                 .onFailure {
+                    ErrorLog.report("Buscar", "«$q» · ${ErrorLog.describe(it)}")
                     results = emptyList()
                     message = "No se pudo buscar. Revisá la conexión o probá de nuevo."
                 }
@@ -337,13 +340,17 @@ private fun UpdateBanner() {
         progress = 0f
         scope.launch {
             val file = withContext(Dispatchers.IO) {
-                runCatching { Updater.download(context, r) { p -> progress = p } }.getOrNull()
+                runCatching { Updater.download(context, r) { p -> progress = p } }
+                    .onFailure { ErrorLog.report("Actualizar", "Descarga v${r.version} · ${ErrorLog.describe(it)}") }
+                    .getOrNull()
             }
             progress = null
             if (file == null) {
                 note = "No se pudo descargar. Revisá la conexión y probá de nuevo."
             } else {
-                val opened = runCatching { Updater.openInstaller(context, file) }.isSuccess
+                val opened = runCatching { Updater.openInstaller(context, file) }
+                    .onFailure { ErrorLog.report("Actualizar", "Abrir instalador v${r.version} · ${ErrorLog.describe(it)}") }
+                    .isSuccess
                 note = if (opened) "Tocá «Instalar» en la pantalla de Android. Si se cerró sin instalar, volvé a tocar Actualizar."
                 else "No se pudo abrir el instalador. Instalala desde el link de descarga."
             }
@@ -563,6 +570,26 @@ private fun QueueList(ui: PlayerUi, onSave: (() -> Unit)?, onAdd: ((Song) -> Uni
                 if (onSave != null && ui.queue.isNotEmpty() && !ui.stationsMode) {
                     IconButton(onClick = onSave) {
                         Icon(Icons.Default.Save, contentDescription = "Guardar como playlist")
+                    }
+                }
+                if (VolumeLeveler.supported) {
+                    val context = LocalContext.current
+                    var level by remember { mutableStateOf(VolumeLeveler.isOn(context)) }
+                    IconButton(onClick = {
+                        level = !level
+                        VolumeLeveler.set(context, level)
+                        Toast.makeText(
+                            context,
+                            if (level) "Volumen parejo activado" else "Volumen parejo desactivado",
+                            Toast.LENGTH_SHORT,
+                        ).show()
+                    }) {
+                        Icon(
+                            Icons.Default.Equalizer,
+                            contentDescription = if (level) "Desactivar volumen parejo" else "Activar volumen parejo",
+                            tint = if (level) MaterialTheme.colorScheme.primary
+                            else MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
                     }
                 }
                 if (!ui.stationsMode) IconButton(onClick = { ui.toggleShuffle() }) {

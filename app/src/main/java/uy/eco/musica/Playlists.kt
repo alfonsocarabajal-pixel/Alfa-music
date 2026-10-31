@@ -80,13 +80,18 @@ class SharedLists {
         error = null
         withContext(Dispatchers.IO) { runCatching { Cloud.list() } }
             .onSuccess { items = it; loadedOnce = true }
-            .onFailure { error = "No se pudieron cargar las playlists. Revisá la conexión." }
+            .onFailure {
+                ErrorLog.report("Cargar playlists", ErrorLog.describe(it))
+                error = "No se pudieron cargar las playlists. Revisá la conexión."
+            }
         loading = false
     }
 
     /** Guarda y actualiza la lista local. Devuelve null si falló. */
     suspend fun save(p: Playlist): Playlist? {
-        val saved = withContext(Dispatchers.IO) { runCatching { Cloud.save(p) } }.getOrNull()
+        val saved = withContext(Dispatchers.IO) { runCatching { Cloud.save(p) } }
+            .onFailure { ErrorLog.report("Guardar playlist", "«${p.name}» · ${ErrorLog.describe(it)}") }
+            .getOrNull()
             ?: return null
         items = (listOf(saved) + items.filter { it.id != saved.id }).sortedByDescending { it.updated }
         return saved
@@ -106,7 +111,9 @@ class SharedLists {
     }
 
     suspend fun delete(id: String): Boolean {
-        val ok = withContext(Dispatchers.IO) { runCatching { Cloud.delete(id) } }.isSuccess
+        val ok = withContext(Dispatchers.IO) { runCatching { Cloud.delete(id) } }
+            .onFailure { ErrorLog.report("Borrar playlist", ErrorLog.describe(it)) }
+            .isSuccess
         if (ok) items = items.filter { it.id != id }
         return ok
     }

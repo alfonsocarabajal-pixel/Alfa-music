@@ -92,6 +92,7 @@ class Access(context: Context) {
         if (n.isBlank()) return
         sp.edit().putString("nombre", n.trim()).apply()
         displayName = n.trim()
+        ErrorLog.who = displayName
     }
 
     /** Si Firebase no está configurado, la app no pide código. */
@@ -99,6 +100,7 @@ class Access(context: Context) {
 
     init {
         Cloud.groupId = groupId
+        ErrorLog.who = displayName
     }
 
     fun clear() {
@@ -116,31 +118,64 @@ class Access(context: Context) {
 
     fun activate(input: String): Result {
         val norm = normalize(input)
+        // Para el registro de errores: el código nunca se anota completo.
+        val masked = if (norm.length <= 2) norm else norm.take(2) + "…(${norm.length} letras)"
+        var step = "leer el código"
+        fun reject(message: String, detail: String): Result.Rejected {
+            ErrorLog.report("Activar código", "$detail · código $masked")
+            return Result.Rejected(message)
+        }
         return try {
             if (norm.startsWith("ADMIN")) {
                 listIssued(norm) // falla con 403 si la clave no es la correcta
                 adminKey = norm
+                ErrorLog.who = displayName
                 Result.Ok
             } else {
                 val c = norm
-                if (c.length !in 3..16) return Result.Rejected("Revisá el código: es una palabra con dos números, como LUNA27.")
-                val inv = getInvite(c) ?: return Result.Rejected("Ese código no existe o fue revocado.")
+                if (c.length !in 3..16) return reject(
+                    "Revisá el código: es una palabra con dos números, como LUNA27. Escribí solo eso, sin el resto del mensaje.",
+                    "Formato inválido (${input.trim().length} caracteres escritos)",
+                )
+                val inv = getInvite(c) ?: return reject(
+                    "Ese código no existe o fue bloqueado. Fijate que sea el último que te mandaron.",
+                    "No existe o fue bloqueado",
+                )
                 when (inv.device) {
                     deviceId -> Unit
-                    "" -> claim(c)
-                    else -> return Result.Rejected("Ese código ya se usó en otro teléfono. Pedile uno nuevo a quien te invitó.")
+                    "" -> {
+                        step = "activar el código en este teléfono"
+                        claim(c)
+                    }
+                    else -> return reject(
+                        "Ese código ya se usó en otro teléfono. Pedile uno nuevo a quien te invitó.",
+                        "Ya usado en otro teléfono",
+                    )
                 }
                 code = c
                 groupId = inv.group
                 saveKaraoke(inv.karaoke)
                 saveName(inv.name)
+                ErrorLog.who = inv.name
                 runCatching { reportUse() }
                 Result.Ok
             }
         } catch (e: HttpError) {
-            if (e.code == 403 || e.code == 404) Result.Rejected("Código incorrecto.")
-            else Result.Rejected("No se pudo verificar el código (error ${e.code}). Probá de nuevo.")
+            val why = ErrorLog.describe(e)
+            when (e.code) {
+                403 -> reject(
+                    "No se pudo $step: el servidor no dio permiso (error 403). Revisá que la fecha y hora del " +
+                        "teléfono estén bien y probá con datos móviles (sin wifi ni VPN). Si sigue, avisale a Denis.",
+                    "Sin permiso al $step · $why",
+                )
+                404 -> reject("Ese código no existe o fue bloqueado.", "No encontrado al $step · $why")
+                else -> reject(
+                    "No se pudo $step (error ${e.code}). Probá de nuevo en un rato.",
+                    "Error del servidor al $step · $why",
+                )
+            }
         } catch (e: IOException) {
+            ErrorLog.report("Activar código", "Sin conexión al $step · ${ErrorLog.describe(e)} · código $masked")
             Result.Offline
         }
     }

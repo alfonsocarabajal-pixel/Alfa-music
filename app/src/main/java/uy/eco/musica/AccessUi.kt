@@ -263,6 +263,9 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
     var revoking by remember { mutableStateOf<Invite?>(null) }
     var moving by remember { mutableStateOf<Invite?>(null) }
     var latest by remember { mutableStateOf<Int?>(null) }
+    var showErrors by remember { mutableStateOf(false) }
+    var errorCount by remember { mutableStateOf(0) }
+
 
     fun refresh() = scope.launch {
         loading = true
@@ -272,7 +275,14 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
         withContext(Dispatchers.IO) { runCatching { access.listInvites() } }
             .onSuccess { invites = it }
             .onFailure { loadError = "No se pudieron cargar las invitaciones. Revisá la conexión." }
+        errorCount = withContext(Dispatchers.IO) { runCatching { ErrorLog.list().size }.getOrDefault(0) }
         loading = false
+    }
+
+    if (showErrors) {
+        // Al volver, la lista de invitaciones se vuelve a cargar sola.
+        ErrorsScreen(onBack = { showErrors = false }, notify = notify)
+        return
     }
 
     LaunchedEffect(Unit) { refresh() }
@@ -290,6 +300,12 @@ fun InvitesScreen(access: Access, notify: (String) -> Unit) {
                     "Solo vos ves esta pestaña",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            TextButton(onClick = { showErrors = true }) {
+                Text(
+                    if (errorCount > 0) "⚠️ $errorCount" else "Errores",
+                    color = if (errorCount > 0) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
                 )
             }
             IconButton(onClick = { refresh() }) { Icon(Icons.Default.Refresh, contentDescription = "Actualizar") }
