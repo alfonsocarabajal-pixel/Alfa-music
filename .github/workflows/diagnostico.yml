@@ -1,0 +1,19 @@
+name: Diagnóstico de invitaciones
+
+on:
+  push:
+    branches: [diagnostico]
+
+jobs:
+  diagnostico:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Leer invitaciones
+        env:
+          ALFA_KS_PASS: ${{ secrets.ALFA_KS_PASS }}
+        run: |
+          openssl enc -d -aes-256-cbc -pbkdf2 -in config/nube.env.enc -out "$RUNNER_TEMP/nube.env" -pass env:ALFA_KS_PASS
+          set -a; . "$RUNNER_TEMP/nube.env"; set +a
+          echo "::add-mask::$FS_GROUP"; echo "::add-mask::$FS_ADMIN"
+          python3 tools/diagnostico_invitaciones.py "$(cat tools/diagnostico-filtro.txt 2>/dev/null)"
