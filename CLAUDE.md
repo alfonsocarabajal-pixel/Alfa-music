@@ -12,6 +12,6 @@
 
 ## Cambios guardados sin publicar (salen con la próxima versión)
 El usuario pidió no generar versiones por cambios chicos: se suben a `main` con `[skip ci]` y se publican junto con el próximo cambio que sí genere versión.
-- Invitaciones: ocultar las bloqueadas y ordenar por último uso.
-- Registro de errores en Firebase (`grupos/G/errores`) + pantalla «Errores» en Invitaciones + mensajes de activación detallados. Requiere la regla de `errores` en Firebase (la compilación avisa si falta).
-- Volumen parejo entre canciones (botón en la cola, activado por defecto, Android 9+).
+**Ojo:** la revisión diaria publica sola cuando sale un extractor nuevo, y esa versión incluye todo lo que esté en `main`. Avisarle al usuario qué cambios pendientes van a salir así.
+- (ninguno por ahora: lo pendiente salió en la v54 del 07/11, por extractor nuevo)
+- Falta que el usuario pegue la regla de `errores` en Firebase: sin ella el registro de errores no guarda nada.
