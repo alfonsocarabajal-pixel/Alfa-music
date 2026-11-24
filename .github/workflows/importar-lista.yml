@@ -2,8 +2,10 @@ name: Importar lista a playlists
 
 on:
   push:
-    branches: [main]
-    paths: ["listas/**"]
+    branches: [main, sincronizar-listas]
+    paths: ["listas/**", "tools/importar_lista.py", ".github/workflows/importar-lista.yml"]
+  schedule:
+    - cron: "40 9 * * *"   # todos los días: agrega las listas en los grupos nuevos que no las tengan
   workflow_dispatch:
     inputs:
       archivo:
@@ -40,6 +42,10 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             FILES="${{ github.event.inputs.archivo }}"
+          elif [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.ref_name }}" = "sincronizar-listas" ]; then
+            # Revisión diaria: cada lista se agrega solo en los grupos que no la tienen.
+            for F in listas/*.txt; do echo "== $F"; python tools/importar_lista.py "$F" --solo-faltantes; done
+            exit 0
           else
             FILES=$(git diff --name-only HEAD~1 HEAD -- listas/ | grep '\.txt$' || true)
           fi

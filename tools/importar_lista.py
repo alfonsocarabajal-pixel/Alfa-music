@@ -71,9 +71,43 @@ def search(ydl, title, artist):
     return None, 0
 
 
+def all_groups():
+    """Todos los grupos: el principal + los creados por el administrador."""
+    groups = {"principal"}
+    res = http("GET", f"{API}{GROUP_PATH}/admins/{ADMIN}/grupos?pageSize=300")
+    for d in res.get("documents", []):
+        groups.add(d["name"].rsplit("/", 1)[-1])
+    return groups
+
+
+def collection(g):
+    return f"{GROUP_PATH}/playlists" if g == "principal" else f"{GROUP_PATH}/equipos/{g}/playlists"
+
+
+def exists(url):
+    try:
+        http("GET", url)
+        return True
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return False
+        raise
+
+
 def main():
-    path = sys.argv[1]
+    # --solo-faltantes: agrega la lista únicamente en los grupos que todavía no la tienen
+    # (no toca las copias que ya existen, aunque las hayan editado).
+    only_missing = "--solo-faltantes" in sys.argv
+    path = [a for a in sys.argv[1:] if not a.startswith("--")][0]
     name, items = read_list(path)
+    doc_id = re.sub(r"[^a-z0-9]+", "-", norm(name)).strip("-") or "lista"
+    groups = all_groups()
+    if only_missing:
+        groups = {g for g in groups if not exists(f"{API}{collection(g)}/{doc_id}")}
+        if not groups:
+            print(f"'{name}': ya está en todos los grupos")
+            return
+        print(f"'{name}': falta en {len(groups)} grupo(s)")
     print(f"Lista '{name}': {len(items)} temas sin repetir")
 
     songs, missing = [], []
@@ -94,13 +128,6 @@ def main():
                 "art": {"stringValue": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"},
             }}})
 
-    # Todos los grupos: el principal + los creados por el administrador.
-    groups = {"principal"}
-    res = http("GET", f"{API}{GROUP_PATH}/admins/{ADMIN}/grupos?pageSize=300")
-    for d in res.get("documents", []):
-        groups.add(d["name"].rsplit("/", 1)[-1])
-
-    doc_id = re.sub(r"[^a-z0-9]+", "-", norm(name)).strip("-") or "lista"
     fields = {
         "nombre": {"stringValue": name},
         "autor": {"stringValue": "Denis"},
@@ -108,7 +135,7 @@ def main():
         "canciones": {"arrayValue": {"values": songs}},
     }
     for g in sorted(groups):
-        coll = f"{GROUP_PATH}/playlists" if g == "principal" else f"{GROUP_PATH}/equipos/{g}/playlists"
+        coll = collection(g)
         http("POST", f"{API}{ROOT}:commit", {"writes": [{"update": {"name": f"{coll}/{doc_id}", "fields": fields}}]})
         print(f"Playlist '{name}' guardada en el grupo {g}")
 
