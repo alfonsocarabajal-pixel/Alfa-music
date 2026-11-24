@@ -147,3 +147,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+# sincronización: 2026-11-24
